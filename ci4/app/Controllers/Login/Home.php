@@ -2,7 +2,8 @@
 
 namespace App\Controllers\Login;
 use App\Controllers\BaseController;
-
+use app\Models\LoginModel;
+use app\Models\CustomModel;
 class Home extends BaseController
 {
     public function index()
@@ -125,9 +126,6 @@ class Home extends BaseController
     {
         if ($data) {
             $data['submit'] = $this->cek_Kategori($data['submit']);
-            // echo "<pre>";
-            // print_r($data);
-            // echo "</pre>";
         }
     }
     protected function cek_Kategori($data)
@@ -158,7 +156,7 @@ class Home extends BaseController
     protected function arData($kategori)
     {
         $data = [
-            'meta_title' => 'Login '.$kategori.' SIM UMMAT',
+            'meta_title' => 'Login ' . $kategori . ' SIM UMMAT',
             'header_title' => 'Silahkan Login Dengan Akun',
             'kategori' => $kategori
         ];
@@ -166,33 +164,30 @@ class Home extends BaseController
     }
     public function sukses($post)
     {
-        echo "<pre>";
-        print_r($post);
-        echo "</pre>";
-        // echo "<pre>";
-        // print_r($_GET);
-        // echo "</pre><hr>";
-        // echo $isset=isset($_GET)? $_GET['s'] : "kosong";
-        // echo '<br>';
+        $db=db_connect();
+        $model = new CustomModel($db);
+        // $var=$model->find($data);   //command untuk mengambil data dari table
 
-        //   echo   $kategori=$post['kategori'];
+        $res=$model->where('super_user',$post['username'],$post['password']);
 
-        // if ($kategori=='dosen') {
-        //             echo $kategori;
+        $this->pre($res);
 
-        // }
-        // if ($kategori=='prodi') {
-        //             echo $kategori;
 
-        // }
-        // if ($kategori=='fakultas') {
-        //             echo $kategori;
+        //$model->save($data);   //command untuk push data ke table
+        //$var=$model->find($data);   //command untuk mengambil data dari table
+        //$model->delete($data);   //command untuk delete data dari table
 
-        // }
+        // untuk edit, perlu define table_id pada $data dan gunakan $model->save()
 
-        //         echo 'fail';
+
+        // return view('dosen/home', $data);
 
 
 
+    }
+    public function pre($data){
+        echo '<pre>';
+        print_r($data);
+        echo '</pre>';
     }
 }

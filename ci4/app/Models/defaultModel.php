@@ -20,10 +20,10 @@ class LoginModel extends Model
     // protected bool $updateOnlyChanged = true;
 
     // Dates
-    protected $useTimestamps = false;
+    // protected $useTimestamps = false;
     // protected $dateFormat = 'datetime';
-    protected $createdField = 'created_at';
-    protected $updatedField = 'updated_at';
+    // protected $createdField = 'created_at';
+    // protected $updatedField = 'updated_at';
     // protected $deletedField = 'deleted_at';
 
     // Validation
@@ -42,21 +42,4 @@ class LoginModel extends Model
     // protected $afterFind = [];
     // protected $beforeDelete = [];
     // protected $afterDelete = [];
-
-
-
-
-
-
-
-
-
-
-    
-    // protected $beforeInsert = ['hashPassword'];
-    // public function hashPassword(array $data)
-    // {
-    //     $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
-    //     return $data;
-    // }
 }
