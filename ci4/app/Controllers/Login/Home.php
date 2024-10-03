@@ -122,22 +122,22 @@ class Home extends BaseController
         // echo $isset=isset($_GET)? $_GET['s'] : "kosong";
         // echo '<br>';
 
-        $kategori=$post['kategori'];
+      echo   $kategori=$post['kategori'];
 
-        if ($kategori=='dosen') {
-                    return redirect()->to('../dosen');
+        // if ($kategori=='dosen') {
+        //             echo $kategori;
 
-        }
-        if ($kategori=='prodi') {
-                    return redirect()->to('../prodi');
+        // }
+        // if ($kategori=='prodi') {
+        //             echo $kategori;
 
-        }
-        if ($kategori=='fakultas') {
-                    return redirect()->to('../fakultas');
+        // }
+        // if ($kategori=='fakultas') {
+        //             echo $kategori;
 
-        }
+        // }
 
-                return redirect()->to('../fail');
+        //         echo 'fail';
 
 
 
