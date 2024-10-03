@@ -28,9 +28,9 @@ $routes->get('/', 'Home::index');
 
 // $routes->get('/sukses', 'Login\Login::sukses');
 
-// $routes->group('login',function($routes){
-//     $routes->add('dosen','Login\Login::dosen');
-//     $routes->add('prodi','Login\Login::prodi');
-//     $routes->add('fakultas','Login\Login::fakultas');
-//     $routes->add('sukses','Login\Login::sukses',['as'=>'sukses']);
-// });
+$routes->group('login',function($routes){
+    $routes->add('dosen','Login\Home::dosen');
+    $routes->add('prodi','Login\Home::prodi');
+    $routes->add('fakultas','Login\Home::fakultas');
+    $routes->add('sukses','Login\Home::sukses',['as'=>'sukses']);
+});
