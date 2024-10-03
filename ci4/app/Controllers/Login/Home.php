@@ -45,7 +45,7 @@ class Home extends BaseController
             }
         }
 
-        $this->cek($_POST);
+        // $this->cek($_POST);
         return view('login/login', $data);
 
     }
