@@ -27,7 +27,7 @@
                     <input type="password" class="form-control" name="password" id="password"
                         placeholder="Inputkan Password">
                 </div>
-                <!-- <button type="submit" class="btn btn-primary right" style="margin=right -50%">Masuk</button> -->
+                <!-- <button type="submit" class="btn btn-primary right" >Masuk</button> -->
                 <input class="btn btn-primary right" type="submit" name="submit" value="Masuk Sebagai <?= $kategori ?>">
             </form>
         </div>
