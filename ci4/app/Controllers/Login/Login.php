@@ -7,14 +7,8 @@ class Login extends BaseController
 {
     public function index()
     {
-        $data = [
-            'meta_title' => 'Login Prodi SIM UMMAT',
-            'header_title' => 'Silahkan Login Dengan Akun',
-            'kategori' => 'Prodi'
-        ];
+        return redirect()->to(base_url('/home'));
 
-        $this->cek($_POST);
-        return view('login/login', $data);
 
 
     }
