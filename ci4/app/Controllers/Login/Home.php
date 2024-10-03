@@ -174,6 +174,14 @@ class Home extends BaseController
 
         $this->pre($res);
 
+        echo '<hr>';
+
+        if (isset($res)) {
+            echo 'login sukses';
+        }else{
+            echo 'login failed';
+        }
+
 
         //$model->save($data);   //command untuk push data ke table
         //$var=$model->find($data);   //command untuk mengambil data dari table
