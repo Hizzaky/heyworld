@@ -2,8 +2,8 @@
 
 namespace App\Controllers\Login;
 use App\Controllers\BaseController;
-use app\Models\LoginModel;
-use app\Models\CustomModel;
+use App\Models\LoginModel;
+use App\Models\CustomModel;
 class Home extends BaseController
 {
     public function index()
