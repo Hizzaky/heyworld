@@ -44,7 +44,7 @@ class Home extends BaseController
                     'rules'=>'required|min_length[8]',
                     'errors' => [
                         'required' => 'Inputkan Password dengan benar!',
-                        'min_length[8]' => 'Password harus lebih dari 7 digit'
+                        'min_length' => 'Password harus lebih dari 7 digit'
                     ]                    
                 ]
             ];
