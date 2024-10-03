@@ -96,7 +96,7 @@ class Home extends BaseController
         return view('login/login', $data);
     }
 
-
+//----------------------------------------------------------------------------------------------------------------------------------
     protected function cek($data)
     {
         if ($data) {
@@ -125,16 +125,16 @@ class Home extends BaseController
         $kategori=$post['kategori'];
 
         if ($kategori=='dosen') {
-            return 'redirect dosen';
+            return view('../<?= $kategori ?>');
         }
         if ($kategori=='prodi') {
-            return 'redirect prodi';
+            return view('../<?= $kategori ?>');
         }
         if ($kategori=='fakultas') {
-            return 'redirect fakultas';
+            return view('../<?= $kategori ?>');
         }
 
-        return 'salah semua';
+        return view('../<?= $kategori ?>');
 
 
     }
