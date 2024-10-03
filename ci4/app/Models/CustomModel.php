@@ -20,7 +20,7 @@ class CustomModel
                         ->where(['username'=>$username])
                         ->where(['password'=>$password])
                         ->get()
-                        ->getResultArray();
+                        ->getResult();
     }
 
     function getPost(){
