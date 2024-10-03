@@ -33,8 +33,20 @@ class Home extends BaseController
         if ($this->request->getMethod() == 'post') {
 
             $rules = [
-                'username' => 'required',
-                'password' => 'required|min_length[8]'
+                'username' => [
+                    'rules' => 'required',
+                    'label' => 'Usename',
+                    'errors' => [
+                        'required' => 'Inputkan username dengan benar!'
+                    ]
+                ],
+                'password' => [
+                    'rules'=>'required|min_length[8]',
+                    'errors' => [
+                        'required' => 'Inputkan Password dengan benar!',
+                        'min_length[8]' => 'Password harus lebih dari 7 digit'
+                    ]                    
+                ]
             ];
             if ($this->validate($rules)) {
                 // return redirect()->to(base_url('/login/sukses?s=dosen'));
@@ -49,6 +61,28 @@ class Home extends BaseController
         return view('login/login', $data);
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function prodi()
     {
         helper(['form']);
