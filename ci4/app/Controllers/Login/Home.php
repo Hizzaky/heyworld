@@ -85,7 +85,8 @@ class Home extends BaseController
                 'password' => 'required|min_length[8]'
             ];
             if ($this->validate($rules)) {
-                return redirect()->to(base_url('/login/sukses?s=fakultas'));
+                // return redirect()->to(base_url('/login/sukses?s=fakultas'));
+                $this->sukses($_POST);
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -110,10 +111,10 @@ class Home extends BaseController
         $ar = explode(" ", $data);
         return $ar[2];
     }
-    public function sukses()
+    public function sukses($post)
     {
         echo "<pre>";
-        print_r($_POST);
+        print_r($post);
         echo "</pre><hr>";
         echo "<pre>";
         print_r($_GET);
