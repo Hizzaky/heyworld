@@ -3,7 +3,7 @@ namespace App\Models;
 
 use CodeIgniter\Database\ConnectionInterface;
 
-class CustomModel
+class CustomModel 
 {
     protected $db;
 
