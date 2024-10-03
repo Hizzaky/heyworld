@@ -32,7 +32,8 @@ class Home extends BaseController
                 'password' => 'required|min_length[8]'
             ];
             if ($this->validate($rules)) {
-                return redirect()->to(base_url('/login/sukses?s=dosen'));
+                // return redirect()->to(base_url('/login/sukses?s=dosen'));
+                $this->sukses($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -58,7 +59,8 @@ class Home extends BaseController
                 'password' => 'required|min_length[8]'
             ];
             if ($this->validate($rules)) {
-                return redirect()->to(base_url('/login/sukses?s=prodi'));
+                // return redirect()->to(base_url('/login/sukses?s=prodi'));
+                $this->sukses($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
