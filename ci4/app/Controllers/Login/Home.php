@@ -115,16 +115,16 @@ class Home extends BaseController
     }
     public function sukses($post)
     {
-        // echo "<pre>";
-        // print_r($post);
-        // echo "</pre><hr>";
+        echo "<pre>";
+        print_r($post);
+        echo "</pre><hr>";
         // echo "<pre>";
         // print_r($_GET);
         // echo "</pre><hr>";
         // echo $isset=isset($_GET)? $_GET['s'] : "kosong";
         // echo '<br>';
 
-      echo   $kategori=$post['kategori'];
+    //   echo   $kategori=$post['kategori'];
 
         // if ($kategori=='dosen') {
         //             echo $kategori;
