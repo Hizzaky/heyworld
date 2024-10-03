@@ -21,18 +21,18 @@ class CustomModel
                         ->get()
                         ->getResultArray();
     }
-    function where2($table,$username,$password){
+    function where2($table,$field,$data){
         return $this->db->table($table)
-                        ->where(['username'=>$username])
-                        ->where(['password'=>$password])
+                        ->where([$field['0']=>$data[0]])
+                        ->where([$field['1']=>$data[1]])
                         ->get()
                         ->getResultArray();
     }
-    function where3($table,$data){
+    function where3($table,$field,$data){
         return $this->db->table($table)
-                        ->where(['data'=>$data])
-                        ->where(['data'=>$data])
-                        ->where(['data'=>$data])
+                        ->where([$field[0]=>$data[0]])
+                        ->where([$field[1]=>$data[1]])
+                        ->where([$field[2]=>$data[2]])
                         ->get()
                         ->getResultArray();
     }

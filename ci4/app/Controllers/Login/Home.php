@@ -170,8 +170,10 @@ class Home extends BaseController
 
         // $this->pre($post);
 
-        // $res = $model->where2('super_user', $post['post']['username'], $post['post']['password']); // validasi username password
-        $res = $model->where1('t_dosen', 'username', $post['post']['username']); // validasi username password
+        $field=['username','password'];
+        $data=[$post['post']['username'],$post['post']['password']];
+        $res = $model->where2('t_dosen', $field, $data); // validasi username password
+        // $res = $model->where1('t_dosen', 'username', $post['post']['username']); // validasi username password
 
         $this->pre($res);
 
