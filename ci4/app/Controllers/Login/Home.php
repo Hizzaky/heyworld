@@ -32,22 +32,8 @@ class Home extends BaseController
 
         if ($this->request->getMethod() == 'post') {
 
-            $rules = [
-                'username' => [
-                    'rules' => 'required',
-                    'label' => 'Usename',
-                    'errors' => [
-                        'required' => 'Inputkan username dengan benar!'
-                    ]
-                ],
-                'password' => [
-                    'rules'=>'required|min_length[8]',
-                    'errors' => [
-                        'required' => 'Inputkan Password dengan benar!',
-                        'min_length' => 'Password harus lebih dari 7 digit'
-                    ]                    
-                ]
-            ];
+            $rules=$this->rule();
+            
             if ($this->validate($rules)) {
                 // return redirect()->to(base_url('/login/sukses?s=dosen'));
                 $data['post']=$_POST;
@@ -152,6 +138,25 @@ class Home extends BaseController
     {
         $ar = explode(" ", $data);
         return $ar[2];
+    }
+    protected function rule()
+    {
+        $rules = [
+            'username' => [
+                'rules' => 'required',
+                'label' => 'Usename',
+                'errors' => [
+                    'required' => 'Inputkan username dengan benar!'
+                ]
+            ],
+            'password' => [
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Inputkan Password dengan benar!',
+                    'min_length' => 'Password minimal 8 digit'
+                ]
+            ]
+        ];
     }
     public function sukses($post)
     {
