@@ -85,8 +85,8 @@ class Home extends BaseController
                 'password' => 'required|min_length[8]'
             ];
             if ($this->validate($rules)) {
-                // return redirect()->to(base_url('/login/sukses?s=fakultas'));
-                $this->sukses($data);
+                return redirect()->to(base_url('/login/sukses?s=fakultas&data='.$data));
+                // $this->sukses($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
