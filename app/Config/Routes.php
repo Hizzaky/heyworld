@@ -1,0 +1,36 @@
+<?php
+
+use CodeIgniter\Router\RouteCollection;
+
+/**
+ * @var RouteCollection $routes
+ */
+// $routes->setDefaultNamespace("app\Controllers");
+// $routes->setDefaultController("Home");
+// $routes->setDefaultMethod("index");
+// $routes->setTranslateURIDashes(false);
+// $routes->set404Override();
+$routes->setAutoRoute(true);
+
+
+
+
+
+
+$routes->get('/', 'Home::index');
+
+// $routes->add('dosen', 'Login\Login::dosen');
+// $routes->add('prodi', 'Login::prodi');
+// $routes->add('fakultas', 'Login::fakultas');
+// $routes->add('login', 'Home::login');
+
+
+
+// $routes->get('/sukses', 'Login\Login::sukses');
+
+$routes->group('login',function($routes){
+    $routes->add('dosen','Login\Login::dosen');
+    $routes->add('prodi','Login\Login::prodi');
+    $routes->add('fakultas','Login\Login::fakultas');
+    $routes->add('sukses','Login\Login::sukses',['as'=>'sukses']);
+});
