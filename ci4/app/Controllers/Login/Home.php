@@ -7,15 +7,12 @@ class Home extends BaseController
 {
     public function index()
     {
-        echo 'kok ga muncul';
 
         // return redirect()->to(base_url('../Home'));
         return redirect()->to('../Home');
         // return redirect()->route('/login/sukses');
         // return redirect()->to(base_url('/login/sukses'));
-
-
-
+        // return redirect()->back();
 
     }
     public function dosen()
@@ -35,20 +32,7 @@ class Home extends BaseController
                 'password' => 'required|min_length[8]'
             ];
             if ($this->validate($rules)) {
-                // return redirect()->to('google.com');
-                // return redirect()->route('/login/sukses');
-                return redirect()->to(base_url('/login/sukses'));
-                // return redirect()->back();
-                // return redirect()->route('sukses');
-                // exit;
-
-                // echo 'validasi berhasil';
-
-
-
-
-
-
+                return redirect()->to(base_url('/login/sukses?dosen'));
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -60,11 +44,25 @@ class Home extends BaseController
     }
     public function prodi()
     {
+        helper(['form']);
         $data = [
             'meta_title' => 'Login Prodi SIM UMMAT',
             'header_title' => 'Silahkan Login Dengan Akun',
             'kategori' => 'Prodi'
         ];
+
+        if ($this->request->getMethod() == 'post') {
+
+            $rules = [
+                'username' => 'required',
+                'password' => 'required|min_length[8]'
+            ];
+            if ($this->validate($rules)) {
+                return redirect()->to(base_url('/login/sukses?prodi'));
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
 
         $this->cek($_POST);
         return view('login/login', $data);
@@ -73,25 +71,30 @@ class Home extends BaseController
     }
     public function fakultas()
     {
+        helper(['form']);
         $data = [
             'meta_title' => 'Login Fakultas SIM UMMAT',
             'header_title' => 'Silahkan Login Dengan Akun',
             'kategori' => 'Fakultas'
         ];
 
+        if ($this->request->getMethod() == 'post') {
+
+            $rules = [
+                'username' => 'required',
+                'password' => 'required|min_length[8]'
+            ];
+            if ($this->validate($rules)) {
+                return redirect()->to(base_url('/login/sukses?fakultas'));
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
+
         $this->cek($_POST);
         return view('login/login', $data);
     }
 
-    protected function login_view($data)
-    {
-
-        // echo view('template/homepage/header', $data);
-        // echo view('login/login');
-        // echo view('template/homepage/footer');
-
-        // return view('homepage', $data);
-    }
 
     protected function cek($data)
     {
@@ -109,6 +112,9 @@ class Home extends BaseController
     }
     public function sukses()
     {
+        echo "<pre>";
+        print_r($_GET);
+        echo "</pre>";
         return 'validasi berhasil';
     }
 }
