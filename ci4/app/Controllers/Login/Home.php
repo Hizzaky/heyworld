@@ -157,6 +157,7 @@ class Home extends BaseController
                 ]
             ]
         ];
+        return $rules;
     }
     public function sukses($post)
     {
