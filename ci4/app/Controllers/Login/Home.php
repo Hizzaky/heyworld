@@ -168,11 +168,11 @@ class Home extends BaseController
         $model = new CustomModel($db);
         // $var=$model->find($data);   //command untuk mengambil data dari table
 
-        $this->pre($post);
+        // $this->pre($post);
 
-        // $res=$model->where('super_user',$post['username'],$post['password']);
+        $res=$model->where('super_user',$post['post']['username'],$post['post']['password']);
 
-        // $this->pre($res);
+        $this->pre($res);
 
 
         //$model->save($data);   //command untuk push data ke table
