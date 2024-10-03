@@ -114,7 +114,9 @@ class Home extends BaseController
     {
         echo "<pre>";
         print_r($_GET);
-        echo "</pre>";
+        echo "</pre><hr>";
+        echo $isset=isset($_GET)? "ada" : "kosong";
+        echo '<br>';
         return 'validasi berhasil';
     }
 }
