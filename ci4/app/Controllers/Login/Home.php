@@ -7,9 +7,8 @@ class Home extends BaseController
 {
     public function index()
     {
-        helper(['form']);
 
-        // return redirect()->to('../Home');
+        return redirect()->to('../Home');
 
         // return redirect()->to(base_url('../Home'));
         // return redirect()->route('/login/sukses');
@@ -20,64 +19,7 @@ class Home extends BaseController
         // print_r($_GET);
         // echo "</pre>";
 
-        $kat = ucwords($_GET['l']);
-        $data = [
-            'meta_title' => 'Login ' . $kat . ' SIM UMMAT',
-            'header_title' => 'Silahkan Login Dengan Akun',
-            'kategori' => $kat
-        ];
-
-        // $data['meta_title'] = 'Login' . $kat . 'SIM UMMAT';
-        // $data['kategori'] = $kat;
-
-
-        // echo "<pre>";
-        // print_r($data);
-        // echo "</pre>";
-
-        if ($this->request->getMethod() == 'post') {
-
-            $rules = [
-                'username' => 'required',
-                'password' => 'required|min_length[8]'
-            ];
-            if ($this->validate($rules)) {
-                // return redirect()->to(base_url('/login/sukses?s=dosen'));
-                $data['post']=$_POST;
-                $this->sukses($data);
-            } else {
-                $data['validasi'] = $this->validator; 
-            }
-        }
-
-        // $this->cek($_POST);
-        return view('login/login', $data);
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public function dosen()
     {
         helper(['form']);
