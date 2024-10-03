@@ -32,7 +32,7 @@ class Home extends BaseController
                 'password' => 'required|min_length[8]'
             ];
             if ($this->validate($rules)) {
-                return redirect()->to(base_url('/login/sukses?dosen'));
+                return redirect()->to(base_url('/login/sukses?s=dosen'));
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -58,7 +58,7 @@ class Home extends BaseController
                 'password' => 'required|min_length[8]'
             ];
             if ($this->validate($rules)) {
-                return redirect()->to(base_url('/login/sukses?prodi'));
+                return redirect()->to(base_url('/login/sukses?s=prodi'));
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -85,7 +85,7 @@ class Home extends BaseController
                 'password' => 'required|min_length[8]'
             ];
             if ($this->validate($rules)) {
-                return redirect()->to(base_url('/login/sukses?fakultas'));
+                return redirect()->to(base_url('/login/sukses?s=fakultas'));
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -115,7 +115,7 @@ class Home extends BaseController
         echo "<pre>";
         print_r($_GET);
         echo "</pre><hr>";
-        echo $isset=isset($_GET)? "ada" : "kosong";
+        echo $isset=isset($_GET)? $_GET['s'] : "kosong";
         echo '<br>';
         return 'validasi berhasil';
     }
