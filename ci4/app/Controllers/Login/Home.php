@@ -44,7 +44,7 @@ class Home extends BaseController
                 // return redirect()->to(base_url('/login/sukses?s=dosen'));
                 $this->sukses($data);
             } else {
-                $data['validasi'] = $this->validator;
+                $data['validasi'] = $this->validator; 
             }
         }
 
@@ -75,7 +75,7 @@ class Home extends BaseController
 
 
 
-    
+
     public function dosen()
     {
         helper(['form']);
