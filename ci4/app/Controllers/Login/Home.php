@@ -24,19 +24,15 @@ class Home extends BaseController
     {
         helper(['form']);
 
-        $data = [
-            'meta_title' => 'Login Dosen SIM UMMAT',
-            'header_title' => 'Silahkan Login Dengan Akun',
-            'kategori' => 'Dosen'
-        ];
+        $data = $this->arData('Dosen');
 
         if ($this->request->getMethod() == 'post') {
 
-            $rules=$this->rule();
-            
+            $rules = $this->rule();
+
             if ($this->validate($rules)) {
                 // return redirect()->to(base_url('/login/sukses?s=dosen'));
-                $data['post']=$_POST;
+                $data['post'] = $_POST;
                 $this->sukses($data);
             } else {
                 $data['validasi'] = $this->validator;
@@ -153,11 +149,20 @@ class Home extends BaseController
                 'rules' => 'required|min_length[8]',
                 'errors' => [
                     'required' => 'Inputkan Password dengan benar!',
-                    'min_length' => 'Password minimal 8 digit'
+                    'min_length' => 'Password minimal 8 digit!'
                 ]
             ]
         ];
         return $rules;
+    }
+    protected function arData($kategori)
+    {
+        $data = [
+            'meta_title' => 'Login '.$kategori.' SIM UMMAT',
+            'header_title' => 'Silahkan Login Dengan Akun',
+            'kategori' => $kategori
+        ];
+        return $data;
     }
     public function sukses($post)
     {
