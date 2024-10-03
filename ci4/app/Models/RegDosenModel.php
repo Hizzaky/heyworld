@@ -4,23 +4,23 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class LoginModel extends Model
+class RegDosenModel extends Model
 {
-    protected $table = 'super_user';
-    protected $primaryKey = 'su_id';
+    protected $table = 't_dosen';
+    protected $primaryKey = 'dosen_id';
 
     // protected $useAutoIncrement = true;
 
     // protected $returnType = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['username', 'password'];
+    protected $allowedFields = ['nama_dosen','username', 'password','status'];
 
     // protected bool $allowEmptyInserts = false;
     // protected bool $updateOnlyChanged = true;
 
     // Dates
-    protected $useTimestamps = false;
+    // protected $useTimestamps = true;
     // protected $dateFormat = 'datetime';
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
@@ -52,7 +52,7 @@ class LoginModel extends Model
 
 
 
-    
+
     // protected $beforeInsert = ['hashPassword'];
     // public function hashPassword(array $data)
     // {

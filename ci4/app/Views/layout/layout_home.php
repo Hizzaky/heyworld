@@ -75,9 +75,9 @@
                             <?= $var = isset($kategori) ? "Sebagai " . $kategori : "Login " ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/login/dosen">Sebagai Dosen</a>
-                            <a class="dropdown-item" href="/login/prodi">Sebagai Prodi</a>
-                            <a class="dropdown-item" href="/login/fakultas">Sebagai Fakultas</a>
+                            <a class="dropdown-item" href="/login?dosen">Sebagai Dosen</a>
+                            <a class="dropdown-item" href="/login?prodi">Sebagai Prodi</a>
+                            <a class="dropdown-item" href="/login?fakultas">Sebagai Fakultas</a>
                         </div>
                         <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <form action="login/dosen" method="post">

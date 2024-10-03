@@ -2,23 +2,20 @@
 
 namespace App\Controllers\Login;
 use App\Controllers\BaseController;
-use App\Models\LoginModel;
 use App\Models\CustomModel;
 class Home extends BaseController
 {
-    public function index()
+    public function index($kat)
     {
-
-        return redirect()->to('../Home');
+        echo $kat;
+        // return redirect()->to('../Home');
 
         // return redirect()->to(base_url('../Home'));
         // return redirect()->route('/login/sukses');
         // return redirect()->to(base_url('/login/sukses'));
         // return redirect()->back();
 
-        // echo "<pre>";
-        // print_r($_GET);
-        // echo "</pre>";
+       
 
     }
     public function dosen()
@@ -173,11 +170,9 @@ class Home extends BaseController
         $field=['username','password'];
         $data=[$post['post']['username'],$post['post']['password']];
         $res = $model->where2('t_dosen', $field, $data); // validasi username password
-        // $res = $model->where1('t_dosen', 'username', $post['post']['username']); // validasi username password
 
         $this->pre($res);
 
-        echo '<hr>';
 
         if (count($res) == 1) { //verivikasi data login
             echo 'login sukses';
@@ -202,6 +197,6 @@ class Home extends BaseController
     {
         echo '<pre>';
         print_r($data);
-        echo '</pre>';
+        echo '</pre><hr>';
     }
 }

@@ -13,7 +13,7 @@ class CustomModel
 
     }
     function all($table){
-        return $this->db->table($table)->get()->getResult();
+        return $this->db->table($table)->get()->getResultArray();
     }
     function where1($table,$field,$data){
         return $this->db->table($table)
