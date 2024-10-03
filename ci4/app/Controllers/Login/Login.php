@@ -7,7 +7,7 @@ class Login extends BaseController
 {
     public function index()
     {
-        return redirect()->to(base_url('/home'));
+        return redirect()->to(base_url('../home'));
 
 
 
