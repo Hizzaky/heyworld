@@ -15,9 +15,22 @@ class Home extends BaseController
         // return redirect()->to(base_url('/login/sukses'));
         // return redirect()->back();
 
+        
+        $data = [
+            
+            'header_title' => 'Silahkan Login Dengan Akun '.$_GET['l'],
+            
+        ];
+        
+        $kat=ucwords($_GET['l']);
+        $data['meta_title'] = 'Login'. $kat .'SIM UMMAT';
+        $data['kategori'] = $kat;
+        
+        
         echo "<pre>";
-        print_r($_GET);
+        print_r($data);
         echo "</pre>";
+        
 
     }
     public function dosen()
