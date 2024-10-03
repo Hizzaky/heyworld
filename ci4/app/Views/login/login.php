@@ -16,7 +16,7 @@
                     <?= $validasi->listErrors() ?>
                 </div>
             <?php endif; ?>
-            <form method="post">
+            <form method="post" >
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" class="form-control" name="username" id="username" value="<?= set_value('username') ?>"

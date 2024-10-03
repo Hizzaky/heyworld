@@ -113,10 +113,26 @@ class Home extends BaseController
     public function sukses()
     {
         echo "<pre>";
+        print_r($_POST);
+        echo "</pre><hr>";
+        echo "<pre>";
         print_r($_GET);
         echo "</pre><hr>";
         echo $isset=isset($_GET)? $_GET['s'] : "kosong";
         echo '<br>';
-        return 'validasi berhasil';
+
+        if ($_GET['s']=='dosen') {
+            return 'redirect dosen';
+        }
+        if ($_GET['s']=='prodi') {
+            return 'redirect prodi';
+        }
+        if ($_GET['s']=='fakultas') {
+            return 'redirect fakultas';
+        }
+
+        return 'salah semua';
+
+
     }
 }
