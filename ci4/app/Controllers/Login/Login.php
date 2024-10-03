@@ -7,8 +7,13 @@ class Login extends BaseController
 {
     public function index()
     {
-        return redirect()->to(base_url('../Home'));
+
+        // return redirect()->to(base_url('../Home'));
         // return redirect()->to('../../Home');
+        // return redirect()->route('/login/sukses');
+        return redirect()->to(base_url('/login/sukses'));
+
+
 
 
     }
