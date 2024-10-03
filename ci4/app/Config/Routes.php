@@ -29,6 +29,7 @@ $routes->get('/', 'Home::index');
 // $routes->get('/sukses', 'Login\Login::sukses');
 
 $routes->group('login',function($routes){
+    $routes->add('/','..\Home::index');
     $routes->add('dosen','Login\Login::dosen');
     $routes->add('prodi','Login\Login::prodi');
     $routes->add('fakultas','Login\Login::fakultas');
