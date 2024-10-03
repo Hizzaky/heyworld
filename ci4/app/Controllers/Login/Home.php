@@ -125,16 +125,20 @@ class Home extends BaseController
         $kategori=$post['kategori'];
 
         if ($kategori=='dosen') {
-            return view('../<?= $kategori ?>');
+                    return redirect()->to('../dosen');
+
         }
         if ($kategori=='prodi') {
-            return view('../<?= $kategori ?>');
+                    return redirect()->to('../prodi');
+
         }
         if ($kategori=='fakultas') {
-            return view('../<?= $kategori ?>');
+                    return redirect()->to('../fakultas');
+
         }
 
-        return view('../<?= $kategori ?>');
+                return redirect()->to('../fail');
+
 
 
     }
