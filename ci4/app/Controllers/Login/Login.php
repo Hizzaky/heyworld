@@ -5,11 +5,13 @@ use App\Controllers\BaseController;
 
 class Login extends BaseController
 {
-    // public function index()
-    // {
-    //     return redirect()->to(base_url('../home'));
+    public function index()
+    {
+        // return redirect()->to(base_url('../Home'));
+        return redirect()->to('../Home');
 
-    // }
+
+    }
     public function dosen()
     {
         helper(['form']);
