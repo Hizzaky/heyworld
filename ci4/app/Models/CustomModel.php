@@ -12,13 +12,27 @@ class CustomModel
         $this->db =& $db;
 
     }
-    function all(){
-        return $this->db->table('super_user')->get()->getResult();
+    function all($table){
+        return $this->db->table($table)->get()->getResult();
     }
-    function where($table,$username,$password){
+    function where1($table,$field,$data){
+        return $this->db->table($table)
+                        ->where([$field=>$data])
+                        ->get()
+                        ->getResultArray();
+    }
+    function where2($table,$username,$password){
         return $this->db->table($table)
                         ->where(['username'=>$username])
                         ->where(['password'=>$password])
+                        ->get()
+                        ->getResultArray();
+    }
+    function where3($table,$data){
+        return $this->db->table($table)
+                        ->where(['data'=>$data])
+                        ->where(['data'=>$data])
+                        ->where(['data'=>$data])
                         ->get()
                         ->getResultArray();
     }

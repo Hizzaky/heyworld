@@ -164,21 +164,22 @@ class Home extends BaseController
     }
     public function sukses($post)
     {
-        $db=db_connect();
+        $db = db_connect();
         $model = new CustomModel($db);
         // $var=$model->find($data);   //command untuk mengambil data dari table
 
         // $this->pre($post);
 
-        $res=$model->where('super_user',$post['post']['username'],$post['post']['password']);
+        // $res = $model->where2('super_user', $post['post']['username'], $post['post']['password']); // validasi username password
+        $res = $model->where1('super_user', 'username', $post['post']['username']); // validasi username password
 
         $this->pre($res);
 
         echo '<hr>';
 
-        if (count($res)==1) {
+        if (count($res) == 1) { //verivikasi data login
             echo 'login sukses';
-        }else{
+        } else {
             echo 'login failed';
         }
 
@@ -195,7 +196,8 @@ class Home extends BaseController
 
 
     }
-    public function pre($data){
+    public function pre($data)
+    {
         echo '<pre>';
         print_r($data);
         echo '</pre>';
