@@ -9,30 +9,73 @@ class Home extends BaseController
     {
 
         // return redirect()->to('../Home');
-        
+
         // return redirect()->to(base_url('../Home'));
         // return redirect()->route('/login/sukses');
         // return redirect()->to(base_url('/login/sukses'));
         // return redirect()->back();
 
-        
+        // echo "<pre>";
+        // print_r($_GET);
+        // echo "</pre>";
+
+        $kat = ucwords($_GET['l']);
         $data = [
-            
-            'header_title' => 'Silahkan Login Dengan Akun '.$_GET['l'],
-            
+            'meta_title' => 'Login ' . $kat . ' SIM UMMAT',
+            'header_title' => 'Silahkan Login Dengan Akun',
+            'kategori' => $kat
         ];
-        
-        $kat=ucwords($_GET['l']);
-        $data['meta_title'] = 'Login'. $kat .'SIM UMMAT';
-        $data['kategori'] = $kat;
-        
-        
-        echo "<pre>";
-        print_r($data);
-        echo "</pre>";
-        
+
+        // $data['meta_title'] = 'Login' . $kat . 'SIM UMMAT';
+        // $data['kategori'] = $kat;
+
+
+        // echo "<pre>";
+        // print_r($data);
+        // echo "</pre>";
+
+        if ($this->request->getMethod() == 'post') {
+
+            $rules = [
+                'username' => 'required',
+                'password' => 'required|min_length[8]'
+            ];
+            if ($this->validate($rules)) {
+                // return redirect()->to(base_url('/login/sukses?s=dosen'));
+                $this->sukses($data);
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
+
+        $this->cek($_POST);
+        return view('login/login', $data);
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     public function dosen()
     {
         helper(['form']);
@@ -116,7 +159,7 @@ class Home extends BaseController
         return view('login/login', $data);
     }
 
-//----------------------------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------------
     protected function cek($data)
     {
         if ($data) {
@@ -135,14 +178,14 @@ class Home extends BaseController
     {
         echo "<pre>";
         print_r($post);
-        echo "</pre>"; 
+        echo "</pre>";
         // echo "<pre>";
         // print_r($_GET);
         // echo "</pre><hr>";
         // echo $isset=isset($_GET)? $_GET['s'] : "kosong";
         // echo '<br>';
 
-    //   echo   $kategori=$post['kategori'];
+        //   echo   $kategori=$post['kategori'];
 
         // if ($kategori=='dosen') {
         //             echo $kategori;
