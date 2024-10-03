@@ -30,8 +30,8 @@ $routes->get('/', 'Home::index');
 
 $routes->group('login',function($routes){
     $routes->add('/','Login\Home::index');
-    $routes->add('?dosen','Login\Home::index\dosen');
-    $routes->get('?prodi','Login\Home::prodi');
-    $routes->add('?fakultas','Login\Home::fakultas');
+    $routes->add('dosen','Login\Home::index\dosen');
+    $routes->add('prodi','Login\Home::index\prodi');
+    $routes->add('fakultas','Login\Home::index\fakultas');
     $routes->add('sukses','Login\Home::sukses',['as'=>'sukses']);
 });
