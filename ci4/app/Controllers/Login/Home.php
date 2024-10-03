@@ -176,7 +176,7 @@ class Home extends BaseController
 
         echo '<hr>';
 
-        if (isset($res)) {
+        if (count($res)==1) {
             echo 'login sukses';
         }else{
             echo 'login failed';
