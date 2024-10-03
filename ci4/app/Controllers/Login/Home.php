@@ -85,8 +85,8 @@ class Home extends BaseController
                 'password' => 'required|min_length[8]'
             ];
             if ($this->validate($rules)) {
-                return redirect()->to(base_url('/login/sukses?s=fakultas&data='.$data));
-                // $this->sukses($data);
+                // return redirect()->to(base_url('/login/sukses?s=fakultas'));
+                $this->sukses($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -113,22 +113,24 @@ class Home extends BaseController
     }
     public function sukses($post)
     {
-        echo "<pre>";
-        print_r($post);
-        echo "</pre><hr>";
-        echo "<pre>";
-        print_r($_GET);
-        echo "</pre><hr>";
-        echo $isset=isset($_GET)? $_GET['s'] : "kosong";
-        echo '<br>';
+        // echo "<pre>";
+        // print_r($post);
+        // echo "</pre><hr>";
+        // echo "<pre>";
+        // print_r($_GET);
+        // echo "</pre><hr>";
+        // echo $isset=isset($_GET)? $_GET['s'] : "kosong";
+        // echo '<br>';
 
-        if ($_GET['s']=='dosen') {
+        $kategori=$post['kategori'];
+
+        if ($kategori=='dosen') {
             return 'redirect dosen';
         }
-        if ($_GET['s']=='prodi') {
+        if ($kategori=='prodi') {
             return 'redirect prodi';
         }
-        if ($_GET['s']=='fakultas') {
+        if ($kategori=='fakultas') {
             return 'redirect fakultas';
         }
 
