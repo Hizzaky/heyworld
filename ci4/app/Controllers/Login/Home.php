@@ -43,6 +43,7 @@ class Home extends BaseController
             ];
             if ($this->validate($rules)) {
                 // return redirect()->to(base_url('/login/sukses?s=dosen'));
+                $data['post']=$_POST;
                 $this->sukses($data);
             } else {
                 $data['validasi'] = $this->validator; 
