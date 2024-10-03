@@ -8,11 +8,16 @@ class Home extends BaseController
     public function index()
     {
 
+        // return redirect()->to('../Home');
+        
         // return redirect()->to(base_url('../Home'));
-        return redirect()->to('../Home');
         // return redirect()->route('/login/sukses');
         // return redirect()->to(base_url('/login/sukses'));
         // return redirect()->back();
+
+        echo "<pre>";
+        print_r($_GET);
+        echo "</pre>";
 
     }
     public function dosen()
