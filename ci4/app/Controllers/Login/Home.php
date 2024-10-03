@@ -10,7 +10,7 @@ class Home extends BaseController
         echo 'kok ga muncul';
 
         // return redirect()->to(base_url('../Home'));
-        // return redirect()->to('../../Home');
+        return redirect()->to('../Home');
         // return redirect()->route('/login/sukses');
         // return redirect()->to(base_url('/login/sukses'));
 
