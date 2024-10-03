@@ -7,7 +7,7 @@ class Home extends BaseController
     public function index(): string
     {
         $data=[
-            "meta_title"=> "SIM UMMAT",
+            "meta_title"=> "SIM UMMATMMMMMMMMMMMMMMMMMMMM",
             "content"=> "halaman homepage"
         ];
         // return view('template/homepage/header', $data);

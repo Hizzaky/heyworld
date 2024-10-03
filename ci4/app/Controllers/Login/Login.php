@@ -5,6 +5,19 @@ use App\Controllers\BaseController;
 
 class Login extends BaseController
 {
+    public function index()
+    {
+        $data = [
+            'meta_title' => 'Login Prodi SIM UMMAT',
+            'header_title' => 'Silahkan Login Dengan Akun',
+            'kategori' => 'Prodi'
+        ];
+
+        $this->cek($_POST);
+        return view('login/login', $data);
+
+
+    }
     public function dosen()
     {
         helper(['form']);
