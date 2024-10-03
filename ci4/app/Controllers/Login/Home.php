@@ -117,7 +117,7 @@ class Home extends BaseController
     {
         echo "<pre>";
         print_r($post);
-        echo "</pre><hr>";
+        echo "</pre>"; 
         // echo "<pre>";
         // print_r($_GET);
         // echo "</pre><hr>";
