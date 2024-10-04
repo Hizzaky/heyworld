@@ -20,7 +20,7 @@
     }
     .reg {
         /* float: left; */
-        text-decoration: none;
+        /* text-decoration: none; */
     }
 
     .pad {
