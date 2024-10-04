@@ -28,10 +28,10 @@
                         placeholder="Inputkan Password">
                 </div>
                 <!-- <button type="submit" class="btn btn-primary right" >Masuk</button> -->
-                <input class="btn btn-primary right" type="submit" name="submit" value="Masuk Sebagai <?= $kategori ?>">
+                <input class="btn btn-success right" type="submit" name="submit" value="Masuk Sebagai <?= $kategori ?>">
             </form>
             <!-- <input class="btn btn-primary right" name="register" value="Daftar Akun <?= $kategori ?>"> -->
-            <a class="btn btn-warning reg" href="/register">Daftar</a>
+            <a class="btn btn-outline-primary reg" href="/register">Daftar</a>
         </div>
     </div>
 
