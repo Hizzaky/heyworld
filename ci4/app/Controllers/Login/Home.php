@@ -34,7 +34,7 @@ class Home extends BaseController
                 // return redirect()->to(base_url('../dosen'));
                 // $this->sukses($data);
                 // return redirect()->to(base_url(('/sukses/'. $_POST['username'].'/'.$_POST['password'].'/'.$kategori)));
-                return redirect()->to(base_url('/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori));
+                return redirect()->to('/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -83,7 +83,7 @@ class Home extends BaseController
             ];
             if ($this->validate($rules)) {
                 // return redirect()->to(base_url('/login/sukses?s=prodi'));
-                $this->sukses($data);
+                // $this->sukses($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -111,7 +111,7 @@ class Home extends BaseController
             ];
             if ($this->validate($rules)) {
                 // return redirect()->to(base_url('/login/sukses?s=fakultas'));
-                $this->sukses($data);
+                // $this->sukses($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
