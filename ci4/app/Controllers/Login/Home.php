@@ -29,7 +29,7 @@ class Home extends BaseController
                 $data['post'] = $_POST;
                 // return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
                 $login = $this->sukses($_POST, $kategori);
-                if ($login == '1') {
+                if ($login['login'] == '1') {
                     return redirect()->to('Dosen');
                 } else {
                     echo 'Login Gagal';
