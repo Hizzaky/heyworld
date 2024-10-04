@@ -3,9 +3,10 @@
 <?= $this->section('konten') ?>
 
 <div class="row">
-    <div class="col-12 col-sm-3">
+    <!-- <div class="col-12 col-sm-3">
         <span></span>
-    </div>
+    </div> -->
+    <!-- <div class="card col-12 col-sm-6 col-md-6 mrg-login"> -->
     <div class="card col-12 col-sm-6 col-md-6 mrg-login">
         <h3 class="card-header ">
             <?= $header_title . " " . $kategori ?>
