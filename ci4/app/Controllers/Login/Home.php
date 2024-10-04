@@ -28,12 +28,12 @@ class Home extends BaseController
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
                 // return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
-                $login=$this->sukses($_POST,$kategori);
-                if($login=='1'){
-                    return redirect()->to('Dosen');
-                }else{
-                    echo 'login fail';
-                }
+                $this->sukses2($_POST,$kategori);
+                // if($login=='1'){
+                //     return redirect()->to('Dosen');
+                // }else{
+                //     echo 'login fail';
+                // }
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -221,6 +221,30 @@ class Home extends BaseController
 
 
 
+
+    }
+    public function sukses2($post,$kategori)
+    {
+        $db = db_connect();
+        $model = new CustomModel($db);
+        
+        $username=$post['username'];
+        $password=$post['password'];
+        $field = ['username', 'password'];
+        $data = [$username, $password];
+        $tbl='t_'.lcfirst($kategori);
+        $res = $model->where1($tbl, 'username', $username); // validasi username password
+
+        
+        if(count($res)==0){
+            echo 'kosong';
+        }else{
+            $this->pre($res);
+        }
+
+
+
+        
 
     }
     
