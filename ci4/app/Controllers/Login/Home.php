@@ -176,7 +176,9 @@ class Home extends BaseController
 
 
         if (count($res) == 1) { //verivikasi data login
-            echo 'login sukses';
+            // echo 'login sukses';
+            $dir=lcfirst($post['kategori']).'/home';
+            return view('dosen/home', $res);
         } else {
             echo 'login failed';
         }
@@ -189,7 +191,6 @@ class Home extends BaseController
         // untuk edit, perlu define table_id pada $data dan gunakan $model->save()
 
 
-        // return view('dosen/home', $data);
 
 
 
