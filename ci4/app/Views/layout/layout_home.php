@@ -85,7 +85,6 @@
                                 echo 'Login';
                             }
                             ?>
-                            <?= //$var = isset($kategori) ? "Sebagai " . $kategori : "Login " ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/login/dosen">Sebagai Dosen</a>
