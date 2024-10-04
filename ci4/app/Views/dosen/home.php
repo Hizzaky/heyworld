@@ -1,1 +1,1 @@
-<?= $kategori ?>
+<h1>HOMEPAGE DOSEN</h1>
