@@ -33,7 +33,8 @@ $routes->group('login',function($routes){
     $routes->add('dosen','Login\Home::dosen');
     $routes->add('prodi','Login\Home::prodi');
     $routes->add('fakultas','Login\Home::fakultas');
-    $routes->add('sukses','Login\Home::sukses',['as'=>'sukses']);
+    // $routes->add('sukses','Login\Home::sukses',['as'=>'sukses']);
+    $routes->add('sukses/(:any)/(:any)/(:any)','Login\Home::sukses/$username/$password/$kategori');
 });
 
 $routes->group('dosen',function($routes){

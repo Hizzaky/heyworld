@@ -162,7 +162,7 @@ class Home extends BaseController
         ];
         return $data;
     }
-    public function sukses(...$username,$password,$kategori)
+    public function sukses($username,$password,$kategori)
     {
         // $db = db_connect();
         // $model = new CustomModel($db);
@@ -177,6 +177,10 @@ class Home extends BaseController
 
         // echo count($res);
         echo $username;
+        echo '<br>';
+        echo $password;
+        echo '<br>';
+        echo $kategori;
         // return redirect()->to(base_url('../dosen'));
 
 
