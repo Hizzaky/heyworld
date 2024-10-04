@@ -10,10 +10,7 @@ class Home extends BaseController
         // echo $kat;
         return redirect()->to('../Home');
 
-        // return redirect()->to(base_url('../Home'));
-        // return redirect()->route('/login/sukses');
-        // return redirect()->to(base_url('/login/sukses'));
-        // return redirect()->back();
+       
 
 
 
@@ -29,11 +26,7 @@ class Home extends BaseController
             $rules = $this->rule();
 
             if ($this->validate($rules)) {
-                // return redirect()->to(base_url('/login/sukses?s=dosen'));
                 $data['post'] = $_POST;
-                // return redirect()->to(base_url('../dosen'));
-                // $this->sukses($data);
-                // return redirect()->to(base_url(('/sukses/'. $_POST['username'].'/'.$_POST['password'].'/'.$kategori)));
                 return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
             } else {
                 $data['validasi'] = $this->validator;
@@ -163,29 +156,29 @@ class Home extends BaseController
         ];
         return $data;
     }
+    public function hashPassword( $data)
+    {
+        $password= password_hash($data, PASSWORD_DEFAULT);
+        return $password;
+    }
     public function sukses($username,$password,$kategori)
     {
         $db = db_connect();
         $model = new CustomModel($db);
         
-        echo $username;
-        echo '<br>';
-        echo $password;
-        echo '<br>';
-        echo $kategori;
+        // echo $username;
+        // echo '<br>';
+        // echo $password;
+        // echo '<br>';
+        // echo $kategori;
+
+
 
         $field = ['username', 'password'];
-        $data = [$username, $password];
+        $data = [$username, $this->hashPassword($password)];
         $tbl='t_'.lcfirst($kategori);
         $res = $model->where2($tbl, $field, $data); // validasi username password
 
-        // $this->pre($post);
-        // $this->pre($res);
-
-        // echo count($res);
-        // return redirect()->to(base_url('dosen'));
-        // return redirect()->to('dosen');
-        
         
         if (count($res) > 0) { //verivikasi data login
             // $dir = lcfirst($kategori['kategori']) . '/home';
@@ -194,9 +187,19 @@ class Home extends BaseController
             // return redirect()->to('../Home');
             
         } else {
-            return redirect()->to('/fakultas');
+            // return redirect()->to('/FAILED');
+            echo 'login gagal';
+            return redirect()->back();
         }
-        
+
+
+
+
+        // return redirect()->to(base_url('../Home'));
+        // return redirect()->route('/login/sukses');
+        // return redirect()->to(base_url('/login/sukses'));
+        // return redirect()->back();
+
         // return view('dosen/home', $post);
 
         //$model->save($data);   //command untuk push data ke table
