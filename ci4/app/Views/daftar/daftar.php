@@ -6,7 +6,7 @@
     <div class="col-12 col-sm-3">    </div>
     <div class="card col-12 col-sm-6 col-md-6 mrg-login">
         <h3 class="card-header ">
-            <?= $header_title . " " . $kategori ?>
+            <?= $header_title ?>
         </h3>
         <div class="card-body">
             <?php if (isset($validasi)): ?>
