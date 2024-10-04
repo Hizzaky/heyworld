@@ -21,8 +21,8 @@ class Home extends BaseController
     public function dosen()
     {
         helper(['form']);
-
-        $data = $this->arData('Dosen');
+        $kategori='Dosen';
+        $data = $this->arData($kategori);
 
         if ($this->request->getMethod() == 'post') {
 
@@ -171,6 +171,7 @@ class Home extends BaseController
         $data=[$post['post']['username'],$post['post']['password']];
         $res = $model->where2('t_dosen', $field, $data); // validasi username password
 
+        $this->pre($post);
         $this->pre($res);
 
 
