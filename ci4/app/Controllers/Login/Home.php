@@ -240,7 +240,7 @@ class Home extends BaseController
             echo 'Login Gagal';
         } else {
             // echo 'verif username';
-            $this->pre($res);
+            // $this->pre($res);
             if (password_verify($password, $res[0]['password'])) {
                 // echo '<hr> verif password berhasil';
                 $return = [
