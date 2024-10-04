@@ -7,8 +7,8 @@ class Home extends BaseController
 {
     public function index($kat)
     {
-        echo $kat;
-        // return redirect()->to('../Home');
+        // echo $kat;
+        return redirect()->to('../Home');
 
         // return redirect()->to(base_url('../Home'));
         // return redirect()->route('/login/sukses');
