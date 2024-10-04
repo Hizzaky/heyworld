@@ -181,15 +181,11 @@ class Home extends BaseController
 
         
         if (count($res) > 0) { //verivikasi data login
-            // $dir = lcfirst($kategori['kategori']) . '/home';
             $dir=lcfirst($kategori);
             return redirect()->to($dir);
-            // return redirect()->to('../Home');
-            
         } else {
-            // return redirect()->to('/FAILED');
-            echo 'login gagal';
-            return redirect()->back();
+            return 'login gagal';
+            // return redirect()->back();
         }
 
 
