@@ -33,7 +33,7 @@ class Home extends BaseController
                 $data['post'] = $_POST;
                 // return redirect()->to(base_url('../dosen'));
                 // $this->sukses($data);
-                return redirect()->to('/sukses', $_POST['username']/$_POST['password']/$kategori);
+                return redirect()->to('/sukses'. $_POST['username'].'/'.$_POST['password'].'/'.$kategori);
             } else {
                 $data['validasi'] = $this->validator;
             }
