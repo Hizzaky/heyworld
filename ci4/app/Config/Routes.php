@@ -35,3 +35,8 @@ $routes->group('login',function($routes){
     $routes->add('fakultas','Login\Home::fakultas');
     $routes->add('sukses','Login\Home::sukses',['as'=>'sukses']);
 });
+
+$routes->group('dosen',function($routes){
+    $routes->add('/','Dosen\Home::index');
+
+});
