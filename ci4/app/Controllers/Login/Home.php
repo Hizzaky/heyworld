@@ -34,14 +34,14 @@ class Home extends BaseController
                 // return redirect()->to(base_url('../dosen'));
                 // $this->sukses($data);
                 // return redirect()->to(base_url(('/sukses/'. $_POST['username'].'/'.$_POST['password'].'/'.$kategori)));
-                return redirect()->to('/login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
+                return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
             } else {
                 $data['validasi'] = $this->validator;
             }
         }
 
         // $this->cek($_POST);
-        return view('login/login', $data);
+        return view('Login/login', $data);
 
     }
 
