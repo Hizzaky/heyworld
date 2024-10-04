@@ -15,13 +15,13 @@ class Home extends BaseController
         // return redirect()->to(base_url('/login/sukses'));
         // return redirect()->back();
 
-       
+
 
     }
     public function dosen()
     {
         helper(['form']);
-        $kategori='Dosen';
+        $kategori = 'Dosen';
         $data = $this->arData($kategori);
 
         if ($this->request->getMethod() == 'post') {
@@ -167,8 +167,8 @@ class Home extends BaseController
 
         // $this->pre($post);
 
-        $field=['username','password'];
-        $data=[$post['post']['username'],$post['post']['password']];
+        $field = ['username', 'password'];
+        $data = [$post['post']['username'], $post['post']['password']];
         $res = $model->where2('t_dosen', $field, $data); // validasi username password
 
         // $this->pre($post);
@@ -177,14 +177,15 @@ class Home extends BaseController
         // echo count($res);
 
         if (count($res) > 0) { //verivikasi data login
-            echo 'login sukses <br>';
-            $dir=lcfirst($post['kategori']).'/home';
+            // echo 'login sukses <br>';
+            $dir = lcfirst($post['kategori']) . '/home';
             // return view('dosen/home', $post);
             // return redirect()->to(base_url('/xxx'));
-        return redirect()->to('../Home');
-
+            return redirect()->to('../Home');
+            
         } else {
-            echo 'login failed';
+            // echo 'login failed';
+            return redirect()->to('../Home');
         }
 
 
