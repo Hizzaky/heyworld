@@ -31,8 +31,8 @@ class Home extends BaseController
             if ($this->validate($rules)) {
                 // return redirect()->to(base_url('/login/sukses?s=dosen'));
                 $data['post'] = $_POST;
-                return redirect()->to(base_url('../dosen'));
-                // $this->sukses($data);
+                // return redirect()->to(base_url('../dosen'));
+                $this->sukses($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -177,18 +177,18 @@ class Home extends BaseController
 
         // echo count($res);
 
-        if (count($res) > 0) { //verivikasi data login
-            // echo 'login sukses <br>';
-            $dir = lcfirst($post['kategori']) . '/home';
-            // return view('dosen/home', $post);
-            // return redirect()->to(base_url('/xxx'));
-            return redirect()->to('../Home');
-            
-        } else {
-            // echo 'login failed';
-            return redirect()->to('../Home');
-        }
+        return redirect()->to(base_url('../dosen'));
 
+
+        // if (count($res) > 0) { //verivikasi data login
+        //     $dir = lcfirst($post['kategori']) . '/home';
+        //     return redirect()->to('../Home');
+            
+        // } else {
+        //     return redirect()->to('../Home');
+        // }
+        
+        // return view('dosen/home', $post);
 
         //$model->save($data);   //command untuk push data ke table
         //$var=$model->find($data);   //command untuk mengambil data dari table
