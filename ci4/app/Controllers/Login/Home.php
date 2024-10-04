@@ -184,16 +184,18 @@ class Home extends BaseController
 
         // echo count($res);
         // return redirect()->to(base_url('dosen'));
-        return redirect()->to('dosen');
-
-
-        // if (count($res) > 0) { //verivikasi data login
-        //     $dir = lcfirst($post['kategori']) . '/home';
-        //     return redirect()->to('../Home');
+        // return redirect()->to('dosen');
+        
+        
+        if (count($res) > 0) { //verivikasi data login
+            // $dir = lcfirst($kategori['kategori']) . '/home';
+            $dir=lcfirst($kategori);
+            return redirect()->to($dir);
+            // return redirect()->to('../Home');
             
-        // } else {
-        //     return redirect()->to('../Home');
-        // }
+        } else {
+            return redirect()->to('/fakultas');
+        }
         
         // return view('dosen/home', $post);
 
