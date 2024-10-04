@@ -29,7 +29,7 @@
                 <input class="btn btn-success right" type="submit" name="submit" value="Masuk Sebagai ">
             </form>
             <!-- <input class="btn btn-primary right" name="register" value="Daftar Akun "> -->
-            <a class="btn btn-outline-primary reg" href="/daftar">Daftar</a>
+            <a class="btn btn-outline-primary reg" href="/daftar">Daftarrr</a>
         </div>
     </div>
 
