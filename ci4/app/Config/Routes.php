@@ -17,7 +17,9 @@ $routes->setAutoRoute(true);
 
 
 
+// $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::index');
+$routes->add('homepage', 'Homepage::index');
 
 // $routes->add('dosen', 'Login\Login::dosen');
 // $routes->add('prodi', 'Login::prodi');
