@@ -38,5 +38,5 @@ $routes->group('login',function($routes){
 
 $routes->group('dosen',function($routes){
     $routes->add('/','Dosen\Home::index');
-
+ 
 });
