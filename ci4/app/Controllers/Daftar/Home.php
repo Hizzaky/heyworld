@@ -23,7 +23,7 @@ class Home extends BaseController
             }
         }
 
-        // return view('daftar/daftar',$data);
+        return view('daftar/daftar',$data);
     }
     public function register(){
         $this->pre($_POST);
