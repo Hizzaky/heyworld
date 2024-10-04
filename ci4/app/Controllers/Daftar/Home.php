@@ -9,7 +9,7 @@ class Home extends BaseController
     public function index(): string
     {
         helper('form');
-        $data=$this->arData();
+        $data = $this->arData();
 
         if ($this->request->getMethod() == 'post') {
 
@@ -17,25 +17,35 @@ class Home extends BaseController
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
-                // $this->prosesRegister($data);
-                echo 'valid';
+                $this->register($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
         }
 
-        return view('daftar/daftar',$data);
+        return view('daftar/daftar', $data);
     }
-    public function register(){
-        $this->pre($_POST);
+    public function register($data)
+    {
+        $db = db_connect();
+        $model = new CustomModel($db);
+
+        $this->pre($data);
+
+        // $field = ['username', 'password'];
+        // $data = [$username, $password];
+        // $tbl = 't_' . lcfirst($kategori);
+        // $res = $model->where2($tbl, $field, $data); // validasi username password
+        // $ret='';
+        // return $ret;
     }
     protected function arData()
     {
         $data = [
             'meta_title' => 'Daftar SIM UMMAT',
             'header_title' => 'Silahkan Lengkapi Form Pendaftaran',
-            'kategori' => ['Dosen','Prodi','Fakultas'],
-            'menu'=>'daftar'
+            'kategori' => ['Dosen', 'Prodi', 'Fakultas'],
+            'menu' => 'daftar'
         ];
         return $data;
     }
@@ -53,7 +63,7 @@ class Home extends BaseController
                 'rules' => 'required',
                 'label' => 'Nama Lengkap',
                 'errors' => [
-                    'required' => 'Inputkan Nama dengan benar!'
+                    'required' => 'Inputkan Nama Lengkap Anda dengan benar!'
                 ]
             ],
             'password' => [
@@ -66,17 +76,5 @@ class Home extends BaseController
         ];
         return $rules;
     }
-    protected function prosesRegister($data){
-        $db = db_connect();
-        $model = new CustomModel($db);
 
-        $this->pre($data);
-
-        // $field = ['username', 'password'];
-        // $data = [$username, $password];
-        // $tbl = 't_' . lcfirst($kategori);
-        // $res = $model->where2($tbl, $field, $data); // validasi username password
-        // $ret='';
-        // return $ret;
-    }
 }
