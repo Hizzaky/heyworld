@@ -18,7 +18,7 @@ class Home extends BaseController
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
-                $this->register($data);
+                $this->register($_POST);
             } else {
                 $data['validasi'] = $this->validator;
             }
