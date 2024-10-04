@@ -1,3 +1,1 @@
-<pre>
-    <?= $post ?>
-</pre>
+<?= $kategori ?>
