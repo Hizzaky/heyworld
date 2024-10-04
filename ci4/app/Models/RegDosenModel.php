@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use CodeIgniter\Model;
@@ -14,7 +13,7 @@ class RegDosenModel extends Model
     // protected $returnType = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nama_dosen','username', 'password','status'];
+    protected $allowedFields = ['nidn','nama_dosen','username', 'password'];
 
     // protected bool $allowEmptyInserts = false;
     // protected bool $updateOnlyChanged = true;
@@ -53,10 +52,10 @@ class RegDosenModel extends Model
 
 
 
-    // protected $beforeInsert = ['hashPassword'];
-    // public function hashPassword(array $data)
-    // {
-    //     $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
-    //     return $data;
-    // }
+    protected $beforeInsert = ['hashPassword'];
+    public function hashPassword(array $data)
+    {
+        $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+        return $data;
+    }
 }

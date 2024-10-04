@@ -3,6 +3,7 @@
 namespace App\Controllers\Daftar;
 use App\Controllers\BaseController;
 use App\Models\CustomModel;
+use App\Models\RegDosenModel;
 
 class Home extends BaseController
 {
@@ -28,9 +29,19 @@ class Home extends BaseController
     public function register($data)
     {
         $db = db_connect();
-        $model = new CustomModel($db);
+        $customModel = new CustomModel($db);
+        $model=new RegDosenModel();
 
-        $this->pre($data);
+        // $this->pre($data);
+
+        ;
+
+        if($model->save($data)){
+            echo 'upload sukses';
+        }else{
+
+            echo 'upload failed';
+        }
 
         // $field = ['username', 'password'];
         // $data = [$username, $password];
