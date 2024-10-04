@@ -76,7 +76,16 @@
                     <li class="nav-item dropdown form-inline">
                         <a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?= $var = isset($kategori) ? "Sebagai " . $kategori : "Login " ?>
+                            <?php 
+                            if($menu=='login'){
+                                echo 'sebagai'.$kategori;
+
+                            }
+                            if($menu=='daftar'){
+                                echo 'Login';
+                            }
+                            ?>
+                            <?= //$var = isset($kategori) ? "Sebagai " . $kategori : "Login " ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/login/dosen">Sebagai Dosen</a>

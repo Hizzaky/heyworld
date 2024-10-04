@@ -158,7 +158,8 @@ class Home extends BaseController
         $data = [
             'meta_title' => 'Login ' . $kategori . ' SIM UMMAT',
             'header_title' => 'Silahkan Login Dengan Akun',
-            'kategori' => $kategori
+            'kategori' => $kategori,
+            'menu'=>'login'
         ];
         return $data;
     }

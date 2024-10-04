@@ -17,7 +17,8 @@ class Home extends BaseController
         $data = [
             'meta_title' => 'Daftar SIM UMMAT',
             'header_title' => 'Silahkan Lengkapi Form Pendaftaran',
-            'kategori' => ['Dosen','Prodi','Fakultas']
+            'kategori' => ['Dosen','Prodi','Fakultas'],
+            'menu'=>'daftar'
         ];
         return $data;
     }
