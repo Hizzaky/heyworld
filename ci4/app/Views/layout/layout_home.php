@@ -18,6 +18,9 @@
     .right {
         float: right;
     }
+    .left {
+        /* float: left; */
+    }
 
     .pad {
         padding-top: 10%;
