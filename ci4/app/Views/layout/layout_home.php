@@ -13,11 +13,10 @@
     <title><?= $meta_title ?></title>
 </head>
 <style>
-   
-
     .right {
         float: right;
     }
+
     .reg {
         /* float: left; */
         /* text-decoration: none; */
@@ -30,6 +29,7 @@
     .mrg-login {
         margin-top: 10%;
     }
+
     .mrg-home {
         margin-top: 5%;
     }
@@ -76,13 +76,12 @@
                     <li class="nav-item dropdown form-inline">
                         <a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php 
-                            if(isset($menu)){
+                            <?php
+                            if (isset($menu)) {
 
-                                if($menu=='login'){
-                                    echo 'sebagai'.$kategori;
-                                    
-                                }else{
+                                if ($menu == 'login') {
+                                    echo 'Sebagai ' . $kategori;
+                                } else {
                                     echo 'Login';
                                 }
                             } else {
@@ -93,7 +92,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/login/dosen">Sebagai Dosen</a>
                             <a class="dropdown-item" href="/login/prodi">Sebagai Prodi</a>
-                            <a class="dropdown-item" href="/login/fakultas">Sebagai Fakultas</a> 
+                            <a class="dropdown-item" href="/login/fakultas">Sebagai Fakultas</a>
                         </div>
                         <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <form action="login/dosen" method="post">

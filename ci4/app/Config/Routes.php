@@ -30,7 +30,7 @@ $routes->add('homepage', 'Homepage\Home::index');
 
 // $routes->get('/sukses', 'Login\Login::sukses');
 
-$routes->group('login', function ($routes) {
+$routes->group('Login', function ($routes) {
     $routes->add('/', 'Login\Home::index');
     $routes->add('dosen', 'Login\Home::dosen');
     $routes->add('prodi', 'Login\Home::prodi');
