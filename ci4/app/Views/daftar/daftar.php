@@ -26,9 +26,9 @@
                         placeholder="Inputkan Password">
                 </div><hr>
                 <!-- <button type="submit" class="btn btn-primary right" >Masuk</button> -->
-                <input class="btn btn-success right" type="submit" name="submit" value="Masuk Sebagai <?= $kategori ?>">
+                <input class="btn btn-success right" type="submit" name="submit" value="Masuk Sebagai ">
             </form>
-            <!-- <input class="btn btn-primary right" name="register" value="Daftar Akun <?= $kategori ?>"> -->
+            <!-- <input class="btn btn-primary right" name="register" value="Daftar Akun "> -->
             <a class="btn btn-outline-primary reg" href="/daftar">Daftar</a>
         </div>
     </div>
