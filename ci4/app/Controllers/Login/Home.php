@@ -10,7 +10,7 @@ class Home extends BaseController
         // echo $kat;
         return redirect()->to('../Home');
 
-       
+
 
 
 
@@ -28,12 +28,12 @@ class Home extends BaseController
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
                 // return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
-                $this->sukses2($_POST,$kategori);
-                // if($login=='1'){
-                //     return redirect()->to('Dosen');
-                // }else{
-                //     echo 'login fail';
-                // }
+                $login = $this->sukses($_POST, $kategori);
+                if ($login == '1') {
+                    return redirect()->to('Dosen');
+                } else {
+                    echo 'Login Gagal';
+                }
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -158,23 +158,23 @@ class Home extends BaseController
             'meta_title' => 'Login ' . $kategori . ' SIM UMMAT',
             'header_title' => 'Silahkan Login Dengan Akun',
             'kategori' => $kategori,
-            'menu'=>'login'
+            'menu' => 'login'
         ];
         return $data;
     }
-    public function hashPassword( $data)
+    public function hashPassword($data)
     {
-        $password= password_hash($data, PASSWORD_DEFAULT);
+        $password = password_hash($data, PASSWORD_DEFAULT);
         return $password;
     }
     // public function sukses($username,$password,$kategori)
-    public function sukses($post,$kategori)
+    public function sukses2($post, $kategori)
     {
         $db = db_connect();
         $model = new CustomModel($db);
-        
-        $username=$post['username'];
-        $password=$post['password'];
+
+        $username = $post['username'];
+        $password = $post['password'];
         // $password=$post['password'];
         // echo '<br>';
         // echo $password;
@@ -186,18 +186,18 @@ class Home extends BaseController
         $field = ['username', 'password'];
         // $data = [$username, $this->hashPassword($password)];
         $data = [$username, $password];
-        $tbl='t_'.lcfirst($kategori);
+        $tbl = 't_' . lcfirst($kategori);
         $res = $model->where2($tbl, $field, $data); // validasi username password
 
-        
+
         if (count($res) > 0) { //verivikasi data login
             // $dir=lcfirst($kategori);
-            $return['cek']='1';
-            $return['login']=$res;
+            $return['cek'] = '1';
+            $return['login'] = $res;
             // return redirect()->to($dir);
             return $return;
         } else {
-            $return['cek']='0';
+            $return['cek'] = '0';
             return $return;
             // return redirect()->back();
         }
@@ -223,35 +223,41 @@ class Home extends BaseController
 
 
     }
-    public function sukses2($post,$kategori)
+    public function sukses($post, $kategori)
     {
         $db = db_connect();
         $model = new CustomModel($db);
-        
-        $username=$post['username'];
-        $password=$post['password'];
-        $field = ['username', 'password'];
-        $data = [$username, $password];
-        $tbl='t_'.lcfirst($kategori);
-        $res = $model->where1($tbl, 'username', $username); // validasi username password
 
-        
-        if(count($res)==0){
-            echo 'kosong';
-        }else{
-            echo 'verif username\n';
+        $username = $post['username'];
+        $password = $post['password'];
+        $field = 'username';
+        $data = $username;
+        $tbl = 't_' . lcfirst($kategori);
+        $res = $model->where1($tbl, $field, $data); // validasi username password
+
+
+        if (count($res) == 0) {
+            echo 'Login Gagal';
+        } else {
+            // echo 'verif username';
             $this->pre($res);
-            if(password_verify($password,$res[0]['password'])){
-                echo '<hr> verif password berhasil';
-            }else{
-                echo 'password fail';
+            if (password_verify($password, $res[0]['password'])) {
+                // echo '<hr> verif password berhasil';
+                $return = [
+                    'login' => '1',
+                    'data' => $res
+                ];
+                return $return;
+            } else {
+                $return['login'] = '0';
+                return $return;
             }
         }
 
 
 
-        
+
 
     }
-    
+
 }
