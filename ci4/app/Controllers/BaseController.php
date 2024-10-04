@@ -55,4 +55,11 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
+    // protected $pre=$this->pre('a');
+    public function pre($data)
+    {
+        echo '<pre>';
+        print_r($data);
+        echo '</pre><hr>';
+    }
 }

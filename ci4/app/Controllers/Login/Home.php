@@ -180,7 +180,7 @@ class Home extends BaseController
         $res = $model->where2($tbl, $field, $data); // validasi username password
 
         // $this->pre($post);
-        $this->pre($res);
+        // $this->pre($res);
 
         // echo count($res);
         // return redirect()->to(base_url('dosen'));
@@ -208,10 +208,5 @@ class Home extends BaseController
 
 
     }
-    public function pre($data)
-    {
-        echo '<pre>';
-        print_r($data);
-        echo '</pre><hr>';
-    }
+    
 }
