@@ -171,9 +171,10 @@ class Home extends BaseController
         $data=[$post['post']['username'],$post['post']['password']];
         $res = $model->where2('t_dosen', $field, $data); // validasi username password
 
-        $this->pre($post);
-        $this->pre($res);
+        // $this->pre($post);
+        // $this->pre($res);
 
+        echo count($res);
 
         if (count($res) == 1) { //verivikasi data login
             // echo 'login sukses';
