@@ -77,10 +77,15 @@
                         <a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <?php 
-                            if($menu=='login'){
-                                echo 'sebagai'.$kategori;
+                            if(isset($menu)){
 
-                            }else{
+                                if($menu=='login'){
+                                    echo 'sebagai'.$kategori;
+                                    
+                                }else{
+                                    echo 'Login';
+                                }
+                            } else {
                                 echo 'Login';
                             }
                             ?>
