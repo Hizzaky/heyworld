@@ -18,8 +18,9 @@
     .right {
         float: right;
     }
-    .left {
+    .reg {
         /* float: left; */
+        text-decoration: none;
     }
 
     .pad {

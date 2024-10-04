@@ -31,7 +31,7 @@
                 <input class="btn btn-primary right" type="submit" name="submit" value="Masuk Sebagai <?= $kategori ?>">
             </form>
             <!-- <input class="btn btn-primary right" name="register" value="Daftar Akun <?= $kategori ?>"> -->
-            <a class="btn btn warning left" href="/register">Daftar Akun <?= $kategori ?></a>
+            <a class="btn btn-warning reg" href="/register">Daftar</a>
         </div>
     </div>
 
