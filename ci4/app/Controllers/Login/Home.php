@@ -176,11 +176,11 @@ class Home extends BaseController
 
         echo count($res);
 
-        if (count($res) == 1) { //verivikasi data login
-            // echo 'login sukses';
+        if (count($res) > 0) { //verivikasi data login
+            echo 'login sukses <br>';
             $dir=lcfirst($post['kategori']).'/home';
             // return view('dosen/home', $post);
-            return redirect()->to(base_url('xxx'));
+            return redirect()->to(base_url('/xxx'));
         } else {
             echo 'login failed';
         }
