@@ -183,7 +183,7 @@ class Home extends BaseController
 
         // echo count($res);
         // return redirect()->to(base_url('dosen'));
-        return redirect()->to('x');
+        return redirect()->to('dosen');
 
 
         // if (count($res) > 0) { //verivikasi data login

@@ -7,7 +7,7 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return 'redirect sukses';
+        return 'redirect login dosen sukses';
         // return view('dosen/home');
     }
 }
