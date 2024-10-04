@@ -80,8 +80,7 @@
                             if($menu=='login'){
                                 echo 'sebagai'.$kategori;
 
-                            }
-                            if($menu=='daftar'){
+                            }else{
                                 echo 'Login';
                             }
                             ?>
