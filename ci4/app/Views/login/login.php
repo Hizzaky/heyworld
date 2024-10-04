@@ -36,7 +36,7 @@
                     <!-- <input class="btn btn-primary right" name="register" value="Daftar Akun <?= $kategori ?>"> -->
                     <a class="btn btn-outline-primary reg" href="/register">Daftar</a>
                 </div>
-            </div>
+            </div> 
         </div>
 
 </div>
