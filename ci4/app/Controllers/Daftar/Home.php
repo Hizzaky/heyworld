@@ -9,7 +9,7 @@ class Home extends BaseController
     {
         $data=$this->arData();
 
-        return view('daftar',$data);
+        return view('daftar/daftar',$data);
     }
     protected function arData()
     {
