@@ -35,7 +35,7 @@ class Home extends BaseController
         // $this->pre($data);
 
         ;
-
+        $data['username']=$data['nidn'];
         if($model->save($data)){
             echo 'upload sukses';
         }else{
