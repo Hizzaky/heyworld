@@ -9,7 +9,8 @@ class Home extends BaseController
     {
         $data=[
             "meta_title"=> "SIM UMMAT",
-            "content"=> "halaman homepage"
+            "content"=> "halaman homepage",
+            'menu'=>'Login'
         ];
         // $data['content']=$kategori ? $kategori : $data['content'];
         return view('homepage/homepage', $data);
