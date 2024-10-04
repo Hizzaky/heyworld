@@ -179,7 +179,7 @@ class Home extends BaseController
             // echo 'login sukses';
             $dir=lcfirst($post['kategori']).'/home';
             // return view('dosen/home', $post);
-            return redirect()->to('../Dosen');
+            return redirect()->to(base_url('xxx'));
         } else {
             echo 'login failed';
         }
