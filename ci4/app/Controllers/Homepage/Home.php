@@ -12,7 +12,7 @@ class Home extends BaseController
             "content"=> "halaman homepage"
         ];
         // $data['content']=$kategori ? $kategori : $data['content'];
-        return view('homepage', $data);
+        return view('homepage/homepage', $data);
     }
     
         
