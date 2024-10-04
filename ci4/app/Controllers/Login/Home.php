@@ -162,7 +162,7 @@ class Home extends BaseController
         ];
         return $data;
     }
-    public function sukses($post)
+    public function sukses($username,$password,$kategori)
     {
         // $db = db_connect();
         // $model = new CustomModel($db);
