@@ -17,7 +17,7 @@ class Home extends BaseController
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
-                $this->prosesRegister($data);
+                $this->register($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -25,8 +25,21 @@ class Home extends BaseController
 
         return view('daftar/daftar',$data);
     }
-    public function register(){
-        $this->pre($_POST);
+    protected function register($data){
+
+        $db = db_connect();
+        $model = new CustomModel($db);
+
+        $this->pre($data);
+        $this->pre($data);
+
+        // $field = ['username', 'password'];
+        // $data = [$username, $password];
+        // $tbl = 't_' . lcfirst($kategori);
+        // $res = $model->where2($tbl, $field, $data); // validasi username password
+        // $ret='';
+        // return $ret;
+
     }
     protected function arData()
     {
@@ -65,17 +78,5 @@ class Home extends BaseController
         ];
         return $rules;
     }
-    protected function prosesRegister($data){
-        $db = db_connect();
-        $model = new CustomModel($db);
-
-        $this->pre($data);
-
-        // $field = ['username', 'password'];
-        // $data = [$username, $password];
-        // $tbl = 't_' . lcfirst($kategori);
-        // $res = $model->where2($tbl, $field, $data); // validasi username password
-        // $ret='';
-        // return $ret;
-    }
+    
 }
