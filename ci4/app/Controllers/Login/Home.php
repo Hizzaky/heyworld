@@ -32,7 +32,8 @@ class Home extends BaseController
                 // return redirect()->to(base_url('/login/sukses?s=dosen'));
                 $data['post'] = $_POST;
                 // return redirect()->to(base_url('../dosen'));
-                $this->sukses($data);
+                // $this->sukses($data);
+                return redirect()->to('/sukses', $_POST['username']/$_POST['password']/$kategori);
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -174,8 +175,8 @@ class Home extends BaseController
         // $this->pre($res);
 
         // echo count($res);
-
-        return redirect()->to(base_url('../dosen'));
+        echo 'login sukses';
+        // return redirect()->to(base_url('../dosen'));
 
 
         // if (count($res) > 0) { //verivikasi data login
