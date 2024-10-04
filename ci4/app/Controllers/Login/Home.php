@@ -162,15 +162,13 @@ class Home extends BaseController
     }
     public function sukses($post)
     {
-        $db = db_connect();
-        $model = new CustomModel($db);
-        // $var=$model->find($data);   //command untuk mengambil data dari table
+        // $db = db_connect();
+        // $model = new CustomModel($db);
 
-        // $this->pre($post);
 
-        $field = ['username', 'password'];
-        $data = [$post['post']['username'], $post['post']['password']];
-        $res = $model->where2('t_dosen', $field, $data); // validasi username password
+        // $field = ['username', 'password'];
+        // $data = [$post['post']['username'], $post['post']['password']];
+        // $res = $model->where2('t_dosen', $field, $data); // validasi username password
 
         // $this->pre($post);
         // $this->pre($res);
