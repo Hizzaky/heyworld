@@ -164,23 +164,24 @@ class Home extends BaseController
     }
     public function sukses($username,$password,$kategori)
     {
-        // $db = db_connect();
-        // $model = new CustomModel($db);
-
-
-        // $field = ['username', 'password'];
-        // $data = [$post['post']['username'], $post['post']['password']];
-        // $res = $model->where2('t_dosen', $field, $data); // validasi username password
-
-        // $this->pre($post);
-        // $this->pre($res);
-
-        // echo count($res);
+        $db = db_connect();
+        $model = new CustomModel($db);
+        
         echo $username;
         echo '<br>';
         echo $password;
         echo '<br>';
         echo $kategori;
+
+        $field = ['username', 'password'];
+        $data = [$username, $password];
+        $tbl='t_'.lcfirst($kategori);
+        $res = $model->where2($tbl, $field, $data); // validasi username password
+
+        // $this->pre($post);
+        $this->pre($res);
+
+        // echo count($res);
         // return redirect()->to(base_url('../dosen'));
 
 
