@@ -27,7 +27,13 @@ class Home extends BaseController
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
-                return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
+                // return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
+                $login=$this->sukses($_POST,$kategori);
+                if($login=='1'){
+                    return redirect()->to('Dosen')
+                }else{
+                    echo 'login fail';
+                }
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -161,12 +167,15 @@ class Home extends BaseController
         $password= password_hash($data, PASSWORD_DEFAULT);
         return $password;
     }
-    public function sukses($username,$password,$kategori)
+    // public function sukses($username,$password,$kategori)
+    public function sukses($post,$kategori)
     {
         $db = db_connect();
         $model = new CustomModel($db);
         
-        // echo $username;
+        $username=$post['username'];
+        $password=$post['password'];
+        // $password=$post['password'];
         // echo '<br>';
         // echo $password;
         // echo '<br>';
@@ -175,16 +184,21 @@ class Home extends BaseController
 
 
         $field = ['username', 'password'];
-        $data = [$username, $this->hashPassword($password)];
+        // $data = [$username, $this->hashPassword($password)];
+        $data = [$username, $password];
         $tbl='t_'.lcfirst($kategori);
         $res = $model->where2($tbl, $field, $data); // validasi username password
 
         
         if (count($res) > 0) { //verivikasi data login
-            $dir=lcfirst($kategori);
-            return redirect()->to($dir);
+            // $dir=lcfirst($kategori);
+            $return['cek']='1';
+            $return['login']=$res;
+            // return redirect()->to($dir);
+            return $return;
         } else {
-            return 'login gagal';
+            $return['cek']='0';
+            return $return;
             // return redirect()->back();
         }
 
