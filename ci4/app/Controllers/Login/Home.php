@@ -239,7 +239,13 @@ class Home extends BaseController
         if(count($res)==0){
             echo 'kosong';
         }else{
+            echo 'verif username\n';
             $this->pre($res);
+            if(password_verify($password,$res[0]['password'])){
+                echo '<hr> verif password berhasil';
+            }else{
+                echo 'password fail';
+            }
         }
 
 
