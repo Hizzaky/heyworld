@@ -9,10 +9,10 @@
             <?= $header_title . " " . $kategori ?>
         </h3>
         <div class="card-body">
-            <?php if (isset($validasi)) : ?>
-                <div class="text-danger">
-                    <?= $validasi->listErrors() ?>
-                </div>
+            <?php if (isset($validasi)): ?>
+                    <div class="text-danger">
+                        <?= $validasi->listErrors() ?>
+                    </div>
             <?php endif; ?>
             <form method="post" >
                 <div class="form-group">
