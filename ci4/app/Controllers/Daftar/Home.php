@@ -2,6 +2,7 @@
 
 namespace App\Controllers\Daftar;
 use App\Controllers\BaseController;
+use App\Models\CustomModel;
 
 class Home extends BaseController
 {
@@ -10,7 +11,19 @@ class Home extends BaseController
         helper('form');
         $data=$this->arData();
 
-        return view('daftar/daftar',$data);
+        if ($this->request->getMethod() == 'post') {
+
+            $rules = $this->rule();
+
+            if ($this->validate($rules)) {
+                $data['post'] = $_POST;
+                $this->prosesRegister($data);
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
+
+        // return view('daftar/daftar',$data);
     }
     public function register(){
         $this->pre($_POST);
@@ -24,5 +37,45 @@ class Home extends BaseController
             'menu'=>'daftar'
         ];
         return $data;
+    }
+    protected function rule()
+    {
+        $rules = [
+            'nidn' => [
+                'rules' => 'required',
+                'label' => 'NIDN',
+                'errors' => [
+                    'required' => 'Inputkan NIDN dengan benar!'
+                ]
+            ],
+            'nama_dosen' => [
+                'rules' => 'required',
+                'label' => 'Nama Lengkap',
+                'errors' => [
+                    'required' => 'Inputkan Nama dengan benar!'
+                ]
+            ],
+            'password' => [
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Inputkan Password dengan benar!',
+                    'min_length' => 'Password minimal 8 digit!'
+                ]
+            ]
+        ];
+        return $rules;
+    }
+    protected function prosesRegister($data){
+        $db = db_connect();
+        $model = new CustomModel($db);
+
+        $this->pre($data);
+
+        // $field = ['username', 'password'];
+        // $data = [$username, $password];
+        // $tbl = 't_' . lcfirst($kategori);
+        // $res = $model->where2($tbl, $field, $data); // validasi username password
+        // $ret='';
+        // return $ret;
     }
 }

@@ -140,7 +140,7 @@ class Home extends BaseController
                 'rules' => 'required',
                 'label' => 'Usename',
                 'errors' => [
-                    'required' => 'Inputkan username dengan benar!'
+                    'required' => 'Inputkan Username dengan benar!'
                 ]
             ],
             'password' => [
