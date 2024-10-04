@@ -7,7 +7,7 @@
         <span></span>
     </div> -->
     <!-- <div class="card col-12 col-sm-6 col-md-6 mrg-login"> -->
-    <div class="card col-12 col-sm-6 col-md-6">
+    <div class="card col-12 col-sm-6 col-md-6 center">
         <h3 class="card-header ">
             <?= $header_title . " " . $kategori ?>
         </h3>

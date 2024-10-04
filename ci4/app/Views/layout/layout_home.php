@@ -33,6 +33,9 @@
     .mrg-home {
         margin-top: 5%;
     }
+    .center{
+        align-self: center;
+    }
 </style>
 
 <body>
