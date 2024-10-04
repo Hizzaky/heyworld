@@ -25,7 +25,7 @@ class Home extends BaseController
 
         return view('daftar/daftar',$data);
     }
-    protected function register($data){
+    public function register($data){
 
         $db = db_connect();
         $model = new CustomModel($db);
