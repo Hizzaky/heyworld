@@ -39,7 +39,7 @@ $routes->group('Login', function ($routes) {
     $routes->add('sukses/(:any)/(:any)/(:any)', 'Login\Home::sukses/$1/$2/$3');
 });
 
-$routes->group('daftar', function ($routes) {
+$routes->group('Daftar', function ($routes) {
     $routes->add('/', 'Daftar\Home::index');
     $routes->add('register', 'Daftar\Home::register');
 
