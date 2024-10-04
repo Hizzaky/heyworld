@@ -5,7 +5,7 @@ use App\Controllers\BaseController;
 use App\Models\CustomModel;
 class Home extends BaseController
 {
-    public function index($kat)
+    public function index()
     {
         // echo $kat;
         return redirect()->to('../Home');
