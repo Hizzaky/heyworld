@@ -1,3 +1,3 @@
 <pre>
-    <?= $data ?>
+    <?= $post ?>
 </pre>
