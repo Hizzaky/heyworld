@@ -33,7 +33,7 @@ class Home extends BaseController
                     return redirect()->to('Dosen');
                 } else {
                     // echo 'Login Gagal';
-                    $data['validasi'] = 'Username/Password Tidak Valid!';
+                    $data['validasi'] = ['Username/Password Tidak Valid!'];
 
                 }
             } else {
