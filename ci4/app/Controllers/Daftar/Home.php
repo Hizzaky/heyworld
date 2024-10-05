@@ -18,7 +18,13 @@ class Home extends BaseController
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
-                $this->register($_POST);
+
+                echo $cek=$this->cekUser($data);
+
+
+                echo 'proses register';
+                // $this->register($_POST);
+
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -88,8 +94,8 @@ class Home extends BaseController
                 'rules' => 'required|matches[password]',
                 'label'=>'Konfirmasi Password',
                 'errors'=>[
-                    'required'=>'Konfirmasi Password dengan benar!',
-                    'matches'=>'Password harus sama'
+                    'required'=>'Konfirmasi Password tidak sesuai!',
+                    'matches'=>'Konfirmasi Password tidak sesuai'
                 ]
             ]
         ];

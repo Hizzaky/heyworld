@@ -9,6 +9,8 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+use App\Models\CustomModel;
+
 /**
  * Class BaseController
  *
@@ -61,5 +63,35 @@ abstract class BaseController extends Controller
         echo '<pre>';
         print_r($data);
         echo '</pre><hr>';
+    }
+    public function cekUser($data){
+        $db = db_connect();
+        $customModel = new CustomModel($db);
+
+        return $data['kategori'][0];
+        // $kategori=$data['kategori'][0];
+        // $field = 'nidn';
+        // $data = $data['nidn'];
+        // $tbl = 't_' . lcfirst($kategori);
+        // $res = $model->where1($tbl, $field, $data); // validasi username password
+
+
+        // if (count($res) == 0) {
+        //     $return['login'] = '0';
+        //     return $return;
+        // } else {
+        //     if (password_verify($password, $res[0]['password'])) {
+        //         $return = [
+        //             'login' => '1',
+        //             'data' => $res
+        //         ];
+        //         return $return;
+        //     } else {
+        //         $return['login'] = '0';
+        //         return $return;
+        //     }
+        // }
+        
+        // return '';
     }
 }
