@@ -20,6 +20,7 @@ class Home extends BaseController
         helper(['form']);
         $kategori = 'Dosen';
         $data = $this->arData($kategori);
+        $session=session();
 
         if ($this->request->getMethod() == 'post') {
 
@@ -35,7 +36,7 @@ class Home extends BaseController
                     // echo 'Login Gagal';
                     // $data['validasi'] = ['login'=>'Username/Password Tidak Valid!'];
                     // $data['validasi'] = $this->validator->getErrors();
-                    $data['fail']='Username/Password tidak valid!';
+                    $data['fail']= $session->setFlashdata('loginFail','Username/Password tidak valid!');
                 }
             } else {
                 $data['validasi'] = $this->validator;
