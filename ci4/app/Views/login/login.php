@@ -10,11 +10,7 @@
         </h3>
         <div class="card-body">
             
-            <?php if (isset($validasi)): ?>
-                <div class="text-danger">
-                    <?= $validasi->listErrors() ?> <!-- validasi form error -->
-                </div>
-            <?php endif; ?>
+            
             <form method="post">
                 <div class="form-group">
                     <label for="username">Username</label>
