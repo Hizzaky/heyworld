@@ -10,8 +10,8 @@
         </h3>
         <div class="card-body">
             <pre>
-                <?= print_r($session) ?>
-            </pre>
+            <?= $session['loginFail'] ?>
+        </pre>
             <?php if (isset($validasi)): ?>
                 <div class="text-danger">
                     <?= $validasi->listErrors() ?> <!-- validasi form error -->
