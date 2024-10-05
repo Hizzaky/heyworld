@@ -24,7 +24,6 @@
                     <label for="username">Username</label>
                     <input type="text" class="form-control" name="username" id="username" value="<?= set_value('username') ?>"
                         aria-describedby="help username" autofocus placeholder="Inputkan Username">
-                        <?= $validasi('username') ?>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
