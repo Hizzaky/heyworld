@@ -3,33 +3,34 @@
 <?= $this->section('konten') ?>
 
 <div class="row">
-    <div class="col-12 col-sm-3">    </div>
+    <div class="col-12 col-sm-3"> </div>
     <div class="card col-12 col-sm-6 col-md-6 mrg-login">
         <h3 class="card-header ">
             <?= $header_title . " " . $kategori ?>
         </h3>
         <div class="card-body">
-            <?php if (isset($validasi)) : ?>
+            <?php if (isset($validasi)): ?>
                 <div class="text-danger">
-                    <pre>
-                        
-                        <?= //$validasi->listErrors()
-                            print_r($validasi);
-                        ?>
-                    </pre>
+                    <?= $validasi->listErrors() ?> <!-- validasi form error -->
+                    <?php if(isset($fail)) ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= $fail ?>
+                    </div>
                 </div>
             <?php endif; ?>
-            <form method="post" >
+            <form method="post">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username" id="username" value="<?= set_value('username') ?>"
-                        aria-describedby="help username" autofocus placeholder="Inputkan Username">
+                    <input type="text" class="form-control" name="username" id="username"
+                        value="<?= set_value('username') ?>" aria-describedby="help username" autofocus
+                        placeholder="Inputkan Username">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" name="password" id="password"
                         placeholder="Inputkan Password">
-                </div><hr>
+                </div>
+                <hr>
                 <!-- <button type="submit" class="btn btn-primary right" >Masuk</button> -->
                 <input class="btn btn-success right" type="submit" name="submit" value="Masuk Sebagai <?= $kategori ?>">
             </form>

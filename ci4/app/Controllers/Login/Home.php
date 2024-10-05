@@ -32,10 +32,10 @@ class Home extends BaseController
                 if ($login['login'] == '1') {
                     return redirect()->to('Dosen');
                 } else {
-                    echo 'Login Gagal';
+                    // echo 'Login Gagal';
                     // $data['validasi'] = ['login'=>'Username/Password Tidak Valid!'];
-                    $data['validasi'] = $this->validator->getErrors();
-
+                    // $data['validasi'] = $this->validator->getErrors();
+                    $data['fail']='Username/Password tidak valid!';
                 }
             } else {
                 $data['validasi'] = $this->validator;
@@ -242,22 +242,17 @@ class Home extends BaseController
 
 
         if (count($res) == 0) {
-            echo 'Login Gagal';
             $return['login'] = '0';
             return $return;
         } else {
-            // echo 'verif username';
-            // $this->pre($res);
             if (password_verify($password, $res[0]['password'])) {
-                // echo '<hr> verif password berhasil';
                 $return = [
                     'login' => '1',
                     'data' => $res
                 ];
                 return $return;
             } else {
-                // $return['login'] = '0';
-                $return['login']= '0';
+                $return['login'] = '0';
                 return $return;
             }
         }
