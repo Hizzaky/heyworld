@@ -36,7 +36,8 @@ class Home extends BaseController
                     // echo 'Login Gagal';
                     // $data['validasi'] = ['login'=>'Username/Password Tidak Valid!'];
                     // $data['validasi'] = $this->validator->getErrors();
-                    $data['fail']= $session->setFlashdata('loginFail','Username/Password tidak valid!');
+                    // $data['fail']= 'Username/Password tidak valid!';
+                    $session->setFlashdata('loginFail','Username/Password tidak valid!');
                 }
             } else {
                 $data['validasi'] = $this->validator;
@@ -45,7 +46,7 @@ class Home extends BaseController
 
 
         // $this->cek($_POST);
-        return view('login/login', $data);
+        return view('login/login', $data,$session);
 
 
     }
