@@ -71,7 +71,7 @@ abstract class BaseController extends Controller
         // return $data['kategori'][0];
         $kategori=$data['kategori'][0];
         $field = 'nidn';
-        $data = $data['nidn'];
+        $data = $data['post']['nidn'];
         $tbl = 't_' . lcfirst($kategori);
         $res = $model->where1($tbl, $field, $data); // validasi username password
 
