@@ -19,13 +19,14 @@ class Home extends BaseController
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
 
-                $cek=$this->cekUser($data);
+                $cek = $this->cekUser($data);
 
-                $this->pre($cek);
+                if ($cek['cekUser'] == '0') {
 
-                echo 'proses register';
-                // $this->register($_POST);
-
+                    $this->register($_POST);
+                } else {
+                    $data['fail'] = 'NIDN Sudah Terdaftar!, Silahkan Hubungi Admin.';
+                }
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -37,15 +38,15 @@ class Home extends BaseController
     {
         $db = db_connect();
         $customModel = new CustomModel($db);
-        $model=new RegDosenModel();
+        $model = new RegDosenModel();
 
         // $this->pre($data);
 
         ;
-        $data['username']=$data['nidn'];
-        if($model->save($data)){
+        $data['username'] = $data['nidn'];
+        if ($model->save($data)) {
             echo 'upload sukses';
-        }else{
+        } else {
 
             echo 'upload failed';
         }
@@ -93,10 +94,10 @@ class Home extends BaseController
             ],
             'rePassword' => [
                 'rules' => 'required|matches[password]',
-                'label'=>'Konfirmasi Password',
-                'errors'=>[
-                    'required'=>'Konfirmasi Password tidak sesuai!',
-                    'matches'=>'Konfirmasi Password tidak sesuai'
+                'label' => 'Konfirmasi Password',
+                'errors' => [
+                    'required' => 'Konfirmasi Password tidak sesuai!',
+                    'matches' => 'Konfirmasi Password tidak sesuai'
                 ]
             ]
         ];
