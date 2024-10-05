@@ -34,7 +34,7 @@ class Home extends BaseController
                 } else {
                     echo 'Login Gagal';
                     // $data['validasi'] = ['login'=>'Username/Password Tidak Valid!'];
-                $data['validasi'] = $this->validator->getError('Username/Password Tidak Valid!');
+                $data['validasi'] = $this->validator->getErrors();
 
                 }
             } else {
