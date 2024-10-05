@@ -9,14 +9,14 @@
             <?= $header_title . " " . $kategori ?>
         </h3>
         <div class="card-body">
+            <?php if (isset($fail)): ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= $fail ?>
+                </div>
+            <?php endif; ?>
             <?php if (isset($validasi)): ?>
                 <div class="text-danger">
                     <?= $validasi->listErrors() ?> <!-- validasi form error -->
-                    <?php if (isset($fail)): ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?= $fail ?>
-                    </div>
-                    <?php endif;?>
                 </div>
             <?php endif; ?>
             <form method="post">
