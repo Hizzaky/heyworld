@@ -11,7 +11,7 @@
         <div class="card-body">
             <?php if (isset($fail)): ?>
                 <div class="alert alert-danger" role="alert">
-                    <?= $fail ?>
+                    <?= session()->getFlashdata($fail) ?>
                 </div>
             <?php endif; ?>
             <?php if (isset($validasi)): ?>
