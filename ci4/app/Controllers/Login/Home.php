@@ -32,7 +32,9 @@ class Home extends BaseController
                 if ($login['login'] == '1') {
                     return redirect()->to('Dosen');
                 } else {
-                    echo 'Login Gagal';
+                    // echo 'Login Gagal';
+                    $data['validasi'] = 'Username/Password Tidak Valid!';
+
                 }
             } else {
                 $data['validasi'] = $this->validator;
