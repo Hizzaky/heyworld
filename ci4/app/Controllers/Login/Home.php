@@ -26,7 +26,7 @@ class Home extends BaseController
             $rules = $this->rule();
 
             if ($this->validate($rules)) {
-                $data['post'] = $_POST;
+            $data['post'] = $_POST;
                 // return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
                 $login = $this->sukses($_POST, $kategori);
                 if ($login['login'] == '1') {
@@ -42,9 +42,11 @@ class Home extends BaseController
             }
         }
 
+        
         // $this->cek($_POST);
         return view('login/login', $data);
 
+        
     }
 
 
