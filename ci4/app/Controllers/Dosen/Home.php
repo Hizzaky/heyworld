@@ -7,8 +7,8 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return 'redirect login dosen sukses';
-        // return view('dosen/home');
+        $data=$this->arData();
+        return view('dosen/home',$data);
     }
 
     protected function arData()
