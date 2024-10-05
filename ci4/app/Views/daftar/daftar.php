@@ -44,7 +44,7 @@
                 </div>
                 <div class="form-group">
                     <label for="rePassword">Konfirmasi Password</label>
-                    <input type="rePassword" class="form-control" name="rePassword" id="rePassword"
+                    <input type="password" class="form-control" name="rePassword" id="rePassword"
                         placeholder="Ketik Ulang Password">
                 </div><hr>
                 <button type="submit" class="btn btn-success right" >Daftar</button>
