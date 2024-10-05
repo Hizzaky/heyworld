@@ -1,7 +1,7 @@
 <?= $this->extend('layout/layout_home') ?>
 
 <?= $this->section('konten') ?>
-<?php $session=session(); ?>
+
 <div class="row">
     <div class="col-12 col-sm-3"> </div>
     <div class="card col-12 col-sm-6 col-md-6 mrg-login">
@@ -9,9 +9,13 @@
             <?= $header_title . " " . $kategori ?>
         </h3>
         <div class="card-body">
-            <pre>
-            <?= $session->getFlashdata('loginFail') ?> 
-        </pre>
+            <?php if (isset($fail)): ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <?= $fail ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+            <?php endif; ?>
             <?php if (isset($validasi)): ?>
                 <div class="text-danger">
                     <?= $validasi->listErrors() ?> <!-- validasi form error -->
