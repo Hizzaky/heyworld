@@ -28,7 +28,7 @@ class Home extends BaseController
             if ($this->validate($rules)) {
             $data['post'] = $_POST;
                 // return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
-                $login = $this->sukses($_POST, $kategori);
+                $login = $this->cekAkun($_POST, $kategori);
                 if ($login['login'] == '1') {
                     return redirect()->to('Dosen');
                 } else {
@@ -228,7 +228,7 @@ class Home extends BaseController
 
 
     }
-    public function sukses($post, $kategori)
+    public function cekAkun($post, $kategori)
     {
         $db = db_connect();
         $model = new CustomModel($db);
