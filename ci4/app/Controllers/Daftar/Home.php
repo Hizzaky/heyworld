@@ -83,6 +83,9 @@ class Home extends BaseController
                     'required' => 'Inputkan Password dengan benar!',
                     'min_length' => 'Password minimal 8 digit!'
                 ]
+            ],
+            'rePassword' => [
+                'rules' => 'required|matches[password]'
             ]
         ];
         return $rules;
