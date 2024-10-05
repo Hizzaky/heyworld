@@ -11,7 +11,7 @@
         <div class="card-body">
             <?php if (isset($fail)): ?>
                 <!-- <div class="alert alert-danger" role="alert"> -->
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
 
                     <?= $fail ?>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
