@@ -10,7 +10,7 @@
         </h3>
         <div class="card-body">
             <pre>
-            <?= $session['loginFail'] ?>
+            <?= $session->getFlashdata('loginFail') ?>
         </pre>
             <?php if (isset($validasi)): ?>
                 <div class="text-danger">
