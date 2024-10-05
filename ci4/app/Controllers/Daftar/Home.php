@@ -19,8 +19,9 @@ class Home extends BaseController
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
 
-                echo $cek=$this->cekUser($data);
+                $cek=$this->cekUser($data);
 
+                $this->pre($cek);
 
                 echo 'proses register';
                 // $this->register($_POST);

@@ -66,14 +66,14 @@ abstract class BaseController extends Controller
     }
     public function cekUser($data){
         $db = db_connect();
-        $customModel = new CustomModel($db);
+        $model = new CustomModel($db);
 
-        return $data['kategori'][0];
-        // $kategori=$data['kategori'][0];
-        // $field = 'nidn';
-        // $data = $data['nidn'];
-        // $tbl = 't_' . lcfirst($kategori);
-        // $res = $model->where1($tbl, $field, $data); // validasi username password
+        // return $data['kategori'][0];
+        $kategori=$data['kategori'][0];
+        $field = 'nidn';
+        $data = $data['nidn'];
+        $tbl = 't_' . lcfirst($kategori);
+        $res = $model->where1($tbl, $field, $data); // validasi username password
 
 
         // if (count($res) == 0) {
@@ -92,6 +92,6 @@ abstract class BaseController extends Controller
         //     }
         // }
         
-        // return '';
+        return $res;
     }
 }
