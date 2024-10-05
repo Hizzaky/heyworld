@@ -254,7 +254,10 @@ class Home extends BaseController
                 ];
                 return $return;
             } else {
-                $return['login'] = '0';
+                // $return['login'] = '0';
+                $return = [
+                    'login' => '0'
+                ];
                 return $return;
             }
         }
