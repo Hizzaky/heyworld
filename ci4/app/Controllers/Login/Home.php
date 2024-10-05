@@ -28,19 +28,24 @@ class Home extends BaseController
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
                 // return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
-                $login = $this->sukses($_POST, $kategori);
+                $login = $this->cekAkun($_POST, $kategori);
                 if ($login['login'] == '1') {
                     return redirect()->to('Dosen');
                 } else {
                     echo 'Login Gagal';
+                    // $data['validasi'] = ['login'=>'Username/Password Tidak Valid!'];
+                    $data['validasi'] = $this->validator->getErrors();
+
                 }
             } else {
                 $data['validasi'] = $this->validator;
             }
         }
 
+
         // $this->cek($_POST);
         return view('login/login', $data);
+
 
     }
 
@@ -223,7 +228,7 @@ class Home extends BaseController
 
 
     }
-    public function sukses($post, $kategori)
+    public function cekAkun($post, $kategori)
     {
         $db = db_connect();
         $model = new CustomModel($db);
@@ -238,6 +243,8 @@ class Home extends BaseController
 
         if (count($res) == 0) {
             echo 'Login Gagal';
+            $return['login'] = '0';
+            return $return;
         } else {
             // echo 'verif username';
             // $this->pre($res);
@@ -249,7 +256,8 @@ class Home extends BaseController
                 ];
                 return $return;
             } else {
-                $return['login'] = '0';
+                // $return['login'] = '0';
+                $return['login']= '0';
                 return $return;
             }
         }
