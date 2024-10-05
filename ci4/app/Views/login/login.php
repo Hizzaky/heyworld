@@ -11,7 +11,12 @@
         <div class="card-body">
             <?php if (isset($validasi)) : ?>
                 <div class="text-danger">
-                    <?= $validasi->listErrors() ?>
+                    <pre>
+                        
+                        <?= //$validasi->listErrors()
+                            print_r($validasi);
+                        ?>
+                    </pre>
                 </div>
             <?php endif; ?>
             <form method="post" >
