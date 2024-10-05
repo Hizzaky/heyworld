@@ -1,4 +1,4 @@
-<?= $this->extend('layout/layout_home') ?>
+<?= $this->extend('layout/homepage/main') ?>
 
 <?= $this->section('konten') ?>
 
