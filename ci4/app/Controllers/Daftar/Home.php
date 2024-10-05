@@ -85,7 +85,12 @@ class Home extends BaseController
                 ]
             ],
             'rePassword' => [
-                'rules' => 'required|matches[password]'
+                'rules' => 'required|matches[password]',
+                'label'=>'Konfirmasi Password',
+                'errors'=>[
+                    'required'=>'Konfirmasi Password dengan benar!',
+                    'matches'=>'Password harus sama'
+                ]
             ]
         ];
         return $rules;
