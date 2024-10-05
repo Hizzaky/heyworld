@@ -12,10 +12,11 @@
             <?php if (isset($validasi)): ?>
                 <div class="text-danger">
                     <?= $validasi->listErrors() ?> <!-- validasi form error -->
-                    <?php if(isset($fail)) ?>
+                    <?php if (isset($fail)): ?>
                     <div class="alert alert-danger" role="alert">
                         <?= $fail ?>
                     </div>
+                    <?php endif?>
                 </div>
             <?php endif; ?>
             <form method="post">
