@@ -154,7 +154,9 @@ class Home extends BaseController
                     'min_length' => 'Password minimal 8 digit!'
                 ]
                 ],
-            'rePassword'=>'required|matches[password]'
+            'rePassword'=>[
+                'rules' => 'required|matches[password]'
+            ]
         ];
         return $rules;
     }
