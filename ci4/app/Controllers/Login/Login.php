@@ -29,12 +29,12 @@ class Login extends BaseController
 
         $sesi = session();
 
-        if (isset($_GET) AND $_GET['login']=='dosen') {
+        // if (isset($_GET) AND $_GET['login']=='dosen') {
             $ret='/Login';
             $sesi->set('jenis_login','dosen punya sesi');
-        }else{
-            $ret='/';
-        }
+        // }else{
+            // $ret='/';
+        // }
         return redirect()->to(base_url($ret));
     }
 }
