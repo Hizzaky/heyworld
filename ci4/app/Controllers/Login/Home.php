@@ -41,7 +41,7 @@ class Home extends BaseController
 
 
 
-        return 'index login';
+        return redirect()->to('/dosen');
         
 
     }
