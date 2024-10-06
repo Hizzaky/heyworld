@@ -90,7 +90,7 @@
                             ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/Login/Login/dosen">Sebagai Dosen</a>
+                            <a class="dropdown-item" href="/Login/Login">Sebagai Dosen</a>
                             <a class="dropdown-item" href="/Login/Login/prodi">Sebagai Prodi</a>
                             <a class="dropdown-item" href="/Login/Login/fakultas">Sebagai Fakultas</a>
                         </div>

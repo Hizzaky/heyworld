@@ -42,7 +42,7 @@ class Home extends BaseController
 
 
         // return redirect()->to('Login/Home/dosen');
-        return $this->dosen();
+        return $this->fakultas();
         
 
     }
