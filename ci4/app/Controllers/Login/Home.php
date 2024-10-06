@@ -7,7 +7,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        if (isset($_GET)) {
+        if (isset($_GET['login'])) {
             $sesi = session();
             if ($_GET['login'] == 'dosen') {
                 $sesi->set('jenis_login', 'dosen');
