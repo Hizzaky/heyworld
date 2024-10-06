@@ -34,15 +34,15 @@
         margin-top: 5%;
     }
 
-    div.top {
-        margin-top: 5%;
+    div.card-konten {
+        margin-top: 2%;
     }
 
     a.logout {
         color: red;
     }
     div.card-body{
-        border: solid red;
+        border: solid black round;
     }
 </style>
 
@@ -96,7 +96,7 @@
             </nav>
         </div>
         <div class="container"><br>
-            <div class="card top">
+            <div class="card card-konten">
                 <div class="card-body">
                     <!-- <h5 class="card-title">Card title</h5> -->
                     <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
