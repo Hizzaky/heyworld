@@ -33,7 +33,8 @@
     .mrg-home {
         margin-top: 5%;
     }
-    div.top{
+
+    div.top {
         margin-top: 5%;
     }
 </style>
@@ -42,7 +43,7 @@
     <div class="">
         <div class="container">
             <!-- <div class="top"></div> -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="/"><strong>SIM UMMAT</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -73,8 +74,9 @@
                     <li class="nav-item dropdown form-inline">
                         <a class="btn btn-danger nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php $sesi=session();
-                            echo $sesi->get('nama_dosen');
+                            <?php $sesi = session();
+                            $sesiLogin = $sesi->get('login');
+                            echo $sesiLogin['nama_dosen'];
                             ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -84,11 +86,11 @@
                         </div>
                     </li>
                 </div>
-        </nav>
-    </div>
-    <div class="container">
-        <?= $this->renderSection('konten') ?>
-    </div>
+            </nav>
+        </div>
+        <div class="container">
+            <?= $this->renderSection('konten') ?>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->

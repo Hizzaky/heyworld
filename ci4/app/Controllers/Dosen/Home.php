@@ -9,19 +9,19 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        $sesi=session();
+        // $sesi=session();
         $model=new Dosen();
 
         $data=$model->arData();
 
-        echo $this->pre($sesi->get('login'));
+        // echo $this->pre($sesi->get('login'));
 
-        $dataSesi=$sesi->get('login');
+        // $sesiLogin=$sesi->get('login');
         // echo 'NIDN : '.$sesi->get('login')->get('nidn');
-        echo $dataSesi['nidn'];
+        // echo $sesiLogin['nidn'];
 
-        // return view('dosen/home',$data);
-        return '';
+        return view('dosen/home',$data);
+        // return '';
     }
 
     
