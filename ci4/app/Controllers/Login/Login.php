@@ -16,13 +16,15 @@ class Login extends BaseController
             }
             if ($_GET['login'] == 'fakultas') {
                 $sesi->set('login','fakultas');
-            }else{
-                return redirect()->to(base_url('/'));
             }
+            // else{
+            //     return redirect()->to(base_url('/'));
+            // }
             $ret = '/Login';
-            
+            // echo 'sesi terbaca';
         } else {
-            $ret = '/';
+            // $ret = '/';
+            // echo 'sesi kosong';
         }
 
         return redirect()->to(base_url($ret));
