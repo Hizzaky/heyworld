@@ -37,12 +37,19 @@
     div.top {
         margin-top: 5%;
     }
+
+    a.logout {
+        color: red;
+    }
+    div.card-body{
+        border-color: solid black;
+    }
 </style>
 
 <body>
     <div class="">
         <div class="container">
-            <!-- <div class="top"></div> -->
+            <div class="top"></div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="/"><strong>SIM UMMAT</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -82,14 +89,24 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <!-- <a class="dropdown-item" href="/Login/dosen">Sebagai Dosen</a>
                             <a class="dropdown-item" href="/Login/prodi">Sebagai Prodi</a> -->
-                            <a class="dropdown-item" href="/Login/fakultas">Logout</a>
+                            <a class="dropdown-item logout" href="/Login/fakultas">Logout</a>
                         </div>
                     </li>
                 </div>
             </nav>
         </div>
         <div class="container">
-            <?= $this->renderSection('konten') ?>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the -->
+                        <!-- card's content.</p> -->
+                        <?= $this->renderSection('konten') ?>
+                    <!-- <a href="#" class="card-link">Card link</a> -->
+                    <!-- <a href="#" class="card-link">Another link</a> -->
+                </div>
+            </div>
         </div>
     </div>
 
