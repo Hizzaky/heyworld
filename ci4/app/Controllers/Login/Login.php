@@ -19,7 +19,7 @@ class Login extends BaseController
             }else{
                 return redirect()->to(base_url('/'));
             }
-            $ret = '/Login';
+            $ret = '/Login/Home';
             
         } else {
             $ret = '/';
