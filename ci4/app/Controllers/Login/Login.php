@@ -17,7 +17,7 @@ class Login extends BaseController
             if ($_GET['login'] == 'fakultas') {
                 $sesi->set('login=fakultas');
             }else{
-                return redirect()->to('/');
+                return redirect()->to(base_url('/'));
             }
             $ret = '/Login';
             
