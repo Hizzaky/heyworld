@@ -33,46 +33,88 @@
     .mrg-home {
         margin-top: 5%;
     }
+    div.top{
+        margin-top: 5%;
+    }
 </style>
 
 <body>
     <div class="">
         <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+            <div class="top"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+                <a class="navbar-brand" href="/"><strong>SIM UMMAT</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- <a class="dropdown-item" href="#">Sebagai Dosen</a>
+                            <a class="dropdown-item" href="#">Sebagai Prodi</a>
+                            <a class="dropdown-item" href="llogin">Sebagai Fakultas</a> -->
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <!-- <form class=" my-2 my-lg-0"> -->
+                    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <!-- <a class="btn form-inline btn-outline-success my-2 my-sm-0" href="Login">Login</a> -->
+                    <!-- </form> -->
+                    <li class="nav-item dropdown form-inline">
+                        <a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php
+                            if (isset($menu)) {
+
+                                if ($menu == 'login') {
+                                    echo 'Sebagai ' . $kategori;
+                                } else {
+                                    echo 'Login';
+                                }
+                            } else {
+                                echo 'Login';
+                            }
+                            ?>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/Login/dosen">Sebagai Dosen</a>
+                            <a class="dropdown-item" href="/Login/prodi">Sebagai Prodi</a>
+                            <a class="dropdown-item" href="/Login/fakultas">Sebagai Fakultas</a>
+                        </div>
+                        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <form action="login/dosen" method="post">
+                            <input type="text" name="login" value="dosen" hidden>
+                            <button class="btn dropdown-item " style="cursor='pointer'" >Akun Dosen</button>
+                        </form>
+                        <form action="login" method="post">
+                            <input type="text" name="login" value="prodi" hidden>
+                            <button class="btn dropdown-item" >Akun Prodi</button>
+                        </form>
+                        <form action="login" method="post">
+                            <input type="text" name="login" value="fakultas" hidden>
+                            <button class="btn dropdown-item" >Akun Fakultas</button>
+                        </form>
+                    </div> -->
+                    </li>
+                </div>
+        </nav>
     </div>
     <div class="container">
         <?= $this->renderSection('konten') ?>
