@@ -13,7 +13,7 @@ class Home extends BaseController
         $sesi=session();
         echo 'ini sesi '.$sesi->get('jenis_login');
         
-        $data=$model->arData('data');
+        $data=$model->arData(ucfirst($sesi->get('jenis_login')));
         
         
         

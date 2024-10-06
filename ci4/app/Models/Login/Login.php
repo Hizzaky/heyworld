@@ -150,7 +150,7 @@ class Login extends BaseController
         ];
         return $rules;
     }
-    protected function arData($kategori)
+    public function arData($kategori)
     {
         $data = [
             'meta_title' => 'Login ' . $kategori . ' SIM UMMAT',
