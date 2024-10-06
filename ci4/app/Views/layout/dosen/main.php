@@ -42,7 +42,7 @@
         color: red;
     }
     div.card-body{
-        border-color: solid black;
+        border: solid red;
     }
 </style>
 
@@ -95,8 +95,8 @@
                 </div>
             </nav>
         </div>
-        <div class="container">
-            <div class="card" style="width: 18rem;">
+        <div class="container"><br>
+            <div class="card top">
                 <div class="card-body">
                     <!-- <h5 class="card-title">Card title</h5> -->
                     <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
