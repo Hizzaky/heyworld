@@ -7,10 +7,11 @@ class Home extends BaseController
 {
     public function index()
     {
-        // $model=new login();
+        $model=new login();
 
-        // $sesi=session();
-        // echo 'ini sesi '.$sesi->get('jenis_login');
+        $sesi=session();
+
+        echo 'ini sesi '.$sesi->get('jenis_login');
         
         
         // $data=$model->dosen(ucfirst($sesi->get('jenis_login')));
@@ -42,7 +43,7 @@ class Home extends BaseController
 
 
         // return redirect()->to('Login/Home/dosen');
-        return $this->fakultas();
+        return '';
         
 
     }
