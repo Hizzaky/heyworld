@@ -45,7 +45,7 @@ $routes->group('Daftar', function ($routes) {
 
 });
 
-$routes->group('Dosen', function ($routes) {
-    $routes->add('/', 'Dosen\Home::index');
+// $routes->group('Dosen', function ($routes) {
+//     $routes->add('/', 'Dosen\Home::index');
 
-});
+// });
