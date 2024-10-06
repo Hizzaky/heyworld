@@ -44,13 +44,16 @@
     div.card-body{
         border: solid black round;
     }
+    nav.rnd{
+        border-style: round;
+    }
 </style>
 
 <body>
     <div class="">
         <div class="container">
             <div class="mrg-home"></div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark rnd">
                 <a class="navbar-brand" href="/"><strong>SIM UMMAT</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -89,7 +92,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <!-- <a class="dropdown-item" href="/Login/dosen">Sebagai Dosen</a>
                             <a class="dropdown-item" href="/Login/prodi">Sebagai Prodi</a> -->
-                            <a class="dropdown-item logout" href="/Login/fakultas">Logout</a>
+                            <a class="dropdown-item logout" href="">Logout</a>
                         </div>
                     </li>
                 </div>
