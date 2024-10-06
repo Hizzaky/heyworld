@@ -38,7 +38,7 @@ class Daftar
 
         return $return;
     }
-    protected function arData()
+    public function arData()
     {
         $data = [
             'meta_title' => 'Daftar SIM UMMAT',
@@ -48,7 +48,7 @@ class Daftar
         ];
         return $data;
     }
-    protected function rule()
+    public function rule()
     {
         $rules = [
             'nidn' => [
