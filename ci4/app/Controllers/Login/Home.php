@@ -41,7 +41,7 @@ class Home extends BaseController
 
 
 
-        return redirect()->to('/dosen');
+        return redirect()->to(base_url('/dosen'));
         
 
     }
