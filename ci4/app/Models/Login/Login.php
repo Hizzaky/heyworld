@@ -6,70 +6,7 @@ use App\Models\CustomModel;
 class Login extends BaseController
 {
 
-    public function dosen($kategori)
-    {
-        helper(['form']);
-        $data = $this->arData($kategori);
-
-        if ($this->request->getMethod() == 'post') {
-
-            $rules = $this->rule();
-
-            if ($this->validate($rules)) {
-                $data['post'] = $_POST;
-                $login = $this->cekAkun($_POST, $kategori);
-                if ($login['login'] == '1') {
-                    return redirect()->to('Dosen');
-                } else {
-                    $data['fail'] = 'Username/Password tidak valid!';
-                }
-            } else {
-                $data['validasi'] = $this->validator;
-            }
-        }
-        // return view('login/login', $data);
-        // return $data;
-    }
-
-
-    public function dosen2()
-    {
-        helper(['form']);
-        $kategori = 'Dosen';
-        $data = $this->arData($kategori);
-        // $session=session();
-// $session->setFlashdata('loginFail','Username/Password tidak valid!')
-
-        if ($this->request->getMethod() == 'post') {
-
-            $rules = $this->rule();
-
-            if ($this->validate($rules)) {
-                $data['post'] = $_POST;
-                // return redirect()->to('/Login/sukses/' . $_POST['username'] . '/' . $_POST['password'] . '/' . $kategori);
-                $login = $this->cekAkun($_POST, $kategori);
-                if ($login['login'] == '1') {
-                    return redirect()->to('Dosen');
-                } else {
-                    // echo 'Login Gagal';
-// $data['validasi'] = ['login'=>'Username/Password Tidak Valid!'];
-// $data['validasi'] = $this->validator->getErrors();
-                    $data['fail'] = 'Username/Password tidak valid!';
-                }
-            } else {
-                $data['validasi'] = $this->validator;
-            }
-        }
-
-
-        // $this->cek($_POST);
-        return view('login/login', $data);
-
-
-    }
-
-
-
+    
 
 
 
@@ -156,7 +93,7 @@ class Login extends BaseController
         $ar = explode(" ", $data);
         return $ar[2];
     }
-    protected function rule()
+    public function rule()
     {
         $rules = [
             'username' => [
