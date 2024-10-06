@@ -41,7 +41,7 @@ class Home extends BaseController
 
 
 
-        return redirect()->to(base_url('fakultas'));
+        return redirect()->to('Login/Home/dosen');
         
 
     }
