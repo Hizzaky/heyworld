@@ -18,16 +18,40 @@ class Home extends BaseController
             if ($_GET['login'] == 'fakultas') {
                 $sesi->set('jenis_login', 'fakultas');
             }
-            $ret = '/Login/'.$_GET['login'];
+            $ret = '/Login/' . $_GET['login'];
         } else {
             $ret = '/';
         }
         return redirect()->to(base_url($ret));
-
     }
     public function dosen()
     {
-        return 'halaman dosen';
+        $model = new Login;
+
+        helper(['form']);
+
+        $sesi = session();
+
+        $kategori = ucfirst($sesi->get('jenis_login'));
+        $data = $model->arData($kategori);
+
+        if ($this->request->getMethod() == 'post') {
+
+            $rules = $model->rule();
+
+            if ($this->validate($rules)) {
+                $data['post'] = $_POST;
+                $login = $model->cekAkun($_POST, $kategori);
+                if ($login['login'] == '1') {
+                    return redirect()->to('Dosen');
+                } else {
+                    $data['fail'] = 'Username/Password tidak valid!';
+                }
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
+        return view('login/login', $data);
     }
     public function prodi()
     {
