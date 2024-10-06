@@ -9,7 +9,7 @@ class Login extends BaseController
         // if (isset($_GET)) {
             $sesi = session();
         //     if ($_GET['login'] == 'dosen') {
-                $sesi->set('login=dosen');
+                $sesi->set('login','dosen');
         //     }
         //     if ($_GET['login'] == 'prodi') {
         //         $sesi->set('login=prodi');
@@ -27,7 +27,7 @@ class Login extends BaseController
 
         // return redirect()->to(base_url($ret));
         return $sesi->get('login');
-
+ 
 
     }
  
