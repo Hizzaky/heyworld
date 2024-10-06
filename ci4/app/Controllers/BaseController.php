@@ -64,24 +64,5 @@ abstract class BaseController extends Controller
         print_r($data);
         echo '</pre><hr>';
     }
-    public function cekUser($data)
-    {
-        $db = db_connect();
-        $model = new CustomModel($db);
-
-        // return $data['kategori'][0];
-        $kategori = $data['kategori'][0];
-        $field = 'nidn';
-        $data = $data['post']['nidn'];
-        $tbl = 't_' . lcfirst($kategori);
-        $res = $model->where1($tbl, $field, $data); // validasi username password
-
-        if (count($res) == 0) {
-            $return['cekUser'] = '0';
-        } else {
-            $return['cekUser'] = '1';
-        }
-
-        return $return;
-    }
+    
 }
