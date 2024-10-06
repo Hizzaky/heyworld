@@ -211,7 +211,7 @@ class Login extends BaseController
                     'nidn' => $res[0]['nidn'],
                     'nama_dosen' => $res[0]['nama_dosen']
                 ];
-                $sesi->set('login', $dataUser);
+                $sesi->set( $dataUser);
                 return $return;
             } else {
                 $return['login'] = '0';
