@@ -31,7 +31,7 @@ class Login extends BaseController
 
         if (isset($_GET) AND $_GET['login']=='dosen') {
             $ret='/Login';
-            $sesi->set('jenis_login','dosen');
+            $sesi->set('jenis_login','dosen punya sesi');
         }else{
             $ret='/';
         }
