@@ -15,7 +15,7 @@ class Home extends BaseController
         $data=$model->arData();
 
         echo $this->pre($sesi->get('login'));
-        echo $sesi->get('nidn');
+        echo 'NIDN : '.$sesi->get('login')->get('nidn');
         // echo $_SESSION['login']['nidn'];
 
         // return view('dosen/home',$data);
