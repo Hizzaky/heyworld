@@ -25,7 +25,7 @@ class Login extends BaseController
             $ret = '/';
         }
 
-        return redirect()->to($ret);
+        return redirect()->to(base_url($ret));
 
 
     }
