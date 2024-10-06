@@ -6,7 +6,33 @@ use App\Models\CustomModel;
 class Login extends BaseController
 {
 
-    public function dosen()
+    public function dosen($kategori)
+    {
+        helper(['form']);
+        $data = $this->arData($kategori);
+
+        if ($this->request->getMethod() == 'post') {
+
+            $rules = $this->rule();
+
+            if ($this->validate($rules)) {
+                $data['post'] = $_POST;
+                $login = $this->cekAkun($_POST, $kategori);
+                if ($login['login'] == '1') {
+                    return redirect()->to('Dosen');
+                } else {
+                    $data['fail'] = 'Username/Password tidak valid!';
+                }
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
+        // return view('login/login', $data);
+        return $data;
+    }
+
+
+    public function dosen2()
     {
         helper(['form']);
         $kategori = 'Dosen';
