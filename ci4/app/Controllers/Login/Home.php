@@ -55,11 +55,11 @@ class Home extends BaseController
     }
     public function prodi()
     {
-        return 'halaman prodi';
+        return 'halaman login prodi';
     }
     public function fakultas()
     {
-        return 'halaman fakultas';
+        return 'halaman login fakultas';
     }
 
 
