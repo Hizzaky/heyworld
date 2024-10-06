@@ -6,7 +6,7 @@ use App\Models\CustomModel;
 class Login extends BaseController
 {
 
-    
+
 
 
 
@@ -187,7 +187,10 @@ class Login extends BaseController
     public function cekAkun($post, $kategori)
     {
         $db = db_connect();
+
         $model = new CustomModel($db);
+
+        $sesi = session();
 
         $username = $post['username'];
         $password = $post['password'];
@@ -202,10 +205,13 @@ class Login extends BaseController
             return $return;
         } else {
             if (password_verify($password, $res[0]['password'])) {
-                $return = [
-                    'login' => '1',
-                    'data' => $res
+                $return['login'] = '1';
+                $dataUser = [
+                    'dosen_id' => $res[0]['dosen_id'],
+                    'nidn' => $res[0]['nidn'],
+                    'nama_dosen' => $res[0]['nama_dosen']
                 ];
+                $sesi->set('login', $dataUser);
                 return $return;
             } else {
                 $return['login'] = '0';
