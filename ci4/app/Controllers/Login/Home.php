@@ -41,7 +41,8 @@ class Home extends BaseController
 
 
 
-        return redirect()->to(base_url('/dosen'));
+        // return redirect()->to('Login/Home/dosen');
+        return $this->dosen();
         
 
     }
