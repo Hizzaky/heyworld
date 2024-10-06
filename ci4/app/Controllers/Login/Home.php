@@ -14,10 +14,10 @@ class Home extends BaseController
         echo 'ini sesi '.$sesi->get('jenis_login');
         
         
-        // $data=$model->dosen(ucfirst($sesi->get('jenis_login')));
+        $data=$model->dosen(ucfirst($sesi->get('jenis_login')));
         
         
-        // return view('login/login', $data);
+        return view('login/login', $data);
 
 
 
@@ -43,7 +43,7 @@ class Home extends BaseController
 
 
         // return redirect()->to('Login/Home/dosen');
-        return '';
+        // return '';
         
 
     }
