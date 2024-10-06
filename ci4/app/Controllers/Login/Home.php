@@ -10,8 +10,8 @@ class Home extends BaseController
         // return redirect()->to('../Home');
 
         $sesi=session();
-        echo 'index login';
-        return $sesi->get('login');
+        echo $sesi->get('login');
+        return '';
 
 
 
