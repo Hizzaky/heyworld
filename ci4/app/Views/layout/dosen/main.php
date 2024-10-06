@@ -41,7 +41,7 @@
 <body>
     <div class="">
         <div class="container">
-            <div class="top"></div>
+            <!-- <div class="top"></div> -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
                 <a class="navbar-brand" href="/"><strong>SIM UMMAT</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
