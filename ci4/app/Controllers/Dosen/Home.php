@@ -14,7 +14,7 @@ class Home extends BaseController
 
         $data=$model->arData();
 
-        $this->pre($sesi->get('login'));
+        echo $this->pre($sesi->get('login'));
 
         return view('dosen/home',$data);
     }
