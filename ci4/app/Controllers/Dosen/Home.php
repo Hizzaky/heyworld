@@ -17,6 +17,7 @@ class Home extends BaseController
         echo $this->pre($sesi->get('login'));
 
         // return view('dosen/home',$data);
+        return '';
     }
 
     
