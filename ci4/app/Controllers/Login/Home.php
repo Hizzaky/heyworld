@@ -10,7 +10,7 @@ class Home extends BaseController
         // return redirect()->to('../Home');
 
         $sesi=session();
-        echo $sesi->get('login');
+        echo 'ini sesi '.$sesi->get('login');
         return '';
 
 
