@@ -45,7 +45,7 @@
         border: solid black round;
     }
     nav.rnd{
-        border-style: round;
+        border-radius: 5px;
     }
 </style>
 
