@@ -36,7 +36,7 @@
                     <select class="form-control" name="username" id="username">
                         <option class="center" value="">-- Silahkan pilih Fakultas anda --</option>
                        
-                        <?php foreach ($program_studi as $x => $val): ?>
+                        <?php foreach ($fakultas as $x => $val): ?>
                             <option value=<?= $val['username'] ?>><?= $val['nama_fakultas'] ?></option>
                         <?php endforeach ?>
                     </select>
