@@ -98,8 +98,8 @@
                             <?php if (isset($sesiLogin['nama_dosen'])): ?>
                                 <form action="/logUserOut" method="post">
                                     <!-- <a class="dropdown-item logout" href="">Logout</a> -->
-                                    <button class="dropdown-item logout btn" type="submit"
-                                        style="color: red;">Logout</button>
+                                    <a class="dropdown-item logout btn" type="submit"
+                                        style="color: red;">Logout</a>
                                 </form>
                             <?php else: ?>
                                 <a class="dropdown-item" href="/Login?login=dosen">Sebagai Dosen</a>
