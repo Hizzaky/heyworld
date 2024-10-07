@@ -150,10 +150,10 @@ class Login extends BaseController
         } else {
             if (password_verify($password, $res[0]['password'])) {
                 $return['login'] = '1';
-                $this->userData($res[0],$jenis_user);
+                $dataUser=$this->userData($res[0],$jenis_user);
 
-                // $sesi->set('login', $dataUser);
-                // return $return;
+                $sesi->set('login', $dataUser);
+                return $return;
             } else {
                 $return['login'] = '0';
                 return $return;
@@ -161,7 +161,7 @@ class Login extends BaseController
         }
     }
     protected function userData($data,$jenis_user){
-        if($jenis_user=='dosen'){
+        if($jenis_user=='Dosen'){
             $dataUser = [
                 'user_id' => $data['dosen_id'],
                 'nidn' => $data['nidn'],
@@ -169,7 +169,7 @@ class Login extends BaseController
                 'jenis_user' => ucfirst($jenis_user)
             ];
         }
-        if($jenis_user=='prodi'){
+        if($jenis_user=='Prodi'){
             $dataUser = [
                 'user_id' => $data['prodi_id'],
                 'nidn' => $data['nidn'],
@@ -177,7 +177,7 @@ class Login extends BaseController
                 'jenis_user' => ucfirst($jenis_user)
             ];
         }
-        if($jenis_user=='fakultas'){
+        if($jenis_user=='Fakultas'){
             $dataUser = [
                 'user_id' => $data['fakultas_id'],
                 'nidn' => $data['nidn'],
@@ -185,7 +185,6 @@ class Login extends BaseController
                 'jenis_user' => ucfirst($jenis_user)
             ];
         }
-        // return $dataUser;
-        echo $jenis_user;
+        return $dataUser;
     }
 }
