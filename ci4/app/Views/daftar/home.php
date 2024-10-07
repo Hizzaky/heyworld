@@ -14,24 +14,6 @@
                         <!-- aria-hidden="true">&times;</span></button> -->
             </div>
         <?php endif; ?>
-        <?php
-        if (isset($_GET['l'])) {
-
-            if ($_GET['l'] == 'fakultas') {
-                // $this->include('daftar/fakultas');
-                // redirect()->to('asdasdasdasd');
-                echo 'fakultas';
-            }
-            if ($_GET['l'] == 'prodi') {
-                // $this->include('daftar/prodi');
-                // echo 'prodi';
-            }
-            if ($_GET['l'] == 'dosen') {
-                // $this->include('daftar/dosen');
-                // echo 'dosen';
-            }
-        }
-        ?>
     </div>
 
 </div>
