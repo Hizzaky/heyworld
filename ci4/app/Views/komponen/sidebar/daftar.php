@@ -6,9 +6,9 @@
     <div class="col-7">
         <div class="">
 
-            <li class="list-group-item "><a class="btn" href="/Daftar/dosen">Dosen</a></li>
-            <li class="list-group-item "><a class="btn" href="/Daftar/prodi">Prodi</a></li>
-            <li class="list-group-item "><a class="btn" href="/Daftar/fakultas">Fakulas</a></li>
+            <li class="list-group-item "><a class="btn form-control" href="/Daftar/dosen">Dosen</a></li>
+            <li class="list-group-item "><a class="btn form-control" href="/Daftar/prodi">Prodi</a></li>
+            <li class="list-group-item "><a class="btn form-control" href="/Daftar/fakultas">Fakulas</a></li>
         </div>
     </div>
 </div>
