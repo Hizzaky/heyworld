@@ -17,13 +17,13 @@
         <?php
         if (isset($_GET['l'])) {
 
-            if ($_GET['l' == 'fakultas']) {
+            if ($_GET['l'] == 'fakultas') {
                 $this->include('fakultas');
             }
-            if ($_GET['l' == 'prodi']) {
+            if ($_GET['l'] == 'prodi') {
                 $this->include('prodi');
             }
-            if ($_GET['l' == 'dosen']) {
+            if ($_GET['l'] == 'dosen') {
                 $this->include('dosen');
             }
         }
