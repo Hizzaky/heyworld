@@ -8,7 +8,7 @@ class Home extends BaseController
     public function index()
     {
         $dataSesi=session();
-        $sesi=$dataSesi['login'];
+        $sesi=$dataSesi->get('login');
         if(isset($sesi['jenis_login'])){
             
         // return redirect()->to(base_url($ret));
