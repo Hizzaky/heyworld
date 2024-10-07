@@ -71,24 +71,26 @@ class Home extends BaseController
 
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         $data = $model->arData($jenis_user);
+        $data['program_studi'] = $model->getData($jenis_user);
 
-        if ($this->request->getMethod() == 'post') {
 
-            $rules = $model->ruleProdi();
+        // if ($this->request->getMethod() == 'post') {
 
-            if ($this->validate($rules)) {
-                $data['post'] = $_POST;
-                $login = $model->cekAkun($_POST, $jenis_user);
-                if ($login['login'] == '1') {
-                    return redirect()->to('Dashboard/Prodi');
-                } else {
-                    $data['fail'] = 'Username/Password tidak valid!';
-                }
-                // $this->pre($_POST);
-            } else {
-                $data['validasi'] = $this->validator;
-            }
-        }
+        //     $rules = $model->ruleProdi();
+
+        //     if ($this->validate($rules)) {
+        //         $data['post'] = $_POST;
+        //         $login = $model->cekAkun($_POST, $jenis_user);
+        //         if ($login['login'] == '1') {
+        //             return redirect()->to('Dashboard/Prodi');
+        //         } else {
+        //             $data['fail'] = 'Username/Password tidak valid!';
+        //         }
+        //         // $this->pre($_POST);
+        //     } else {
+        //         $data['validasi'] = $this->validator;
+        //     }
+        // }
         return view('login/prodi', $data);
     }
     public function fakultas()
@@ -103,7 +105,7 @@ class Home extends BaseController
         $data = $model->arData($jenis_user);
         $data['program_studi']=$model->getData($jenis_user);
 
-        $this->pre($data);
+        // $this->pre($data);
 
         // if ($this->request->getMethod() == 'post') {
 
