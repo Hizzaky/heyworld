@@ -20,12 +20,12 @@ class Home extends BaseController
             if ($_GET['login'] == 'dosen') {
                 $sesi->set('jenis_user', 'dosen');
             }
-            // if ($_GET['login'] == 'prodi') {
-            //     $sesi->set('jenis_user', 'prodi');
-            // }
-            // if ($_GET['login'] == 'fakultas') {
-            //     $sesi->set('jenis_user', 'fakultas');
-            // }
+            if ($_GET['login'] == 'prodi') {
+                $sesi->set('jenis_user', 'prodi');
+            }
+            if ($_GET['login'] == 'fakultas') {
+                $sesi->set('jenis_user', 'fakultas');
+            }
             $ret = '/Login/' . $_GET['login'];
         } else {
             $ret = '/';
