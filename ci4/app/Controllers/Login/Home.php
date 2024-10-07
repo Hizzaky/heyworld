@@ -73,6 +73,8 @@ class Home extends BaseController
         $data = $model->arData($jenis_user);
         $data['program_studi'] = $model->getData($jenis_user);
 
+        $this->pre($data);
+
 
         // if ($this->request->getMethod() == 'post') {
 
