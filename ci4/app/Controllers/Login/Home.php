@@ -7,6 +7,14 @@ class Home extends BaseController
 {
     public function index()
     {
+        $dataSesi=session();
+        $sesi=$dataSesi['login'];
+        if(isset($sesi['jenis_login'])){
+            
+        // return redirect()->to(base_url($ret));
+            return redirect()->to(ucfirst($sesi['jenis_login']));
+        }
+
         if (isset($_GET['login'])) {
             $sesi = session();
             if ($_GET['login'] == 'dosen') {

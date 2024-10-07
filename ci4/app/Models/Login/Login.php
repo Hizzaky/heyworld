@@ -196,7 +196,8 @@ class Login extends BaseController
         $password = $post['password'];
         $field = 'username';
         $data = $username;
-        $tbl = 't_' . lcfirst($kategori);
+        $kategori = lcfirst($kategori);
+        $tbl = 't_' . $kategori;
         $res = $model->where1($tbl, $field, $data); // validasi username password
 
 
@@ -209,9 +210,10 @@ class Login extends BaseController
                 $dataUser = [
                     'dosen_id' => $res[0]['dosen_id'],
                     'nidn' => $res[0]['nidn'],
-                    'nama_dosen' => $res[0]['nama_dosen']
+                    'nama_dosen' => $res[0]['nama_dosen'],
+                    'jenis_login' => $kategori
                 ];
-                $sesi->set( 'login',$dataUser);
+                $sesi->set('login', $dataUser);
                 return $return;
             } else {
                 $return['login'] = '0';
