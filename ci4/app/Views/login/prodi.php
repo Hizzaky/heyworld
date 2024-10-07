@@ -44,7 +44,7 @@
                         <?php 
                         foreach ($program_studi as $x => $val) {
                             
-                            echo '<option value=$x["username"]>$x["nama_prodi"]</option>';
+                            echo '<option value=$x[username]>$x[nama_prodi]</option>';
                         }
                         ?>
                     </select>
