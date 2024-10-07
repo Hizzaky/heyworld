@@ -37,10 +37,6 @@
     div.card-konten {
         margin-top: 2%;
     }
-
-    .logout {
-        color: red;
-    }
     div.card-body{
         border: solid black round;
     }
@@ -94,7 +90,7 @@
                             <a class="dropdown-item" href="/Login/prodi">Sebagai Prodi</a> -->
                             <form action="/logUserOut" method="post">
                                 <!-- <a class="dropdown-item logout" href="">Logout</a> -->
-                                 <button class="dropdown-item logout btn" type="submit">Logout</button>
+                                 <button class="dropdown-item logout btn" type="submit" style="color:red;">Logout</button>
                             </form>
                         </div>
                     </li> 

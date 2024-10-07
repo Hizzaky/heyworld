@@ -73,17 +73,19 @@
                     <!-- <a class="btn form-inline btn-outline-success my-2 my-sm-0" href="Login">Login</a> -->
                     <!-- </form> -->
                     <li class="nav-item dropdown form-inline">
-                        <a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php $sesi = session();
+                        
+                        <?php $sesi = session();
                             $sesiLogin = $sesi->get('login');
                             if(isset($sesiLogin['nama_dosen'])){
-
+                                echo '<a class="btn btn-danger nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                                 echo $sesiLogin['nama_dosen'];
                             }else{
                                 if (isset($menu)) {
 
                                 if ($menu == 'login') {
+                                    echo '<a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                                     echo 'Sebagai ' . $kategori;
                                 } else {
                                     echo 'Login';
@@ -98,7 +100,7 @@
                             <?php if(isset($sesiLogin['nama_dosen'])): ?>
                                 <form action="/logUserOut" method="post">
                                     <!-- <a class="dropdown-item logout" href="">Logout</a> -->
-                                    <button class="dropdown-item logout btn" type="submit">Logout</button>
+                                    <button class="dropdown-item logout btn" type="submit" style="color: red;">Logout</button>
                                 </form>
                                 <?php else: ?>
                                 <a class="dropdown-item" href="/Login?login=dosen">Sebagai Dosen</a>
