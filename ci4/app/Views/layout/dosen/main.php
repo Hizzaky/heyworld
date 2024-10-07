@@ -98,7 +98,7 @@
 
                             </form>
                         </div>
-                    </li>
+                    </li> 
                 </div>
             </nav>
         </div>
@@ -107,7 +107,7 @@
                 <div class="card-body">
                         <?= $this->renderSection('konten') ?>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 
