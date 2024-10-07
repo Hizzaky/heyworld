@@ -73,19 +73,18 @@
                     <!-- <a class="btn form-inline btn-outline-success my-2 my-sm-0" href="Login">Login</a> -->
                     <!-- </form> -->
                     <li class="nav-item dropdown form-inline">
-                        
+
                         <?php $sesi = session();
-                            $sesiLogin = $sesi->get('login');
-                            if(isset($sesiLogin['nama_dosen'])){
-                                echo '<a class="btn btn-danger nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        $sesiLogin = $sesi->get('login');
+                        if (isset($sesiLogin['nama_dosen'])) {
+                            echo '<a class="btn btn-danger nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-                                echo $sesiLogin['nama_dosen'];
-                            }else{
-                                if (isset($menu)) {
+                            echo $sesiLogin['nama_dosen'];
+                        } else {
+                            echo '<a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                            if (isset($menu)) {
 
                                 if ($menu == 'login') {
-                                    echo '<a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                                     echo 'Sebagai ' . $kategori;
                                 } else {
                                     echo 'Login';
@@ -94,19 +93,20 @@
                                 echo 'Login';
                             }
                         }
-                            ?>
+                        ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <?php if(isset($sesiLogin['nama_dosen'])): ?>
+                            <?php if (isset($sesiLogin['nama_dosen'])): ?>
                                 <form action="/logUserOut" method="post">
                                     <!-- <a class="dropdown-item logout" href="">Logout</a> -->
-                                    <button class="dropdown-item logout btn" type="submit" style="color: red;">Logout</button>
+                                    <button class="dropdown-item logout btn" type="submit"
+                                        style="color: red;">Logout</button>
                                 </form>
-                                <?php else: ?>
+                            <?php else: ?>
                                 <a class="dropdown-item" href="/Login?login=dosen">Sebagai Dosen</a>
                                 <a class="dropdown-item" href="/Login?login=prodi">Sebagai Prodi</a>
                                 <a class="dropdown-item" href="/Login?login=fakultas">Sebagai Fakultas</a>
-                                <?php endif; ?>
+                            <?php endif; ?>
                         </div>
                         <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <form action="login/dosen" method="post">
@@ -122,7 +122,7 @@
                             <button class="btn dropdown-item" >Akun Fakultas</button>
                         </form>
                     </div> -->
-                    
+
                     </li>
                 </div>
         </nav>
