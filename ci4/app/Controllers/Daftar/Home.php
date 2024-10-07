@@ -7,6 +7,12 @@ use App\Models\Daftar\Daftar;
 
 class Home extends BaseController
 {
+    public function index(){
+
+        return view('daftar/home');
+
+
+    }
     public function dosen(): string
     {
         $model = new Daftar();
