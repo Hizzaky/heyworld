@@ -39,7 +39,7 @@
     }
 
     .s-body {
-        text-align: end;
+        font-weight: bold;
     }
 </style>
 
