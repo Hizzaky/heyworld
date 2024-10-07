@@ -45,6 +45,11 @@ $routes->group('Daftar', function ($routes) {
 
 });
 
+$routes->add('logout',function($routes){
+    session()->destroy();
+    $routes->get('/', 'Home::index');
+});
+
 // $routes->group('Dosen', function ($routes) {
 //     $routes->add('/', 'Dosen\Home::index');
 
