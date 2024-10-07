@@ -12,7 +12,7 @@
                     <a class="list-group-item btn <?= $sideClass = $jenis_user == 'Dosen' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
                         href="/Daftar/dosen">Dosen</a>
                     <a class="list-group-item btn btn-outline-primary s-body" href="/Daftar/prodi">Prodi</a>
-                    <a class="list-group-item btn btn-secondary s-body" href="/Daftar/fakultas">Fakulas</a>
+                    <a class="list-group-item btn btn-outline-primary s-body active" href="/Daftar/fakultas">Fakulas</a>
                 </div>
             </div>
         </div>
