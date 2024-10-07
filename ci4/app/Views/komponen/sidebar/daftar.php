@@ -2,7 +2,7 @@
     <ul class="list-group">
         <li class="list-group-item s-head"><strong>Daftar Akun : </strong></li>
 <div class="row">
-    <div class="col-3">
+    <div class="col-offset-3">
         <div class="">
 
             <li class="list-group-item s-body"><a class="btn" href="/Daftar/dosen">Dosen</a></li>
