@@ -20,12 +20,12 @@ class Home extends BaseController
             if ($_GET['login'] == 'dosen') {
                 $sesi->set('jenis_login', 'dosen');
             }
-            if ($_GET['login'] == 'prodi') {
-                $sesi->set('jenis_login', 'prodi');
-            }
-            if ($_GET['login'] == 'fakultas') {
-                $sesi->set('jenis_login', 'fakultas');
-            }
+            // if ($_GET['login'] == 'prodi') {
+            //     $sesi->set('jenis_login', 'prodi');
+            // }
+            // if ($_GET['login'] == 'fakultas') {
+            //     $sesi->set('jenis_login', 'fakultas');
+            // }
             $ret = '/Login/' . $_GET['login'];
         } else {
             $ret = '/';
@@ -59,7 +59,7 @@ class Home extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('login/login', $data);
+        return view('login/dosen', $data);
     }
     public function prodi()
     {
