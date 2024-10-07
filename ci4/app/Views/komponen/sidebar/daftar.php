@@ -9,9 +9,9 @@
             <!-- <li class="list-group-item dropdown-item"><a class="" href="/Daftar/dosen">Dosen</a></li>
             <li class="list-group-item dropdown-item"><a class="" href="/Daftar/prodi">Prodi</a></li>
             <li class="list-group-item dropdown-item"><a class="" href="/Daftar/fakultas">Fakulas</a></li> -->
-            <button class="list-group-item " href="/Daftar/dosen">Dosen</button>
-            <button class="list-group-item " href="/Daftar/prodi">Prodi</button>
-            <button class="list-group-item " href="/Daftar/fakultas">Fakulas</button>
+            <a class="list-group-item btn" href="/Daftar/dosen">Dosen</a>
+            <a class="list-group-item btn" href="/Daftar/prodi">Prodi</a>
+            <a class="list-group-item btn" href="/Daftar/fakultas">Fakulas</a>
         </div>
     </div>
 </div>
