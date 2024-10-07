@@ -7,23 +7,24 @@ use App\Models\Daftar\Daftar;
 
 class Home extends BaseController
 {
-    public function index(){
+    public function index()
+    {
 
         $model = new Daftar();
 
         $data = $model->arData('');
 
-        return view('daftar/home',$data);
+        return view('daftar/home', $data);
 
 
     }
-    public function dosen(): string
+    public function dosen()
     {
         $model = new Daftar();
 
         helper('form');
 
-        $jenis_user='dosen';
+        $jenis_user = 'dosen';
         $data = $model->arData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
@@ -33,15 +34,20 @@ class Home extends BaseController
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
 
-                $cek = $model->cekUser('nidn', $_POST['nidn'],$jenis_user);
+                $cek = $model->cekUser('nidn', $_POST['nidn'], $jenis_user);
 
                 if ($cek['cekUser'] == '0') {
 
-                    $reg=$model->register($jenis_user,$_POST);
-                    if($reg=='1'){
+                    $reg = $model->register($jenis_user, $_POST);
+                    if ($reg == '1') {
                         // sukses
-                        $data['register']='Pendaftaran Berhasil!, Silahkan menunggu proses konfirmasi';
-                    }else{
+                        // $data['register']='Pendaftaran Berhasil!, Silahkan menunggu proses konfirmasi';
+                        $dataSesi = session();
+                        $dataSesi->set('register', 'Pendaftaran Berhasil!, Silahkan menunggu proses konfirmasi');
+
+                        return redirect()->to('/Login/dosen');
+                        
+                    } else {
                         // fail
                         $data['fail'] = 'Pendaftaran Gagal!, Silahkan Coba lagi.';
                     }

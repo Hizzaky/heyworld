@@ -9,6 +9,15 @@
             <?= $header_title . " " . $kategori ?>
         </h3>
         <div class="card-body">
+            <?php 
+                $dataSesi=session();
+                $register=$dataSesi->get('register');
+            
+            if (isset($register)): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= $register ?>
+                </div>
+            <?php endif; ?>
             <?php if (isset($fail)): ?>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <?= $fail ?>
