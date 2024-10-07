@@ -45,9 +45,10 @@ $routes->group('Daftar', function ($routes) {
 
 });
 
-$routes->add('logout',function($routes){
+$routes->add('logout',function(){
     session()->destroy();
-    $routes->get('/', 'Home::index');
+    // $routes->get('/', 'Home::index');
+    return redirect()->to('/');
 });
 
 // $routes->group('Dosen', function ($routes) {
