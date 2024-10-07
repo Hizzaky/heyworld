@@ -45,7 +45,7 @@ $routes->group('Daftar', function ($routes) {
 
 });
 
-$routes->add('logout',function(){
+$routes->get('logUserOut',function(){
     session()->destroy();
     // $routes->get('/', 'Home::index');
     return redirect()->to('/');

@@ -92,7 +92,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <!-- <a class="dropdown-item" href="/Login/dosen">Sebagai Dosen</a>
                             <a class="dropdown-item" href="/Login/prodi">Sebagai Prodi</a> -->
-                            <form action="/logout" method="post">
+                            <form action="/logUserOut" method="post">
                                 <!-- <a class="dropdown-item logout" href="">Logout</a> -->
                                  <button class="dropdown-item logout btn" type="submit">Logout</button>
                             </form>
