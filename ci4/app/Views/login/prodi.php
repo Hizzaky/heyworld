@@ -44,7 +44,7 @@
 
                         <?php foreach ($program_studi as $x => $val) : ?>
                             
-                            <option value=<?= $x['username'] ?>><?= $x['username'] ?></option>
+                            <option value=<?= $val ?>><?= $val ?></option>
                         
                         <?php endforeach ?>
                     </select>
