@@ -37,7 +37,7 @@
                         value="<?= set_value('username') ?>" aria-describedby="help username" autofocus
                         placeholder="Inputkan Username"> -->
                     <select class="form-control" name="username" id="username">
-                        <option class="centrer" value="">-- Silahkan pilih prodi anda --</option>
+                        <option class="center" value="">-- Silahkan pilih prodi anda --</option>
                         <option value="PBA">Pendidikan Bahasa Arab</option>
                         <option value="PGMI">Pendidikan Guru Madrasah Ibtidaiyah (PGMI)</option>
                         <option value="ES">Ekonomi Syariah</option>
