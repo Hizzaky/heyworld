@@ -11,7 +11,7 @@
         <div class="card-body">
             <?php 
                 $dataSesi=session();
-                $register=$dataSesi->get('register');
+                $register=$dataSesi->getFlashdata('register');
             
             if (isset($register)): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
