@@ -41,7 +41,9 @@ $routes->group('Login', function ($routes) {
 
 $routes->group('Daftar', function ($routes) {
     $routes->add('/', 'Daftar\Home::index');
-    $routes->add('register', 'Daftar\Home::register');
+    $routes->add('dosen', 'Daftar\Home::dosen');
+    $routes->add('prodi', 'Daftar\Home::prodi');
+    $routes->add('fakultas', 'Daftar\Home::fakultas');
 
 });
 
