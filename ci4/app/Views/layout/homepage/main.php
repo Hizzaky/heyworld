@@ -25,12 +25,12 @@
         padding-top: 10%;
     }
 
-    .mrg-login {
+    .mrg-konten {
         margin-top: 5%;
     }
 
-    .mrg-home {
-        margin-top: 5%;
+    .mrg-side {
+        margin-top: 10%;
     }
 
     .s-head {

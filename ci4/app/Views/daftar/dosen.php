@@ -4,11 +4,11 @@
 
 <div class="row">
     <!-- <div class="col-12 col-sm-3"> </div> -->
-    <?= $this->include('komponen/sidebarDaftar'); ?>
+        <?= $this->include('komponen/sidebar/daftar'); ?>
 
-    <div class="card col-12 col-sm-6 col-md-6 mrg-login">
+    <div class="card col-12 col-sm-6 col-md-6 mrg-konten">
         <h3 class="card-header ">
-            <?= $header_title ?> Dosen
+            <?= $header_title ?>
         </h3>
         <div class="card-body">
             <?php if (isset($fail)): ?>

@@ -4,7 +4,7 @@
 
 <div class="row">
     <!-- <div class="col-12 col-sm-3"> </div> -->
-    <?= $this->include('komponen/sidebarDaftar'); ?>
+    <?= $this->include('komponen/sidebar/daftar'); ?>
 
     <div class="card col-12 col-sm-6 col-md-6 mrg-login">
         <?php if (isset($register)): ?>
