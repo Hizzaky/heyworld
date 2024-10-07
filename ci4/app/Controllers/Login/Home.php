@@ -45,7 +45,7 @@ class Home extends BaseController
 
         if ($this->request->getMethod() == 'post') {
 
-            $rules = $model->rule();
+            $rules = $model->ruleDosen();
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
@@ -74,7 +74,7 @@ class Home extends BaseController
 
         if ($this->request->getMethod() == 'post') {
 
-            $rules = $model->rule();
+            $rules = $model->ruleProdi();
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
@@ -104,7 +104,7 @@ class Home extends BaseController
 
         if ($this->request->getMethod() == 'post') {
 
-            $rules = $model->rule();
+            $rules = $model->ruleFakultas();
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
