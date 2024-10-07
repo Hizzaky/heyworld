@@ -9,7 +9,7 @@
                     <!-- <li class="list-group-item dropdown-item"><a class="" href="/Daftar/dosen">Dosen</a></li>
             <li class="list-group-item dropdown-item"><a class="" href="/Daftar/prodi">Prodi</a></li>
             <li class="list-group-item dropdown-item"><a class="" href="/Daftar/fakultas">Fakulas</a></li> -->
-                    <a class="list-group-item btn <?= $sideClass = $jenis_user == 'dosen' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
+                    <a class="list-group-item btn <?= $sideClass = $jenis_user == 'Dosen' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
                         href="/Daftar/dosen">Dosen</a>
                     <a class="list-group-item btn btn-outline-primary s-body" href="/Daftar/prodi">Prodi</a>
                     <a class="list-group-item btn btn-outline-primary s-body" href="/Daftar/fakultas">Fakulas</a>
