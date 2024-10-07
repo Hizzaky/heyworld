@@ -14,7 +14,9 @@ class Home extends BaseController
 
         $data = $model->arData('');
 
-        return view('daftar/home', $data);
+        // return view('daftar/home', $data);
+        return redirect()->to('/Login/dosen');
+
 
 
     }
@@ -125,7 +127,7 @@ class Home extends BaseController
                         // sukses
                         // $data['register']='Pendaftaran Berhasil!, Silahkan menunggu proses konfirmasi';
                         $dataSesi = session();
-                        $dataSesi->setFlashdata('register', 'Pendaftaran Berhasil!, Silahkan menunggu proses konfirmasi');
+                        $dataSesi->setFlashdata('register', 'Pendaftaran Berhasil!, Silahkan menunggu proses konfirmasi.');
 
                         return redirect()->to('/Login/fakultas');
                         
