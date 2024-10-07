@@ -9,7 +9,11 @@ class Home extends BaseController
 {
     public function index(){
 
-        return view('daftar/home');
+        $model = new Daftar();
+
+        $data = $model->arData();
+
+        return view('daftar/home',$data);
 
 
     }

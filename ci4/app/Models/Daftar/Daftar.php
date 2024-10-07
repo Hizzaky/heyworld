@@ -49,7 +49,7 @@ class Daftar
     public function arData()
     {
         $data = [
-            'meta_title' => 'Daftar SIM UMMAT',
+            'meta_title' => 'Pendaftaran SIM UMMAT',
             'header_title' => 'Silahkan Lengkapi Form Pendaftaran',
             'kategori' => ['Dosen', 'Prodi', 'Fakultas'],
             'menu' => 'daftar'
