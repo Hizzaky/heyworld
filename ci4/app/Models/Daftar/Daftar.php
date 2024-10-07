@@ -9,9 +9,9 @@ class Daftar
 {
     public function register($data,$dir)
     {
-        $model = new TdosenModel();
-        $model = new TdosenModel();
-        $model = new TdosenModel();
+        $modelDosen = new TdosenModel();
+        $modelProdi = new TprodiModel();
+        $modelFakultas = new TfakultasModel();
 
         $data['username'] = $data['nidn'];
 
