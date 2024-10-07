@@ -152,4 +152,19 @@ class Login extends BaseController
         }
         return $dataUser;
     }
+    public function getData($jenis_user){
+
+        $db = db_connect();
+
+        $model = new CustomModel($db);
+
+        // $username = $data['username'];
+        // $password = $data['password'];
+        // $field = 'username';
+        // $value = $username;
+        $tbl = 't_' . lcfirst($jenis_user);
+        $prodi = $model->all($tbl); // validasi username password
+
+        return $prodi;
+    }
 }

@@ -101,23 +101,26 @@ class Home extends BaseController
 
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         $data = $model->arData($jenis_user);
+        $data['program_studi']=$model->getData($jenis_user);
 
-        if ($this->request->getMethod() == 'post') {
+        $this->pre($data);
 
-            $rules = $model->ruleFakultas();
+        // if ($this->request->getMethod() == 'post') {
 
-            if ($this->validate($rules)) {
-                $data['post'] = $_POST;
-                $login = $model->cekAkun($_POST, $jenis_user);
-                if ($login['login'] == '1') {
-                    return redirect()->to('Dashboard/Fakultas');
-                } else {
-                    $data['fail'] = 'Username/Password tidak valid!';
-                }
-            } else {
-                $data['validasi'] = $this->validator;
-            }
-        }
+        //     $rules = $model->ruleFakultas();
+
+        //     if ($this->validate($rules)) {
+        //         $data['post'] = $_POST;
+        //         $login = $model->cekAkun($_POST, $jenis_user);
+        //         if ($login['login'] == '1') {
+        //             return redirect()->to('Dashboard/Fakultas');
+        //         } else {
+        //             $data['fail'] = 'Username/Password tidak valid!';
+        //         }
+        //     } else {
+        //         $data['validasi'] = $this->validator;
+        //     }
+        // }
         return view('login/fakultas', $data);
     }
 }
