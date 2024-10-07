@@ -118,8 +118,8 @@ class Login extends BaseController
         $data = [
             'meta_title' => 'Login ' . $kategori . ' SIM UMMAT',
             'header_title' => 'Silahkan Login Dengan Akun',
-            'kategori' => $kategori,
-            'menu' => 'login'
+            'kategori' => $kategori
+            // 'menu' => 'login'
         ];
         return $data;
     }
@@ -128,63 +128,7 @@ class Login extends BaseController
         $password = password_hash($data, PASSWORD_DEFAULT);
         return $password;
     }
-    // public function sukses($username,$password,$kategori)
-    public function sukses2($post, $kategori)
-    {
-        $db = db_connect();
-        $model = new CustomModel($db);
-
-        $username = $post['username'];
-        $password = $post['password'];
-        // $password=$post['password'];
-// echo '<br>';
-// echo $password;
-// echo '<br>';
-// echo $kategori;
-
-
-
-        $field = ['username', 'password'];
-        // $data = [$username, $this->hashPassword($password)];
-        $data = [$username, $password];
-        $tbl = 't_' . lcfirst($kategori);
-        $res = $model->where2($tbl, $field, $data); // validasi username password
-
-
-        if (count($res) > 0) { //verivikasi data login
-// $dir=lcfirst($kategori);
-            $return['cek'] = '1';
-            $return['login'] = $res;
-            // return redirect()->to($dir);
-            return $return;
-        } else {
-            $return['cek'] = '0';
-            return $return;
-            // return redirect()->back();
-        }
-
-
-
-
-        // return redirect()->to(base_url('../Home'));
-// return redirect()->route('/login/sukses');
-// return redirect()->to(base_url('/login/sukses'));
-// return redirect()->back();
-
-        // return view('dosen/home', $post);
-
-        //$model->save($data); //command untuk push data ke table
-//$var=$model->find($data); //command untuk mengambil data dari table
-//$model->delete($data); //command untuk delete data dari table
-
-        // untuk edit, perlu define table_id pada $data dan gunakan $model->save()
-
-
-
-
-
-    }
-    public function cekAkun($post, $kategori)
+    public function cekAkun($data, $jenis_user)
     {
         $db = db_connect();
 
@@ -192,13 +136,12 @@ class Login extends BaseController
 
         $sesi = session();
 
-        $username = $post['username'];
-        $password = $post['password'];
+        $username = $data['username'];
+        $password = $data['password'];
         $field = 'username';
-        $data = $username;
-        $kategori = lcfirst($kategori);
-        $tbl = 't_' . $kategori;
-        $res = $model->where1($tbl, $field, $data); // validasi username password
+        $value = $username;
+        $tbl = 't_' . lcfirst($jenis_user);
+        $res = $model->where1($tbl, $field, $value); // validasi username password
 
 
         if (count($res) == 0) {
@@ -207,12 +150,8 @@ class Login extends BaseController
         } else {
             if (password_verify($password, $res[0]['password'])) {
                 $return['login'] = '1';
-                $dataUser = [
-                    'dosen_id' => $res[0]['dosen_id'],
-                    'nidn' => $res[0]['nidn'],
-                    'nama_dosen' => $res[0]['nama_dosen'],
-                    'jenis_user' => ucfirst($kategori)
-                ];
+                $dataUser=$this->userData($res[0],$jenis_user);
+
                 $sesi->set('login', $dataUser);
                 return $return;
             } else {
@@ -220,10 +159,32 @@ class Login extends BaseController
                 return $return;
             }
         }
-
-
-
-
-
+    }
+    protected function userData($data,$jenis_user){
+        if($jenis_user=='dosen'){
+            $dataUser = [
+                'user_id' => $data['dosen_id'],
+                'nidn' => $data['nidn'],
+                'nama_user' => $data['nama_dosen'],
+                'jenis_user' => ucfirst($jenis_user)
+            ];
+        }
+        if($jenis_user=='prodi'){
+            $dataUser = [
+                'user_id' => $data['prodi_id'],
+                'nidn' => $data['nidn'],
+                'nama_user' => $data['nama_prodi'],
+                'jenis_user' => ucfirst($jenis_user)
+            ];
+        }
+        if($jenis_user=='fakultas'){
+            $dataUser = [
+                'user_id' => $data['fakultas_id'],
+                'nidn' => $data['nidn'],
+                'nama_user' => $data['nama_fakultas'],
+                'jenis_user' => ucfirst($jenis_user)
+            ];
+        }
+        return $dataUser;
     }
 }

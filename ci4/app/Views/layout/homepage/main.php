@@ -70,26 +70,19 @@
                                 Menu
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <!-- <a class="dropdown-item" href="#">Sebagai Dosen</a>
-                            <a class="dropdown-item" href="#">Sebagai Prodi</a>
-                            <a class="dropdown-item" href="llogin">Sebagai Fakultas</a> -->
                             </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#">Menu</a>
                         </li>
                     </ul>
-                    <!-- <form class=" my-2 my-lg-0"> -->
-                    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <!-- <a class="btn form-inline btn-outline-success my-2 my-sm-0" href="Login">Login</a> -->
-                    <!-- </form> -->
                     <li class="nav-item dropdown form-inline">
 
                         <?php $sesi = session();
                         $sesiLogin = $sesi->get('login');
-                        if (isset($sesiLogin['nama_dosen'])) {
+                        if (isset($sesiLogin['nama_user'])) {
                             echo '<a class="btn btn-danger nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-                            echo $sesiLogin['nama_dosen'];
+                            echo $sesiLogin['nama_user'];
                         } else {
                             echo '<a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                             if (isset($menu)) {
@@ -106,7 +99,7 @@
                         ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <?php if (isset($sesiLogin['nama_dosen'])): ?>
+                            <?php if (isset($sesiLogin['nama_user'])): ?>
                                 <form action="/logUserOut" method="post">
                                     <!-- <a class="dropdown-item logout" href="">Logout</a> -->
                                     <button class="dropdown-item logout btn" type="submit"
@@ -118,21 +111,6 @@
                                 <a class="dropdown-item" href="/Login?login=fakultas">Sebagai Fakultas</a>
                             <?php endif; ?>
                         </div>
-                        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <form action="login/dosen" method="post">
-                            <input type="text" name="login" value="dosen" hidden>
-                            <button class="btn dropdown-item " style="cursor='pointer'" >Akun Dosen</button>
-                        </form>
-                        <form action="login" method="post">
-                            <input type="text" name="login" value="prodi" hidden>
-                            <button class="btn dropdown-item" >Akun Prodi</button>
-                        </form>
-                        <form action="login" method="post">
-                            <input type="text" name="login" value="fakultas" hidden>
-                            <button class="btn dropdown-item" >Akun Fakultas</button>
-                        </form>
-                    </div> -->
-
                     </li>
                 </div>
         </nav>

@@ -7,8 +7,10 @@
                 <div class="">
                     <a class="list-group-item btn <?= $sideClass = $jenis_user == 'Dosen' ? 'active' : 'btn-outline-primary' ?> s-body"
                         href="/Daftar/dosen">Dosen</a>
-                    <a class="list-group-item btn <?= $sideClass = $jenis_user == 'Dosen' ? 'active' : 'btn-outline-primary' ?> s-body" href="/Daftar/prodi">Prodi</a>
-                    <a class="list-group-item btn <?= $sideClass = $jenis_user == 'Dosen' ? 'active' : 'btn-outline-primary' ?> s-body " href="/Daftar/fakultas">Fakulas</a>
+                    <a class="list-group-item btn <?= $sideClass = $jenis_user == 'Prodi' ? 'active' : 'btn-outline-primary' ?> s-body"
+                        href="/Daftar/prodi">Prodi</a>
+                    <a class="list-group-item btn <?= $sideClass = $jenis_user == 'Fakultas' ? 'active' : 'btn-outline-primary' ?> s-body "
+                        href="/Daftar/fakultas">Fakulas</a>
                 </div>
             </div>
         </div>

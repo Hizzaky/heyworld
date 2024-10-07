@@ -37,10 +37,12 @@
     div.card-konten {
         margin-top: 2%;
     }
-    div.card-body{
+
+    div.card-body {
         border: solid black round;
     }
-    nav.rnd{
+
+    nav.rnd {
         border-radius: 5px;
     }
 </style>
@@ -82,7 +84,7 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <?php $sesi = session();
                             $sesiLogin = $sesi->get('login');
-                            echo $sesiLogin['nama_dosen'];
+                            echo $sesiLogin['nama_user'];
                             ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -90,19 +92,20 @@
                             <a class="dropdown-item" href="/Login/prodi">Sebagai Prodi</a> -->
                             <form action="/logUserOut" method="post">
                                 <!-- <a class="dropdown-item logout" href="">Logout</a> -->
-                                 <button class="dropdown-item logout btn" type="submit" style="color:red;">Logout</button>
+                                <button class="dropdown-item logout btn" type="submit"
+                                    style="color:red;">Logout</button>
                             </form>
                         </div>
-                    </li> 
+                    </li>
                 </div>
             </nav>
         </div>
         <div class="container"><br>
             <div class="card card-konten">
                 <div class="card-body">
-                        <?= $this->renderSection('konten') ?>
+                    <?= $this->renderSection('konten') ?>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 

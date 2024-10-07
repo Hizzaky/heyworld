@@ -82,7 +82,7 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <?php $sesi = session();
                             $sesiLogin = $sesi->get('login');
-                            echo $sesiLogin['nama_dosen'];
+                            echo $sesiLogin['nama_user'];
                             ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
