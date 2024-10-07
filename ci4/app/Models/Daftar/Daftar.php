@@ -1,21 +1,29 @@
 <?php
 namespace App\Models\Daftar;
 
-use App\Models\RegDosenModel;
+use App\Models\Daftar\TdosenModel;
+use App\Models\Daftar\TprodiModel;
+use App\Models\Daftar\TfakultasModel;
 use App\Models\CustomModel;
 class Daftar
 {
-    public function register($data)
+    public function register($data,$dir)
     {
-        $model = new RegDosenModel();
+        $model = new TdosenModel();
+        $model = new TdosenModel();
+        $model = new TdosenModel();
 
         $data['username'] = $data['nidn'];
 
         if ($model->save($data)) {
-            echo 'upload sukses'; // reidrect to login
+            // echo 'upload sukses'; // reidrect to login
+            $ret='1';
+            
         } else {
-            echo 'upload failed';
+            $ret='0';
+            // echo 'upload failed';
         }
+        return $ret;
 
     }
     public function cekUser($data)

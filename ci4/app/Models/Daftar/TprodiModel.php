@@ -1,9 +1,9 @@
 <?php
-namespace App\Models;
+namespace App\Models\Daftar;
 
 use CodeIgniter\Model;
 
-class RegDosenModel extends Model
+class TprodiModel extends Model
 {
     protected $table = 't_dosen';
     protected $primaryKey = 'dosen_id';

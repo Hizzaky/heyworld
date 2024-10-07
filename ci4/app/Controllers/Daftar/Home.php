@@ -7,7 +7,7 @@ use App\Models\Daftar\Daftar;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function dosen(): string
     {
         $model = new Daftar();
 
@@ -26,7 +26,14 @@ class Home extends BaseController
 
                 if ($cek['cekUser'] == '0') {
 
-                    $model->register($_POST);
+                    $reg=$model->register($_POST,'dosen');
+                    if($reg=='1'){
+                        // sukses
+                        $data['register']='Pendaftaran Berhasil!, Silahkan menunggu proses konfirmasi';
+                    }else{
+                        // fail
+                        $data['fail'] = 'Pendaftaran Gagal!, Silahkan Coba lagi.';
+                    }
                 } else {
                     $data['fail'] = 'NIDN Sudah Terdaftar!, Silahkan Hubungi Admin.';
                 }
@@ -36,4 +43,5 @@ class Home extends BaseController
         }
         return view('daftar/daftar', $data);
     }
+
 }

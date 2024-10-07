@@ -51,7 +51,7 @@ class Home extends BaseController
                 $data['post'] = $_POST;
                 $login = $model->cekAkun($_POST, $kategori);
                 if ($login['login'] == '1') {
-                    return redirect()->to('Dosen');
+                    return redirect()->to('Dashboard/Dosen');
                 } else {
                     $data['fail'] = 'Username/Password tidak valid!';
                 }
