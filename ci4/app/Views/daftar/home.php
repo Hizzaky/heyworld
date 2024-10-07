@@ -18,15 +18,15 @@
         if (isset($_GET['l'])) {
 
             if ($_GET['l'] == 'fakultas') {
-                // $this->include('fakultas');
+                $this->include('daftar/fakultas');
                 echo 'fakultas';
             }
             if ($_GET['l'] == 'prodi') {
-                // $this->include('prodi');
+                $this->include('daftar/prodi');
                 echo 'prodi';
             }
             if ($_GET['l'] == 'dosen') {
-                // $this->include('dosen');
+                $this->include('daftar/dosen');
                 echo 'dosen';
             }
         }
