@@ -3,15 +3,13 @@
 <?= $this->section('konten') ?>
 
 <div class="row">
-    <!-- <div class="col-12 col-sm-3"> </div> -->
-    <?= $this->include('komponen/sidebar/daftar'); ?>
-
-    <div class="card col-12 col-sm-6 col-md-6 mrg-login">
+    <div class="col-12 col-sm-3 mrg-side">
+        <?= $this->include('komponen/sidebar/daftar'); ?>
+    </div>
+    <div class="card col-12 col-sm-6 col-md-6 mrg-konten">
         <?php if (isset($register)): ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <?= $register ?>
-                <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span -->
-                        <!-- aria-hidden="true">&times;</span></button> -->
             </div>
         <?php endif; ?>
     </div>
