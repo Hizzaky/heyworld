@@ -7,16 +7,16 @@ use App\Models\Daftar\TfakultasModel;
 use App\Models\CustomModel;
 class Daftar
 {
-    public function register($kategori, $data)
+    public function register($jenis_user, $data)
     {
-        if ($kategori == 'dosen') {
+        if ($jenis_user == 'dosen') {
             $model = new TdosenModel();
         }
-        if ($kategori == 'dosen') {
+        if ($jenis_user == 'prodi') {
 
             $model = new TprodiModel();
         }
-        if ($kategori == 'dosen') {
+        if ($jenis_user == 'fakultas') {
 
             $model = new TfakultasModel();
         }
@@ -30,21 +30,21 @@ class Daftar
         }
         return $ret;
     }
-    public function cekUser($field, $data)
+    public function cekUser($field, $data,$jenis_user)
     {
         $db = db_connect();
         $model = new CustomModel($db);
 
-        $kategori = $data['kategori'][0];
-        $tbl = 't_' . lcfirst($kategori);
+        // $jenis_user = $data['jenis_user'][0];
+        $tbl = 't_' . $jenis_user;
         $res = $model->where1($tbl, $field, $data); // validasi username password
 
         if (count($res) == 0) {
-            $return['cekUser'] = '0';
+            $ret['cekUser'] = '0';
         } else {
-            $return['cekUser'] = '1';
+            $ret['cekUser'] = '1';
         }
-        return $return;
+        return $ret;
     }
     public function arData($jenis_user)
     {
@@ -52,7 +52,7 @@ class Daftar
             'meta_title' => 'Pendaftaran SIM UMMAT',
             'header_title' => 'Silahkan Lengkapi Form Pendaftaran',
             // 'jenis_user' => ['Dosen', 'Prodi', 'Fakultas'],
-            'jenis_user' => $jenis_user,
+            'jenis_user' => ucfirst($jenis_user),
             'menu' => 'daftar'
         ];
         return $data;

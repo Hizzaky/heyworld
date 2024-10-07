@@ -23,7 +23,8 @@ class Home extends BaseController
 
         helper('form');
 
-        $data = $model->arData('Dosen');
+        $jenis_user='dosen';
+        $data = $model->arData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
@@ -32,11 +33,11 @@ class Home extends BaseController
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
 
-                $cek = $model->cekUser('nidn', $_POST['nidn']);
+                $cek = $model->cekUser('nidn', $_POST['nidn'],$jenis_user);
 
                 if ($cek['cekUser'] == '0') {
 
-                    $reg=$model->register('dosen',$_POST);
+                    $reg=$model->register($jenis_user,$_POST);
                     if($reg=='1'){
                         // sukses
                         $data['register']='Pendaftaran Berhasil!, Silahkan menunggu proses konfirmasi';
