@@ -17,7 +17,7 @@ class Login extends BaseController
         $ar = explode(" ", $data);
         return $ar[2];
     }
-    public function rule()
+    public function ruleDosen()
     {
         $rules = [
             'username' => [
@@ -25,6 +25,46 @@ class Login extends BaseController
                 'label' => 'Usename',
                 'errors' => [
                     'required' => 'Inputkan Username dengan benar!'
+                ]
+            ],
+            'password' => [
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Inputkan Password dengan benar!',
+                    'min_length' => 'Password minimal 8 digit!'
+                ]
+            ]
+        ];
+        return $rules;
+    }
+    public function ruleProdi()
+    {
+        $rules = [
+            'username' => [
+                'rules' => 'required',
+                'label' => 'Prodi',
+                'errors' => [
+                    'required' => 'Pilih Prodi dengan benar!'
+                ]
+            ],
+            'password' => [
+                'rules' => 'required|min_length[8]',
+                'errors' => [
+                    'required' => 'Inputkan Password dengan benar!',
+                    'min_length' => 'Password minimal 8 digit!'
+                ]
+            ]
+        ];
+        return $rules;
+    }
+    public function ruleFakultas()
+    {
+        $rules = [
+            'username' => [
+                'rules' => 'required',
+                'label' => 'Fakultas',
+                'errors' => [
+                    'required' => 'Pilih Fakultas dengan benar!'
                 ]
             ],
             'password' => [
