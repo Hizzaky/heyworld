@@ -79,13 +79,13 @@ class Home extends BaseController
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
-                $login = $model->cekAkun($_POST, $jenis_user);
-                if ($login['login'] == '1') {
-                    return redirect()->to('Dashboard/Prodi');
-                } else {
-                    $data['fail'] = 'Username/Password tidak valid!';
-                }
-                // $this->pre($_POST);
+                // $login = $model->cekAkun($_POST, $jenis_user);
+                // if ($login['login'] == '1') {
+                //     return redirect()->to('Dashboard/Prodi');
+                // } else {
+                //     $data['fail'] = 'Username/Password tidak valid!';
+                // }
+                $this->pre($_POST);
             } else {
                 $data['validasi'] = $this->validator;
             }
