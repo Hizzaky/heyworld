@@ -107,21 +107,21 @@ class Login extends BaseController
         $tbl = 't_' . lcfirst($jenis_user);
         $res = $model->where1($tbl, $field, $value); // validasi username password
 
-        if (count($res) == 0) {
-            $return['login'] = '0';
-            return $return;
-        } else {
-            if (password_verify($password, $res[0]['password'])) {
-                $return['login'] = '1';
-                $dataUser=$this->userData($res[0],$jenis_user);
+        // if (count($res) == 0) {
+        //     $return['login'] = '0';
+        //     // return $return;
+        // } else {
+        //     if (password_verify($password, $res[0]['password'])) {
+        //         $return['login'] = '1';
+        //         $dataUser=$this->userData($res[0],$jenis_user);
 
-                $sesi->set('login', $dataUser);
-                return $return;
-            } else {
-                $return['login'] = '0';
-                return $return;
-            }
-        }
+        //         $sesi->set('login', $dataUser);
+        //         // return $return;
+        //     } else {
+        //         $return['login'] = '0';
+        //     }
+        // }
+        return $res[0];
     }
     protected function userData($data,$jenis_user){
         if($jenis_user=='Dosen'){
