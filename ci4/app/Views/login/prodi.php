@@ -38,10 +38,15 @@
                         placeholder="Inputkan Username"> -->
                     <select class="form-control" name="username" id="username">
                         <option class="center" value="">-- Silahkan pilih prodi anda --</option>
-                        <option value="PBA">Pendidikan Bahasa Arab</option>
+                        <!-- <option value="PBA">Pendidikan Bahasa Arab</option>
                         <option value="PGMI">Pendidikan Guru Madrasah Ibtidaiyah (PGMI)</option>
-                        <option value="ES">Ekonomi Syariah</option>
-                        <option value="KPI">Komunikasi Penyiaran Islam (KPI)</option>
+                        <option value="ES">Ekonomi Syariah</option> -->
+                        <?php 
+                        foreach ($program_studi as $x => $val) {
+                            
+                            echo '<option value=$x["username"]>$x["nama_prodi"]</option>';
+                        }
+                        ?>
                     </select>
                 </div>
                 <div class="form-group">
