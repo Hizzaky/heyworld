@@ -40,6 +40,7 @@
 
     .s-body {
         font-weight: bold;
+        text-align: left;
     }
 </style>
 
