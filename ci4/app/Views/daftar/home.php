@@ -19,8 +19,8 @@
 
             if ($_GET['l'] == 'fakultas') {
                 // $this->include('daftar/fakultas');
-                redirect()->to('asdasdasdasd');
-                // echo 'fakultas';
+                // redirect()->to('asdasdasdasd');
+                echo 'fakultas';
             }
             if ($_GET['l'] == 'prodi') {
                 // $this->include('daftar/prodi');
