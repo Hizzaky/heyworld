@@ -7,34 +7,35 @@ use App\Models\Daftar\TfakultasModel;
 use App\Models\CustomModel;
 class Daftar
 {
-    public function register($data,$dir)
+    public function register($kategori, $data)
     {
-        $modelDosen = new TdosenModel();
-        $modelProdi = new TprodiModel();
-        $modelFakultas = new TfakultasModel();
+        if ($kategori == 'dosen') {
+            $model = new TdosenModel();
+        }
+        if ($kategori == 'dosen') {
+
+            $model = new TprodiModel();
+        }
+        if ($kategori == 'dosen') {
+
+            $model = new TfakultasModel();
+        }
 
         $data['username'] = $data['nidn'];
 
         if ($model->save($data)) {
-            // echo 'upload sukses'; // reidrect to login
-            $ret='1';
-            
+            $ret = '1';
         } else {
-            $ret='0';
-            // echo 'upload failed';
+            $ret = '0';
         }
         return $ret;
-
     }
-    public function cekUser($data)
+    public function cekUser($field, $data)
     {
         $db = db_connect();
         $model = new CustomModel($db);
 
-        // return $data['kategori'][0];
         $kategori = $data['kategori'][0];
-        $field = 'nidn';
-        $data = $data['post']['nidn'];
         $tbl = 't_' . lcfirst($kategori);
         $res = $model->where1($tbl, $field, $data); // validasi username password
 
@@ -43,15 +44,15 @@ class Daftar
         } else {
             $return['cekUser'] = '1';
         }
-
         return $return;
     }
-    public function arData()
+    public function arData($jenis_user)
     {
         $data = [
             'meta_title' => 'Pendaftaran SIM UMMAT',
             'header_title' => 'Silahkan Lengkapi Form Pendaftaran',
-            'kategori' => ['Dosen', 'Prodi', 'Fakultas'],
+            // 'jenis_user' => ['Dosen', 'Prodi', 'Fakultas'],
+            'jenis_user' => $jenis_user,
             'menu' => 'daftar'
         ];
         return $data;

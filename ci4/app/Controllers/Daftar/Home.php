@@ -11,7 +11,7 @@ class Home extends BaseController
 
         $model = new Daftar();
 
-        $data = $model->arData();
+        $data = $model->arData('');
 
         return view('daftar/home',$data);
 
@@ -23,7 +23,7 @@ class Home extends BaseController
 
         helper('form');
 
-        $data = $model->arData();
+        $data = $model->arData('Dosen');
 
         if ($this->request->getMethod() == 'post') {
 
@@ -32,11 +32,11 @@ class Home extends BaseController
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
 
-                $cek = $model->cekUser($data);
+                $cek = $model->cekUser('nidn', $_POST['nidn']);
 
                 if ($cek['cekUser'] == '0') {
 
-                    $reg=$model->register($_POST,'dosen');
+                    $reg=$model->register('dosen',$_POST);
                     if($reg=='1'){
                         // sukses
                         $data['register']='Pendaftaran Berhasil!, Silahkan menunggu proses konfirmasi';

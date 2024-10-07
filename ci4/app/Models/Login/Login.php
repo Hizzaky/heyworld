@@ -211,7 +211,7 @@ class Login extends BaseController
                     'dosen_id' => $res[0]['dosen_id'],
                     'nidn' => $res[0]['nidn'],
                     'nama_dosen' => $res[0]['nama_dosen'],
-                    'jenis_login' => $kategori
+                    'jenis_user' => ucfirst($kategori)
                 ];
                 $sesi->set('login', $dataUser);
                 return $return;
