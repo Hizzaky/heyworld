@@ -109,19 +109,19 @@ class Login extends BaseController
 
         if (count($res) == 0) {
             $return['login'] = '0';
-            // return $return;
+            return $return;
         } else {
             if (password_verify($password, $res[0]['password'])) {
                 $return['login'] = '1';
                 $dataUser=$this->userData($res[0],$jenis_user);
 
                 $sesi->set('login', $dataUser);
-                // return $return;
+                return $return;
             } else {
                 $return['login'] = '0';
+                return $return;
             }
         }
-        return $return;
     }
     protected function userData($data,$jenis_user){
         if($jenis_user=='Dosen'){

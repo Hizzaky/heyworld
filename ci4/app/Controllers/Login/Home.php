@@ -84,7 +84,7 @@ class Home extends BaseController
                 } else {
                     $data['fail'] = 'Username/Password tidak valid!';
                 }
-                $this->pre($_POST);
+                // $this->pre($_POST);
             } else {
                 $data['validasi'] = $this->validator;
             }
