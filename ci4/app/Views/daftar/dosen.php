@@ -30,7 +30,7 @@
                     <?= $validasi->listErrors() ?>
                 </div>
             <?php endif; ?>
-            <form action="/Daftar/dosen" method="post">
+            <form action="dosen" method="post">
                 <div class="form-group">
                     <label for="nidn">NIDN</label>
                     <input type="text" class="form-control" name="nidn" id="nidn" value="<?= set_value('nidn') ?>"
