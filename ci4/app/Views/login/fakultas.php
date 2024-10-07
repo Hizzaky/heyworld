@@ -9,10 +9,10 @@
             <?= $header_title . " " . $jenis_user ?>
         </h3>
         <div class="card-body">
-            <?php 
-                $dataSesi=session();
-                $register=$dataSesi->getFlashdata('register');
-            
+            <?php
+            $dataSesi = session();
+            $register = $dataSesi->getFlashdata('register');
+
             if (isset($register)): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <?= $register ?>
@@ -32,10 +32,14 @@
             <?php endif; ?>
             <form method="post">
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username" id="username"
-                        value="<?= set_value('username') ?>" aria-describedby="help username" autofocus
-                        placeholder="Inputkan Username">
+                   
+                    <select class="form-control" name="username" id="username">
+                        <option class="center" value="">-- Silahkan pilih Fakultas anda --</option>
+                       
+                        <?php foreach ($program_studi as $x => $val): ?>
+                            <option value=<?= $val['username'] ?>><?= $val['nama_fakultas'] ?></option>
+                        <?php endforeach ?>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
@@ -44,10 +48,11 @@
                 </div>
                 <hr>
                 <!-- <button type="submit" class="btn btn-primary right" >Masuk</button> -->
-                <input class="btn btn-success right" type="submit" name="submit" value="Masuk Sebagai <?= $kategori ?>">
+                <input class="btn btn-success right" type="submit" name="submit"
+                    value="Masuk Sebagai <?= $jenis_user ?>">
             </form>
-            <!-- <input class="btn btn-primary right" name="register" value="Daftar Akun <?= $kategori ?>"> -->
-            <a class="btn btn-outline-primary reg" href="/Daftar/dosen">Daftar</a>
+            <!-- <input class="btn btn-primary right" name="register" value="Daftar Akun <?= $jenis_user ?>"> -->
+            <!-- <a class="btn btn-outline-primary reg" href="/Daftar/dosen">Daftar</a> -->
         </div>
     </div>
 

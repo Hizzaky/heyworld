@@ -104,7 +104,6 @@ class Home extends BaseController
         $data = $model->arData($jenis_user);
         $data['fakultas']=$model->getData($jenis_user);
 
-
         if ($this->request->getMethod() == 'post') {
 
             $rules = $model->ruleFakultas();
