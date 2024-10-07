@@ -150,10 +150,10 @@ class Login extends BaseController
         } else {
             if (password_verify($password, $res[0]['password'])) {
                 $return['login'] = '1';
-                $dataUser=$this->userData($res[0],$jenis_user);
+                $this->userData($res[0],$jenis_user);
 
-                $sesi->set('login', $dataUser);
-                return $return;
+                // $sesi->set('login', $dataUser);
+                // return $return;
             } else {
                 $return['login'] = '0';
                 return $return;
@@ -185,6 +185,7 @@ class Login extends BaseController
                 'jenis_user' => ucfirst($jenis_user)
             ];
         }
-        return $dataUser;
+        // return $dataUser;
+        echo $jenis_user;
     }
 }
