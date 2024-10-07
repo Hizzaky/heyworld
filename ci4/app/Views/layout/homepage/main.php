@@ -17,9 +17,8 @@
         float: right;
     }
 
-    .reg {
-        /* float: left; */
-        /* text-decoration: none; */
+    .center {
+        text-align: center;
     }
 
     .pad {
@@ -76,8 +75,13 @@
                     <li class="nav-item dropdown form-inline">
                         <a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php
-                            if (isset($menu)) {
+                            <?php $sesi = session();
+                            $sesiLogin = $sesi->get('login');
+                            if(isset($sesiLogin['nama_dosen'])){
+
+                                echo $sesiLogin['nama_dosen'];
+                            }else{
+                                if (isset($menu)) {
 
                                 if ($menu == 'login') {
                                     echo 'Sebagai ' . $kategori;
@@ -87,12 +91,20 @@
                             } else {
                                 echo 'Login';
                             }
+                        }
                             ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/Login?login=dosen">Sebagai Dosen</a>
-                            <a class="dropdown-item" href="/Login?login=prodi">Sebagai Prodi</a>
-                            <a class="dropdown-item" href="/Login?login=fakultas">Sebagai Fakultas</a>
+                            <?php if(isset($sesiLogin['nama_dosen'])): ?>
+                                <form action="/logUserOut" method="post">
+                                    <!-- <a class="dropdown-item logout" href="">Logout</a> -->
+                                    <button class="dropdown-item logout btn" type="submit">Logout</button>
+                                </form>
+                                <?php else: ?>
+                                <a class="dropdown-item" href="/Login?login=dosen">Sebagai Dosen</a>
+                                <a class="dropdown-item" href="/Login?login=prodi">Sebagai Prodi</a>
+                                <a class="dropdown-item" href="/Login?login=fakultas">Sebagai Fakultas</a>
+                                <?php endif; ?>
                         </div>
                         <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <form action="login/dosen" method="post">
@@ -108,6 +120,7 @@
                             <button class="btn dropdown-item" >Akun Fakultas</button>
                         </form>
                     </div> -->
+                    
                     </li>
                 </div>
         </nav>
