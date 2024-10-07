@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-12 col-sm-3 mrg-side"> 
-        
+        <?php echo $sideClass=$jenis_user; ?>
         <?= $this->include('komponen/sidebar/daftar'); ?>
     </div>
 
