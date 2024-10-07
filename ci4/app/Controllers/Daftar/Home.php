@@ -51,7 +51,7 @@ class Home extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('daftar/daftar', $data);
+        return view('daftar/dosen', $data);
     }
 
 }
