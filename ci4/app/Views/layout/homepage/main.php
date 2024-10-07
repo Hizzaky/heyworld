@@ -77,8 +77,7 @@
                         <?php $sesi = session();
                         $sesiLogin = $sesi->get('login');
                         if (isset($sesiLogin['nama_dosen'])) {
-                            echo '<a class="btn btn-danger nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                            echo '<a class="btn btn-danger nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                             echo $sesiLogin['nama_dosen'];
                         } else {
                             echo '<a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
