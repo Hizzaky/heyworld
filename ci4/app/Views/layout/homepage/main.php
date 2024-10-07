@@ -42,7 +42,7 @@
         font-weight: bold;
         text-align: left;
         text-decoration: none;
-    }
+    } 
 </style>
 
 <body>
