@@ -9,10 +9,13 @@ class Profile extends BaseController
 {
     public function index(): string
     {
-        // $sesi=session();
+        $sesi=session();
         $model = new ProfileModel();
 
         $data = $model->arData();
+        $data['login']=$sesi->get('login');
+
+        $this->pre($data);
 
         return view('dashboard/fakultas/profile', $data);
     }
