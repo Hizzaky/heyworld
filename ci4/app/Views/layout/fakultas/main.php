@@ -104,7 +104,7 @@
   <div class="dropdown-menu dropdown-menu-right">
     <button class="dropdown-item" type="button">Action</button>
     <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button">Something else hereasdasd asd asd as da sd asd</button>
   </div>
 </div>
                 </div>
