@@ -100,11 +100,11 @@
             </nav>
         </div>
         <div class="container"><br>
-            <div class="card card-konten">
-                <div class="card-body">
+            <!-- <div class="card card-konten"> -->
+                <!-- <div class="card-body"> -->
                     <?= $this->renderSection('konten') ?>
-                </div>
-            </div>
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
     </div>
 
