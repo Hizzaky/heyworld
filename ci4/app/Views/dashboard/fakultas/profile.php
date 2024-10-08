@@ -38,7 +38,7 @@
                         placeholder="Inputkan Nama Lengkap">
                 </div>
                 <hr>
-                <button type="submit" class="btn btn-success right">Update Nama</button>
+                <button type="submit" class="btn btn-success right">Update Nama Fakultas</button>
             </form>
         </div>
     </div>
