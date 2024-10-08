@@ -36,7 +36,7 @@ class NamaModel extends Model
     // protected $allowCallbacks = true;
     // protected $beforeInsert = [];
     // protected $afterInsert = [];
-    protected $beforeUpdate = ['hashPassword'];
+    // protected $beforeUpdate = ['hashPassword'];
     // protected $afterUpdate = [];
     // protected $beforeFind = [];
     // protected $afterFind = [];
