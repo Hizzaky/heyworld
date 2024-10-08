@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Dashboard\Fakultas;
+namespace App\Models\Dashboard\Fakultas\Table;
 
 use CodeIgniter\Model;
 
-class FakultasTblModel extends Model
+class NamaModel extends Model
 {
     protected $table = 't_fakultas';
     protected $primaryKey = 'fakultas_id';
@@ -14,7 +14,7 @@ class FakultasTblModel extends Model
     // protected $returnType = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nama_fakultas', 'username', 'password'];
+    protected $allowedFields = ['nama_fakultas'];
 
     // protected bool $allowEmptyInserts = false;
     // protected bool $updateOnlyChanged = true;
