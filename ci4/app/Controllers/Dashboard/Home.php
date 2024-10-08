@@ -6,13 +6,13 @@ use App\Controllers\BaseController;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index(): 
     {
         $dataSesi=session();
 
         $sesi=$dataSesi->get('login');
-        $ret=ucfirst($sesi['jenis_login']);
+        // $ret=ucfirst($sesi['jenis_login']);
 
-        return view($ret);
+        return redirect()->to($sesi['jenis_user']);
     }
 }
