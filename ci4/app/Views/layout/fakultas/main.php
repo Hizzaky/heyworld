@@ -99,7 +99,7 @@
                     </li>
                     <div class="btn-group dropright">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropright
+                            FAKULTAS ILMU AGAMA ISLAM
                         </button>
                         <div class="dropdown-menu">
       <button class="dropdown-item logout btn" type="submit">logout</button>
