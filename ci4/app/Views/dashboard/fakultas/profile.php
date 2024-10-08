@@ -35,7 +35,7 @@
                     <label for="nama_fakultas">Nama Fakultas Baru </label>
                     <input type="text" class="form-control" name="nama_fakultas" id="nama_fakultas"
                         value="<?= set_value('nama_fakultas') ?>" aria-describedby="help nama_fakultas" autofocus
-                        placeholder="Inputkan Nama Lengkap">
+                        placeholder="Inputkan Nama Baru">
                 </div><hr>
                 <button type="submit" class="btn btn-success right">Update Nama Fakultas</button>
             </form>
