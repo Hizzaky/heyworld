@@ -53,7 +53,7 @@ $routes->post('logUserOut',function(){
     return redirect()->to('/');
 });
 
-// $routes->group('Dosen', function ($routes) {
-//     $routes->add('/', 'Dosen\Home::index');
+$routes->group('Dashboard', function ($routes) {
+    $routes->add('Profile/Profile', 'Dashboard\Profile::index');
 
-// });
+});
