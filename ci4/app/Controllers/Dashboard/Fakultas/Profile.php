@@ -39,18 +39,18 @@ class Profile extends BaseController
             if($this->validate($rules)){
                 // $getData=$modelTbl->find($data['login']['user_id']);
                 // $this->pre($getData);
-                $_POST['fakultas_id']=$data['login']['user_id'];
-                $modelTbl->save($_POST);
+                // $_POST['fakultas_id']=$data['login']['user_id'];
+                // $modelTbl->save($_POST);
 
-                if($modelTbl){
-                    $sesi->setFlashdata('sukses','Update Nama Fakultas Berhasil!');
-                    $nama_user['nama_user']=$_POST['nama_fakultas'];
-                    $sesi->set('login',$nama_user);
-                    $data['login']['nama_user']=$_POST['nama_fakultas'];
-                }else{
-                    $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
-                }
-                // $this->pre($_POST);
+                // if($modelTbl){
+                //     $sesi->setFlashdata('sukses','Update Nama Fakultas Berhasil!');
+                //     $nama_user['nama_user']=$_POST['nama_fakultas'];
+                //     $sesi->set('login',$nama_user);
+                //     $data['login']['nama_user']=$_POST['nama_fakultas'];
+                // }else{
+                //     $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
+                // }
+                $this->pre($data);
             }else{
                 $data['validasi']=$this->validator;
             }
