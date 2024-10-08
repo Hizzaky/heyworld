@@ -13,8 +13,7 @@ class Profile extends BaseController
         helper('form');
         $sesi = session();
         $model = new ProfileModel();
-
-        $data = $model->arData();
+        $data = $this->arData($sesi->get('login'));
         $data['login'] = $sesi->get('login');
 
         // $this->pre($data);

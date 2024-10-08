@@ -64,6 +64,16 @@ abstract class BaseController extends Controller
         print_r($data);
         echo '</pre><hr>';
     }
+    public function arData($data)
+    {
+        $data = [
+            // 'meta_title' => $data['1'],
+            // 'header_title' => $data['2'],
+            'nama_user' => $data['nama_user'],
+            'jenis_user' => $data['jenis_user']
+        ];
+        return $data;
+    }
     protected function userData($data, $jenis_user)
     {
         if ($jenis_user == 'Dosen') {
