@@ -4,6 +4,7 @@ namespace App\Controllers\Dashboard\Fakultas;
 
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Fakultas\ProfileModel;
+use App\Models\Dashboard\Fakultas\FakultasTblModel;
 
 class Profile extends BaseController
 {
@@ -24,6 +25,7 @@ class Profile extends BaseController
         helper('form');
         $sesi=session();
         $model = new ProfileModel();
+        $modelTbl = new FakultasTblModel();
     
         $data = $model->arData();
         $data['login']=$sesi->get('login');
@@ -35,7 +37,7 @@ class Profile extends BaseController
         if(request()->getMethod()=='post'){
             $rules=$model->rules();
             if($this->validate($rules)){
-                $getData=$model->find($data['login']['user_id']);
+                $getData=$modelTbl->find($data['login']['user_id']);
                 $this->pre($getData);
                 
             }
