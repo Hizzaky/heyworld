@@ -87,25 +87,16 @@
                             echo $sesiLogin['nama_user'];
                             ?>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <!-- <a class="dropdown-item" href="/Login/dosen">Sebagai Dosen</a>
                             <a class="dropdown-item" href="/Login/prodi">Sebagai Prodi</a> -->
                             <form action="/logUserOut" method="post">
                                 <!-- <a class="dropdown-item logout" href="">Logout</a> -->
                                 <button class="dropdown-item logout btn" type="submit"
-                                style="color:red;">Logoutt</button>
+                                    style="color:red;">Logout</button>
                             </form>
                         </div>
                     </li>
-                    <div class="btn-group dropright">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            FAKULTAS ILMU AGAMA ISLAM
-                        </button> 
-                        <div class="dropdown-menu">
-      <button class="dropdown-item logout btn" type="submit">logout</button>
-    <!-- Dropdown menu links -->
-  </div>
-</div>
                 </div>
             </nav>
         </div>
