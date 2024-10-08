@@ -47,7 +47,7 @@
                 <div class="form-group">
                     <label for="nama_fakultas">Nama Fakultas Baru </label>
                     <input type="text" class="form-control" name="nama_fakultas" id="nama_fakultas"
-                        value="<?= set_value('nama_fakultas') ?>" aria-describedby="help nama_fakultas" autofocus
+                        value="" aria-describedby="help nama_fakultas" autofocus
                         placeholder="Inputkan Nama Baru">
                 </div>
                 <hr>
