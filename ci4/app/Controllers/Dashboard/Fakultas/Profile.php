@@ -32,25 +32,30 @@ class Profile extends BaseController
 
 
         // $this->pre($_POST);
-        $this->pre($data);
+        // $this->pre($data);
         
         if(request()->getMethod()=='post'){
             $rules=$model->rules();
             if($this->validate($rules)){
                 $getData=$modelTbl->find($data['login']['user_id']);
-                $this->pre($getData);
+                // $this->pre($getData);
                 $_POST['fakultas_id']=$data['login']['user_id'];
-                // $modelTbl->save($_POST);
+                $modelTbl->save($_POST);
+                
+                if($modelTbl){
+                    $sesi->setFlashdata('sukses','Update Nama Fakultas Berhasil!');
+                    // $nama_user['nama_user']=$_POST['nama_fakultas'];
+                    $data['login']['nama_user']=$_POST['nama_fakultas'];
 
-                // if($modelTbl){
-                //     $sesi->setFlashdata('sukses','Update Nama Fakultas Berhasil!');
-                //     // $nama_user['nama_user']=$_POST['nama_fakultas'];
-                //     $data['login']['nama_user']=$_POST['nama_fakultas'];
-                //     $sesi->set('login',$data['login']);
-                // }else{
-                //     $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
-                // }
-                $this->pre($sesi->get('login'));
+                    $dataUser = $this->userData($getData, $data['jenis_user']);
+                    $sesi->set('login', $dataUser);
+
+                    // $sesi->set('login',$data['login']);
+                }else{
+                    $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
+                }
+                // $this->pre($sesi->get('login'));
+                $this->pre($data);
             }else{
                 $data['validasi']=$this->validator;
             }
