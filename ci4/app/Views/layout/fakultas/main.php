@@ -97,11 +97,11 @@
                             </form>
                         </div>
                     </li>
-                    <div class="btn-group">
+                    <div class="btn-group dropright">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Right-aligned menu
   </button>
-  <div class="dropdown-menu dropdown-menu-right">
+  <div class="dropdown-menu ">
     <button class="dropdown-item" type="button">Action</button>
     <button class="dropdown-item" type="button">Another action</button>
     <button class="dropdown-item" type="button">Something else hereasdasd asd asd as da sd asd</button>
