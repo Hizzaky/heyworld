@@ -9,6 +9,7 @@ class Profile extends BaseController
 {
     public function index(): string
     {
+        helper('form');
         $sesi=session();
         $model = new ProfileModel();
 
