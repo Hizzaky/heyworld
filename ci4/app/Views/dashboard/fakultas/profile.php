@@ -27,7 +27,7 @@
             <form action="" method="post">
                 
                 <div class="form-group">
-                    <label for="nama_fakultas_lama">Nama Fakultas </label>
+                    <label for="nama_fakultas_lama">Nama Fakultas ssss</label>
                     <input type="text" class="form-control" name="nama_fakultas_lama" id="nama_fakultas_lama"
                         value="<?= $login['nama_user'] ?>" aria-describedby="help nama_fakultas_lama" dissable>
                 </div>
