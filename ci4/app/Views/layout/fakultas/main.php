@@ -27,7 +27,7 @@
     }
 
     .mrg-konten {
-        margin-top: 10%;
+        margin-top: 5%;
     }
 
     .mrg-side {
