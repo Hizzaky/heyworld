@@ -26,11 +26,11 @@
         padding-top: 10%;
     }
 
-    .mrg-login {
+    .mrg-konten {
         margin-top: 5%;
     }
 
-    .mrg-home {
+    .mrg-side {
         margin-top: 5%;
     }
 
