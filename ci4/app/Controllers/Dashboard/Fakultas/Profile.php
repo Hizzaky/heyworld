@@ -33,13 +33,13 @@ class Profile extends BaseController
 
 
         // $this->pre($_POST);
-        // $this->pre($data);
+        $this->pre($data);
 
         if (request()->getMethod() == 'post') {
             $rules = $model->rules();
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
-                // $this->pre($getData);
+                $this->pre($getData);
                 $_POST['fakultas_id'] = $data['login']['user_id'];
                 $modelTbl->save($_POST);
 
