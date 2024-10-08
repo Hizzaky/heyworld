@@ -28,7 +28,7 @@ class Profile extends BaseController
         $modelTbl = new NamaModel();
 
         $data = $this->arData($sesi->get('login'));
-        $data['meta_tilte']='Profil Fakultas';
+        $data['meta_title']='Profil Fakultas';
         $data['header_title']='Nama ';
         $data['login'] = $sesi->get('login');
 
