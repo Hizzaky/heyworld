@@ -11,55 +11,58 @@ class Profile extends BaseController
     public function index(): string
     {
         helper('form');
-        $sesi=session();
+        $sesi = session();
         $model = new ProfileModel();
 
         $data = $model->arData();
-        $data['login']=$sesi->get('login');
-        
+        $data['login'] = $sesi->get('login');
+
         // $this->pre($data);
-        
+
         return view('dashboard/fakultas/profile', $data);
     }
-    public function update(){
+    public function update()
+    {
         helper('form');
-        $sesi=session();
+        $sesi = session();
         $model = new ProfileModel();
         $modelTbl = new NamaModel();
-    
+
         $data = $model->arData();
-        $data['login']=$sesi->get('login');
+        $data['login'] = $sesi->get('login');
 
 
         // $this->pre($_POST);
         // $this->pre($data);
-        
-        if(request()->getMethod()=='post'){
-            $rules=$model->rules();
-            if($this->validate($rules)){
-                $getData=$modelTbl->find($data['login']['user_id']);
+
+        if (request()->getMethod() == 'post') {
+            $rules = $model->rules();
+            if ($this->validate($rules)) {
+                $getData = $modelTbl->find($data['login']['user_id']);
                 // $this->pre($getData);
-                $_POST['fakultas_id']=$data['login']['user_id'];
+                $_POST['fakultas_id'] = $data['login']['user_id'];
                 $modelTbl->save($_POST);
-                
-                if($modelTbl){
-                    $sesi->setFlashdata('sukses','Update Nama Fakultas Berhasil!');
+
+                if ($modelTbl) {
+                    $sesi->setFlashdata('sukses', 'Update Nama Fakultas Berhasil!');
                     // $nama_user['nama_user']=$_POST['nama_fakultas'];
-                    $data['login']['nama_user']=$_POST['nama_fakultas'];
+                    $data['login']['nama_user'] = $_POST['nama_fakultas'];
 
                     $dataUser = $this->userData($getData, $data['jenis_user']);
                     $sesi->set('login', $dataUser);
+                    $data['login'] = $sesi->get('login');
+
 
                     // $sesi->set('login',$data['login']);
-                }else{
-                    $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
+                } else {
+                    $sesi->setFlashdata('fail', 'Update Nama Fakultas Gagal!');
                 }
                 // $this->pre($sesi->get('login'));
                 $this->pre($data);
-            }else{
-                $data['validasi']=$this->validator;
+            } else {
+                $data['validasi'] = $this->validator;
             }
-            
+
         }
 
 
