@@ -32,7 +32,7 @@ class Profile extends BaseController
 
 
         // $this->pre($_POST);
-        // $this->pre($data);
+        $this->pre($data);
         
         if(request()->getMethod()=='post'){
             $rules=$model->rules();
@@ -50,7 +50,7 @@ class Profile extends BaseController
                 // }else{
                 //     $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
                 // }
-                $this->pre($data);
+                // $this->pre($data);
             }else{
                 $data['validasi']=$this->validator;
             }
