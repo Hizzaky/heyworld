@@ -11,7 +11,7 @@ class Fakultas extends Model
         $data = [
             'meta_title' => 'Welcome Fakultas UMMAT',
             'header_title' => '',
-            'jenis_user' => 'Fakultas',
+            'jenis_user' => 'Fakultas', 
             'konten' => 'login berhasil'
         ];
         return $data;
