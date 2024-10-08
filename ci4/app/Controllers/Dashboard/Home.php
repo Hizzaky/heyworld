@@ -11,7 +11,13 @@ class Home extends BaseController
         $dataSesi=session();
 
         $sesi=$dataSesi->get('login');
-        $dir='Dashboard/'.$sesi['jenis_user'];
+        if(isset($sesi)){
+
+            $dir='Dashboard/'.$sesi['jenis_user'];
+        }else{
+            $dir='/';
+
+        }
         return redirect()->to(base_url($dir));
     }
 }
