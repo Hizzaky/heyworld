@@ -87,7 +87,7 @@
                             echo $sesiLogin['nama_user'];
                             ?>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <!-- <a class="dropdown-item" href="/Login/dosen">Sebagai Dosen</a>
                             <a class="dropdown-item" href="/Login/prodi">Sebagai Prodi</a> -->
                             <form action="/logUserOut" method="post">
