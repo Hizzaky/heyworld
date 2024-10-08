@@ -48,7 +48,7 @@ class Profile extends BaseController
                     $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
                 }
             }else{
-                $data['validasi']->$this->validator;
+                $data['validasi']=$this->validator;
             }
             
         }
