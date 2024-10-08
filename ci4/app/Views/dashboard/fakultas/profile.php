@@ -29,7 +29,7 @@
                 <div class="form-group">
                     <label for="nama_fakultas_lama">Nama Fakultas </label>
                     <input type="text" class="form-control" name="nama_fakultas_lama" id="nama_fakultas_lama"
-                        value="<?= $login['nama_user'] ?>" aria-describedby="help nama_fakultas_lama" dissabled>
+                        value="<?= $login['nama_user'] ?>" aria-describedby="help nama_fakultas_lama" disabled>
                 </div>
                 <div class="form-group">
                     <label for="nama_fakultas">Nama Fakultas Baru </label>
