@@ -54,6 +54,6 @@ $routes->post('logUserOut',function(){
 });
 
 $routes->group('Dashboard', function ($routes) {
-    $routes->add('Profile/Profile', 'Dashboard\Profile::index');
+    $routes->add('Profile/Profile', 'Dashboard\Fakultas\Profile::index');
 
 });
