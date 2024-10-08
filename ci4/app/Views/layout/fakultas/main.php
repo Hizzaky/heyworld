@@ -93,15 +93,16 @@
                             <form action="/logUserOut" method="post">
                                 <!-- <a class="dropdown-item logout" href="">Logout</a> -->
                                 <button class="dropdown-item logout btn" type="submit"
-                                    style="color:red;">Logoutt</button>
+                                style="color:red;">Logoutt</button>
                             </form>
                         </div>
                     </li>
                     <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropright
-  </button>
-  <div class="dropdown-menu">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropright
+                        </button>
+                        <div class="dropdown-menu">
+      <button class="dropdown-item logout btn" type="submit">logout</button>
     <!-- Dropdown menu links -->
   </div>
 </div>
