@@ -24,30 +24,21 @@
                         <?= $validasi->listErrors() ?>
                     </div>
             <?php endif; ?>
-            <form action="dosen" method="post">
+            <form action="" method="post">
+                
                 <div class="form-group">
-                    <label for="nidn">NIDN</label>
-                    <input type="text" class="form-control" name="nidn" id="nidn" value="<?= set_value('nidn') ?>"
-                        aria-describedby="help nidn" autofocus placeholder="Inputkan NIDN">
+                    <label for="nama_fakultas_lama">Nama Fakultas </label>
+                    <input type="text" class="form-control" name="nama_fakultas_lama" id="nama_fakultas_lama"
+                        value="<?= $data['login']['nama_user'] ?>" aria-describedby="help nama_fakultas_lama" dissable>
                 </div>
                 <div class="form-group">
-                    <label for="nama_dosen">Nama Lengkap </label>
-                    <input type="text" class="form-control" name="nama_dosen" id="nama_dosen"
-                        value="<?= set_value('nama_dosen') ?>" aria-describedby="help nama_dosen" autofocus
+                    <label for="nama_fakultas">Nama Fakultas Baru </label>
+                    <input type="text" class="form-control" name="nama_fakultas" id="nama_fakultas"
+                        value="<?= set_value('nama_fakultas') ?>" aria-describedby="help nama_fakultas" autofocus
                         placeholder="Inputkan Nama Lengkap">
                 </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" id="password"
-                        placeholder="Inputkan Password">
-                </div>
-                <div class="form-group">
-                    <label for="rePassword">Konfirmasi Password</label>
-                    <input type="password" class="form-control" name="rePassword" id="rePassword"
-                        placeholder="Ketik Ulang Password">
-                </div>
                 <hr>
-                <button type="submit" class="btn btn-success right">Daftar</button>
+                <button type="submit" class="btn btn-success right">Update Nama</button>
             </form>
         </div>
     </div>
