@@ -27,8 +27,10 @@ class Profile extends BaseController
     
         $data = $model->arData();
         $data['login']=$sesi->get('login');
-        
+
+
         $this->pre($_POST);
+        $this->pre($data);
         return view('dashboard/fakultas/profile', $data);
     }
 
