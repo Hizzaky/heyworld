@@ -14,6 +14,6 @@ class Home extends BaseController
         // $ret=ucfirst($sesi['jenis_login']);
         // $dir='/'.$sesi['jenis_user'];
         $dir='fail';
-        return redirect()->to(base_url($dir));
+        return redirect()->to($dir);
     }
 }
