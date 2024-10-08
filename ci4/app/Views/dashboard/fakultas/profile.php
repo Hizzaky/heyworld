@@ -24,7 +24,7 @@
                         <?= $validasi->listErrors() ?>
                     </div>
             <?php endif; ?>
-            <form action="" method="post">
+            <form action="update" method="post">
                 
                 <div class="form-group">
                     <label for="nama_fakultas_lama">Nama Fakultas </label>

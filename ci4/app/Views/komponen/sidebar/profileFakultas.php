@@ -6,11 +6,11 @@
             <div class="col-7">
                 <div class="">
                     <a class="list-group-item btn btn-outline-primary s-body"
-                        href="/Daftar/dosen">Menu</a>
+                        href="/Dashboard/profile/dosen">Nama Fakultas</a>
                     <a class="list-group-item btn btn-outline-primary s-body"
-                        href="/Daftar/prodi">Menu</a>
-                    <a class="list-group-item btn btn-outline-primary s-body "
-                        href="/Daftar/fakultas">Menu</a>
+                        href="/Daftar/prodi">Password</a>
+                    <!-- <a class="list-group-item btn btn-outline-primary s-body "
+                        href="/Daftar/fakultas">Menu</a> -->
                 </div>
             </div>
         </div>
