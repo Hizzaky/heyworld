@@ -93,7 +93,7 @@
                             <form action="/logUserOut" method="post">
                                 <!-- <a class="dropdown-item logout" href="">Logout</a> -->
                                 <button class="dropdown-item logout btn" type="submit"
-                                    style="color:red;">Logout</button>
+                                    style="color:red;">Logoutt</button>
                             </form>
                         </div>
                     </li>
