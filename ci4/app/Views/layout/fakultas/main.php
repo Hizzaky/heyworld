@@ -99,12 +99,10 @@
                     </li>
                     <div class="btn-group dropright">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Right-aligned menu
+    Dropright
   </button>
-  <div class="dropdown-menu ">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else</button>
+  <div class="dropdown-menu">
+    <!-- Dropdown menu links -->
   </div>
 </div>
                 </div>
