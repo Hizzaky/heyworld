@@ -29,7 +29,7 @@ class Profile extends BaseController
 
         $data = $this->arData($sesi->get('login'));
         $data['meta_tilte']='Profil Fakultas';
-        $data['header_tilte']='Nama ';
+        $data['header_title']='Nama ';
         $data['login'] = $sesi->get('login');
 
 
