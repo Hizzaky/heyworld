@@ -13,8 +13,6 @@ class Home extends BaseController
         $sesi=$dataSesi->get('login');
         // $ret=ucfirst($sesi['jenis_login']);
 
-        // return redirect()->to($sesi['jenis_user']);
-        echo $sesi['jenis_user'];
-        return '';
+        return redirect()->to($sesi['jenis_user']);
     }
 }
