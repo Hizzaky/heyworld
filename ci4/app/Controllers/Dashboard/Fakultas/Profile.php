@@ -32,7 +32,7 @@ class Profile extends BaseController
 
 
         // $this->pre($_POST);
-        // $this->pre($data);
+        $this->pre($data);
         
         if(request()->getMethod()=='post'){
             $rules=$model->rules();
@@ -40,16 +40,16 @@ class Profile extends BaseController
                 $getData=$modelTbl->find($data['login']['user_id']);
                 $this->pre($getData);
                 $_POST['fakultas_id']=$data['login']['user_id'];
-                $modelTbl->save($_POST);
+                // $modelTbl->save($_POST);
 
-                if($modelTbl){
-                    $sesi->setFlashdata('sukses','Update Nama Fakultas Berhasil!');
-                    // $nama_user['nama_user']=$_POST['nama_fakultas'];
-                    $data['login']['nama_user']=$_POST['nama_fakultas'];
-                    $sesi->set('login',$data['login']);
-                }else{
-                    $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
-                }
+                // if($modelTbl){
+                //     $sesi->setFlashdata('sukses','Update Nama Fakultas Berhasil!');
+                //     // $nama_user['nama_user']=$_POST['nama_fakultas'];
+                //     $data['login']['nama_user']=$_POST['nama_fakultas'];
+                //     $sesi->set('login',$data['login']);
+                // }else{
+                //     $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
+                // }
                 $this->pre($sesi->get('login'));
             }else{
                 $data['validasi']=$this->validator;
