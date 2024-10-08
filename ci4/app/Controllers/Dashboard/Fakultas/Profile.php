@@ -29,8 +29,20 @@ class Profile extends BaseController
         $data['login']=$sesi->get('login');
 
 
-        $this->pre($_POST);
-        $this->pre($data);
+        // $this->pre($_POST);
+        // $this->pre($data);
+        
+        if(request()->getMethod()=='post'){
+            $rules=$model->rules();
+            if($this->validate($rules)){
+                $getData=$model->find($data['login']['user_id']);
+                $this->pre($getData);
+                
+            }
+            
+        }
+
+
         return view('dashboard/fakultas/profile', $data);
     }
 

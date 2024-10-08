@@ -16,4 +16,16 @@ class ProfileModel extends Model
         ];
         return $data;
     }
+    public function rules(){
+        $rules = [
+            'nama_fakultas' => [
+                'rules' => 'required',
+                'label' => 'Nama Fakultas',
+                'errors' => [
+                    'required' => 'Input Nama Fakultas dengan benar!'
+                ]
+            ]
+        ];
+        return $rules;
+    }
 }
