@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 
 class Home extends BaseController
 {
-    public function index(): 
+    public function index()
     {
         $dataSesi=session();
 
