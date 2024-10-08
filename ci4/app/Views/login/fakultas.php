@@ -33,11 +33,11 @@
             <form method="post">
                 <div class="form-group">
                    
-                    <select class="form-control" name="nama_fakultas" id="nama_fakultas">
+                    <select class="form-control" name="username" id="username">
                         <option class="center" value="">-- Silahkan pilih Fakultas anda --</option>
                        
                         <?php foreach ($fakultas as $x => $val): ?>
-                            <option value=<?= $val['nama_fakultas'] ?>><?= $val['nama_fakultas'] ?></option>
+                            <option value=<?= $val['username'] ?>><?= $val['nama_fakultas'] ?></option>
                         <?php endforeach ?>
                     </select>
                 </div>
