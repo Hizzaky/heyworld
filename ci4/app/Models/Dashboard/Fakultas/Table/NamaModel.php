@@ -14,7 +14,7 @@ class NamaModel extends Model
     // protected $returnType = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nama_fakultas'];
+    protected $allowedFields = ['fakultas_id','nama_fakultas'];
 
     // protected bool $allowEmptyInserts = false;
     // protected bool $updateOnlyChanged = true;
