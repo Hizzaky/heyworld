@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Dashboard\Dosen;
+namespace App\Controllers\Dashboard;
 
 use App\Controllers\BaseController;
 
