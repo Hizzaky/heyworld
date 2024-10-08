@@ -37,9 +37,16 @@ class Profile extends BaseController
         if(request()->getMethod()=='post'){
             $rules=$model->rules();
             if($this->validate($rules)){
-                $getData=$modelTbl->find($data['login']['user_id']);
+                // $getData=$modelTbl->find($data['login']['user_id']);
                 // $this->pre($getData);
-                
+                $_POST['fakultas_id']=$data['login']['user_id'];
+                $modelTbl->save($_POST);
+
+                if($modelTbl){
+                    $sesi->setFlashdata('sukses','Update Nama Fakultas Berhasil!');
+                }else{
+                    $sesi->setFlashdata('fail','Update Nama Fakultas Gagal!');
+                }
             }
             
         }
