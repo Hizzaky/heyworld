@@ -44,7 +44,7 @@ class Profile extends BaseController
 
                 if($modelTbl){
                     $sesi->setFlashdata('sukses','Update Nama Fakultas Berhasil!');
-                    $nama_user['nama_user']=$_POST['nama_fakultas'];
+                    // $nama_user['nama_user']=$_POST['nama_fakultas'];
                     $data['login']['nama_user']=$_POST['nama_fakultas'];
                     $sesi->set('login',$data['login']);
                 }else{
