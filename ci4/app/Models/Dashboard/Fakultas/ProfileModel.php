@@ -12,7 +12,7 @@ class ProfileModel extends Model
             'meta_title' => 'Welcome Fakultas UMMAT',
             'header_title' => 'Profil Fakultas ',
             'kategori' => 'Fakultas',
-            'konten' => 'Prifil'
+            'konten' => 'Profil'
         ];
         return $data;
     }
