@@ -13,7 +13,7 @@ class Home extends BaseController
         $sesi=$dataSesi->get('login');
         // $ret=ucfirst($sesi['jenis_login']);
         // $dir='/'.$sesi['jenis_user'];
-        $dir='/fail';
-        return redirect()->to($dir);
+        $dir='Dashboard/'.$sesi['jenis_user'];
+        return redirect()->to(base_url($dir));
     }
 }
