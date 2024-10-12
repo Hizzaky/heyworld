@@ -10,7 +10,7 @@ class Home extends BaseController
     public function index(): string
     {
         $sesi=session();
-        $this->pre($sesi->get('login'));
+        // $this->pre($sesi->get('login'));
         $model=new Fakultas();
 
         $data=$this->arData($model->title(),$sesi->get('login'));
