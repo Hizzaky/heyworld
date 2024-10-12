@@ -6,9 +6,9 @@
             <div class="col-7">
                 <div class="">
                     <?= $side ?>
-                    <a class="list-group-item btn <?= $variable = $side == '1' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
+                    <a class="list-group-item btn <?= $variable = $side == '1' ? 'active' : 'btn-outline-primary' ?> s-body"
                         href="nama_fakultas">Nama Fakultas</a>
-                    <a class="list-group-item btn <?= $variable = $side == '2' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
+                    <a class="list-group-item btn <?= $variable = $side == '2' ? 'active' : 'btn-outline-primary' ?> s-body"
                         href="password">Password</a>
                     <!-- <a class="list-group-item btn btn-outline-primary s-body "
                         href="/Daftar/fakultas">Menu</a> -->
