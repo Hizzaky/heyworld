@@ -28,7 +28,7 @@ class Profile extends BaseController
             return redirect()->to('/');
         }
 
-        return redirect('Profile');
+        return redirect('nama-fakultas');
     }
     public function update_nama()
     {
