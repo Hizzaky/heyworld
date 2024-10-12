@@ -6,13 +6,11 @@ use CodeIgniter\Model;
 
 class Fakultas extends Model
 {
-    public function arData()
+    public function title()
     {
         $data = [
             'meta_title' => 'Welcome Fakultas UMMAT',
-            'header_title' => '',
-            'jenis_user' => 'Fakultas', 
-            'konten' => 'login berhasil'
+            'header_title' => ''
         ];
         return $data;
     }

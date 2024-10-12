@@ -11,11 +11,11 @@ class Home extends BaseController
     {
         $sesi=session();
         $this->pre($sesi->get('login'));
-        // $model=new Fakultas();
+        $model=new Fakultas();
 
-        // $data=$model->arData();
+        $data=$this->arData($model->title(),$sesi->get('login'));
 
-        // return view('dashboard/fakultas/home',$data);
+        return view('dashboard/fakultas/home',$data);
     }
 
     
