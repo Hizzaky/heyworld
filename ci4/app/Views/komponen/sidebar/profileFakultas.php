@@ -6,9 +6,9 @@
             <div class="col-7">
                 <div class="">
                     <a class="list-group-item btn btn-outline-primary s-body"
-                        href="/update">Nama Fakultas</a>
+                        href="/dashboard/update">Nama Fakultas</a>
                     <a class="list-group-item btn btn-outline-primary s-body"
-                        href="/password">Password</a>
+                        href="password">Password</a>
                     <!-- <a class="list-group-item btn btn-outline-primary s-body "
                         href="/Daftar/fakultas">Menu</a> -->
                 </div>
