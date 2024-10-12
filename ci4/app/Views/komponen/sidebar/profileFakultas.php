@@ -6,7 +6,7 @@
             <div class="col-7">
                 <div class="">
                     <a class="list-group-item btn btn-outline-primary s-body"
-                        href="/Dashboard/profile/dosen">Nama Fakultas</a>
+                        href="/update">Nama Fakultas</a>
                     <a class="list-group-item btn btn-outline-primary s-body"
                         href="/Daftar/prodi">Password</a>
                     <!-- <a class="list-group-item btn btn-outline-primary s-body "

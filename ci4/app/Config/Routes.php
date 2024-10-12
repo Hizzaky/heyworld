@@ -57,5 +57,6 @@ $routes->group('Dashboard', function ($routes) {
     $routes->add('/', 'Dashboard\Home::index');
     $routes->add('update', 'Dashboard\Fakultas\Profile::update');
     $routes->add('Profile', 'Dashboard\Fakultas\Profile::index');
+    $routes->add('password', 'Dashboard\Fakultas\Profile::index',['as'=>'Profile']);
 
 });
