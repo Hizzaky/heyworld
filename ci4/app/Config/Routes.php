@@ -55,9 +55,8 @@ $routes->post('logUserOut',function(){
 
 $routes->group('Dashboard', function ($routes) {
     $routes->add('/', 'Dashboard\Home::index');
-    $routes->post('update', 'Dashboard\Fakultas\Profile::update');
     $routes->add('Profile', 'Dashboard\Fakultas\Profile::index');
-    $routes->add('nama_fakultas', 'Dashboard\Fakultas\Profile::index',['as'=>'nama-fakultas']);
-    $routes->add('password', 'Dashboard\Fakultas\Profile::index',['as'=>'Profile']);
+    $routes->add('nama_fakultas', 'Dashboard\Fakultas\Profile::update_nama',['as'=>'Profile']);
+    $routes->add('password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'Profile']);
 
 });
