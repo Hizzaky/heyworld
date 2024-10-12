@@ -14,12 +14,8 @@ class Profile extends BaseController
         $sesi = session();
         $model = new ProfileModel();
 
-        $title=[
-            'meta'=>'Profile Fakultas UMMAT',
-            'header'=>'Profile UMMAT'
-        ];
-        $data = $this->arData($title,$sesi->get('login'));
-        
+        $data = $this->arData($this->title(),$sesi->get('login'));
+
         $data['login'] = $sesi->get('login');
 
         // $this->pre($data);
@@ -33,9 +29,9 @@ class Profile extends BaseController
         $model = new ProfileModel();
         $modelTbl = new NamaModel();
 
-        $data = $this->arData($sesi->get('login'));
-        $data['meta_title']='Profil Fakultas';
-        $data['header_title']='Nama ';
+        $data = $this->arData($this->title(),$sesi->get('login'));
+        // $data['meta_title']='Profil Fakultas';
+        // $data['header_title']='Nama ';
         $data['login'] = $sesi->get('login');
 
 
@@ -74,6 +70,14 @@ class Profile extends BaseController
 
 
         return view('dashboard/fakultas/profile', $data);
+    }
+
+    protected function title(){
+        $title = [
+            'meta' => 'Profile Fakultas UMMAT',
+            'header' => 'Profil UMMAT'
+        ];
+        return $title;
     }
 
 
