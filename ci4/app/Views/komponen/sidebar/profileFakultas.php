@@ -5,9 +5,9 @@
             <div class="col-5"></div>
             <div class="col-7">
                 <div class="">
-                    <a class="list-group-item btn btn-outline-primary s-body"
-                        href="/dashboard/update">Nama Fakultas</a>
-                    <a class="list-group-item btn btn-outline-primary s-body"
+                    <a class="list-group-item btn <?= $variable = $side == '1' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
+                        href="nama_fakultas">Nama Fakultas</a>
+                    <a class="list-group-item btn <?= $variable = $side == '2' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
                         href="password">Password</a>
                     <!-- <a class="list-group-item btn btn-outline-primary s-body "
                         href="/Daftar/fakultas">Menu</a> -->
