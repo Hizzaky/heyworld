@@ -19,7 +19,7 @@ class Profile extends BaseController
         // $data['side']='1';
 
         // return view('dashboard/fakultas/profile', $data);
-        
+
         $data = $sesi->get('login');
         if (isset($data['jenis_user'])) {
             if ($data['jenis_user'] != 'Fakultas') {
@@ -68,7 +68,7 @@ class Profile extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('dashboard/fakultas/profile', $data);
+        return view('dashboard/fakultas/profileNama', $data);
     }
     public function update_password()
     {
@@ -107,7 +107,7 @@ class Profile extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('dashboard/fakultas/profile', $data);
+        return view('dashboard/fakultas/profilePass', $data);
     }
 
 
