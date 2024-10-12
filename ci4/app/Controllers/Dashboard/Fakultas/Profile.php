@@ -14,10 +14,10 @@ class Profile extends BaseController
         $sesi = session();
         $model = new ProfileModel();
 
-        $data = $this->arData($model->title(),$sesi->get('login'));
+        $data = $this->arData($model->title(), $sesi->get('login'));
 
         $data['login'] = $sesi->get('login');
-        
+
         return view('dashboard/fakultas/profile', $data);
     }
     public function update()
@@ -27,7 +27,7 @@ class Profile extends BaseController
         $model = new ProfileModel();
         $modelTbl = new NamaModel();
 
-        $data = $this->arData($model->title(),$sesi->get('login'));
+        $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         // $this->pre($data);
         if (request()->getMethod() == 'post') {
@@ -41,7 +41,8 @@ class Profile extends BaseController
 
                 if ($modelTbl) {
                     $sesi->setFlashdata('sukses', 'Update Nama Fakultas Berhasil!');
-                    
+                    $getData = $modelTbl->find($data['login']['user_id']);
+
                     $dataUser = $this->userData($getData, $data['jenis_user']);
                     $sesi->set('login', $dataUser);
                     $data['login'] = $sesi->get('login');
@@ -57,7 +58,7 @@ class Profile extends BaseController
         return view('dashboard/fakultas/profile', $data);
     }
 
-    
+
 
 
 }
