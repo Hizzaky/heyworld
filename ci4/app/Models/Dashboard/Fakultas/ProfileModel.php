@@ -6,20 +6,11 @@ use CodeIgniter\Model;
 
 class ProfileModel extends Model
 {
-    
-    public function arData($x){
-        $data = [
-            'meta_title' => 'Welcome $x UMMAT',
-            'header_title' => 'Profil $x',
-            'jenis_user' => '$x'
-        ];
-        return $data;
-    }
     public function title()
     {
         $title = [
             'meta' => 'Profile Fakultas UMMAT',
-            'header' => 'Profil UMMAT'
+            'header' => 'Profile UMMAT'
         ];
         return $title;
     }
