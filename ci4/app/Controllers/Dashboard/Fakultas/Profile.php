@@ -13,7 +13,13 @@ class Profile extends BaseController
         helper('form');
         $sesi = session();
         $model = new ProfileModel();
-        $data = $this->arData($sesi->get('login'));
+
+        $title=[
+            'meta'=>'Profile Fakultas UMMAT',
+            'header'=>'Profile UMMAT'
+        ];
+        $data = $this->arData($title,$sesi->get('login'));
+        
         $data['login'] = $sesi->get('login');
 
         // $this->pre($data);

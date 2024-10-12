@@ -64,11 +64,11 @@ abstract class BaseController extends Controller
         print_r($data);
         echo '</pre><hr>';
     }
-    public function arData($data)
+    public function arData($title,$data)
     {
         $data = [
-            // 'meta_title' => $data['1'],
-            // 'header_title' => $data['2'],
+            'meta_title' => $title['meta'],
+            'header_title' => $title['header'],
             'nama_user' => $data['nama_user'],
             'jenis_user' => $data['jenis_user']
         ];
