@@ -41,7 +41,7 @@ class Home extends BaseController
         $sesi = session();
 
         $jenis_user = ucfirst($sesi->get('jenis_user'));
-        $data = $model->arData($jenis_user);
+        $data = $model->arDataLogin($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
@@ -70,7 +70,7 @@ class Home extends BaseController
         $sesi = session();
 
         $jenis_user = ucfirst($sesi->get('jenis_user'));
-        $data = $model->arData($jenis_user);
+        $data = $model->arDataLogin($jenis_user);
         $data['program_studi'] = $model->getData($jenis_user);
         
         if ($this->request->getMethod() == 'post') {

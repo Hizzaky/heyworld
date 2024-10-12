@@ -15,6 +15,14 @@ class ProfileModel extends Model
         ];
         return $data;
     }
+    public function title()
+    {
+        $title = [
+            'meta' => 'Profile Fakultas UMMAT',
+            'header' => 'Profil UMMAT'
+        ];
+        return $title;
+    }
     public function rules(){
         $rules = [
             'nama_fakultas' => [

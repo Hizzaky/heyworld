@@ -14,12 +14,10 @@ class Profile extends BaseController
         $sesi = session();
         $model = new ProfileModel();
 
-        $data = $this->arData($this->title(),$sesi->get('login'));
+        $data = $this->arData($model->title(),$sesi->get('login'));
 
         $data['login'] = $sesi->get('login');
-
-        // $this->pre($data);
-
+        
         return view('dashboard/fakultas/profile', $data);
     }
     public function update()
@@ -29,56 +27,37 @@ class Profile extends BaseController
         $model = new ProfileModel();
         $modelTbl = new NamaModel();
 
-        $data = $this->arData($this->title(),$sesi->get('login'));
-        // $data['meta_title']='Profil Fakultas';
-        // $data['header_title']='Nama ';
+        $data = $this->arData($model->title(),$sesi->get('login'));
         $data['login'] = $sesi->get('login');
-
-
-        // $this->pre($_POST);
-        $this->pre($data);
-
+        // $this->pre($data);
         if (request()->getMethod() == 'post') {
             $rules = $model->rules();
+
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
-                $this->pre($getData);
+                // $this->pre($getData);
                 $_POST['fakultas_id'] = $data['login']['user_id'];
                 $modelTbl->save($_POST);
 
                 if ($modelTbl) {
                     $sesi->setFlashdata('sukses', 'Update Nama Fakultas Berhasil!');
-                    // $nama_user['nama_user']=$_POST['nama_fakultas'];
-                    // $data['login']['nama_user'] = $_POST['nama_fakultas'];
-
+                    
                     $dataUser = $this->userData($getData, $data['jenis_user']);
                     $sesi->set('login', $dataUser);
                     $data['login'] = $sesi->get('login');
-
-
-                    // $sesi->set('login',$data['login']);
                 } else {
                     $sesi->setFlashdata('fail', 'Update Nama Fakultas Gagal!');
                 }
                 // $this->pre($sesi->get('login'));
-                $this->pre($data);
+                // $this->pre($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
-
         }
-
-
         return view('dashboard/fakultas/profile', $data);
     }
 
-    protected function title(){
-        $title = [
-            'meta' => 'Profile Fakultas UMMAT',
-            'header' => 'Profil UMMAT'
-        ];
-        return $title;
-    }
+    
 
 
 }
