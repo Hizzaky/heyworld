@@ -19,6 +19,7 @@ class Profile extends BaseController
         // $data['side']='1';
 
         // return view('dashboard/fakultas/profile', $data);
+        
         $data = $sesi->get('login');
         if (isset($data['jenis_user'])) {
             if ($data['jenis_user'] != 'Fakultas') {

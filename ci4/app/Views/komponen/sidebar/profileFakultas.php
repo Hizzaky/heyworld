@@ -5,6 +5,7 @@
             <div class="col-5"></div>
             <div class="col-7">
                 <div class="">
+                    <?= $side ?>
                     <a class="list-group-item btn <?= $variable = $side == '1' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
                         href="nama_fakultas">Nama Fakultas</a>
                     <a class="list-group-item btn <?= $variable = $side == '2' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
