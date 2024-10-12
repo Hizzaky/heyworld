@@ -9,12 +9,13 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        // $sesi=session();
-        $model=new Fakultas();
+        $sesi=session();
+        $this->pre($sesi->get('login'));
+        // $model=new Fakultas();
 
-        $data=$model->arData();
+        // $data=$model->arData();
 
-        return view('dashboard/fakultas/home',$data);
+        // return view('dashboard/fakultas/home',$data);
     }
 
     
