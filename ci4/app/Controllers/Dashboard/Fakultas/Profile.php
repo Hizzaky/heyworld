@@ -5,6 +5,7 @@ namespace App\Controllers\Dashboard\Fakultas;
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Fakultas\ProfileModel;
 use App\Models\Dashboard\Fakultas\Table\NamaModel;
+use App\Models\Dashboard\Fakultas\Table\PassModel;
 
 class Profile extends BaseController
 {
@@ -75,7 +76,7 @@ class Profile extends BaseController
         helper('form');
         $sesi = session();
         $model = new ProfileModel();
-        $modelTbl = new NamaModel();
+        $modelTbl = new PassModel();
 
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
