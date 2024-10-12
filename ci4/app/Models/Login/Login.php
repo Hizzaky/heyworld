@@ -77,13 +77,12 @@ class Login extends BaseController
         ];
         return $rules;
     }
-    public function arData($jenis_user)
+    public function arDataLogin($jenis_user)
     {
         $data = [
             'meta_title' => 'Login ' . $jenis_user . ' SIM UMMAT',
             'header_title' => 'Silahkan Login Dengan Akun',
             'jenis_user' => $jenis_user
-            // 'menu' => 'login'
         ];
         return $data;
     }
