@@ -4,7 +4,7 @@ namespace App\Models\Dashboard\Fakultas\Table;
 
 use CodeIgniter\Model;
 
-class NamaModel extends Model
+class PassModel extends Model
 {
     protected $table = 't_fakultas';
     protected $primaryKey = 'fakultas_id';
