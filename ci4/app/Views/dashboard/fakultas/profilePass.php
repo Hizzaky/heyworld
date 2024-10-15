@@ -54,7 +54,7 @@
                 </div><hr>
                 <div class="form-group">
                     <label for="oldPassword">Password Terakhir</label>
-                    <input type="text" class="form-control" name="oldPassword" id="oldPassword"
+                    <input type="password" class="form-control" name="oldPassword" id="oldPassword"
                         value="" aria-describedby="help oldPassword" autofocus
                         placeholder="Inputkan Password Terakhir Digunakan">
                 </div>
