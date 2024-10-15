@@ -94,21 +94,26 @@ class Profile extends BaseController
 
                 if(password_verify($_POST['oldPassword'], $getData['password'])){
 
-                    $sesi->setFlashdata('sukses','password sama dan lolos verif');
+                    // $sesi->setFlashdata('sukses','password sama dan lolos verif');
 
+                    $dataTbl =[
+                        'fakultas_id'=>$getData['fakultas_id'],
+                        'password'=>$_POST['oldPassword']
+                    ];
                     // $_POST['fakultas_id'] = $data['login']['user_id'];
-                    // $modelTbl->save($_POST);
+
+                    $modelTbl->save($dataTbl);
     
-                    // if ($modelTbl) {
-                    //     $sesi->setFlashdata('sukses', 'Update Password Berhasil!');
-                    //     $getData = $modelTbl->find($data['login']['user_id']);
+                    if ($modelTbl) {
+                        $sesi->setFlashdata('sukses', 'Update Password Berhasil!');
+                        $getData = $modelTbl->find($data['login']['user_id']);
     
-                    //     $dataUser = $this->userData($getData, $data['jenis_user']);
-                    //     $sesi->set('login', $dataUser);
-                    //     $data['login'] = $sesi->get('login');
-                    // } else {
-                    //     $sesi->setFlashdata('fail', 'Update Password Gagal!');
-                    // }
+                        $dataUser = $this->userData($getData, $data['jenis_user']);
+                        $sesi->set('login', $dataUser);
+                        $data['login'] = $sesi->get('login');
+                    } else {
+                        $sesi->setFlashdata('fail', 'Update Password Gagal!');
+                    }
                     
                     
                     
