@@ -85,9 +85,18 @@ class Profile extends BaseController
         // $this->pre($data);
         if (request()->getMethod() == 'post') {
             $rules = $model->passRules();
-            $this->pre($_POST);
+            // $this->pre($_POST);
             if ($this->validate($rules)) {
-                // $getData = $modelTbl->find($data['login']['user_id']);
+                $getData = $modelTbl->find($data['login']['user_id']);
+
+                // validasi password lama 
+                $this->pre($getData);
+
+
+
+
+
+                
                 // $_POST['fakultas_id'] = $data['login']['user_id'];
                 // $modelTbl->save($_POST);
 
