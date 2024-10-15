@@ -37,7 +37,7 @@
                         <?= $validasi->listErrors() ?>
                     </div>
             <?php endif; ?>
-            <form action="update" method="post">
+            <form action="update_password" method="post">
 
                 
                 <div class="form-group">
