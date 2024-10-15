@@ -84,26 +84,23 @@ class Profile extends BaseController
 
         // $this->pre($data);
         if (request()->getMethod() == 'post') {
-            $rules = $model->rules();
-
+            $rules = $model->passRules();
+            $this->pre($_POST);
             if ($this->validate($rules)) {
-                $getData = $modelTbl->find($data['login']['user_id']);
-                // $this->pre($getData);
-                $_POST['fakultas_id'] = $data['login']['user_id'];
-                $modelTbl->save($_POST);
+                // $getData = $modelTbl->find($data['login']['user_id']);
+                // $_POST['fakultas_id'] = $data['login']['user_id'];
+                // $modelTbl->save($_POST);
 
-                if ($modelTbl) {
-                    $sesi->setFlashdata('sukses', 'Update Password Berhasil!');
-                    $getData = $modelTbl->find($data['login']['user_id']);
+                // if ($modelTbl) {
+                //     $sesi->setFlashdata('sukses', 'Update Password Berhasil!');
+                //     $getData = $modelTbl->find($data['login']['user_id']);
 
-                    $dataUser = $this->userData($getData, $data['jenis_user']);
-                    $sesi->set('login', $dataUser);
-                    $data['login'] = $sesi->get('login');
-                } else {
-                    $sesi->setFlashdata('fail', 'Update Password Gagal!');
-                }
-                // $this->pre($sesi->get('login'));
-                // $this->pre($data);
+                //     $dataUser = $this->userData($getData, $data['jenis_user']);
+                //     $sesi->set('login', $dataUser);
+                //     $data['login'] = $sesi->get('login');
+                // } else {
+                //     $sesi->setFlashdata('fail', 'Update Password Gagal!');
+                // }
             } else {
                 $data['validasi'] = $this->validator;
             }
