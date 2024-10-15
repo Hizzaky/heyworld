@@ -114,12 +114,8 @@ class Profile extends BaseController
                     } else {
                         $sesi->setFlashdata('fail', 'Update Password Gagal!');
                     }
-                    
-                    
-                    
-                    
                 }else{
-                    $sesi->setFlashdata('fail','password berbeda dan gagal verivikasi');
+                    $sesi->setFlashdata('fail','Update Password Gagal, Password Terakhir Tidak Sesuai!');
                 }
 
             } else {
