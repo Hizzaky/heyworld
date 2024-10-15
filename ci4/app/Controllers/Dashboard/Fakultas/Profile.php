@@ -90,26 +90,33 @@ class Profile extends BaseController
                 $getData = $modelTbl->find($data['login']['user_id']);
 
                 // validasi password lama 
-                $this->pre($getData);
+                // $this->pre($getData);
 
+                if(password_verify($_POST['oldPassword'], $getData['password'])){
 
+                    $sesi->setFlashdata('sukses','password sama dan lolos verif');
 
+                    // $_POST['fakultas_id'] = $data['login']['user_id'];
+                    // $modelTbl->save($_POST);
+    
+                    // if ($modelTbl) {
+                    //     $sesi->setFlashdata('sukses', 'Update Password Berhasil!');
+                    //     $getData = $modelTbl->find($data['login']['user_id']);
+    
+                    //     $dataUser = $this->userData($getData, $data['jenis_user']);
+                    //     $sesi->set('login', $dataUser);
+                    //     $data['login'] = $sesi->get('login');
+                    // } else {
+                    //     $sesi->setFlashdata('fail', 'Update Password Gagal!');
+                    // }
+                    
+                    
+                    
+                    
+                }else{
+                    $sesi->setFlashdata('fail','password berbeda dan gagal verivikasi');
+                }
 
-
-                
-                // $_POST['fakultas_id'] = $data['login']['user_id'];
-                // $modelTbl->save($_POST);
-
-                // if ($modelTbl) {
-                //     $sesi->setFlashdata('sukses', 'Update Password Berhasil!');
-                //     $getData = $modelTbl->find($data['login']['user_id']);
-
-                //     $dataUser = $this->userData($getData, $data['jenis_user']);
-                //     $sesi->set('login', $dataUser);
-                //     $data['login'] = $sesi->get('login');
-                // } else {
-                //     $sesi->setFlashdata('fail', 'Update Password Gagal!');
-                // }
             } else {
                 $data['validasi'] = $this->validator;
             }
