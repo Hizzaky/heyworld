@@ -54,14 +54,14 @@ class Profile extends BaseController
                 $modelTbl->save($_POST);
 
                 if ($modelTbl) {
-                    $sesi->setFlashdata('sukses', 'Update Nama Fakultas Berhasil!');
+                    $sesi->setFlashdata('sukses', 'Update Berhasil!');
                     $getData = $modelTbl->find($data['login']['user_id']);
 
                     $dataUser = $this->userData($getData, $data['jenis_user']);
                     $sesi->set('login', $dataUser);
                     $data['login'] = $sesi->get('login');
                 } else {
-                    $sesi->setFlashdata('fail', 'Update Nama Fakultas Gagal!');
+                    $sesi->setFlashdata('fail', 'Update Gagal!');
                 }
                 // $this->pre($sesi->get('login'));
                 // $this->pre($data);
@@ -112,7 +112,7 @@ class Profile extends BaseController
                         $sesi->set('login', $dataUser);
                         $data['login'] = $sesi->get('login');
                     } else {
-                        $sesi->setFlashdata('fail', 'Update Password Gagal!');
+                        $sesi->setFlashdata('fail', 'Update Gagal!');
                     }
                 }else{
                     $sesi->setFlashdata('fail','Update Gagal, Password Terakhir Tidak Sesuai!');
