@@ -77,7 +77,7 @@ class Home extends BaseController
         helper(['form']);
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         $data = $model->arDataLogin($jenis_user);
-        $data['prodi']=$model->getData($jenis_user);
+        $data['dataTbl']=$model->getData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
@@ -109,7 +109,7 @@ class Home extends BaseController
         helper(['form']);
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         $data = $model->arDataLogin($jenis_user);
-        // $data['fakultas']=$model->getData($jenis_user);
+        $data['dataTbl']=$model->getData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
