@@ -64,7 +64,7 @@ abstract class BaseController extends Controller
         print_r($data);
         echo '</pre><hr>';
     }
-    public function arData($title,$data)
+    public function arData($title, $data)
     {
         $data = [
             'meta_title' => $title['meta'],
@@ -102,6 +102,14 @@ abstract class BaseController extends Controller
             ];
         }
         return $dataUser;
+    }
+
+    public function verifPage($sesi)
+    {
+        $dataSesi = $sesi->get('login');
+        if (isset($dataSesi['user_id'])) {
+            return redirect()->to('Dashboard');
+        }
     }
 
 }

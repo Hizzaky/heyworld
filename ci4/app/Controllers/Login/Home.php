@@ -37,11 +37,7 @@ class Home extends BaseController
         $sesi = session();
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         
-        $dataSesi=$sesi->get('login');
-        echo 'user id : '.$dataSesi['user_id'];
-        if (isset($dataSesi['user_id'])) {
-            return redirect()->to('Dashboard');
-        }
+        $this->verifPage($sesi);
  
         $model = new Login;
 
