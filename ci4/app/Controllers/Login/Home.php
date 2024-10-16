@@ -32,6 +32,7 @@ class Home extends BaseController
         }
         return redirect()->to(base_url($ret));
     }
+    
     public function dosen()
     {
         $sesi = session();
@@ -44,16 +45,17 @@ class Home extends BaseController
         helper(['form']);
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         $data = $model->arDataLogin($jenis_user);
+        $data['fakultas']=$model->getData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
-            $rules = $model->ruleDosen();
+            $rules = $model->ruleFakultas();
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
                 $login = $model->cekAkun($_POST, $jenis_user);
                 if ($login['login'] == '1') {
-                    return redirect()->to('Dashboard/Dosen');
+                    return redirect()->to('Dashboard/Fakultas');
                 } else {
                     $data['fail'] = 'Username/Password tidak valid!';
                 }
@@ -61,7 +63,7 @@ class Home extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('login/dosen', $data);
+        return view('login/fakultas', $data);
     }
     public function prodi()
     {
@@ -70,26 +72,25 @@ class Home extends BaseController
         if (isset($dataSesi['user_id'])) {
             return redirect()->to('Dashboard');
         }
-        
+
         $model = new Login;
         helper(['form']);
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         $data = $model->arDataLogin($jenis_user);
-        $data['program_studi'] = $model->getData($jenis_user);
-        
+        $data['prodi']=$model->getData($jenis_user);
+
         if ($this->request->getMethod() == 'post') {
 
-            $rules = $model->ruleProdi();
+            $rules = $model->ruleFakultas();
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
                 $login = $model->cekAkun($_POST, $jenis_user);
                 if ($login['login'] == '1') {
-                    return redirect()->to('Dashboard/Prodi');
+                    return redirect()->to('Dashboard/Fakultas');
                 } else {
                     $data['fail'] = 'Username/Password tidak valid!';
                 }
-                // $this->pre($_POST);
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -98,18 +99,17 @@ class Home extends BaseController
     }
     public function fakultas()
     {
-        
         $sesi = session();
         $dataSesi = $sesi->get('login');
         if (isset($dataSesi['user_id'])) {
             return redirect()->to('Dashboard');
         }
-        
+
         $model = new Login;
         helper(['form']);
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         $data = $model->arDataLogin($jenis_user);
-        $data['fakultas']=$model->getData($jenis_user);
+        // $data['fakultas']=$model->getData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
