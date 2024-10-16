@@ -15,7 +15,7 @@ class Profile extends BaseController
 
         $data = $sesi->get('login');
         if (isset($data['jenis_user'])) {
-            if ($data['jenis_user'] != 'Fakultas') {
+            if ($data['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
