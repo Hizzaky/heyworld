@@ -34,18 +34,18 @@ class Home extends BaseController
     }
     public function dosen()
     {
-        $model = new Login;
-
-        helper(['form']);
-
         $sesi = session();
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         
         $userId=$sesi->get('user_id');
         if (isset($userId)) {
-
             return redirect()->to('Dashboard');
         }
+
+        $model = new Login;
+
+        helper(['form']);
+
 
         $data = $model->arDataLogin($jenis_user);
 
