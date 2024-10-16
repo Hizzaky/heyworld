@@ -82,21 +82,17 @@ class Profile extends BaseController
         $data['login'] = $sesi->get('login');
         $data['side'] = '2';
 
-        // $this->pre($data);
         if (request()->getMethod() == 'post') {
             $rules = $model->passRules();
-            // $this->pre($_POST);
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
                 
-                // if (password_verify($_POST['oldPassword'], $getData['password'])) {
+                if (password_verify($_POST['oldPassword'], $getData['password'])) {
 
                     $dataTbl = [
                         'fakultas_id' => $getData['fakultas_id'],
                         'password' => $_POST['password']
                     ];
-
-                    $this->pre($dataTbl);
                     
                     $modelTbl->save($dataTbl);
 
@@ -111,9 +107,9 @@ class Profile extends BaseController
                     } else {
                         $sesi->setFlashdata('fail', 'Update Gagal!');
                     }
-                // } else {
-                //     $sesi->setFlashdata('fail', 'Update Gagal, Password Terakhir Tidak Sesuai!');
-                // }
+                } else {
+                    $sesi->setFlashdata('fail', 'Update Gagal, Password Terakhir Tidak Sesuai!');
+                }
 
             } else {
                 $data['validasi'] = $this->validator;

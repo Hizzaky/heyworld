@@ -39,8 +39,14 @@ class Home extends BaseController
         helper(['form']);
 
         $sesi = session();
-
         $jenis_user = ucfirst($sesi->get('jenis_user'));
+        
+        $userId=$sesi->get('user_id');
+        if (isset($userId)) {
+
+            return redirect()->to('Dashboard');
+        }
+
         $data = $model->arDataLogin($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
