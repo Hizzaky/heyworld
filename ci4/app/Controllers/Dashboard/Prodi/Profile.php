@@ -55,8 +55,6 @@ class Profile extends BaseController
                 } else {
                     $sesi->setFlashdata('fail', 'Update Gagal!');
                 }
-                // $this->pre($sesi->get('login'));
-                // $this->pre($data);
             } else {
                 $data['validasi'] = $this->validator;
             }
