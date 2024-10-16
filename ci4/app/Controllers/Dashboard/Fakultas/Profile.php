@@ -102,6 +102,7 @@ class Profile extends BaseController
 
                     // if ($modelTbl) {
                     //     $sesi->setFlashdata('sukses', 'Update Berhasil!');
+                        $sesi->setTempdata('sukses', 'Update Berhasil!',3);
                     //     $getData = $modelTbl->find($data['login']['user_id']);
 
                     //     $dataUser = $this->userData($getData, $data['jenis_user']);

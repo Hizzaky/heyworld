@@ -14,7 +14,7 @@
         <div class="card-body">
             <?php
             $dataSesi = session();
-            $sukses = $dataSesi->getFlashdata('sukses');
+            $sukses = $dataSesi->getTempdata('sukses');
             $fail = $dataSesi->getFlashdata('fail');
 
             if (isset($sukses)): ?>
