@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Dashboard\Fakultas;
+namespace App\Models\Dashboard\Prodi;
 
 use CodeIgniter\Model;
 
@@ -9,18 +9,18 @@ class ProfileModel extends Model
     public function title()
     {
         $title = [
-            'meta' => 'Profile Fakultas UMMAT',
+            'meta' => 'Profile Prodi UMMAT',
             'header' => 'Profile UMMAT'
         ];
         return $title;
     }
     public function rules(){
         $rules = [
-            'nama_fakultas' => [
+            'nama_prodi' => [
                 'rules' => 'required',
-                'label' => 'Nama Fakultas',
+                'label' => 'Nama Prodi',
                 'errors' => [
-                    'required' => 'Input Nama Fakultas dengan benar!'
+                    'required' => 'Input Nama Prodi dengan benar!'
                 ]
             ]
         ];
