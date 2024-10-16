@@ -1,11 +1,11 @@
-<?= $this->extend('layout/fakultas/main') ?>
+<?= $this->extend('layout/prodi/main') ?>
 
 <?= $this->section('konten') ?>
 
 <div class="row">
     <div class="col-12 col-sm-3 mrg-side">
 
-        <?= $this->include('komponen/sidebar/profileFakultas'); ?>
+        <?= $this->include('komponen/sidebar/profileProdi'); ?>
     </div>
     <div class="card col-12 col-sm-6 col-md-6 mrg-konten">
         <h3 class="card-header ">
@@ -40,14 +40,14 @@
             <form action="update_nama" method="post"> 
 
                 <div class="form-group">
-                    <label for="nama_fakultas_lama">Nama Fakultas </label>
-                    <input type="text" class="form-control" name="nama_fakultas_lama" id="nama_fakultas_lama"
-                        value="<?= $login['nama_user'] ?>" aria-describedby="help nama_fakultas_lama" disabled>
+                    <label for="nama_prodi_lama">Nama Fakultas </label>
+                    <input type="text" class="form-control" name="nama_prodi_lama" id="nama_prodi_lama"
+                        value="<?= $login['nama_user'] ?>" aria-describedby="help nama_prodi_lama" disabled>
                 </div>
                 <div class="form-group">
-                    <label for="nama_fakultas">Nama Fakultas Baru </label>
-                    <input type="text" class="form-control" name="nama_fakultas" id="nama_fakultas"
-                        value="" aria-describedby="help nama_fakultas" autofocus
+                    <label for="nama_prodi">Nama Fakultas Baru </label>
+                    <input type="text" class="form-control" name="nama_prodi" id="nama_prodi"
+                        value="" aria-describedby="help nama_prodi" autofocus
                         placeholder="Inputkan Nama Baru">
                 </div><hr>
                 <button type="submit" class="btn btn-success right">Update Nama Fakultas</button>
@@ -55,4 +55,5 @@
         </div>
     </div>
 </div>
+
 <?= $this->endSection() ?>
