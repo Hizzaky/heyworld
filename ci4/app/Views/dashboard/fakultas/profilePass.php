@@ -42,13 +42,13 @@
                 
                 <div class="form-group">
                     <label for="password">Password Baru </label>
-                    <input type="text" class="form-control" name="password" id="password"
+                    <input type="password" class="form-control" name="password" id="password"
                         value="" aria-describedby="help password" autofocus
                         placeholder="Inputkan Password Baru">
                 </div>
                 <div class="form-group">
                     <label for="rePassword">Ketik Ulang Password Baru </label>
-                    <input type="text" class="form-control" name="rePassword" id="rePassword"
+                    <input type="password" class="form-control" name="rePassword" id="rePassword"
                         value="" aria-describedby="help rePassword" autofocus
                         placeholder="Inputkan Kembali Password Baru">
                 </div><hr>
