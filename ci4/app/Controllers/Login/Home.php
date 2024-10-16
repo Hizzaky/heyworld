@@ -35,15 +35,13 @@ class Home extends BaseController
     public function dosen()
     {
         $sesi = session();
-        $jenis_user = ucfirst($sesi->get('jenis_user'));
-        
+
         $this->verifPage($sesi);
- 
-        $model = new Login;
 
         helper(['form']);
-
-
+        
+        $model = new Login;
+        $jenis_user = ucfirst($sesi->get('jenis_user'));
         $data = $model->arDataLogin($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
