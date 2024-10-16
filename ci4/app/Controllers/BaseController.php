@@ -104,8 +104,9 @@ abstract class BaseController extends Controller
         return $dataUser;
     }
 
-    public function verifPage($sesi)
+    public function verifPage()
     {
+        $sesi=session();
         $dataSesi = $sesi->get('login');
         if (isset($dataSesi['user_id'])) {
             return redirect()->to('Dashboard');

@@ -34,9 +34,9 @@ class Home extends BaseController
     }
     public function dosen()
     {
+        $this->verifPage();
+        
         $sesi = session();
-
-        $this->verifPage($sesi);
 
         helper(['form']);
         
