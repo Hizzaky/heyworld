@@ -9,10 +9,10 @@
             <?= $header_title . " " . $jenis_user ?>
         </h3>
         <div class="card-body">
-            <?php 
-                $dataSesi=session();
-                $register=$dataSesi->getFlashdata('register');
-            
+            <?php
+            $dataSesi = session();
+            $register = $dataSesi->getFlashdata('register');
+
             if (isset($register)): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <?= $register ?>
@@ -24,29 +24,21 @@
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
-            <?php endif; ?>
-            <?php if (isset($validasi)): ?>
+            <?php endif; 
+                  if (isset($validasi)): ?>
                 <div class="text-danger">
                     <?= $validasi->listErrors() ?> <!-- validasi form error -->
                 </div>
             <?php endif; ?>
             <form method="post">
                 <div class="form-group">
-                    <!-- <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username" id="username"
-                        value="<?= set_value('username') ?>" aria-describedby="help username" autofocus
-                        placeholder="Inputkan Username"> -->
                     <select class="form-control" name="username" id="username">
                         <option class="center" value="">-- Silahkan pilih prodi anda --</option>
-                        <!-- <option value="PBA">Pendidikan Bahasa Arab</option>
-                        <option value="PGMI">Pendidikan Guru Madrasah Ibtidaiyah (PGMI)</option>
-                        <option value="ES">Ekonomi Syariah</option> -->
 
                         <?php foreach ($dataTbl as $x => $val) : ?>
-                            
                             <option value=<?= $val['username'] ?>><?= $val['nama_prodi'] ?></option>
-                        
                         <?php endforeach ?>
+
                     </select>
                 </div>
                 <div class="form-group">

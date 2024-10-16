@@ -24,18 +24,18 @@
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
                 </div>
-            <?php endif; ?>
-            <?php if (isset($validasi)): ?>
+            <?php endif;
+                  if (isset($validasi)): ?>
                 <div class="text-danger">
                     <?= $validasi->listErrors() ?> <!-- validasi form error -->
                 </div>
             <?php endif; ?>
             <form method="post">
                 <div class="form-group">
-                   
+
                     <select class="form-control" name="username" id="username">
                         <option class="center" value="">-- Silahkan pilih Fakultas anda --</option>
-                       
+
                         <?php foreach ($dataTbl as $x => $val): ?>
                             <option value=<?= $val['username'] ?>><?= $val['nama_fakultas'] ?></option>
                         <?php endforeach ?>
