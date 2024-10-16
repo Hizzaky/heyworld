@@ -42,7 +42,7 @@
                         <option value="PGMI">Pendidikan Guru Madrasah Ibtidaiyah (PGMI)</option>
                         <option value="ES">Ekonomi Syariah</option> -->
 
-                        <?php foreach ($program_studi as $x => $val) : ?>
+                        <?php foreach ($dataTbl as $x => $val) : ?>
                             
                             <option value=<?= $val['username'] ?>><?= $val['nama_prodi'] ?></option>
                         

@@ -45,17 +45,17 @@ class Home extends BaseController
         helper(['form']);
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         $data = $model->arDataLogin($jenis_user);
-        $data['fakultas']=$model->getData($jenis_user);
+        $data['dataTbl']=$model->getData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
-            $rules = $model->ruleFakultas();
+            $rules = $model->ruleDosen();
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
                 $login = $model->cekAkun($_POST, $jenis_user);
                 if ($login['login'] == '1') {
-                    return redirect()->to('Dashboard/Fakultas');
+                    return redirect()->to('Dashboard');
                 } else {
                     $data['fail'] = 'Username/Password tidak valid!';
                 }
@@ -81,13 +81,13 @@ class Home extends BaseController
 
         if ($this->request->getMethod() == 'post') {
 
-            $rules = $model->ruleFakultas();
+            $rules = $model->ruleProdi();
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
                 $login = $model->cekAkun($_POST, $jenis_user);
                 if ($login['login'] == '1') {
-                    return redirect()->to('Dashboard/Fakultas');
+                    return redirect()->to('Dashboard');
                 } else {
                     $data['fail'] = 'Username/Password tidak valid!';
                 }
@@ -119,7 +119,7 @@ class Home extends BaseController
                 $data['post'] = $_POST;
                 $login = $model->cekAkun($_POST, $jenis_user);
                 if ($login['login'] == '1') {
-                    return redirect()->to('Dashboard/Fakultas');
+                    return redirect()->to('Dashboard');
                 } else {
                     $data['fail'] = 'Username/Password tidak valid!';
                 }
