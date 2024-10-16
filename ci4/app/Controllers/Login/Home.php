@@ -34,9 +34,13 @@ class Home extends BaseController
     }
     public function dosen()
     {
-        $this->verifPage();
+        
         
         $sesi = session();
+        $dataSesi = $sesi->get('login');
+        if (isset($dataSesi['user_id'])) {
+            return redirect()->to('Dashboard');
+        }
 
         helper(['form']);
         
