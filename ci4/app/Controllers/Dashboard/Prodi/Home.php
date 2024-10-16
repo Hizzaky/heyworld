@@ -9,10 +9,10 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        // $sesi=session();
+        $sesi=session();
         $model=new Prodi();
 
-        $data=$model->arData();
+        $data = $this->arData($model->title(), $sesi->get('login'));
 
         return view('dashboard/prodi/home',$data);
     }

@@ -6,13 +6,11 @@ use CodeIgniter\Model;
 
 class Prodi extends Model
 {
-    public function arData()
+    public function title()
     {
         $data = [
-            'meta_title' => 'Welcome Prodi UMMAT',
-            'header_title' => '',
-            'kategori' => 'Prodi',
-            'konten' => 'login berhasil'
+            'meta' => 'Welcome Fakultas UMMAT',
+            'header' => 'Homepage Fakultas'
         ];
         return $data;
     }
