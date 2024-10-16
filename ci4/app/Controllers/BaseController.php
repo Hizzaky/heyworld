@@ -110,7 +110,7 @@ abstract class BaseController extends Controller
         $dataSesi = $sesi->get('login');
         echo 'user id : '.$dataSesi['user_id'];
         if (isset($dataSesi['user_id'])) {
-            return redirect('Dashboard/');
+            return redirect('Dashboard');
         }
     }
 
