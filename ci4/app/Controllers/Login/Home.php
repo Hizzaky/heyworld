@@ -42,7 +42,7 @@ class Home extends BaseController
         if (isset($dataSesi['user_id'])) {
             return redirect()->to('Dashboard');
         }
-
+ 
         $model = new Login;
 
         helper(['form']);
