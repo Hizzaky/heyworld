@@ -38,6 +38,7 @@ class Home extends BaseController
         $jenis_user = ucfirst($sesi->get('jenis_user'));
         
         $userId=$sesi->get('user_id');
+        echo 'user id : $userId';
         if (isset($userId)) {
             return redirect()->to('Dashboard');
         }
