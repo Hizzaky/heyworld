@@ -93,24 +93,24 @@ class Profile extends BaseController
 
                     $dataTbl = [
                         'fakultas_id' => $getData['fakultas_id'],
-                        'password' => $_POST['oldPassword']
+                        'password' => $_POST['password']
                     ];
 
                     $this->pre($dataTbl);
                     
-                    // $modelTbl->save($dataTbl);
+                    $modelTbl->save($dataTbl);
 
-                    // if ($modelTbl) {
-                    //     $sesi->setFlashdata('sukses', 'Update Berhasil!');
-                        $sesi->setTempdata('sukses', 'Update Berhasil!',3);
-                    //     $getData = $modelTbl->find($data['login']['user_id']);
+                    if ($modelTbl) {
+                        $sesi->setFlashdata('sukses', 'Update Berhasil!');
+                        // $sesi->setTempdata('sukses', 'Update Berhasil!',3);
+                        $getData = $modelTbl->find($data['login']['user_id']);
 
-                    //     $dataUser = $this->userData($getData, $data['jenis_user']);
-                    //     $sesi->set('login', $dataUser);
-                    //     $data['login'] = $sesi->get('login');
-                    // } else {
-                    //     $sesi->setFlashdata('fail', 'Update Gagal!');
-                    // }
+                        $dataUser = $this->userData($getData, $data['jenis_user']);
+                        $sesi->set('login', $dataUser);
+                        $data['login'] = $sesi->get('login');
+                    } else {
+                        $sesi->setFlashdata('fail', 'Update Gagal!');
+                    }
                 } else {
                     $sesi->setFlashdata('fail', 'Update Gagal, Password Terakhir Tidak Sesuai!');
                 }
