@@ -9,13 +9,7 @@ use App\Models\Dashboard\Prodi\Table\PassModel;
 
 class Profile extends BaseController
 {
-    public function index()
-    {
-        $sesi = session();
-       
-
-        return redirect('update-nama');
-    }
+    
     public function tes(){
         echo 'tes';
     }
