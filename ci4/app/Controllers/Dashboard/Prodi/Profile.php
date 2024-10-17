@@ -41,7 +41,7 @@ class Profile extends BaseController
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
                 // $this->pre($getData);
-                $_POST['fakultas_id'] = $data['login']['user_id'];
+                $_POST['prodi_id'] = $data['login']['user_id'];
                 $modelTbl->save($_POST);
 
                 if ($modelTbl) {
@@ -79,7 +79,7 @@ class Profile extends BaseController
                 if (password_verify($_POST['oldPassword'], $getData['password'])) {
 
                     $dataTbl = [
-                        'fakultas_id' => $getData['fakultas_id'],
+                        'prodi_id' => $getData['prodi_id'],
                         'password' => $_POST['password']
                     ];
                     
