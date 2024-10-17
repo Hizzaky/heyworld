@@ -22,7 +22,8 @@ class Profile extends BaseController
         }
 
         // return redirect('update-password'); 
-        return redirect('update-nama'); 
+        return redirect()->to('Fakultas/update_nama'); 
+
     }
     public function tes(){
         echo 'tes';
