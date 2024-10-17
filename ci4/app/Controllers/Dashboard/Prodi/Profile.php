@@ -10,8 +10,8 @@ use App\Models\Dashboard\Prodi\Table\PassModel;
 class Profile extends BaseController
 {
     
-    public function tes(){
-        echo 'tes';
+    public function index(){
+        return 'tes';
     }
     public function update_nama()
     {
