@@ -7,16 +7,24 @@ use App\Models\Dashboard\Fakultas\Fakultas;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
         $sesi=session();
-        // $this->pre($sesi->get('login'));
-        $model=new Fakultas();
+        $this->verPage($sesi->get('login'));
 
+        $model=new Fakultas();
         $data=$this->arData($model->title(),$sesi->get('login'));
 
         return view('dashboard/fakultas/home',$data);
     }
 
-    
+    protected function verPage($data){
+        if (isset($data['jenis_user'])) {
+            if ($data['jenis_user'] != 'Fakultas') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+    }
 }

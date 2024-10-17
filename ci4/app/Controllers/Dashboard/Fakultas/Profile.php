@@ -11,16 +11,7 @@ class Profile extends BaseController
 {
     public function index()
     {
-        // helper('form');
         $sesi = session();
-        // $model = new ProfileModel();
-
-        // $data = $this->arData($model->title(), $sesi->get('login'));
-        // $data['login'] = $sesi->get('login');
-        // $data['side']='1';
-
-        // return view('dashboard/fakultas/profile', $data);
-
         $data = $sesi->get('login');
         if (isset($data['jenis_user'])) {
             if ($data['jenis_user'] != 'Fakultas') {
@@ -29,13 +20,21 @@ class Profile extends BaseController
         } else {
             return redirect()->to('/');
         }
-
         return redirect('update-nama');
     }
     public function update_nama()
     {
-        helper('form');
         $sesi = session();
+        $data = $sesi->get('login');
+        if (isset($data['jenis_user'])) {
+            if ($data['jenis_user'] != 'Fakultas') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        
+        helper('form');
         $model = new ProfileModel();
         $modelTbl = new NamaModel();
 
@@ -86,14 +85,14 @@ class Profile extends BaseController
             $rules = $model->passRules();
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
-                
+
                 if (password_verify($_POST['oldPassword'], $getData['password'])) {
 
                     $dataTbl = [
                         'fakultas_id' => $getData['fakultas_id'],
                         'password' => $_POST['password']
                     ];
-                    
+
                     $modelTbl->save($dataTbl);
 
                     if ($modelTbl) {

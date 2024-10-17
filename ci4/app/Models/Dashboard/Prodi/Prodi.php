@@ -9,8 +9,8 @@ class Prodi extends Model
     public function title()
     {
         $data = [
-            'meta' => 'Welcome Fakultas UMMAT',
-            'header' => 'Homepage Fakultas'
+            'meta' => 'Welcome Prodi UMMAT',
+            'header' => 'Homepage Prodi'
         ];
         return $data;
     }
