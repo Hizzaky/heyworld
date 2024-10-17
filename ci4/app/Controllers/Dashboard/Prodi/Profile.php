@@ -23,6 +23,9 @@ class Profile extends BaseController
 
         return redirect('update-nama');
     }
+    public function tes(){
+        echo 'tes';
+    }
     public function update_nama()
     {
         helper('form');
