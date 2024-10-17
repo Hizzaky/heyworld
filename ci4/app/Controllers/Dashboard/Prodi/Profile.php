@@ -21,7 +21,11 @@ class Profile extends BaseController
             return redirect()->to('/');
         }
 
-        return redirect('update-password'); 
+        // return redirect('update-password'); 
+        return redirect()->to('/tes');
+    }
+    public function tes(){
+        echo 'tes';
     }
     public function update_nama()
     {
