@@ -17,7 +17,7 @@ class Profile extends BaseController
         if (isset($data['jenis_user'])) {
             if ($data['jenis_user'] != 'Prodi') {
                 return redirect()->back();
-            }
+            } 
         } else {
             return redirect()->to('/');
         }
