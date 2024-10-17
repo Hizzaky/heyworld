@@ -29,7 +29,7 @@ class Profile extends BaseController
     }
     public function update_nama()
     {
-        helper('form');
+        // helper('form');
         $sesi = session();
         $model = new ProfileModel();
         $modelTbl = new NamaModel();
@@ -38,7 +38,7 @@ class Profile extends BaseController
         $data['login'] = $sesi->get('login');
         $data['side'] = '1';
 
-        return view('dashboard/fakultas/profileNama', $data);
+        return view('dashboard/prodi/profileNama', $data);
     }
 
 }
