@@ -48,7 +48,6 @@ $routes->group('Daftar', function ($routes) {
 });
 
 $routes->post('logUserOut',function(){
-    /Login?login=dosen
     $sesi=session();
     $data=$sesi->get('login');
     $dir='/Login?login='.lcfirst($data['jenis_user']);
