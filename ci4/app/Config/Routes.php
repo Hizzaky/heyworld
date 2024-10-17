@@ -75,4 +75,6 @@ $routes->group('Prodi', function ($routes) {
     $routes->add('Profile', 'Dashboard\Prodi\Profile::index'); 
     $routes->add('update_nama', 'Dashboard\Prodi\Profile::update_nama', ['as' => 'update-nama']);
     $routes->add('update_password', 'Dashboard\Prodi\Profile::update_password',['as'=>'update-password']);
+
+    $routes->add('tes', 'Dashboard\Prodi\Profile::tes',['as'=>'tes']);
 });

@@ -22,7 +22,7 @@ class Profile extends BaseController
         }
 
         // return redirect('update-password'); 
-        return redirect()->to('/tes');
+        return redirect('tes'); 
     }
     public function tes(){
         echo 'tes';
