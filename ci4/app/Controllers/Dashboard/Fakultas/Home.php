@@ -21,10 +21,10 @@ class Home extends BaseController
     protected function verPage($data){
         if (isset($data['jenis_user'])) {
             if ($data['jenis_user'] != 'Fakultas') {
-                return redirect()->back();
+                redirect()->back();
             }
         } else {
-            return redirect()->to('/');
+            redirect()->to('/');
         }
     }
 }
