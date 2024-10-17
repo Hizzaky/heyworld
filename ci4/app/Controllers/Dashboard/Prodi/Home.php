@@ -11,9 +11,9 @@ class Home extends BaseController
     {
         $sesi=session();
         $model=new Prodi();
-        $this->pre($sesi->get('login'));
-
+        
         $data = $this->arData($model->title(), $sesi->get('login'));
+        $this->pre($data);
 
         return view('dashboard/prodi/home',$data);
     }
