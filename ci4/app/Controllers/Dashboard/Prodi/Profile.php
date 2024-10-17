@@ -22,8 +22,6 @@ class Profile extends BaseController
             return redirect()->to('/');
         }
 
-        echo $data['jenis_user'];
-
         return redirect('update-nama');
     }
     public function update_nama()
@@ -61,7 +59,7 @@ class Profile extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('dashboard/fakultas/profileNama', $data);
+        return view('dashboard/prodi/profileNama', $data);
     }
     public function update_password()
     {
@@ -107,7 +105,7 @@ class Profile extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('dashboard/fakultas/profilePass', $data);
+        return view('dashboard/prodi/profilePass', $data);
     }
 
 
