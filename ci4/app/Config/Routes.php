@@ -63,7 +63,7 @@ $routes->group('Dashboard', function ($routes) {
     // $routes->add('update_password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'update-password']);
 
     $routes->group('Fakultas', function ($routes) {
-        $routes->add('/', 'Fakultas\Home::index');
+        $routes->add('/', 'Dashboard/Fakultas\Home::index');
         // $routes->add('Profile', 'Dashboard\Fakultas\Profile::index'); 
         $routes->add('update_nama', 'Fakultas\Profile::update_nama',['as'=>'update-nama']);
         $routes->add('update_password', 'Fakultas\Profile::update_password',['as'=>'update-password']);
