@@ -22,7 +22,7 @@ class Profile extends BaseController
         }
 
         // return redirect('update-password'); 
-        return redirect('tes'); 
+        return redirect('update-nama'); 
     }
     public function tes(){
         echo 'tes';
@@ -37,7 +37,7 @@ class Profile extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         $data['side'] = '1';
-        
+
         return view('dashboard/prodi/profileNama', $data);
     }
 
