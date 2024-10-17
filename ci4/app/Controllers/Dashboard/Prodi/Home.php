@@ -7,13 +7,20 @@ use App\Models\Dashboard\Prodi\Prodi;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
         $sesi=session();
-        $model=new Prodi();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Fakultas') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
         
+        $model=new Prodi();
         $data = $this->arData($model->title(), $sesi->get('login'));
-        $this->pre($data);
 
         return view('dashboard/prodi/home',$data);
     }
