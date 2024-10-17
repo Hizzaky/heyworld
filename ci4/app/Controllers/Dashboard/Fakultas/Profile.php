@@ -14,7 +14,7 @@ class Profile extends BaseController
         $sesi = session();
         $ver = $sesi->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Prodi') {
+            if ($ver['jenis_user'] != 'Fakultas') {
                 return redirect()->back();
             }
         } else {
