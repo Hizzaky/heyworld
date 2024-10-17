@@ -12,7 +12,6 @@ class Profile extends BaseController
     public function index()
     {
         $sesi = session();
-
         $data = $sesi->get('login');
         if (isset($data['jenis_user'])) {
             if ($data['jenis_user'] != 'Prodi') {
