@@ -10,9 +10,9 @@ class Home extends BaseController
     public function index()
     {
         $sesi=session();
-        $data = $sesi->get('login');
-        if (isset($data['jenis_user'])) {
-            if ($data['jenis_user'] != 'Fakultas') {
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Fakultas') {
                 return redirect()->back();
             }
         } else {

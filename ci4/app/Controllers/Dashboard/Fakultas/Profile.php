@@ -12,9 +12,9 @@ class Profile extends BaseController
     public function index()
     {
         $sesi = session();
-        $data = $sesi->get('login');
-        if (isset($data['jenis_user'])) {
-            if ($data['jenis_user'] != 'Fakultas') {
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Fakultas') {
                 return redirect()->back();
             }
         } else {
@@ -25,15 +25,15 @@ class Profile extends BaseController
     public function update_nama()
     {
         $sesi = session();
-        $data = $sesi->get('login');
-        if (isset($data['jenis_user'])) {
-            if ($data['jenis_user'] != 'Fakultas') {
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Fakultas') {
                 return redirect()->back();
             }
         } else {
             return redirect()->to('/');
         }
-        
+
         helper('form');
         $model = new ProfileModel();
         $modelTbl = new NamaModel();
@@ -72,8 +72,17 @@ class Profile extends BaseController
     }
     public function update_password()
     {
-        helper('form');
         $sesi = session();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Fakultas') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        
+        helper('form');
         $model = new ProfileModel();
         $modelTbl = new PassModel();
 
