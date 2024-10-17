@@ -86,11 +86,10 @@
                             ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <!-- <a class="dropdown-item" href="/Login/dosen">Sebagai Dosen</a>
-                            <a class="dropdown-item" href="/Login/prodi">Sebagai Prodi</a> -->
+                            <a class="dropdown-item" href="Dosen/Profile">Profil</a>
+                            <div class="dropdown-divider"></div>
                             <form action="/logUserOut" method="post">
-                                <!-- <a class="dropdown-item logout" href="">Logout</a> -->
-                                 <button class="dropdown-item logout btn" type="submit" style="color:red;">Logout</button>
+                                <button class="dropdown-item logout btn" type="submit" style="color:red;">Logout</button>
                             </form>
                         </div>
                     </li> 
