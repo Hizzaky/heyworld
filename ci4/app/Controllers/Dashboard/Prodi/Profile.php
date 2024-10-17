@@ -33,30 +33,28 @@ class Profile extends BaseController
         $data['login'] = $sesi->get('login');
         $data['side'] = '1';
 
-        // $this->pre($data);
-        if (request()->getMethod() == 'post') {
-            $rules = $model->rules();
+        // if (request()->getMethod() == 'post') {
+        //     $rules = $model->rules();
 
-            if ($this->validate($rules)) {
-                $getData = $modelTbl->find($data['login']['user_id']);
-                // $this->pre($getData);
-                $_POST['prodi_id'] = $data['login']['user_id'];
-                $modelTbl->save($_POST);
+        //     if ($this->validate($rules)) {
+        //         $getData = $modelTbl->find($data['login']['user_id']);
+        //         $_POST['prodi_id'] = $data['login']['user_id'];
+        //         $modelTbl->save($_POST);
 
-                if ($modelTbl) {
-                    $sesi->setFlashdata('sukses', 'Update Berhasil!');
-                    $getData = $modelTbl->find($data['login']['user_id']);
+        //         if ($modelTbl) {
+        //             $sesi->setFlashdata('sukses', 'Update Berhasil!');
+        //             $getData = $modelTbl->find($data['login']['user_id']);
 
-                    $dataUser = $this->userData($getData, $data['jenis_user']);
-                    $sesi->set('login', $dataUser);
-                    $data['login'] = $sesi->get('login');
-                } else {
-                    $sesi->setFlashdata('fail', 'Update Gagal!');
-                }
-            } else {
-                $data['validasi'] = $this->validator;
-            }
-        }
+        //             $dataUser = $this->userData($getData, $data['jenis_user']);
+        //             $sesi->set('login', $dataUser);
+        //             $data['login'] = $sesi->get('login');
+        //         } else {
+        //             $sesi->setFlashdata('fail', 'Update Gagal!');
+        //         }
+        //     } else {
+        //         $data['validasi'] = $this->validator;
+        //     }
+        // }
         return view('dashboard/prodi/profileNama', $data);
     }
 
