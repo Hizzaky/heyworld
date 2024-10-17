@@ -15,10 +15,10 @@ class Profile extends BaseController
         $data = $sesi->get('login');
         if (isset($data['jenis_user'])) {
             if ($data['jenis_user'] != 'Prodi') {
-                return redirect()->to('rip');
+                return redirect()->to('rip1');
             }
         } else {
-            return redirect()->to('/rip');
+            return redirect()->to('/rip2');
         }
 
         // return redirect('update-password'); 
