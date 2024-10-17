@@ -13,7 +13,7 @@ class Home extends BaseController
         $sesi=$dataSesi->get('login');
         if(isset($sesi)){
 
-            $dir='Dashboard/'.$sesi['jenis_user'];
+            $dir=$sesi['jenis_user'];
         }else{
             $dir='/';
 
