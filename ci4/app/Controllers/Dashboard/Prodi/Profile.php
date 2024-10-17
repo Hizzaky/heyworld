@@ -22,6 +22,8 @@ class Profile extends BaseController
             return redirect()->to('/');
         }
 
+        echo $data['jenis_user'];
+
         return redirect('update-nama');
     }
     public function update_nama()
