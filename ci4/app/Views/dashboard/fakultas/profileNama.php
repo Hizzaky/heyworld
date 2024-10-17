@@ -14,8 +14,8 @@
         <div class="card-body">
             <?php
             $dataSesi = session();
-            $sukses = $dataSesi->getFlashdata('sukses');
-            $fail = $dataSesi->getFlashdata('fail');
+            $sukses = $dataSesi->getTempdata('sukses');
+            $fail = $dataSesi->getTempdata('fail');
 
             if (isset($sukses)): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">

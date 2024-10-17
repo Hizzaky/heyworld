@@ -53,14 +53,14 @@ class Profile extends BaseController
                 $modelTbl->save($_POST);
 
                 if ($modelTbl) {
-                    $sesi->setFlashdata('sukses', 'Update Berhasil!');
+                    $sesi->setTempdata('sukses', 'Update Berhasil!',2);
                     $getData = $modelTbl->find($data['login']['user_id']);
 
                     $dataUser = $this->userData($getData, $data['jenis_user']);
                     $sesi->set('login', $dataUser);
                     $data['login'] = $sesi->get('login');
                 } else {
-                    $sesi->setFlashdata('fail', 'Update Gagal!');
+                    $sesi->setTempdata('fail', 'Update Gagal!',2);
                 }
                 // $this->pre($sesi->get('login'));
                 // $this->pre($data);
@@ -81,7 +81,7 @@ class Profile extends BaseController
         } else {
             return redirect()->to('/');
         }
-        
+
         helper('form');
         $model = new ProfileModel();
         $modelTbl = new PassModel();
@@ -105,7 +105,7 @@ class Profile extends BaseController
                     $modelTbl->save($dataTbl);
 
                     if ($modelTbl) {
-                        $sesi->setFlashdata('sukses', 'Update Berhasil!');
+                        $sesi->setTempdata('sukses', 'Update Berhasil!',2);
                         // $sesi->setTempdata('sukses', 'Update Berhasil!',3);
                         $getData = $modelTbl->find($data['login']['user_id']);
 
@@ -113,10 +113,10 @@ class Profile extends BaseController
                         $sesi->set('login', $dataUser);
                         $data['login'] = $sesi->get('login');
                     } else {
-                        $sesi->setFlashdata('fail', 'Update Gagal!');
+                        $sesi->setTempdata('fail', 'Update Gagal!',2);
                     }
                 } else {
-                    $sesi->setFlashdata('fail', 'Update Gagal, Password Terakhir Tidak Sesuai!');
+                    $sesi->setTempdata('fail', 'Update Gagal, Password Terakhir Tidak Sesuai!',2);
                 }
 
             } else {
