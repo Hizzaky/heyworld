@@ -12,14 +12,14 @@ class Profile extends BaseController
     public function index()
     {
         $sesi = session();
-        $data = $sesi->get('login');
-        if (isset($data['jenis_user'])) {
-            if ($data['jenis_user'] != 'Prodi') {
-                return redirect()->back();
-            } 
-        } else {
-            return redirect()->to('/');
-        }
+        // $data = $sesi->get('login');
+        // if (isset($data['jenis_user'])) {
+        //     if ($data['jenis_user'] != 'Prodi') {
+        //         return redirect()->back();
+        //     } 
+        // } else {
+        //     return redirect()->to('/');
+        // }
 
         return redirect('update-nama');
     }
