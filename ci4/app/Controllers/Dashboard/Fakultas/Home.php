@@ -9,24 +9,21 @@ class Home extends BaseController
 {
     public function index()
     {
-        $sesi = session();
-        $this->verPage($sesi->get('login'));
-
-        $model = new Fakultas();
-        $data = $this->arData($model->title(), $sesi->get('login'));
-
-        return view('dashboard/fakultas/home', $data);
-    }
-
-    protected function verPage($data)
-    {
+        $sesi=session();
+        $data = $sesi->get('login');
         if (isset($data['jenis_user'])) {
             if ($data['jenis_user'] != 'Fakultas') {
-                // redirect()->back();
-                redirect()->to('prodii');
+                return redirect()->back();
             }
         } else {
-            redirect()->to('/');
+            return redirect()->to('/');
         }
+        
+        $model=new Fakultas();
+        $data=$this->arData($model->title(),$sesi->get('login'));
+
+        return view('dashboard/fakultas/home',$data);
     }
+
+    
 }
