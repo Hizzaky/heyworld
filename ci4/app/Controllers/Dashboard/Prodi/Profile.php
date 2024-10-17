@@ -23,7 +23,7 @@ class Profile extends BaseController
         // return redirect('update-nama');
 
         $model = new ProfileModel();
-        $data['side'] = '1';
+        $data['side'] = '1'; 
 
         $data = $this->arData($model->title(), $sesi->get('login'));
 
