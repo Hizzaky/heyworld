@@ -11,7 +11,6 @@ class Home extends BaseController
         $sesi=$dataSesi->get('login');
         if(isset($sesi['jenis_user'])){
             
-        // return redirect()->to(base_url($ret));
             return redirect()->to(ucfirst($sesi['jenis_user']));
         }
 

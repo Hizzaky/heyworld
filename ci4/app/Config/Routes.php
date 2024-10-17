@@ -48,9 +48,13 @@ $routes->group('Daftar', function ($routes) {
 });
 
 $routes->post('logUserOut',function(){
+    /Login?login=dosen
+    $sesi=session();
+    $data=$sesi->get('login');
+    $dir='/Login?login='.lcfirst($data['jenis_user']);
     session()->destroy();
     // $routes->get('/', 'Home::index');
-    return redirect()->to('/');
+    return redirect()->to($dir);
 });
 
 $routes->group('Dashboard', function ($routes) {
