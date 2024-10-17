@@ -30,15 +30,15 @@ class Profile extends BaseController
     public function update_nama()
     {
         // helper('form');
-        $sesi = session();
-        $model = new ProfileModel();
-        $modelTbl = new NamaModel();
+        // $sesi = session();
+        // $model = new ProfileModel();
+        // $modelTbl = new NamaModel();
 
-        $data = $this->arData($model->title(), $sesi->get('login'));
-        $data['login'] = $sesi->get('login');
-        $data['side'] = '1';
+        // $data = $this->arData($model->title(), $sesi->get('login'));
+        // $data['login'] = $sesi->get('login');
+        // $data['side'] = '1';
 
-        return view('dashboard/prodi/profileNama', $data);
+        return view('dashboard/prodi/profileNama');
     }
 
 }
