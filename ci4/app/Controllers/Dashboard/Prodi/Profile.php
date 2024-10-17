@@ -18,7 +18,7 @@ class Profile extends BaseController
                 return redirect()->to('rip');
             }
         } else {
-            return redirect()->to('/');
+            return redirect()->to('/rip');
         }
 
         // return redirect('update-password'); 
