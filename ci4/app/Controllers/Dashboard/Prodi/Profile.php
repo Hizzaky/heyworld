@@ -20,7 +20,14 @@ class Profile extends BaseController
             return redirect()->to('/');
         }
 
-        return redirect('update-nama');
+        // return redirect('update-nama');
+
+        $model = new ProfileModel();
+
+        $data = $this->arData($model->title(), $sesi->get('login'));
+
+        return view('dashboard/prodi/profileNama', $data);
+
     }
     public function update_nama()
     {
