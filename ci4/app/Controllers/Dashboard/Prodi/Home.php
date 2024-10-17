@@ -18,7 +18,6 @@ class Home extends BaseController
         } else {
             return redirect()->to('/');
         }
-        $this->pre($ver);
         $model=new Prodi();
         $data = $this->arData($model->title(), $sesi->get('login'));
 

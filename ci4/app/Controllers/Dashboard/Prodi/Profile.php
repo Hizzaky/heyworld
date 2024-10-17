@@ -19,7 +19,7 @@ class Profile extends BaseController
         //     } 
         // } else {
         //     return redirect()->to('/');
-        // }
+        // } 
 
         return redirect('update-nama');
     }
