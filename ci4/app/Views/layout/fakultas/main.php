@@ -88,7 +88,7 @@
                             ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/Profile">Profil</a>
+                            <a class="dropdown-item" href="Profile">Profil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logUserOut" method="post">
                                 <button class="dropdown-item logout btn" type="submit"
