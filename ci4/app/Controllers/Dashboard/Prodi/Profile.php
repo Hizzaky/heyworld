@@ -39,7 +39,8 @@ class Profile extends BaseController
         // $data['login'] = $sesi->get('login');
         // $data['side'] = '1';
 
-        return view('dashboard/prodi/profileNama');
+        // return view('dashboard/prodi/profileNama');
+        echo 'rip';
     }
 
 }
