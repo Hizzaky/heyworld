@@ -21,7 +21,7 @@ class Profile extends BaseController
         //     return redirect()->to('/rip2');
         // } 
 
-        return redirect('prodi-update-nama'); 
+        return redirect('prodi-update-nama');  
         // return redirect()->to('Prodi/Profile/update_nama'); 
 
     }
