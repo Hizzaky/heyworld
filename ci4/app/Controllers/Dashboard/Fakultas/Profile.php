@@ -44,7 +44,7 @@ class Profile extends BaseController
 
         // $this->pre($data);
         if (request()->getMethod() == 'post') {
-            $rules = $model->rules();
+            $rules = $model->rules_nama_fakultas();
 
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);

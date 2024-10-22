@@ -9,38 +9,105 @@ use App\Models\Dashboard\Prodi\Table\PassModel;
 
 class Profile extends BaseController
 {
-    public function index()
-    {
-        // $sesi = session();
-        // $data = $sesi->get('login');
-        // if (isset($data['jenis_user'])) {
-        //     if ($data['jenis_user'] != 'Prodi') {
-        //         return redirect()->to('rip1');
-        //     }
-        // } else {
-        //     return redirect()->to('/rip2');
-        // } 
+    
+    public function index(){
+        $sesi = session();
+        $data = $sesi->get('login');
+        if (isset($data['jenis_user'])) {
+            if ($data['jenis_user'] != 'Prodi') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
 
-        return redirect('prodi-update-nama');  
-        // return redirect()->to('Prodi/Profile/update_nama'); 
-
-    }
-    public function tes(){
-        echo 'tes';
+        return redirect('prodi-update-nama');
     }
     public function update_nama()
     {
-        // helper('form');
-        // $sesi = session();
-        // $model = new ProfileModel();
-        // $modelTbl = new NamaModel();
+        helper('form');
+        $sesi = session();
+        $model = new ProfileModel();
+        $modelTbl = new NamaModel();
 
-        // $data = $this->arData($model->title(), $sesi->get('login'));
-        // $data['login'] = $sesi->get('login');
-        // $data['side'] = '1';
+        $data = $this->arData($model->title(), $sesi->get('login'));
+        $data['login'] = $sesi->get('login');
+        $data['side'] = '1';
 
-        // return view('dashboard/prodi/profileNama');
-        echo 'rip';
+        // $this->pre($data);
+        if (request()->getMethod() == 'post') {
+            $rules = $model->rules();
+
+            if ($this->validate($rules)) {
+                $getData = $modelTbl->find($data['login']['user_id']);
+                // $this->pre($getData);
+                $_POST['prodi_id'] = $data['login']['user_id'];
+                $modelTbl->save($_POST);
+
+                if ($modelTbl) {
+                    $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+                    $getData = $modelTbl->find($data['login']['user_id']);
+
+                    $dataUser = $this->userData($getData, $data['jenis_user']);
+                    $sesi->set('login', $dataUser);
+                    $data['login'] = $sesi->get('login');
+                } else {
+                    $sesi->setTempdata('fail', 'Update Gagal!',2);
+                }
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
+        return view('dashboard/prodi/profileNama', $data);
     }
+    public function update_password()
+    {
+        helper('form');
+        $sesi = session();
+        $model = new ProfileModel();
+        $modelTbl = new PassModel();
+
+        $data = $this->arData($model->title(), $sesi->get('login'));
+        $data['login'] = $sesi->get('login');
+        $data['side'] = '2';
+
+        if (request()->getMethod() == 'post') {
+            $rules = $model->passRules();
+            if ($this->validate($rules)) {
+                $getData = $modelTbl->find($data['login']['user_id']);
+                
+                if (password_verify($_POST['oldPassword'], $getData['password'])) {
+
+                    $dataTbl = [
+                        'prodi_id' => $getData['prodi_id'],
+                        'password' => $_POST['password']
+                    ];
+                    
+                    $modelTbl->save($dataTbl);
+
+                    if ($modelTbl) {
+                        $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+                        // $sesi->setTempdata('sukses', 'Update Berhasil!',3);
+                        $getData = $modelTbl->find($data['login']['user_id']);
+
+                        $dataUser = $this->userData($getData, $data['jenis_user']);
+                        $sesi->set('login', $dataUser);
+                        $data['login'] = $sesi->get('login');
+                    } else {
+                        $sesi->setTempdata('fail', 'Update Gagal!',2);
+                    }
+                } else {
+                    $sesi->setTempdata('fail', 'Update Gagal, Password Terakhir Tidak Sesuai!',2);
+                }
+
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
+        return view('dashboard/prodi/profilePass', $data);
+    }
+
+
+
 
 }
