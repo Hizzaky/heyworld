@@ -11,15 +11,15 @@ class Profil extends BaseController
 {
     public function index()
     {
-        $sesi = session();
-        $data = $sesi->get('login');
-        if (isset($data['jenis_user'])) {
-            if ($data['jenis_user'] != 'Prodi') {
-                return redirect()->to('rip1');
-            }
-        } else {
-            return redirect()->to('/rip2');
-        }
+        // $sesi = session();
+        // $data = $sesi->get('login');
+        // if (isset($data['jenis_user'])) {
+        //     if ($data['jenis_user'] != 'Prodi') {
+        //         return redirect()->to('rip1');
+        //     }
+        // } else {
+        //     return redirect()->to('/rip2');
+        // }
 
         // return redirect('update-password'); 
         return redirect()->to('Fakultas/update_nama'); 
