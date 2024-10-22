@@ -1,5 +1,5 @@
 <?php 
 
-echo 'ini homepage php yang harusnya tidak errror';
+echo 'ini homepage php yang harusnya tidak errror'; 
 
 ?>
