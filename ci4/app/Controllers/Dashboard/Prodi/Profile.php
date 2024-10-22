@@ -22,7 +22,7 @@ class Profil extends BaseController
         // } 
 
         // return redirect('update-password'); 
-        return redirect()->to('Fakultas/update_nama'); 
+        return redirect()->to('Prodi/update_nama'); 
 
     }
     public function tes(){
