@@ -7,7 +7,7 @@ use App\Models\Dashboard\Prodi\ProfileModel;
 use App\Models\Dashboard\Prodi\Table\NamaModel;
 use App\Models\Dashboard\Prodi\Table\PassModel;
 
-class Profile extends BaseController
+class Profil extends BaseController
 {
     public function index()
     {
