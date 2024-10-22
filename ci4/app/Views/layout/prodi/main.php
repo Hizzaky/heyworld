@@ -13,6 +13,9 @@
     <title><?= $meta_title ?></title>
 </head>
 <style>
+    body{
+        background-color: solid black;
+    }
     .right {
         float: right;
     }
