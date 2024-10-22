@@ -19,7 +19,7 @@ class Profil extends BaseController
         //     }
         // } else {
         //     return redirect()->to('/rip2');
-        // }
+        // } 
 
         // return redirect('update-password'); 
         return redirect()->to('Fakultas/update_nama'); 
