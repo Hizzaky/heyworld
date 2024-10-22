@@ -22,7 +22,7 @@ class Profile extends BaseController
         // } 
 
         // return redirect('update-nama'); 
-        return redirect()->to('/Profile/update_nama'); 
+        return redirect()->to('Prodi/Profile/update_nama'); 
 
     }
     public function tes(){
