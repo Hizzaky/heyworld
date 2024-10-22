@@ -21,8 +21,8 @@ class Profile extends BaseController
         //     return redirect()->to('/rip2');
         // } 
 
-        // return redirect('update-password'); 
-        return redirect()->to('Prodi/update_nama'); 
+        return redirect('update-nama'); 
+        // return redirect()->to('Prodi/update_nama'); 
 
     }
     public function tes(){
