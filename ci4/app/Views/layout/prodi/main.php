@@ -14,7 +14,7 @@
 </head>
 <style>
     body{
-        background-color: solid black;
+        background-color: lightgrey;
     }
     .right {
         float: right;
