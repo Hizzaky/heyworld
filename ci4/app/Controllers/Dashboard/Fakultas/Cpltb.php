@@ -5,7 +5,7 @@ namespace App\Controllers\Dashboard\Fakultas;
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Fakultas\Fakultas;
 
-class Cpl extends BaseController
+class cpltb extends BaseController
 {
     public function index()
     {
