@@ -76,6 +76,8 @@
                                 Menu
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Fakultas/cpltb">CPL & Taxonomy Bloom</a> 
+
                             </div>
                         </li>
                         <li class="nav-item">
