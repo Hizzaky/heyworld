@@ -68,15 +68,15 @@ $routes->post('logUserOut',function(){
 $routes->group('Fakultas', function ($routes) {
     $routes->add('/', 'Dashboard\Fakultas\Home::index');
     $routes->add('Profile', 'Dashboard\Fakultas\Profile::index'); 
-    $routes->add('update_nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'update-nama']);
-    $routes->add('update_password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'update-password']);
+    $routes->add('update_nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
+    $routes->add('update_password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
 });
 
 $routes->group('Prodi', function ($routes) {
     $routes->add('/', 'Dashboard\Prodi\Home::index');
     $routes->add('Profile', 'Dashboard\Prodi\Profile::index');  
-    $routes->add('update_nama', 'Dashboard\Prodi\Profile::update_nama', ['as' => 'update-namaa']); 
-    $routes->add('update_password', 'Dashboard\Prodi\Profile::update_password',['as'=>'update-password']);
+    $routes->add('update_nama', '\Prodi\Profile::update_nama', ['as' => 'prodi-update-nama']); 
+    $routes->add('update_password', 'Dashboard\Prodi\Profile::update_password',['as'=>'prodi-update-password']);
 
     $routes->add('tes', 'Dashboard\Prodi\Profile::tes',['as'=>'tes']);
 });
