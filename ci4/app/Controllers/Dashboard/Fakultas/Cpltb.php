@@ -27,6 +27,13 @@ class cpltb extends BaseController
         return redirect('fakultas-taxbloom');
 
     }
+    public function capaian(){
+        $model= new Fakultas();
+        $data=$model->title();
+        $data['side']='1';
+        return view('dashboard/fakultas/capaian', $data);
+
+    }
     public function taxbloom(){
         $model= new Fakultas();
         $data=$model->title();
