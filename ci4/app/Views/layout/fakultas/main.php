@@ -73,8 +73,8 @@
                                 CPL & Taxonomy Bloom
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="capaian">CPL</a> 
-                            <a class="dropdown-item" href="taxbloom">& Taxonomy Bloom</a> 
+                            <a class="dropdown-item" href="Fakultas/capaian">CPL</a> 
+                            <a class="dropdown-item" href="Fakultas/taxbloom">Taxonomy Bloom</a> 
 
                             </div>
                         </li>
