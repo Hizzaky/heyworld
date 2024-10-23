@@ -62,8 +62,11 @@ class cpltb extends BaseController
             $this->pre($_POST);
             $new = $model->dataExplode($_POST);
             $this->pre($new);
+            
         }else{
-            echo 'no post request';
+            $sesi=session();
+            $sesi->setTempdata('fail','Tidak ada data',2);
+            return redirect('fakultas-taxbloom');
         }
     }
 
