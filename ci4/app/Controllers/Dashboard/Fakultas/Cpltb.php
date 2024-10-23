@@ -44,13 +44,27 @@ class cpltb extends BaseController
         $sesi=session();
         $data = $this->arData($model->title(), $sesi->get('login')); 
         $data['side']='2';
-        $this->pre($_POST);
-        // $new=explode(" ",$_POST['c1']);
-        $new=$model->dataExplode($_POST);
-        $this->pre($new);
+
+        // if(request()->getMethod()=='post'){
+        //     $rule=$model->rules();
+        // }
+
+
+        
 
         return view('dashboard/fakultas/taxbloom', $data);
 
+    }
+
+    public function saveTaxbloom(){
+        $model = new Fakultas();
+        if(request()->getMethod()=='post'){
+            $this->pre($_POST);
+            $new = $model->dataExplode($_POST);
+            $this->pre($new);
+        }else{
+            echo 'no post request';
+        }
     }
 
     
