@@ -25,5 +25,25 @@ class Prodi extends Model
         }
         return $new;
     }
+    public function reData($data)
+    {
+        $new = [];
+        // $key = array_keys($data);
+        $count = count($data);
+        $count += 2;
+        $c = 0;
+
+        for ($i = 2; $i < $count; $i++) {
+            for ($j = 0; $j < count($data[$i]); $j++) {
+
+                $new[$c] = [
+                    'kode' => 'C' . $i,
+                    'katalog' => str_replace('-', ' ', $data[$i][$j])
+                ];
+                $c++;
+            }
+        }
+        return $new;
+    }
     
 }
