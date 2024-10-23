@@ -62,9 +62,9 @@ class cpltb extends BaseController
     {
         $model = new Prodi();
         if (request()->getMethod() == 'post') {
-            $this->pre($_POST);
+            // $this->pre($_POST);
             $new = $model->dataExplode($_POST);
-            $this->pre($new);
+            // $this->pre($new);
 
             $reData = $this->reData($new);
             $this->pre($reData);
