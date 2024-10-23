@@ -104,15 +104,17 @@ class cpltb extends BaseController
 
         for ($i = 2; $i < $count; $i++) {
             for ($j = 0; $j < count($data[$i]); $j++) {
+
                 $new[$c] = [
                     'kode' => 'C' . $i,
-                    'katalog' => $data[$i][$j]
+                    'katalog' => str_replace('-',' ', $data[$i][$j])
                 ];
                 $c++;
             }
         }
         return $new;
     }
+
 
 
 
