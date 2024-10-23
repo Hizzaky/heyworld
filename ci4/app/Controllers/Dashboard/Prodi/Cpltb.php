@@ -67,7 +67,7 @@ class cpltb extends BaseController
             // $this->pre($new);
 
             $reData = $this->reData($new);
-            // $this->pre($reData);
+            $this->pre($reData);
         } else {
             $sesi = session();
             $sesi->setTempdata('fail', 'Tidak ada data', 2);
