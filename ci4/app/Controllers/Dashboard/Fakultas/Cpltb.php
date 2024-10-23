@@ -39,7 +39,7 @@ class cpltb extends BaseController
     public function taxbloom(){
         $model= new Fakultas();
         $sesi=session();
-        $data = $this->arData($model->title(), $sesi->get('login'));
+        $data = $this->arData($model->title(), $sesi->get('login')); 
         $data['side']='2';
         $this->pre($_POST);
         return view('dashboard/fakultas/taxbloom', $data);
