@@ -37,7 +37,7 @@
                     <?= $validasi->listErrors() ?>
                 </div>
             <?php endif; ?>
-            <form action="saveTaxbloom" method="post">
+            <form action="save_taxbloom" method="post">
                 <!-- <div class="form-group">
                     <label for="c1">C1 </label>
                     <input type="text" class="form-control" name="c1" id="c1" value="" aria-describedby="help c1"

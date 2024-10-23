@@ -56,7 +56,7 @@ class cpltb extends BaseController
 
     }
 
-    public function saveTaxbloom(){
+    public function save_taxbloom(){
         $model = new Fakultas();
         if(request()->getMethod()=='post'){
             $this->pre($_POST);

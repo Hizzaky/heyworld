@@ -72,6 +72,7 @@ $routes->group('Fakultas', function ($routes) {
     $routes->add('update_password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
     $routes->add('capaian', 'Dashboard\Fakultas\Cpltb::capaian',['as'=>'fakultas-capaian']);
     $routes->add('taxbloom', 'Dashboard\Fakultas\Cpltb::taxbloom',['as'=>'fakultas-taxbloom']);
+    $routes->add('save_taxbloom', 'Dashboard\Fakultas\Cpltb::save_taxbloom',['as'=>'fakultas-save-taxbloom']);
 });
 
 $routes->group('Prodi', function ($routes) { 
