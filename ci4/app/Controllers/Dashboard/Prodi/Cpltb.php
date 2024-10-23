@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers\Dashboard\Fakultas;
+namespace App\Controllers\Dashboard\Prodi;
 
 use App\Controllers\BaseController;
-use App\Models\Dashboard\Fakultas\Fakultas;
-use App\Models\Dashboard\Fakultas\Table\TaxbloomModel;
+use App\Models\Dashboard\Prodi\Prodi;
+use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
 
 
 class cpltb extends BaseController
@@ -14,32 +14,32 @@ class cpltb extends BaseController
         $sesi = session();
         $ver = $sesi->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Fakultas') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
             return redirect()->to('/');
         }
 
-        // $model = new Fakultas();
+        // $model = new Prodi();
         // $data = $this->arData($model->title(), $sesi->get('login'));
 
-        // return view('dashboard/fakultas/home', $data);
+        // return view('dashboard/prodi/home', $data);
 
-        return redirect('fakultas-taxbloom');
+        return redirect('prodi-taxbloom');
 
     }
     public function capaian(){
-        $model= new Fakultas();
+        $model= new Prodi();
         $sesi=session();
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['side']='1';
 
-        return view('dashboard/fakultas/capaian', $data);
+        return view('dashboard/prodi/capaian', $data);
 
     }
     public function taxbloom(){
-        $model= new Fakultas();
+        $model= new Prodi();
         $modelTbl= new TaxbloomModel();
         $sesi=session();
         $data = $this->arData($model->title(), $sesi->get('login')); 
@@ -52,12 +52,12 @@ class cpltb extends BaseController
 
         
 
-        return view('dashboard/fakultas/taxbloom', $data);
+        return view('dashboard/prodi/taxbloom', $data);
 
     }
 
     public function save_taxbloom(){
-        $model = new Fakultas();
+        $model = new Prodi();
         if(request()->getMethod()=='post'){
             $this->pre($_POST);
             $new = $model->dataExplode($_POST);
@@ -66,7 +66,7 @@ class cpltb extends BaseController
         }else{
             $sesi=session();
             $sesi->setTempdata('fail','Tidak ada data',2);
-            return redirect('fakultas-taxbloom');
+            return redirect('prodi-taxbloom');
         }
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Dashboard\Fakultas\Table;
+namespace App\Models\Dashboard\Prodi\Table;
 
 use CodeIgniter\Model;
 
