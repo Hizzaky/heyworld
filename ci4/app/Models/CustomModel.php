@@ -45,5 +45,12 @@ class CustomModel
         $post = $builder->get()->getResult();
         return $post;
     }
+
+    function insertBatch($tbl,$data)
+    {
+        $builder = $this->db->table($tbl);
+        $builder->insertBatch($data);
+
+    }
     
 }

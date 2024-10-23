@@ -5,6 +5,7 @@ namespace App\Controllers\Dashboard\Prodi;
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Prodi\Prodi;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
+use App\Models\CustomModel;
 
 
 class cpltb extends BaseController
@@ -62,20 +63,27 @@ class cpltb extends BaseController
     {
         $model = new Prodi();
         $modelTbl = new TaxbloomModel();
+
+        $db = db_connect();
+        $customModel=new customModel($db);
         if (request()->getMethod() == 'post') {
             // $this->pre($_POST);
             $new = $model->dataExplode($_POST);
             // $this->pre($new);
 
             $reData = $model->reData($new);
-            $modelTbl->save($reData);
-            if($modelTbl)
-            {
-                echo 'upload sukses';
-            }else{
-                echo 'upload fail';
-            }
+
+            // $modelTbl->save($reData);
+            // if($modelTbl)
+            // {
+            //     echo 'upload sukses';
+            // }else{
+            //     echo 'upload fail';
+            // }
             // $this->pre($reData);
+
+            $customModel->insertBatch('t_taxbloom',$reData);
+            
         } else {
             $sesi = session();
             $sesi->setTempdata('fail', 'Tidak ada data', 2);
