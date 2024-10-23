@@ -108,8 +108,8 @@ class cpltb extends BaseController
                     'kode' => 'C' . $i,
                     'katalog' => $data[$i][$j]
                 ];
+                $c++;
             }
-            $c++;
         }
         return $new;
     }
