@@ -4,6 +4,8 @@ namespace App\Controllers\Dashboard\Fakultas;
 
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Fakultas\Fakultas;
+use App\Models\Dashboard\Fakultas\Table\TaxbloomModel;
+
 
 class cpltb extends BaseController
 {
@@ -38,28 +40,20 @@ class cpltb extends BaseController
     }
     public function taxbloom(){
         $model= new Fakultas();
+        $modelTbl= new TaxbloomModel();
         $sesi=session();
         $data = $this->arData($model->title(), $sesi->get('login')); 
         $data['side']='2';
         $this->pre($_POST);
         // $new=explode(" ",$_POST['c1']);
-        $new=$this->dataExplode($_POST);
+        $new=$model->dataExplode($_POST);
         $this->pre($new);
 
         return view('dashboard/fakultas/taxbloom', $data);
 
     }
 
-    public function dataExplode($data){
-        // $count=count($data);
-        $new=[];
-        $x=2;
-        foreach($data as $val){
-            $new[$x]= explode(" ", $val);
-            $x++;
-        }
-        return $new;
-    }
+    
 
 
 }
