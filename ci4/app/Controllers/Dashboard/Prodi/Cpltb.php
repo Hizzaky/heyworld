@@ -63,6 +63,9 @@ class cpltb extends BaseController
             $new = $model->dataExplode($_POST);
             $this->pre($new);
             
+            $reData=$model->reData($new);
+            $this->pre($reData);
+
         }else{
             $sesi=session();
             $sesi->setTempdata('fail','Tidak ada data',2);

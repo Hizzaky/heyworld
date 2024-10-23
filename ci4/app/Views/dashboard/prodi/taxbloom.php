@@ -69,7 +69,7 @@
                         placeholder="Inputkan Index C6">
                 </div>
                 <hr>
-                <button type="submit" class="btn btn-success right">Simpan Index</button>
+                <button type="submit" class="btn btn-success right">Simpan Katalog</button>
             </form>
         </div>
     </div>
