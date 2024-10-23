@@ -38,15 +38,15 @@
                 </div>
             <?php endif; ?>
             <form action="" method="post">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="c1">C1 </label>
                     <input type="text" class="form-control" name="c1" id="c1" value="" aria-describedby="help c1"
                         autofocus placeholder="Inputkan Index C1">
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label for="c2">C2 </label>
                     <input type="text" class="form-control" name="c2" id="c2" value="" aria-describedby="help c2"
-                        placeholder="Inputkan Index C2">
+                        autofocus placeholder="Inputkan Index C2">
                 </div>
                 <div class="form-group">
                     <label for="c3">C3 </label>
