@@ -29,14 +29,17 @@ class cpltb extends BaseController
     }
     public function capaian(){
         $model= new Fakultas();
-        $data=$model->title();
+        $sesi=session();
+        $data = $this->arData($model->title(), $sesi->get('login'));
         $data['side']='1';
+
         return view('dashboard/fakultas/capaian', $data);
 
     }
     public function taxbloom(){
         $model= new Fakultas();
-        $data=$model->title();
+        $sesi=session();
+        $data = $this->arData($model->title(), $sesi->get('login'));
         $data['side']='2';
         return view('dashboard/fakultas/taxbloom', $data);
 
