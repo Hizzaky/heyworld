@@ -76,12 +76,12 @@ class cpltb extends BaseController
     }
     public function reData($data)
     {
-        $new = array();
+        $new = [];
         // $key = array_keys($data);
         $count = count($data);
-        $count=+2;
+        $count += 2;
         $c = 0;
-        
+
         // foreach ($key as $x) {
         //     $d=0;
         //     foreach ($data as $val) {
@@ -95,20 +95,18 @@ class cpltb extends BaseController
 
         // foreach($data as $key=>$val)
         // {
-            // $kode=array_keys($data);
-            // $new[$c]=[ 
-            //     'kode'=>'C'.$key,
-            //     'katalog'=>$val
-            // ];
+        // $kode=array_keys($data);
+        // $new[$c]=[ 
+        //     'kode'=>'C'.$key,
+        //     'katalog'=>$val
+        // ];
         // }
-        
-        for($i=2;$i<$count;$i++)
-        {
-            for($j=0;$j<count($data[$i]); $j++)
-            {
-                $new[$c]=[
-                    'kode'=>'C'.$i,
-                    'katalog'=>$data[$j]
+
+        for ($i = 2; $i < $count; $i++) {
+            for ($j = 0; $j < count($data[$i]); $j++) {
+                $new[$c] = [
+                    'kode' => 'C' . $i,
+                    'katalog' => $data[$j]
                 ];
             }
             $c++;
