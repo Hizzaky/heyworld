@@ -70,11 +70,11 @@ $routes->group('Fakultas', function ($routes) {
     $routes->add('Profile', 'Dashboard\Fakultas\Profile::index'); 
     $routes->add('update_nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
     $routes->add('update_password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
-    $routes->add('taxbloom', 'Dashboard\Fakultas\Cpltb::taxbloom',['as'=>'fakultas-taxbloom']);
     $routes->add('capaian', 'Dashboard\Fakultas\Cpltb::capaian',['as'=>'fakultas-capaian']);
+    $routes->add('taxbloom', 'Dashboard\Fakultas\Cpltb::taxbloom',['as'=>'fakultas-taxbloom']);
 });
 
-$routes->group('Prodi', function ($routes) {
+$routes->group('Prodi', function ($routes) { 
     $routes->add('/', 'Dashboard\Prodi\Home::index');
     $routes->add('Profile', 'Dashboard\Prodi\Profile::index');  
     $routes->add('update_nama', 'Dashboard\Prodi\Profile::update_nama', ['as' => 'prodi-update-nama']); 
