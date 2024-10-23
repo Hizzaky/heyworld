@@ -64,10 +64,10 @@ class cpltb extends BaseController
         if (request()->getMethod() == 'post') {
             // $this->pre($_POST);
             $new = $model->dataExplode($_POST);
-            // $this->pre($new);
+            $this->pre($new);
 
-            $reData = $this->reData($new);
-            $this->pre($reData);
+            // $reData = $this->reData($new);
+            // $this->pre($reData);
         } else {
             $sesi = session();
             $sesi->setTempdata('fail', 'Tidak ada data', 2);
@@ -78,7 +78,8 @@ class cpltb extends BaseController
     {
         $new = array();
         // $key = array_keys($data);
-        // $count = count($data);
+        $count = count($data);
+        $count=+2;
         $c = 0;
         
         // foreach ($key as $x) {
@@ -92,14 +93,20 @@ class cpltb extends BaseController
         //     $c++;
         // } 
 
-        foreach($data as $key=>$val)
-        {
+        // foreach($data as $key=>$val)
+        // {
             // $kode=array_keys($data);
             // $new[$c]=[ 
             //     'kode'=>'C'.$key,
             //     'katalog'=>$val
             // ];
-            $new[$c]=$val;
+        // }
+        
+        for($i=2;$i<$count;$i++)
+        {
+            $new[$c]=[
+                'kode'=>$data[$i]
+            ];
             $c++;
         }
         return $new;
