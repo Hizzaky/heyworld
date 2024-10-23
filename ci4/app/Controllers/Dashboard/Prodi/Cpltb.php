@@ -64,10 +64,10 @@ class cpltb extends BaseController
         if (request()->getMethod() == 'post') {
             // $this->pre($_POST);
             $new = $model->dataExplode($_POST);
-            $this->pre($new);
+            // $this->pre($new);
 
-            // $reData = $this->reData($new);
-            // $this->pre($reData);
+            $reData = $this->reData($new);
+            $this->pre($reData);
         } else {
             $sesi = session();
             $sesi->setTempdata('fail', 'Tidak ada data', 2);
