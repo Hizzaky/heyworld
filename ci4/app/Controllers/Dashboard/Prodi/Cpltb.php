@@ -90,7 +90,7 @@ class cpltb extends BaseController
         //         ];
         //     }
         //     $c++;
-        // }
+        // } 
 
         foreach($data as $key=>$val)
         {
