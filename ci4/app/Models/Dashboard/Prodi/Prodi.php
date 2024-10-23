@@ -25,8 +25,5 @@ class Prodi extends Model
         }
         return $new;
     }
-    public function reData($data){
-        $new = array_keys($data);
-        return $new;
-    }
+    
 }
