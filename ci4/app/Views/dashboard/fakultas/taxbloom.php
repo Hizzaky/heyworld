@@ -45,27 +45,27 @@
                 </div> -->
                 <div class="form-group">
                     <label for="c2">C2 </label>
-                    <input type="text" class="form-control" name="c2" id="c2" value="" aria-describedby="help c2"
+                    <input type="text" class="form-control" name="c2" id="c2" value="Memahami Menerjemahkan Menafsirkan Memperkirakan Menentukan Menjelaskan Mengartikan Menginterpretasikan Menceritakan Menampilkan Memberi-contoh Merangkum Menyimpulkan Membandingkan Mengklasifikasikan Menunjukkan Menguraikan Membedakan Menerangkan Menggantikan" aria-describedby="help c2"
                         autofocus placeholder="Inputkan Index C2">
                 </div>
                 <div class="form-group">
                     <label for="c3">C3 </label>
-                    <input type="text" class="form-control" name="c3" id="c3" value="" aria-describedby="help c3"
+                    <input type="text" class="form-control" name="c3" id="c3" value="Menerapakan Memecahkan-masalah Membuat-bagan/grafik Menggunakan Melaksanakan Mengimplementasikan Mengonsepkan Menentukan Memproseskan Mendemonstrasikan Menghitung Menghubungkan Melakukan Membuktikan Menghasilkan Memperagakan Melengkapi Menyesuaikan Menemukan" aria-describedby="help c3"
                         placeholder="Inputkan Index C3">
                 </div>
                 <div class="form-group">
                     <label for="c4">C4 </label>
-                    <input type="text" class="form-control" name="c4" id="c4" value="" aria-describedby="help c4"
+                    <input type="text" class="form-control" name="c4" id="c4" value="Menganalisis Mendiferensiasikan Mengorganisasikan Mengatribusikan Mendiagnosis Mengelola Menerapkan Memerinci Menelaah Mendeteksi Mengaitkan Memecahkan Menguraikan Memisahkan Menyeleksi Memilih Membandingkan Mempertentangkan Menguraikan Membagi" aria-describedby="help c4"
                         placeholder="Inputkan Index C4">
                 </div>
                 <div class="form-group">
                     <label for="c5">C5 </label>
-                    <input type="text" class="form-control" name="c5" id="c5" value="" aria-describedby="help c5"
+                    <input type="text" class="form-control" name="c5" id="c5" value="Mengevaluasi Mengecek Mengkritik Membuktikan Mempertahankan Memvalidasi Mendukung Memproyeksikan Memperbandingkan Menyimpulkan Mengkritik Menilai Mengevaluasi Memberi saran Memberi argumentasi Menafsirkan Merekomendasi" aria-describedby="help c5"
                         placeholder="Inputkan Index C5">
                 </div>
                 <div class="form-group">
                     <label for="c6">C6 </label>
-                    <input type="text" class="form-control" name="c6" id="c6" value="" aria-describedby="help c6"
+                    <input type="text" class="form-control" name="c6" id="c6" value="Menciptakan Membangun Merencanakan Memproduksi Mengkombinasikan Merangcang Merekonstruksi Membuat Menciptakan Mengabstraksi Mengkategorikan Mengkombinasikan Mengarang Merancang Mendesain Menyusun-kembali Merangkaikan" aria-describedby="help c6"
                         placeholder="Inputkan Index C6">
                 </div>
                 <hr>
