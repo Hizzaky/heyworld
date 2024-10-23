@@ -45,10 +45,6 @@
     nav.rnd {
         border-radius: 5px;
     }
-    .twr{
-        /* text-wrap: wrap; */
-        word-wrap: break-word;
-    }
 </style>
 
 <body>
