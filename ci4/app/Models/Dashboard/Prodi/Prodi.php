@@ -14,4 +14,15 @@ class Prodi extends Model
         ];
         return $data;
     }
+    public function dataExplode($data)
+    {
+        // $count=count($data);
+        $new = [];
+        $x = 2;
+        foreach ($data as $val) {
+            $new[$x] = explode(" ", $val);
+            $x++;
+        }
+        return $new;
+    }
 }

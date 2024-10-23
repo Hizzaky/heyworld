@@ -77,8 +77,8 @@ $routes->group('Prodi', function ($routes) {
     $routes->add('Profile', 'Dashboard\Prodi\Profile::index');  
     $routes->add('update_nama', 'Dashboard\Prodi\Profile::update_nama', ['as' => 'prodi-update-nama']); 
     $routes->add('update_password', 'Dashboard\Prodi\Profile::update_password',['as'=>'prodi-update-password']);
-    $routes->add('capaian', 'Dashboard\Prodi\Cpltb::capaian',['as'=>'fakultas-capaian']);
-    $routes->add('taxbloom', 'Dashboard\Prodi\Cpltb::taxbloom',['as'=>'fakultas-taxbloom']);
-    $routes->add('save_taxbloom', 'Dashboard\Prodi\Cpltb::save_taxbloom',['as'=>'fakultas-save-taxbloom']);
+    $routes->add('capaian', 'Dashboard\Prodi\Cpltb::capaian',['as'=>'prodi-capaian']);
+    $routes->add('taxbloom', 'Dashboard\Prodi\Cpltb::taxbloom',['as'=>'prodi-taxbloom']);
+    $routes->add('save_taxbloom', 'Dashboard\Prodi\Cpltb::save_taxbloom',['as'=>'prodi-save-taxbloom']);
 
 });
