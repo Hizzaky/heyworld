@@ -53,10 +53,12 @@ class cpltb extends BaseController
     public function dataExplode($data){
         // $count=count($data);
         $new=[];
+        $x=2;
         foreach($data as $val){
-            $data[$val]= explode(" ", $data[$val]);
+            $new[$x]= explode(" ", $val);
+            $x++;
         }
-        return $data;
+        return $new;
     }
 
 
