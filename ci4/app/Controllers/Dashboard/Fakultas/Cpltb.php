@@ -42,6 +42,9 @@ class cpltb extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login')); 
         $data['side']='2';
         $this->pre($_POST);
+        $new=implode($_POST['c1']);
+        $this->pre($new);
+
         return view('dashboard/fakultas/taxbloom', $data);
 
     }
