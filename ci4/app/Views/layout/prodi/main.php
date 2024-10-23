@@ -73,10 +73,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Menu
+                                CPL & Taxonomy Bloom
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
+                            <a class="dropdown-item" href="Fakultas/capaian">CPL</a> 
+                            <a class="dropdown-item" href="Fakultas/taxbloom">Taxonomy Bloom</a> 
                             </div>
                         </li>
                         <li class="nav-item">
