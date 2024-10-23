@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-5"></div>
             <div class="col-7">
-                <div class="twr">
+                <div class="" style="text-wrap">
                     <a class="list-group-item btn <?= $variable = $side == '1' ? 'active' : 'btn-outline-primary' ?> s-body"
                         href="capaian">Capaian Pembelajaran</a>
                     <a class="list-group-item btn <?= $variable = $side == '2' ? 'active' : 'btn-outline-primary' ?> s-body"
