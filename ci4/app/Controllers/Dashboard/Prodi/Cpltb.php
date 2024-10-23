@@ -106,7 +106,7 @@ class cpltb extends BaseController
             for ($j = 0; $j < count($data[$i]); $j++) {
                 $new[$c] = [
                     'kode' => 'C' . $i,
-                    'katalog' => $data[$j]
+                    'katalog' => $data[$i][$j]
                 ];
             }
             $c++;
