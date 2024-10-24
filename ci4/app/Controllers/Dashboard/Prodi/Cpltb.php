@@ -131,7 +131,7 @@ class cpltb extends BaseController
             'cell_end' => '</td>',
 
             'row_alt_start' => '<tr>',
-            'row_alt_end' => '</tr>',
+            'row_alt_end' => '</tr>', 
             'cell_alt_start' => '<td>',
             'cell_alt_end' => '</td>',
 
