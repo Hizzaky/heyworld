@@ -38,7 +38,7 @@
                         <div class="search-backdrop"></div>
                         <div class="search-result">
                             <div class="search-header">
-                                HistoriesHistoriesHistoriesHistoriesHistories
+                                Histories
                             </div>
                             <div class="search-item">
                                 <a href="#">How to hack NASA using CSS</a>
