@@ -139,9 +139,10 @@ class cpltb extends BaseController
         ];
 
         $table->setTemplate($template);
-        
+
         $dataTbl=$modelTbl->findAll();
         // $this->pre($dataTbl);
+        $table->setHeading(['ID','Kode','Kaatalog','Created','Updated']);
         echo $table->generate($dataTbl);
 
     }
