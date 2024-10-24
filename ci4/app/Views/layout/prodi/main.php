@@ -68,16 +68,16 @@
                             <a class="nav-link" href="/Prodi">Dashboard <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Menu</a>
+                            <a class="nav-link" href="/Prodi/taxbloom">Taxonomy Bloom</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                CPL & Taxonomy Bloom
+                                Menu
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/Prodi/capaian">CPL</a> 
-                            <a class="dropdown-item" href="/Prodi/taxbloom">Taxonomy Bloom</a> 
+                            <!-- <a class="dropdown-item" href="/Prodi/capaian">CPL</a> 
+                            <a class="dropdown-item" href="/Prodi/taxbloom">Taxonomy Bloom</a>  -->
                             </div>
                         </li>
                         <li class="nav-item">
