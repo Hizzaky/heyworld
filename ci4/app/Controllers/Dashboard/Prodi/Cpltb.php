@@ -94,11 +94,15 @@ class cpltb extends BaseController
     }
     
     public function tbl_taxbloom(){
+        $table = new \CodeIgniter\View\Table();
+
         $model=new Prodi();
         $modelTbl=new TaxbloomModel();
 
         $dataTbl=$modelTbl->findAll();
-        $this->pre($dataTbl);
+        // $this->pre($dataTbl);
+        echo $table->generate($dataTbl);
+
     }
 
 
