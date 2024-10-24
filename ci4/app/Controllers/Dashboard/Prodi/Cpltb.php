@@ -99,7 +99,7 @@ class cpltb extends BaseController
         $model=new Prodi();
         $modelTbl=new TaxbloomModel();
 
-        $dataTbl=$modelTbl->find(381);
+        $dataTbl=$modelTbl->findAll();
         // $this->pre($dataTbl);
         echo $table->generate($dataTbl);
 
