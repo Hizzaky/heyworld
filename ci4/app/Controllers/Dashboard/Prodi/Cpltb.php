@@ -82,7 +82,7 @@ class cpltb extends BaseController
             // }
             // $this->pre($reData);
 
-            $customModel->insertBatch('t_taxbloom',$reData);
+            // $customModel->insertBatch('t_taxbloom',$reData);
             
         } else {
             $sesi = session();

@@ -3,6 +3,7 @@
 namespace App\Models\Dashboard\Prodi;
 
 use CodeIgniter\Model;
+use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
 
 class Prodi extends Model
 {
@@ -27,6 +28,7 @@ class Prodi extends Model
     }
     public function reData($data)
     {
+        $modelTbl=new TaxbloomModel();
         $new = [];
         // $key = array_keys($data);
         $count = count($data);
@@ -36,11 +38,13 @@ class Prodi extends Model
         for ($i = 2; $i < $count; $i++) {
             for ($j = 0; $j < count($data[$i]); $j++) {
 
-                $new[$c] = [
+                // $new[$c] = [
+                $new = [
                     'kode' => 'C' . $i,
                     'katalog' => str_replace('-', ' ', $data[$i][$j])
                 ];
-                $c++;
+                // $c++;
+                $modelTbl->save($new);
             }
         }
         return $new;
