@@ -93,6 +93,13 @@ class cpltb extends BaseController
         }
     }
     
+    public function tbl_taxbloom(){
+        $model=new Prodi();
+        $modelTbl=new TaxbloomModel();
+
+        $dataTbl=$modelTbl->findAll();
+        $this->pre($dataTbl);
+    }
 
 
 

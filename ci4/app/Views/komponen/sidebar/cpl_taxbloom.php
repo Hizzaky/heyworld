@@ -6,7 +6,7 @@
             <div class="col-7">
                 <div class="">
                     <a class="list-group-item btn <?= $variable = $side == '1' ? 'active' : 'btn-outline-primary' ?> s-body"
-                        href="capaian">Capaian Pembelajaran</a>
+                        href="tbl_taxbloom">Tabel</a>
                     <a class="list-group-item btn <?= $variable = $side == '2' ? 'active' : 'btn-outline-primary' ?> s-body"
                         href="taxbloom">Taxonomy Bloom</a>
                     <!-- <a class="list-group-item btn btn-outline-primary s-body "

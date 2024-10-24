@@ -80,5 +80,6 @@ $routes->group('Prodi', function ($routes) {
     $routes->add('capaian', 'Dashboard\Prodi\Cpltb::capaian',['as'=>'prodi-capaian']);
     $routes->add('taxbloom', 'Dashboard\Prodi\Cpltb::taxbloom',['as'=>'prodi-taxbloom']);
     $routes->add('save_taxbloom', 'Dashboard\Prodi\Cpltb::save_taxbloom',['as'=>'prodi-save-taxbloom']);
+    $routes->add('tbl_taxbloom', 'Dashboard\Prodi\Cpltb::tbl_taxbloom',['as'=>'prodi-tbl-taxbloom']);
 
 });
