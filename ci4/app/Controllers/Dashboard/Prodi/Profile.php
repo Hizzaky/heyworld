@@ -82,20 +82,24 @@ class Profile extends BaseController
                         'prodi_id' => $getData['prodi_id'],
                         'password' => $_POST['password']
                     ];
+
+                    $this->pre($_POST);
+                    $this->pre($dataTbl);
+
                     
-                    $modelTbl->save($dataTbl);
+                    // $modelTbl->save($dataTbl);
 
-                    if ($modelTbl) {
-                        $sesi->setTempdata('sukses', 'Update Berhasil!',2);
-                        // $sesi->setTempdata('sukses', 'Update Berhasil!',3);
-                        $getData = $modelTbl->find($data['login']['user_id']);
+                    // if ($modelTbl) {
+                    //     $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+                    //     // $sesi->setTempdata('sukses', 'Update Berhasil!',3);
+                    //     $getData = $modelTbl->find($data['login']['user_id']);
 
-                        $dataUser = $this->userData($getData, $data['jenis_user']);
-                        $sesi->set('login', $dataUser);
-                        $data['login'] = $sesi->get('login');
-                    } else {
-                        $sesi->setTempdata('fail', 'Update Gagal!',2);
-                    }
+                    //     $dataUser = $this->userData($getData, $data['jenis_user']);
+                    //     $sesi->set('login', $dataUser);
+                    //     $data['login'] = $sesi->get('login');
+                    // } else {
+                    //     $sesi->setTempdata('fail', 'Update Gagal!',2);
+                    // }
                 } else {
                     $sesi->setTempdata('fail', 'Update Gagal, Password Terakhir Tidak Sesuai!',2);
                 }
