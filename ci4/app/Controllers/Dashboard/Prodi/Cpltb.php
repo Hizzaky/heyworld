@@ -101,7 +101,7 @@ class cpltb extends BaseController
 
         $dataTbl=$modelTbl->findAll();
         // $this->pre($dataTbl);
-        // echo $table->generate($dataTbl);
+        echo $table->generate($dataTbl);
 
     }
 
