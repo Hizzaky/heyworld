@@ -71,7 +71,7 @@ class cpltb extends BaseController
             $new = $model->dataExplode($_POST);
             // $this->pre($new);
 
-            $reData = $model->reData($new);
+            // $model->reData($new);
 
             // $modelTbl->save($reData);
             // if($modelTbl)
@@ -83,6 +83,8 @@ class cpltb extends BaseController
             // $this->pre($reData);
 
             // $customModel->insertBatch('t_taxbloom',$reData);
+
+            echo 'cek proses';
             
         } else {
             $sesi = session();

@@ -44,7 +44,7 @@ class Prodi extends Model
                     'katalog' => str_replace('-', ' ', $data[$i][$j])
                 ];
                 // $c++;
-                $modelTbl->save($new);
+                // $modelTbl->save($new);
             }
         }
         echo 'cek';
