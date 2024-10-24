@@ -47,7 +47,7 @@ class Prodi extends Model
                 $modelTbl->save($new);
             }
         }
-        return $new;
+        echo 'cek';
     }
     
 }
