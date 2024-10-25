@@ -380,12 +380,11 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    <?= include 'foot.php'; ?>
+                    <?php include 'footerLeft.php' ?>
                     
                 </div>
                 <div class="footer-right">
-                    <?= include 'footerRight.php' ?>
-                    <?= include 'footerRight.php' ?>
+                    <?php include 'footerRight.php' ?>
                 </div>
             </footer>
         </div>
