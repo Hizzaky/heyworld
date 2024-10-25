@@ -3,7 +3,7 @@
 
 <section class="section">
     <div class="section-header">
-        <h1><?= $header ?></h1>
+        <h1><?= $header_title ?></h1>
     </div>
     <div class="section-body">
 
