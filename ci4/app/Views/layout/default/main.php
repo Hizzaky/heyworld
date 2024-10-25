@@ -385,6 +385,7 @@
                 </div>
                 <div class="footer-right">
                     <?= include 'footerRight.php' ?>
+                    <?= include 'footerRight.php' ?>
                 </div>
             </footer>
         </div>
