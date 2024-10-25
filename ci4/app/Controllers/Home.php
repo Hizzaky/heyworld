@@ -6,8 +6,8 @@ class Home extends BaseController
 {
     public function index()
     {
-        // return redirect()->to('Homepage/');
+        return redirect()->to('Homepage/');
 
-        return view('tes/home');
+        // return view('tes/home');
     }
 }
