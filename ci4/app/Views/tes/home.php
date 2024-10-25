@@ -299,7 +299,7 @@
                                 <li><a class="nav-link" href="bootstrap-badge.html">Badge</a></li>
                             </ul>
                         </li>
-                        <li class="menu-header">Stisla</li>
+                        <li class="menu-header">MENU</li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i>
                                 <span>Components</span></a>
@@ -332,7 +332,7 @@
                                 <li><a class="nav-link" href="modules-chartjs.html">ChartJS</a></li>
                             </ul>
                         </li>
-                        <li class="menu-header">Pages</li>
+                        <li class="menu-header">MENU</li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>Auth</span></a>
                             <ul class="dropdown-menu">
