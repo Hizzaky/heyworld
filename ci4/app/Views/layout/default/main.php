@@ -380,8 +380,7 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2024 <div class="bullet"></div> Developed By <a href="#">HIZZAKY</a>
-                    <?= include 'footerLeft.php'; ?>
+                    <?= include 'foot.php'; ?>
                     
                 </div>
                 <div class="footer-right">
