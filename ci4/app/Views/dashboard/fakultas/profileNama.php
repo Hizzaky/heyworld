@@ -38,6 +38,7 @@
                     <div class="card-header">
                         <h4>Edit <?= $konten . ' ' . $jenis_user ?></h4>
                     </div>
+                    blablabla
                     <div class="card-body">
                         <!-- <div class="row"> -->
                         <div class="form-group col-md-12 col-12">
@@ -56,7 +57,7 @@
                         </div>
                         <div class="form-group col-md-12 col-12">
                             <label>Input Nama Baru</label>
-                            <input type="text" class="form-control" name="nama_fakultas2" value="" >
+                            <input type="text" class="form-control" name="nama_fakultas2" value="" required min_length="8">
                             <div class="invalid-feedback">
                                 Isi nama fakultas dengan benar!
                             </div>
@@ -78,22 +79,11 @@
                                     aria-hidden="true">&times;</span></button>
                         </div>
                     <?php endif;
-
                    if (isset($fail)): ?>
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
                             <?= $fail ?>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (isset($validasi)): ?>
-                        <div class="text-danger">
-                            <?= $validasi->listErrors() ?>
-                            <hr>
-                            <?php $tes= $validasi->getErrors(); ?>
-                            <pre>
-                                <?php print_r($tes); ?>
-                            </pre>
                         </div>
                     <?php endif; ?>
                     <!--  -->
