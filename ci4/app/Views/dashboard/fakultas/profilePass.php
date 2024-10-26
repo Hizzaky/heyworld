@@ -49,16 +49,16 @@
                             </div>
                         </div><hr>
                         <div class="form-group col-md-12 col-12">
-                            <label>Password Saat Ini</label>
+                            <label>Password Terkini</label>
                             <input type="password" class="form-control" name="oldPassword" value=""
-                                 placeholder="Inputkan Kembali Password Baru" required>
+                                 placeholder="Inputkan Password Terkini" required>
                             <div class="invalid-feedback">
                                 Inputkan Password dengan benar!
                             </div>
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <button class="btn btn-success">Update Password</button>
+                        <button class="btn btn-outline-success">Update Password</button>
                     </div>
                 </form>
             </div>
