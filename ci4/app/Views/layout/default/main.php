@@ -261,7 +261,7 @@
                     </li>
                 </ul>
             </nav>
-            <?= $this->include('komponen/sidebar/homepage'); ?>
+            <?= $this->include('komponen/sidebar/main'); ?>
 
 
             <!-- Main Content -->
