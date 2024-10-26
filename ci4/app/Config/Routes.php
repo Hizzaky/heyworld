@@ -64,6 +64,14 @@ $routes->add('logUserOut',function(){
 // });
  
   
+
+$routes->group('Fakultas', function ($routes) {
+    $routes->add('/', 'Dashboard\Fakultas\Home::index');
+    $routes->add('Profile', 'Dashboard\Fakultas\Profile::index'); 
+    $routes->add('Update-nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
+    $routes->add('Update-password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
+});
+
 $routes->group('Prodi', function ($routes) { 
     $routes->add('/', 'Dashboard\Prodi\Home::index');
     $routes->add('Profile', 'Dashboard\Prodi\Profile::index');  
@@ -74,11 +82,4 @@ $routes->group('Prodi', function ($routes) {
     $routes->add('Save-taxbloom', 'Dashboard\Prodi\Cpltb::save_taxbloom',['as'=>'prodi-save-taxbloom']);
     $routes->add('Tbl-taxbloom', 'Dashboard\Prodi\Cpltb::tbl_taxbloom',['as'=>'prodi-tbl-taxbloom']);
 
-});
-
-$routes->group('Fakultas', function ($routes) {
-    $routes->add('/', 'Dashboard\Fakultas\Home::index');
-    $routes->add('Profile', 'Dashboard\Fakultas\Profile::index'); 
-    $routes->add('Update-nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
-    $routes->add('Update-password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
 });
