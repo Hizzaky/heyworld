@@ -27,10 +27,10 @@
             <div class="navbar-bg"></div>
             <nav class="navbar navbar-expand-lg main-navbar">
                 <ul class="navbar-nav mr-3 form-inline mr-auto">
-                    <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i
+                    <!-- <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i
                                 class="fas fa-bars"></i></a></li>
                     <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
-                                class="fas fa-search"></i></a></li>
+                                class="fas fa-search"></i></a></li> -->
                 </ul>
                 <!-- <form class="form-inline mr-auto">
                     <div class="search-element">
