@@ -39,7 +39,10 @@
 
                             <label>Password Baru</label>
                             <input type="password" class="form-control" name="password" value=""
-                                aria-describedby="help password" autofocus placeholder="Inputkan Password Baru">
+                                aria-describedby="help password" autofocus placeholder="Inputkan Password Baru" required>
+                            <div class="invalid-feedback">
+                                Isi nama fakultas dengan benar!
+                            </div>
                         </div>
 
 
