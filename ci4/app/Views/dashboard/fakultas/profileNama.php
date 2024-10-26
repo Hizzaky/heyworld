@@ -1,4 +1,4 @@
-<?= $this->extend('layout/fakultas/main') ?>
+<?= $this->extend('layout/default/main') ?>
 
 <?= $this->section('konten') ?>
 <div class="section-body">
