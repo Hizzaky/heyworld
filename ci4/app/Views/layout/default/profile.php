@@ -495,11 +495,11 @@
                                         </div>
                                         <div class="card-body">
                                             <!-- <div class="row"> -->
-                                                <div class="form-group col-md-6 col-12">
-                                                    <label>First Name</label>
-                                                    <input type="text" class="form-control" value="Ujang" required="">
+                                                <div class="form-group col-md-12 col-12">
+                                                    <label>Nama Fakultas</label>
+                                                    <input type="text" class="form-control" value="<?= $login['nama_user'] ?>" required="">
                                                     <div class="invalid-feedback">
-                                                        Please fill in the first name
+                                                        Isi nama fakultas dengan benar!
                                                     </div>
                                                 </div>
                                                 <!-- <div class="form-group col-md-6 col-12">
