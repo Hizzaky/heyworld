@@ -255,12 +255,12 @@
                             </a>
                             <div class="dropdown-divider"></div>
                             <a href="logUserOut" class="dropdown-item has-icon text-danger">
-                                <i class="fas fa-sign-out-alt"></i> Logout 1.4
+                                <i class="fas fa-sign-out-alt"></i> Logout 1.5
                             </a>
                             <!-- /logUserOut -->
                             <form action="logUserOut" method="post">
-                                <a class="dropdown-item has-icon text-danger">
-                                <button  type="submit">
+                                <a >
+                                <button  class="dropdown-item has-icon text-danger" type="submit">
 
                                         <i class="fas fa-sign-out-alt"></i> Logout 
                                     </button> 
