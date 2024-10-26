@@ -49,30 +49,28 @@ class Profile extends BaseController
         $data['side'] = '1';
         $data['konten'] = 'Nama';
 
-        $this->pre($data);
+        if (request()->getMethod() == 'post') {
+            $rules = $model->rules_nama();
 
-        // if (request()->getMethod() == 'post') {
-        //     $rules = $model->rules_nama_fakultas();
+            if ($this->validate($rules)) {
+                $getData = $modelTbl->find($data['login']['user_id']);
+                $_POST['fakultas_id'] = $data['login']['user_id'];
+                $modelTbl->save($_POST);
 
-        //     if ($this->validate($rules)) {
-        //         $getData = $modelTbl->find($data['login']['user_id']);
-        //         $_POST['fakultas_id'] = $data['login']['user_id'];
-        //         $modelTbl->save($_POST);
+                if ($modelTbl) {
+                    $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+                    $getData = $modelTbl->find($data['login']['user_id']);
 
-        //         if ($modelTbl) {
-        //             $sesi->setTempdata('sukses', 'Update Berhasil!',2);
-        //             $getData = $modelTbl->find($data['login']['user_id']);
-
-        //             $dataUser = $this->userData($getData, $data['jenis_user']);
-        //             $sesi->set('login', $dataUser);
-        //             $data['login'] = $sesi->get('login');
-        //         } else {
-        //             $sesi->setTempdata('fail', 'Update Gagal!',2);
-        //         }
-        //     } else {
-        //         $data['validasi'] = $this->validator;
-        //     }
-        // }
+                    $dataUser = $this->userData($getData, $data['jenis_user']);
+                    $sesi->set('login', $dataUser);
+                    $data['login'] = $sesi->get('login');
+                } else {
+                    $sesi->setTempdata('fail', 'Update Gagal!',2);
+                }
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
         return view('dashboard/fakultas/profileNama', $data);
     }
     public function update_password()
@@ -97,7 +95,7 @@ class Profile extends BaseController
         $data['konten'] = 'Password'; 
 
         if (request()->getMethod() == 'post') {
-            $rules = $model->passRules();
+            $rules = $model->rules_pass();
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
 

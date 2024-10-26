@@ -14,7 +14,7 @@ class ProfileModel extends Model
         ];
         return $title;
     }
-    public function rules(){
+    public function rules_nama(){
         $rules = [
             'nama_fakultas' => [
                 'rules' => 'required',
@@ -26,7 +26,7 @@ class ProfileModel extends Model
         ];
         return $rules;
     }
-    public function passRules(){
+    public function rules_pass(){
         $rules = [
             'oldPassword' => [
                 'rules' => 'required|min_length[8]',
