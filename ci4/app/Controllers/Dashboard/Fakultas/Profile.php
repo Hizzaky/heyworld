@@ -49,29 +49,30 @@ class Profile extends BaseController
         $data['side'] = '1';
         $data['konten'] = 'Nama';
 
-        if (request()->getMethod() == 'post') {
-            $rules = $model->rules_nama_fakultas();
+        $this->pre($data);
 
-            if ($this->validate($rules)) {
-                $getData = $modelTbl->find($data['login']['user_id']);
-                $_POST['fakultas_id'] = $data['login']['user_id'];
-                $this->pre($_POST);
-                // $modelTbl->save($_POST);
+        // if (request()->getMethod() == 'post') {
+        //     $rules = $model->rules_nama_fakultas();
 
-                // if ($modelTbl) {
-                //     $sesi->setTempdata('sukses', 'Update Berhasil!',2);
-                //     $getData = $modelTbl->find($data['login']['user_id']);
+        //     if ($this->validate($rules)) {
+        //         $getData = $modelTbl->find($data['login']['user_id']);
+        //         $_POST['fakultas_id'] = $data['login']['user_id'];
+        //         $modelTbl->save($_POST);
 
-                //     $dataUser = $this->userData($getData, $data['jenis_user']);
-                //     $sesi->set('login', $dataUser);
-                //     $data['login'] = $sesi->get('login');
-                // } else {
-                //     $sesi->setTempdata('fail', 'Update Gagal!',2);
-                // }
-            } else {
-                $data['validasi'] = $this->validator;
-            }
-        }
+        //         if ($modelTbl) {
+        //             $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+        //             $getData = $modelTbl->find($data['login']['user_id']);
+
+        //             $dataUser = $this->userData($getData, $data['jenis_user']);
+        //             $sesi->set('login', $dataUser);
+        //             $data['login'] = $sesi->get('login');
+        //         } else {
+        //             $sesi->setTempdata('fail', 'Update Gagal!',2);
+        //         }
+        //     } else {
+        //         $data['validasi'] = $this->validator;
+        //     }
+        // }
         return view('dashboard/fakultas/profileNama', $data);
     }
     public function update_password()

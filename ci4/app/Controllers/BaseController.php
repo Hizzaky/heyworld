@@ -81,7 +81,7 @@ abstract class BaseController extends Controller
                 'user_id' => $data['dosen_id'],
                 'nidn' => $data['nidn'],
                 'nama_user' => $data['nama_dosen'],
-                'jenis_user' => ucfirst($jenis_user)
+                'jenis_user' => $jenis_user
             ];
         }
         if ($jenis_user == 'Prodi') {
@@ -91,14 +91,14 @@ abstract class BaseController extends Controller
                 'nama_user' => $data['nama_prodi'],
                 'akreditasi' => $data['akreditasi'],
                 'jenjang' => $data['jenjang'],
-                'jenis_user' => ucfirst($jenis_user)
+                'jenis_user' => $jenis_user
             ];
         }
         if ($jenis_user == 'Fakultas') {
             $dataUser = [
                 'user_id' => $data['fakultas_id'],
                 'nama_user' => $data['nama_fakultas'],
-                'jenis_user' => ucfirst($jenis_user)
+                'jenis_user' => $jenis_user
             ];
         }
         return $dataUser;
