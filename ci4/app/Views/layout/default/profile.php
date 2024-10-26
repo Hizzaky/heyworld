@@ -455,9 +455,11 @@
                             <div class="col-12 col-md-12 col-lg-5">
                                 <div class="card profile-widget">
                                     <div class="profile-widget-header">
-                                        <h5>
-                                            Menu <?= $header_title ?>
-                                        </h5>
+                                        <div class="card-header">
+                                            <h4>
+                                                Menu <?= $header_title ?>
+                                            </h4>
+                                        </div>
                                     </div>
                                     <div class="profile-widget-description">
                                         <!-- <div class="profile-widget-name">Ujang Maman <div
