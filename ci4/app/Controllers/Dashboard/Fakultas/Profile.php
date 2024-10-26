@@ -68,6 +68,7 @@ class Profile extends BaseController
                 //     $sesi->setTempdata('fail', 'Update Gagal!',2);
                 // }
             } else {
+                    $sesi->setTempdata('fail', 'Update Gagal!',2);
                 $data['validasi'] = $this->validator;
             }
         }
