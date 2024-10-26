@@ -456,6 +456,7 @@
                                         </div> -->
                                         <a class="list-group-item btn <?= $variable = $side == '1' ? 'active' : 'btn-outline-secondary' ?> s-body"
                                             href="update_nama">Nama Fakultas</a>
+                                            <br>
                                         <a class="list-group-item btn <?= $variable = $side == '2' ? 'active' : 'btn-outline-secondary' ?> s-body"
                                             href="update_password">Password</a>
                                     </div>
