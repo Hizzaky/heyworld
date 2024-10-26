@@ -68,7 +68,7 @@ $routes->add('logUserOut',function(){
 $routes->group('Fakultas', function ($routes) {
     $routes->add('/', 'Dashboard\Fakultas\Home::index');
     $routes->add('Profile', 'Dashboard\Fakultas\Profile::index'); 
-    $routes->add('update_nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
+    $routes->add('update-nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
     $routes->add('update_password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
 });
 
