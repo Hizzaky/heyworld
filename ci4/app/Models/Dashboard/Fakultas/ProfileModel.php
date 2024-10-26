@@ -17,19 +17,10 @@ class ProfileModel extends Model
     public function rules_nama(){
         $rules = [
             'nama_fakultas' => [
-                'rules' => 'required|min_length[8]',
+                'rules' => 'required',
                 'label' => 'Nama Fakultas',
                 'errors' => [
-                    'required' => 'Input Nama Fakultas dengan benar!',
-                    'min_length' => 'Minimal 8 digit!'
-                ]
-                ],
-            'nama_fakultas2' => [
-                'rules' => 'required|min_length[8]',
-                'label' => 'Nama Fakultas',
-                'errors' => [
-                    'required' => 'Input Nama Fakultas dengan benar!',
-                    'min_length' => 'Minimal 8 digit!'
+                    'required' => 'Input Nama Fakultas dengan benar!'
                 ]
             ]
         ];
