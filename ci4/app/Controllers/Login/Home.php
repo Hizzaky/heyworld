@@ -17,13 +17,13 @@ class Home extends BaseController
         if (isset($_GET['login'])) {
             $sesi = session();
             if ($_GET['login'] == 'dosen') {
-                $sesi->set('jenis_user', 'dosen');
+                $sesi->set('jenis_user', 'Dosen');
             }
             if ($_GET['login'] == 'prodi') {
-                $sesi->set('jenis_user', 'prodi');
+                $sesi->set('jenis_user', 'Prodi');
             }
             if ($_GET['login'] == 'fakultas') {
-                $sesi->set('jenis_user', 'fakultas');
+                $sesi->set('jenis_user', 'Fakultas');
             }
             $ret = '/Login/' . $_GET['login'];
         } else {
@@ -42,7 +42,7 @@ class Home extends BaseController
 
         $model = new Login;
         helper(['form']);
-        $jenis_user = ucfirst($sesi->get('jenis_user'));
+        $jenis_user = $sesi->get('jenis_user');
         $data = $model->arDataLogin($jenis_user);
         $data['dataTbl']=$model->getData($jenis_user);
 
@@ -74,7 +74,7 @@ class Home extends BaseController
 
         $model = new Login;
         helper(['form']);
-        $jenis_user = ucfirst($sesi->get('jenis_user'));
+        $jenis_user = $sesi->get('jenis_user');
         $data = $model->arDataLogin($jenis_user);
         $data['dataTbl']=$model->getData($jenis_user);
 
@@ -106,7 +106,7 @@ class Home extends BaseController
 
         $model = new Login;
         helper(['form']);
-        $jenis_user = ucfirst($sesi->get('jenis_user'));
+        $jenis_user = $sesi->get('jenis_user');
         $data = $model->arDataLogin($jenis_user);
         $data['dataTbl']=$model->getData($jenis_user);
 
