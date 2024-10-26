@@ -75,8 +75,8 @@ class Profile extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        // return view('dashboard/fakultas/profileNama', $data);
-        return view('layout/default/profile', $data);
+        return view('dashboard/fakultas/profileNama', $data);
+        // return view('layout/default/profile', $data);
     }
     public function update_password()
     {
