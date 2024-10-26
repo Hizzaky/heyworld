@@ -261,7 +261,7 @@
                     </li>
                 </ul>
             </nav>
-            <?php include 'kompnen/sidebar/main.php' ?>
+            <?php include '../../kompnen/sidebar/main.php' ?>
 
             <!-- Main Content -->
             <div class="main-content">
