@@ -11,7 +11,7 @@ class Home extends BaseController
         $sesi=$dataSesi->get('login');
         if(isset($sesi['jenis_user'])){
             
-            return redirect()->to(ucfirst($sesi['jenis_user']));
+            return redirect()->to($sesi['jenis_user']);
         }
 
         if (isset($_GET['login'])) {
@@ -25,11 +25,13 @@ class Home extends BaseController
             if ($_GET['login'] == 'fakultas') {
                 $sesi->set('jenis_user', 'Fakultas');
             }
-            $ret = '/Login/' . $_GET['login'];
+            // $ret = '/Login/' . $_GET['login'];
+            $ret='login-'.$_GET['login'];
         } else {
             $ret = '/';
+            return redirect()->to(base_url($ret));
         }
-        return redirect()->to(base_url($ret));
+        return redirect($ret);
     }
     
     public function dosen()

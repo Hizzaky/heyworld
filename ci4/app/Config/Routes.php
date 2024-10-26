@@ -32,9 +32,9 @@ $routes->add('homepage', 'Homepage\Home::index');
 
 $routes->group('Login', function ($routes) {
     $routes->add('/', 'Login\Home::index');
-    $routes->add('Dosen', 'Login\Home::dosen');
-    $routes->add('Prodi', 'Login\Home::prodi');
-    $routes->add('Fakultas', 'Login\Home::fakultas');
+    $routes->add('Dosen', 'Login\Home::dosen', ['as' => 'login-Dosen']);
+    $routes->add('Prodi', 'Login\Home::prodi', ['as' => 'login-Prodi']);
+    $routes->add('Fakultas', 'Login\Home::fakultas',['as'=>'login-Fakultas']);
     // $routes->add('sukses','Login\Home::sukses',['as'=>'sukses']);
     $routes->add('sukses/(:any)/(:any)/(:any)', 'Login\Home::sukses/$1/$2/$3');
 });
