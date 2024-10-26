@@ -20,11 +20,10 @@
                 </div>
                 <!-- </div> -->
                 <div class="profile-widget-description">
-                    <!-- <div class="profile-widget-name">Ujang Maman <div
-                                                class="text-muted d-inline font-weight-normal">
-                                                <div class="slash"></div> Web Developer
-                                            </div>
-                                        </div> -->
+                    <!-- <div class="profile-widget-name">Ujang Maman <div class="text-muted d-inline font-weight-normal">
+                            <div class="slash"></div> Web Developer
+                        </div>
+                    </div> -->
                     <a class="list-group-item btn <?= $variable = $side == '1' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
                         href="Update-nama">Update Nama</a><br>
                     <a class="list-group-item btn <?= $variable = $side == '2' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"

@@ -67,6 +67,7 @@ $routes->add('logUserOut',function(){
 
 $routes->group('Fakultas', function ($routes) {
     $routes->add('/', 'Dashboard\Fakultas\Home::index');
+    $routes->add('Home', 'Dashboard\Fakultas\Home::index');
     $routes->add('Profile', 'Dashboard\Fakultas\Profile::index'); 
     $routes->add('Update-nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
     $routes->add('Update-password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
@@ -74,6 +75,7 @@ $routes->group('Fakultas', function ($routes) {
 
 $routes->group('Prodi', function ($routes) { 
     $routes->add('/', 'Dashboard\Prodi\Home::index');
+    $routes->add('Home', 'Dashboard\Prodi\Home::index');
     $routes->add('Profile', 'Dashboard\Prodi\Profile::index');  
     $routes->add('Update-nama', 'Dashboard\Prodi\Profile::update_nama', ['as' => 'prodi-update-nama']); 
     $routes->add('Update-password', 'Dashboard\Prodi\Profile::update_password',['as'=>'prodi-update-password']);
