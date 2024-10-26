@@ -466,9 +466,9 @@
                                             </div>
                                         </div> -->
                                         <a class="list-group-item btn <?= $variable = $side == '1' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
-                                            href="update-nama">Nama Fakultas</a><br>
+                                            href="Update-nama">Nama Fakultas</a><br>
                                         <a class="list-group-item btn <?= $variable = $side == '2' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
-                                            href="update_password">Password</a>
+                                            href="Update_password">Password</a>
                                     </div>
                                     <!-- <div class="card-footer text-center">
                                         <div class="font-weight-bold mb-2">Follow Ujang On</div>
