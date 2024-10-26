@@ -33,9 +33,20 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group col-md-12 col-12">
-                            <label>Nama Fakultas</label>
-                            <input type="text" class="form-control" value="<?= $login['nama_user'] ?>" disabled>
+                            <!-- <label>Nama Fakultas</label>
+                            <input type="text" class="form-control" value="<?= $login['nama_user'] ?>" disabled> -->
+
+
+                            <label>Password Baru</label>
+                            <input type="password" class="form-control" name="password" value=""
+                                aria-describedby="help password" autofocus placeholder="Inputkan Password Baru">
                         </div>
+
+
+
+
+
+
                         <div class="form-group col-md-12 col-12">
                             <label>Input Nama Baru</label>
                             <input type="text" class="form-control" name="nama_fakultas" value="" required>
@@ -52,9 +63,7 @@
 
 
                     <div class="form-group">
-                        <label for="password">Password Baru </label>
-                        <input type="password" class="form-control" name="password" id="password" value=""
-                            aria-describedby="help password" autofocus placeholder="Inputkan Password Baru">
+
                     </div>
                     <div class="form-group">
                         <label for="rePassword">Ketik Ulang Password Baru </label>
