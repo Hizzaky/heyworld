@@ -21,7 +21,11 @@ class Profile extends BaseController
             return redirect()->to('/');
         }
         // return redirect('fakultas-update-nama');
-        return view('layout/default/profile');
+        
+        $model = new ProfileModel();
+        $data = $this->arData($model->title(), $sesi->get('login'));
+
+        return view('layout/default/profile',$data);
     }
     public function update_nama()
     {
