@@ -48,6 +48,29 @@
                         <button class="btn btn-primary">Update Nama</button>
                     </div>
                 </form>
+                <form action="update_password" method="post">
+
+
+                    <div class="form-group">
+                        <label for="password">Password Baru </label>
+                        <input type="password" class="form-control" name="password" id="password" value=""
+                            aria-describedby="help password" autofocus placeholder="Inputkan Password Baru">
+                    </div>
+                    <div class="form-group">
+                        <label for="rePassword">Ketik Ulang Password Baru </label>
+                        <input type="password" class="form-control" name="rePassword" id="rePassword" value=""
+                            aria-describedby="help rePassword" autofocus placeholder="Inputkan Kembali Password Baru">
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="oldPassword">Password Terakhir</label>
+                        <input type="password" class="form-control" name="oldPassword" id="oldPassword" value=""
+                            aria-describedby="help oldPassword" autofocus
+                            placeholder="Inputkan Password Terakhir Digunakan">
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-success right">Update Password</button>
+                </form>
             </div>
         </div>
     </div>
