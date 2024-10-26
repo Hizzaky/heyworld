@@ -59,21 +59,21 @@
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" href="<?= base_url() ?>/template/assets/img/products/product-3-50.png"
+                                    <img class="mr-3 rounded" width="30" src="<?= base_url() ?>/template/assets/img/products/product-3-50.png"
                                         alt="product">
                                     oPhone S9 Limited Edition
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" href="<?= base_url() ?>/template/assets/img/products/product-2-50.png"
+                                    <img class="mr-3 rounded" width="30" src="<?= base_url() ?>/template/assets/img/products/product-2-50.png"
                                         alt="product">
                                     Drone X2 New Gen-7
                                 </a>
                             </div>
                             <div class="search-item">
                                 <a href="#">
-                                    <img class="mr-3 rounded" width="30" href="<?= base_url() ?>/template/assets/img/products/product-1-50.png"
+                                    <img class="mr-3 rounded" width="30" src="<?= base_url() ?>/template/assets/img/products/product-1-50.png"
                                         alt="product">
                                     Headphone Blitz
                                 </a>
@@ -112,7 +112,7 @@
                             <div class="dropdown-list-content dropdown-list-message">
                                 <a href="#" class="dropdown-item dropdown-item-unread">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" href="<?= base_url() ?>/template/assets/img/avatar/avatar-1.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-1.png" class="rounded-circle">
                                         <div class="is-online"></div>
                                     </div>
                                     <div class="dropdown-item-desc">
@@ -123,7 +123,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item dropdown-item-unread">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" href="<?= base_url() ?>/template/assets/img/avatar/avatar-2.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-2.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Dedik Sugiharto</b>
@@ -133,7 +133,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item dropdown-item-unread">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" href="<?= base_url() ?>/template/assets/img/avatar/avatar-3.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-3.png" class="rounded-circle">
                                         <div class="is-online"></div>
                                     </div>
                                     <div class="dropdown-item-desc">
@@ -144,7 +144,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" href="<?= base_url() ?>/template/assets/img/avatar/avatar-4.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-4.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Ardian Rahardiansyah</b>
@@ -154,7 +154,7 @@
                                 </a>
                                 <a href="#" class="dropdown-item">
                                     <div class="dropdown-item-avatar">
-                                        <img alt="image" href="<?= base_url() ?>/template/assets/img/avatar/avatar-5.png" class="rounded-circle">
+                                        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-5.png" class="rounded-circle">
                                     </div>
                                     <div class="dropdown-item-desc">
                                         <b>Alfa Zulkarnain</b>
@@ -230,7 +230,7 @@
                     </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" href="<?= base_url() ?>/template/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                            <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -446,7 +446,7 @@
                             <div class="col-12 col-md-12 col-lg-5">
                                 <div class="card profile-widget">
                                     <div class="profile-widget-header">
-                                        <img alt="image" href="<?= base_url() ?>/template/assets/img/avatar/avatar-1.png"
+                                        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-1.png"
                                             class="rounded-circle profile-widget-picture">
                                         <div class="profile-widget-items">
                                             <div class="profile-widget-item">
@@ -583,14 +583,14 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script href="<?= base_url() ?>/template/assets/js/stisla.js"></script>
+    <script src="<?= base_url() ?>/template/assets/js/stisla.js"></script>
 
     <!-- JS Libraies -->
-    <script href="<?= base_url() ?>/template/node_modules/summernote/dist/summernote-bs4.js"></script>
+    <script src="<?= base_url() ?>/template/node_modules/summernote/dist/summernote-bs4.js"></script>
 
     <!-- Template JS File -->
-    <script href="<?= base_url() ?>/template/assets/js/scripts.js"></script>
-    <script href="<?= base_url() ?>/template/assets/js/custom.js"></script>
+    <script src="<?= base_url() ?>/template/assets/js/scripts.js"></script>
+    <script src="<?= base_url() ?>/template/assets/js/custom.js"></script>
 
     <!-- Page Specific JS File -->
 </body>
