@@ -261,16 +261,17 @@
                     </li>
                 </ul>
             </nav>
-            <?php include '../../kompnen/sidebar/main.php' ?>
+            <?= $this->include('komponen/sidebar/homepage'); ?>
+
 
             <!-- Main Content -->
             <div class="main-content">
-                    <?= $this->renderSection('konten') ?>
+                <?= $this->renderSection('konten') ?>
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
                     <?php include 'footerLeft.php' ?>
-                    
+
                 </div>
                 <div class="footer-right">
                     <?php include 'footerRight.php' ?>
