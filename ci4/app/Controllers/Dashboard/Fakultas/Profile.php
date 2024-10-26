@@ -49,34 +49,30 @@ class Profile extends BaseController
         $data['side'] = '1';
         $data['konten'] = 'Nama';
 
-        // $this->pre($data);
         if (request()->getMethod() == 'post') {
             $rules = $model->rules_nama_fakultas();
 
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
-                // $this->pre($getData);
                 $_POST['fakultas_id'] = $data['login']['user_id'];
-                $modelTbl->save($_POST);
+                $this->pre($_POST);
+                // $modelTbl->save($_POST);
 
-                if ($modelTbl) {
-                    $sesi->setTempdata('sukses', 'Update Berhasil!',2);
-                    $getData = $modelTbl->find($data['login']['user_id']);
+                // if ($modelTbl) {
+                //     $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+                //     $getData = $modelTbl->find($data['login']['user_id']);
 
-                    $dataUser = $this->userData($getData, $data['jenis_user']);
-                    $sesi->set('login', $dataUser);
-                    $data['login'] = $sesi->get('login');
-                } else {
-                    $sesi->setTempdata('fail', 'Update Gagal!',2);
-                }
-                // $this->pre($sesi->get('login'));
-                // $this->pre($data);
+                //     $dataUser = $this->userData($getData, $data['jenis_user']);
+                //     $sesi->set('login', $dataUser);
+                //     $data['login'] = $sesi->get('login');
+                // } else {
+                //     $sesi->setTempdata('fail', 'Update Gagal!',2);
+                // }
             } else {
                 $data['validasi'] = $this->validator;
             }
         }
         return view('dashboard/fakultas/profileNama', $data);
-        // return view('layout/default/profile', $data);
     }
     public function update_password()
     {
