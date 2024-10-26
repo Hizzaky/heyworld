@@ -29,21 +29,6 @@
                     <a class="list-group-item btn <?= $variable = $side == '2' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
                         href="Update-password">Update Password</a>
                 </div>
-                <!-- <div class="card-footer text-center">
-                <div class="font-weight-bold mb-2">Follow Ujang On</div>
-                <a href="#" class="btn btn-social-icon btn-facebook mr-1">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="btn btn-social-icon btn-twitter mr-1">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-social-icon btn-github mr-1">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="btn btn-social-icon btn-instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div> -->
             </div>
         </div>
         <div class="col-12 col-md-12 col-lg-7">
@@ -65,6 +50,13 @@
                         <div class="form-group col-md-12 col-12">
                             <label>Input Nama Baru</label>
                             <input type="text" class="form-control" name="nama_fakultas" value="" >
+                            <div class="invalid-feedback">
+                                Isi nama fakultas dengan benar!
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12 col-12">
+                            <label>Input Nama Baru</label>
+                            <input type="text" class="form-control" name="nama_fakultas2" value="" >
                             <div class="invalid-feedback">
                                 Isi nama fakultas dengan benar!
                             </div>
