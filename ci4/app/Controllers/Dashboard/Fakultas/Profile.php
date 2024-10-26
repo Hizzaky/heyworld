@@ -131,6 +131,8 @@ class Profile extends BaseController
     }
 
 
-
+    public function cek(){
+        $this->pre($_POST);
+    }
 
 }

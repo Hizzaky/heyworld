@@ -48,7 +48,7 @@
         </div>
         <div class="col-12 col-md-12 col-lg-7">
             <div class="card">
-                <form method="post" class="needs-validation" novalidate>
+                <form action="cek" method="post" class="needs-validation" novalidate>
                     <div class="card-header">
                         <h4>Edit <?= $konten . ' ' . $jenis_user ?></h4>
                     </div>
