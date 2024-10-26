@@ -56,7 +56,7 @@
                         </div>
                         <div class="form-group col-md-12 col-12">
                             <label>Input Nama Baru</label>
-                            <input type="text" class="form-control" name="nama_fakultas2" value="" required min_length="8">
+                            <input type="text" class="form-control" name="nama_fakultas2" value="" >
                             <div class="invalid-feedback">
                                 Isi nama fakultas dengan benar!
                             </div>
