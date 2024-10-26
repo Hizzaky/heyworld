@@ -52,24 +52,24 @@ class Profile extends BaseController
         if (request()->getMethod() == 'post') {
             $rules = $model->rules_nama();
 
-            if ($this->validate($rules)) {
-                $getData = $modelTbl->find($data['login']['user_id']);
-                $_POST['fakultas_id'] = $data['login']['user_id'];
-                $modelTbl->save($_POST);
+            // if ($this->validate($rules)) {
+            //     $getData = $modelTbl->find($data['login']['user_id']);
+            //     $_POST['fakultas_id'] = $data['login']['user_id'];
+            //     $modelTbl->save($_POST);
 
-                if ($modelTbl) {
-                    $sesi->setTempdata('sukses', 'Update Berhasil!',2);
-                    $getData = $modelTbl->find($data['login']['user_id']);
+            //     if ($modelTbl) {
+            //         $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+            //         $getData = $modelTbl->find($data['login']['user_id']);
 
-                    $dataUser = $this->userData($getData, $data['jenis_user']);
-                    $sesi->set('login', $dataUser);
-                    $data['login'] = $sesi->get('login');
-                } else {
-                    $sesi->setTempdata('fail', 'Update Gagal!',2);
-                }
-            } else {
-                $data['validasi'] = $this->validator;
-            }
+            //         $dataUser = $this->userData($getData, $data['jenis_user']);
+            //         $sesi->set('login', $dataUser);
+            //         $data['login'] = $sesi->get('login');
+            //     } else {
+            //         $sesi->setTempdata('fail', 'Update Gagal!',2);
+            //     }
+            // } else {
+            //     $data['validasi'] = $this->validator;
+            // }
         }
         return view('dashboard/fakultas/profileNama', $data);
     }
