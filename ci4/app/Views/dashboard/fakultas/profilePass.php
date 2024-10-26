@@ -56,44 +56,10 @@
                                 Inputkan Password dengan benar!
                             </div>
                         </div>
-
-
-
-
-
-
-                        <div class="form-group col-md-12 col-12">
-                            <label>Input Nama Baru</label>
-                            <input type="text" class="form-control" name="nama_fakultas" value="" required>
-                            <div class="invalid-feedback">
-                                Isi nama fakultas dengan benar!
-                            </div>
-                        </div>
                     </div>
                     <div class="card-footer text-right">
                         <button class="btn btn-success">Update Nama</button>
                     </div>
-                </form>
-                <form action="update_password" method="post">
-
-
-                    <div class="form-group">
-
-                    </div>
-                    <div class="form-group">
-                        <label for="rePassword">Ketik Ulang Password Baru </label>
-                        <input type="password" class="form-control" name="rePassword" id="rePassword" value=""
-                            aria-describedby="help rePassword" autofocus placeholder="Inputkan Kembali Password Baru">
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <label for="oldPassword">Password Terakhir</label>
-                        <input type="password" class="form-control" name="oldPassword" id="oldPassword" value=""
-                            aria-describedby="help oldPassword" autofocus
-                            placeholder="Inputkan Password Terakhir Digunakan">
-                    </div>
-                    <hr>
-                    <button type="submit" class="btn btn-success right">Update Password</button>
                 </form>
             </div>
         </div>
