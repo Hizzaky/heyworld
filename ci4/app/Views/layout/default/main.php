@@ -255,15 +255,16 @@
                             </a>
                             <div class="dropdown-divider"></div>
                             <a href="logUserOut" class="dropdown-item has-icon text-danger">
-                                <i class="fas fa-sign-out-alt"></i> Logout 1.3
+                                <i class="fas fa-sign-out-alt"></i> Logout 1.4
                             </a>
                             <!-- /logUserOut -->
                             <form action="logUserOut" method="post">
                                 <button  type="submit">
                                     <a class="dropdown-item has-icon text-danger">
 
-                                        <i class="fas fa-sign-out-alt"></i> Logout </button> 
+                                        <i class="fas fa-sign-out-alt"></i> Logout 
                                     </a>
+                                </button> 
                             </form>
                         </div>
                     </li>
