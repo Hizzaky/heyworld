@@ -254,14 +254,14 @@
                                 <i class="fas fa-cog"></i> Menu
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item has-icon text-danger">
-                                <i class="fas fa-sign-out-alt"></i> Logout
+                            <a href="/logUserOut" class="dropdown-item has-icon text-danger">
+                                <i class="fas fa-sign-out-alt"></i> Logout 1
                             </a>
                             <form action="/logUserOut" method="post">
                                 <!-- <button class="dropdown-item logout btn" type="submit"
                                     style="color:red;">Logout</button> -->
-                                <a type="submit" class="dropdown-item has-icon text-danger">
-                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                <a href="#" class="dropdown-item has-icon text-danger">
+                                    <i class="fas fa-sign-out-alt"></i> Logout 2
                                 </a>
                             </form>
                         </div>
