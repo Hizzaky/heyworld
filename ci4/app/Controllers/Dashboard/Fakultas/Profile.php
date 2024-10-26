@@ -68,7 +68,6 @@ class Profile extends BaseController
                 //     $sesi->setTempdata('fail', 'Update Gagal!',2);
                 // }
             } else {
-                    $sesi->setTempdata('fail', 'Update Gagal!',2);
                 $data['validasi'] = $this->validator;
             }
         }
@@ -134,6 +133,9 @@ class Profile extends BaseController
 
     public function cek(){
         $this->pre($_POST);
+        $sesi=session();
+        $data['login'] = $sesi->get('login');
+        echo $data['login']['user_id'];
     }
 
 }
