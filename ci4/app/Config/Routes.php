@@ -32,18 +32,18 @@ $routes->add('homepage', 'Homepage\Home::index');
 
 $routes->group('Login', function ($routes) {
     $routes->add('/', 'Login\Home::index');
-    $routes->add('dosen', 'Login\Home::dosen');
-    $routes->add('prodi', 'Login\Home::prodi');
-    $routes->add('fakultas', 'Login\Home::fakultas');
+    $routes->add('Dosen', 'Login\Home::dosen');
+    $routes->add('Prodi', 'Login\Home::prodi');
+    $routes->add('Fakultas', 'Login\Home::fakultas');
     // $routes->add('sukses','Login\Home::sukses',['as'=>'sukses']);
     $routes->add('sukses/(:any)/(:any)/(:any)', 'Login\Home::sukses/$1/$2/$3');
 });
 
 $routes->group('Daftar', function ($routes) {
     $routes->add('/', 'Daftar\Home::index');
-    $routes->add('dosen', 'Daftar\Home::dosen');
-    $routes->add('prodi', 'Daftar\Home::prodi');
-    $routes->add('fakultas', 'Daftar\Home::fakultas');
+    $routes->add('Dosen', 'Daftar\Home::dosen');
+    $routes->add('Prodi', 'Daftar\Home::prodi');
+    $routes->add('Fakultas', 'Daftar\Home::fakultas');
 
 });
 
@@ -64,22 +64,21 @@ $routes->add('logUserOut',function(){
 // });
  
   
+$routes->group('Prodi', function ($routes) { 
+    $routes->add('/', 'Dashboard\Prodi\Home::index');
+    $routes->add('Profile', 'Dashboard\Prodi\Profile::index');  
+    $routes->add('Update-nama', 'Dashboard\Prodi\Profile::update_nama', ['as' => 'prodi-update-nama']); 
+    $routes->add('Update-password', 'Dashboard\Prodi\Profile::update_password',['as'=>'prodi-update-password']);
+    $routes->add('Capaian', 'Dashboard\Prodi\Cpltb::capaian',['as'=>'prodi-capaian']);
+    $routes->add('Taxbloom', 'Dashboard\Prodi\Cpltb::taxbloom',['as'=>'prodi-taxbloom']);
+    $routes->add('Save-taxbloom', 'Dashboard\Prodi\Cpltb::save_taxbloom',['as'=>'prodi-save-taxbloom']);
+    $routes->add('Tbl-taxbloom', 'Dashboard\Prodi\Cpltb::tbl_taxbloom',['as'=>'prodi-tbl-taxbloom']);
+
+});
 
 $routes->group('Fakultas', function ($routes) {
     $routes->add('/', 'Dashboard\Fakultas\Home::index');
     $routes->add('Profile', 'Dashboard\Fakultas\Profile::index'); 
-    $routes->add('update-nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
-    $routes->add('update_password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
-});
-
-$routes->group('Prodi', function ($routes) { 
-    $routes->add('/', 'Dashboard\Prodi\Home::index');
-    $routes->add('Profile', 'Dashboard\Prodi\Profile::index');  
-    $routes->add('update_nama', 'Dashboard\Prodi\Profile::update_nama', ['as' => 'prodi-update-nama']); 
-    $routes->add('update_password', 'Dashboard\Prodi\Profile::update_password',['as'=>'prodi-update-password']);
-    $routes->add('capaian', 'Dashboard\Prodi\Cpltb::capaian',['as'=>'prodi-capaian']);
-    $routes->add('taxbloom', 'Dashboard\Prodi\Cpltb::taxbloom',['as'=>'prodi-taxbloom']);
-    $routes->add('save_taxbloom', 'Dashboard\Prodi\Cpltb::save_taxbloom',['as'=>'prodi-save-taxbloom']);
-    $routes->add('tbl_taxbloom', 'Dashboard\Prodi\Cpltb::tbl_taxbloom',['as'=>'prodi-tbl-taxbloom']);
-
+    $routes->add('Update-nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
+    $routes->add('Update-password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
 });
