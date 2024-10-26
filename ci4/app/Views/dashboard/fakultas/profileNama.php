@@ -89,6 +89,11 @@
                     <?php if (isset($validasi)): ?>
                         <div class="text-danger">
                             <?= $validasi->listErrors() ?>
+                            <hr>
+                            <?php $tes= $validasi->getErrors(); ?>
+                            <pre>
+                                <?php print_r($tes); ?>
+                            </pre>
                         </div>
                     <?php endif; ?>
                     <!--  -->
