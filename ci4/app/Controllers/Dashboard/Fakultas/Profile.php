@@ -55,18 +55,18 @@ class Profile extends BaseController
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
                 $_POST['fakultas_id'] = $data['login']['user_id'];
-                // $modelTbl->save($_POST);
+                $modelTbl->save($_POST);
 
-                // if ($modelTbl) {
-                //     $sesi->setTempdata('sukses', 'Update Berhasil!',2);
-                //     $getData = $modelTbl->find($data['login']['user_id']);
+                if ($modelTbl) {
+                    $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+                    $getData = $modelTbl->find($data['login']['user_id']);
 
-                //     $dataUser = $this->userData($getData, $data['jenis_user']);
-                //     $sesi->set('login', $dataUser);
-                //     $data['login'] = $sesi->get('login');
-                // } else {
-                //     $sesi->setTempdata('fail', 'Update Gagal!',2);
-                // }
+                    $dataUser = $this->userData($getData, $data['jenis_user']);
+                    $sesi->set('login', $dataUser);
+                    $data['login'] = $sesi->get('login');
+                } else {
+                    $sesi->setTempdata('fail', 'Update Gagal!',2);
+                }
             } else {
                 $data['validasi'] = $this->validator;
             }
