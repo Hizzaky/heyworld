@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <button class="btn btn-outline-success">Update Password</button>
+                        <button class="btn btn-success">Update Password</button>
                     </div>
                 </form>
             </div>
