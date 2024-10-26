@@ -26,7 +26,7 @@ class Home extends BaseController
                 $sesi->set('jenis_user', 'Fakultas');
             }
             // $ret = '/Login/' . $_GET['login'];
-            $ret='login-'.$_GET['login'];
+            $ret='login-'.$sesi->get('jenis_user');
         } else {
             $ret = '/';
             return redirect()->to(base_url($ret));
