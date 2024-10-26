@@ -24,6 +24,7 @@ class Profile extends BaseController
         
         $model = new ProfileModel();
         $data = $this->arData($model->title(), $sesi->get('login'));
+        $data['side']='1';
 
         return view('layout/default/profile',$data);
     }
