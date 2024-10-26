@@ -33,13 +33,25 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group col-md-12 col-12">
-                            <!-- <label>Nama Fakultas</label>
-                            <input type="text" class="form-control" value="<?= $login['nama_user'] ?>" disabled> -->
-
-
                             <label>Password Baru</label>
                             <input type="password" class="form-control" name="password" value=""
                                 aria-describedby="help password" autofocus placeholder="Inputkan Password Baru" required>
+                            <div class="invalid-feedback">
+                                Inputkan Password dengan benar!
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12 col-12">
+                            <label>Password Baru</label>
+                            <input type="password" class="form-control" name="rePassword" value=""
+                                 placeholder="Inputkan Kembali Password Baru" required>
+                            <div class="invalid-feedback">
+                                Inputkan Password dengan benar!
+                            </div>
+                        </div><hr>
+                        <div class="form-group col-md-12 col-12">
+                            <label>Password Saat Ini</label>
+                            <input type="password" class="form-control" name="oldPassword" value=""
+                                 placeholder="Inputkan Kembali Password Baru" required>
                             <div class="invalid-feedback">
                                 Inputkan Password dengan benar!
                             </div>
