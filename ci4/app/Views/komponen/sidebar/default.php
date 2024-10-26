@@ -1,10 +1,10 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="/">SIM UMMAT</a>
+            <a href="/<?= $jenis_user ?>">SIM UMMAT</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="/">SU</a>
+            <a href="/<?= $jenis_user ?>">SU</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
