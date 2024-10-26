@@ -258,11 +258,9 @@
                                 <i class="fas fa-sign-out-alt"></i> Logout 1
                             </a>
                             <form action="/logUserOut" method="post">
-                                <!-- <button class="dropdown-item logout btn" type="submit"
-                                    style="color:red;">Logout</button> -->
-                                <a href="#" class="dropdown-item has-icon text-danger">
-                                    <i class="fas fa-sign-out-alt"></i> Logout 2
-                                </a>
+                                <!-- <button class="dropdown-item has-icon text-danger logout btn" type="submit"><i -->
+                                <button class="dropdown-item has-icon text-danger" type="submit"><i
+                                        class="fas fa-sign-out-alt"></i> Logout 2</button>
                             </form>
                         </div>
                     </li>
