@@ -71,6 +71,8 @@ $routes->group('Fakultas', function ($routes) {
     $routes->add('Profile', 'Dashboard\Fakultas\Profile::index'); 
     $routes->add('Update-nama', 'Dashboard\Fakultas\Profile::update_nama', ['as' => 'fakultas-update-nama']);
     $routes->add('Update-password', 'Dashboard\Fakultas\Profile::update_password',['as'=>'fakultas-update-password']);
+
+    $routes->add('cek', 'Dashboard\Fakultas\Profile::cek');
 });
 
 $routes->group('Prodi', function ($routes) { 
