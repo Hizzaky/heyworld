@@ -260,7 +260,7 @@
                             <form action="/logUserOut" method="post">
                                 <!-- <button class="dropdown-item has-icon text-danger logout btn" type="submit"><i -->
                                 <button class="dropdown-item has-icon text-danger" type="submit"><i
-                                        class="fas fa-sign-out-alt"></i> Logout 2</button>
+                                        class="fas fa-sign-out-alt"></i> Logout </button>
                             </form>
                         </div>
                     </li>
