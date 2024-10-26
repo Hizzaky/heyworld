@@ -63,7 +63,7 @@
                         </div>
                         <div class="form-group col-md-12 col-12">
                             <label>Input Nama Baru</label>
-                            <input type="text" class="form-control" name="nama_fakultas" value="" required min_length="3">
+                            <input type="text" class="form-control" name="nama_fakultas" value="" required >
                             <div class="invalid-feedback">
                                 Isi nama fakultas dengan benar!
                             </div>

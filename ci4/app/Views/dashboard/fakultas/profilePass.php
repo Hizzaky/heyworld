@@ -35,7 +35,8 @@
                         <div class="form-group col-md-12 col-12">
                             <label>Password Baru</label>
                             <input type="password" class="form-control" name="password" value=""
-                                aria-describedby="help password" autofocus placeholder="Inputkan Password Baru" required>
+                                aria-describedby="help password" autofocus placeholder="Inputkan Password Baru"
+                                required>
                             <div class="invalid-feedback">
                                 Inputkan Password dengan benar!
                             </div>
@@ -43,20 +44,48 @@
                         <div class="form-group col-md-12 col-12">
                             <label>Password Baru</label>
                             <input type="password" class="form-control" name="rePassword" value=""
-                                 placeholder="Inputkan Kembali Password Baru" required>
+                                placeholder="Inputkan Kembali Password Baru" required>
                             <div class="invalid-feedback">
                                 Inputkan Password dengan benar!
                             </div>
-                        </div><hr>
+                        </div>
+                        <hr>
                         <div class="form-group col-md-12 col-12">
                             <label>Password Terkini</label>
                             <input type="password" class="form-control" name="oldPassword" value=""
-                                 placeholder="Inputkan Password Terkini" required>
+                                placeholder="Inputkan Password Terkini" required>
                             <div class="invalid-feedback">
                                 Inputkan Password dengan benar!
                             </div>
                         </div>
                     </div>
+                    <!--  -->
+                    <?php
+                    $dataSesi = session();
+                    $sukses = $dataSesi->getTempdata('sukses');
+                    $fail = $dataSesi->getTempdata('fail');
+
+                    if (isset($sukses)): ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <?= $sukses ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                        </div>
+                    <?php endif;
+
+                    if (isset($fail)): ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <?= $fail ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($validasi)): ?>
+                        <div class="text-danger">
+                            <?= $validasi->listErrors() ?>
+                        </div>
+                    <?php endif; ?>
+                    <!--  -->
                     <div class="card-footer text-right">
                         <button class="btn btn-success">Update Password</button>
                     </div>
