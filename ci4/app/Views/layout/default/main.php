@@ -244,7 +244,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-title">Logged in 5 min ago</div>
-                            <a href="features-profile.html" class="dropdown-item has-icon">
+                            <a href="Fakultas/Profile" class="dropdown-item has-icon">
                                 <i class="far fa-user"></i> Profile
                             </a>
                             <a href="features-activities.html" class="dropdown-item has-icon">
@@ -255,14 +255,8 @@
                             </a>
                             <div class="dropdown-divider"></div>
                             <a href="/logUserOut" class="dropdown-item has-icon text-danger">
-                                <i class="fas fa-sign-out-alt"></i> Logout 1.7
+                                <i class="fas fa-sign-out-alt"></i> Logout
                             </a>
-                            <!-- /logUserOut -->
-                            <form action="logUserOut" method="post">
-                                <button type="submit" class="dropdown-item has-icon text-danger">
-                                    <i class="fas fa-sign-out-alt"></i> Logout 1.6
-                                </button>
-                            </form>
                         </div>
                     </li>
                 </ul>
