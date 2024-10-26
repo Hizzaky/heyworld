@@ -1,4 +1,4 @@
-<?= $this->extend('layout/default/main') ?>
+<?= $this->extend('layout/default/profile') ?>
 
 <?= $this->section('konten') ?>
 <div class="section-body">
