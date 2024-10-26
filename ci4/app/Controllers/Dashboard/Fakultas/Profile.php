@@ -97,7 +97,7 @@ class Profile extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         $data['side'] = '2';
-        $data['konten'] = 'Password';
+        $data['konten'] = 'Password'; 
 
         if (request()->getMethod() == 'post') {
             $rules = $model->passRules();
