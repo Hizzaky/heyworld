@@ -49,16 +49,19 @@
                         </div>
                         <div class="form-group col-md-12 col-12">
                             <label>Input Nama Baru</label>
-                            <input type="text" class="form-control" name="nama_fakultas" value="" >
+                            <input type="text" class="form-control" name="nama_fakultas" value="" autofocus>
                             <div class="invalid-feedback">
                                 Isi nama fakultas dengan benar!
                             </div>
                         </div>
                         <div class="form-group col-md-12 col-12">
                             <label>Input Nama Baru</label>
-                            <input type="text" class="form-control" name="nama_fakultas2" value="" >
+                            <input type="text" class="form-control" name="nama_fakultas2" value="" required min_length="8">
                             <div class="invalid-feedback">
                                 Isi nama fakultas dengan benar!
+                            </div>
+                            <div class="invalid-feedback">
+                                Isi min min_length dengan benar!
                             </div>
                         </div>
                     </div>

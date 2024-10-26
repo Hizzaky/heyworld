@@ -23,14 +23,6 @@ class ProfileModel extends Model
                     'required' => 'Input Nama Fakultas dengan benar!',
                     'min_length' => 'Minimal 8 digit!'
                 ]
-                ],
-            'nama_fakultas2' => [
-                'rules' => 'required|min_length[8]',
-                'label' => 'Nama Fakultas',
-                'errors' => [
-                    'required' => 'Input Nama Fakultas dengan benar!',
-                    'min_length' => 'Minimal 8 digit!'
-                ]
             ]
         ];
         return $rules;
