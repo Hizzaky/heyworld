@@ -466,9 +466,9 @@
                                             </div>
                                         </div> -->
                                         <a class="list-group-item btn <?= $variable = $side == '1' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
-                                            href="Update-nama">Nama Fakultas</a><br>
+                                            href="Update-nama">Update Nama</a><br>
                                         <a class="list-group-item btn <?= $variable = $side == '2' ? 'btn-primary' : 'btn-outline-primary' ?> s-body"
-                                            href="Update-password">Password</a>
+                                            href="Update-password">Update Password</a>
                                     </div>
                                     <!-- <div class="card-footer text-center">
                                         <div class="font-weight-bold mb-2">Follow Ujang On</div>
@@ -494,7 +494,7 @@
                                             <h4>Edit <?= $konten.' '.$jenis_user ?></h4>
                                         </div>
                                         <div class="card-body">
-                                            <div class="row">
+                                            <!-- <div class="row"> -->
                                                 <div class="form-group col-md-6 col-12">
                                                     <label>First Name</label>
                                                     <input type="text" class="form-control" value="Ujang" required="">
@@ -502,14 +502,14 @@
                                                         Please fill in the first name
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-md-6 col-12">
+                                                <!-- <div class="form-group col-md-6 col-12">
                                                     <label>Last Name</label>
                                                     <input type="text" class="form-control" value="Maman" required="">
                                                     <div class="invalid-feedback">
                                                         Please fill in the last name
                                                     </div>
-                                                </div>
-                                            </div>
+                                                </div> -->
+                                            <!-- </div> -->
                                             <div class="row">
                                                 <div class="form-group col-md-7 col-12">
                                                     <label>Email</label>
