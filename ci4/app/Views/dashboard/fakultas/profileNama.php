@@ -111,7 +111,7 @@
                     </div> -->
                     </div>
                     <div class="card-footer text-right">
-                        <button class="btn btn-primary">Update Nama</button>
+                        <button class="btn btn-success">Update Nama</button>
                     </div>
                 </form>
             </div>
