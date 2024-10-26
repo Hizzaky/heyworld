@@ -454,10 +454,10 @@
                                                 <div class="slash"></div> Web Developer
                                             </div>
                                         </div> -->
-                                        <a class="list-group-item btn <?= $variable = $side == '1' ? 'active' : '' ?> s-body"
+                                        <a class="list-group-item btn <?= $variable = $side == '1' ? 'active' : 'btn-primary' ?> s-body"
                                             href="update_nama">Nama Fakultas</a>
                                             <br>
-                                        <a class="list-group-item btn <?= $variable = $side == '2' ? 'active' : '' ?> s-body"
+                                        <a class="list-group-item btn <?= $variable = $side == '2' ? 'active' : 'btn-primary' ?> s-body"
                                             href="update_password">Password</a>
                                     </div>
                                     <!-- <div class="card-footer text-center">
