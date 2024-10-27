@@ -124,6 +124,10 @@ class cpltb extends BaseController
 
 
         $data['dataC2']=$modelCustom->where1('t_taxbloom', 'kode', 'C2');
+        $data['dataC3']=$modelCustom->where1('t_taxbloom', 'kode', 'C3');
+        $data['dataC4']=$modelCustom->where1('t_taxbloom', 'kode', 'C4');
+        $data['dataC5']=$modelCustom->where1('t_taxbloom', 'kode', 'C5');
+        $data['dataC6']=$modelCustom->where1('t_taxbloom', 'kode', 'C6');
 
 
 
