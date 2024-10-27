@@ -66,10 +66,8 @@
                     </tbody>
                 </table> -->
 
-<pre>
+                <?= $table->generate($taxbloom) ?>
 
-<?php print_r($taxbloom) ?>
-</pre>
             </div>
         </div>
 
