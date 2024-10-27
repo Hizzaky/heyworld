@@ -97,7 +97,7 @@ class Profile extends BaseController
                         $sesi->setTempdata('fail', 'Update Gagal!',2);
                     }
                 } else {
-                    $sesi->setTempdata('fail', 'Update Gagal, Password Terakhir Tidak Sesuai!',2);
+                    $sesi->setTempdata('fail', 'Update Gagal, Password Terkini Tidak Sesuai!',2);
                 }
 
             } else {
