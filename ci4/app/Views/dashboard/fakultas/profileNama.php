@@ -57,19 +57,21 @@
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
                         </div>
-                    <?php endif; ?>
+                    <?php endif;
+                    $name_inputNamaBaru='nama_'.lcfirst($jenis_user);
+                    ?>
                     <!--  -->
                     <div class="card-body">
                         <!-- <div class="row"> -->
                         <div class="form-group col-md-12 col-12">
-                            <label>Nama Fakultas</label>
+                            <label>Nama <?= $jenis_user ?></label>
                             <input type="text" class="form-control" value="<?= $login['nama_user'] ?>" disabled>
                         </div>
                         <div class="form-group col-md-12 col-12">
                             <label>Input Nama Baru</label>
-                            <input type="text" class="form-control" name="nama_fakultas" value="" autofocus required>
+                            <input type="text" class="form-control" name="<?= $name_inputNamaBaru ?>" value="" autofocus required>
                             <div class="invalid-feedback">
-                                Inputkan nama fakultas dengan benar!
+                                Inputkan nama <?= lcfirst($jenis_user) ?> dengan benar!
                             </div>
                         </div>
                     </div>
