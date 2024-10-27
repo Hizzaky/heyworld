@@ -67,7 +67,7 @@ class Prodi extends Model
         // foreach($dataC3 as $val)
         // {
 
-        // }
+        // } 
 
         return $dataC2;
     }
