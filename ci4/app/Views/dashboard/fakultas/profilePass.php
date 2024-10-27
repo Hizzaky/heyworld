@@ -50,6 +50,19 @@
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
                         </div>
+                    <?php endif; 
+                    if (isset($validasi)): 
+                        $listValidasi=$validasi->getErrors();
+                        if(isset($listValidasi['rePassword']))
+                        {
+                            $fail=$listValidasi['rePassword'];
+                        }
+                    ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <?= $fail ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                        </div>
                     <?php endif; ?>
                     <!--  -->
                     <div class="card-body">
@@ -57,26 +70,26 @@
                             <label>Password Baru</label>
                             <input type="password" class="form-control" name="password" value=""
                                 aria-describedby="help password" autofocus placeholder="Inputkan Password Baru"
-                                 minlength="8">
+                                required minlength="8">
                             <div class="invalid-feedback">
-                                Inputkan Password dengan benar!
+                                Password baru minimal 8 digit!
                             </div>
                         </div>
                         <div class="form-group col-md-12 col-12">
                             <label>Ketik Kembali Password Baru</label>
                             <input type="password" class="form-control" name="rePassword" value=""
-                                placeholder="Inputkan Kembali Password Baru" required>
+                                placeholder="Inputkan Kembali Password Baru" required minlength="8">
                             <div class="invalid-feedback">
-                                Inputkan Password dengan benar!
+                                Password minimal 8 digit!
                             </div>
                         </div>
                         <hr>
                         <div class="form-group col-md-12 col-12">
                             <label>Password Terkini</label>
                             <input type="password" class="form-control" name="oldPassword" value=""
-                                placeholder="Inputkan Password Terkini" required>
+                                placeholder="Inputkan Password Terkini" required minlength="8">
                             <div class="invalid-feedback">
-                                Inputkan Password dengan benar!
+                                Password minimal 8 digit!
                             </div>
                         </div>
                     </div>
