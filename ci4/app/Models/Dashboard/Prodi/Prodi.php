@@ -71,23 +71,24 @@ class Prodi extends Model
             // $data[$count]['created_at']=$dataC3[$i]['created_at'];
             // $data[$count]['updated_at']=$dataC3[$i]['updated_at'];
 
-            if(is_null($dataC2[$i]['katalog']))
+            
+            if(empty($dataC2[$i]['katalog']))
             {
                 $dataC2[$i]['katalog']='';
             }
-            if(is_null($dataC3[$i]['katalog']))
+            if(empty($dataC3[$i]['katalog']))
             {
                 $dataC3[$i]['katalog']='';
             }
-            if(is_null($dataC4[$i]['katalog']))
+            if(empty($dataC4[$i]['katalog']))
             {
                 $dataC4[$i]['katalog']='';
             }
-            if(is_null($dataC5[$i]['katalog']))
+            if(empty($dataC5[$i]['katalog']))
             {
                 $dataC5[$i]['katalog']='';
             }
-            if(is_null($dataC6[$i]['katalog']))
+            if(empty($dataC6[$i]['katalog']))
             {
                 $dataC6[$i]['katalog']='';
             }
