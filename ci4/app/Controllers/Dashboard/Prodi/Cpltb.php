@@ -74,7 +74,7 @@ class cpltb extends BaseController
         $modelTbl = new TaxbloomModel();
 
         $db = db_connect();
-        $customModel=new customModel($db);
+        $customModel = new customModel($db);
         if (request()->getMethod() == 'post') {
             // $this->pre($_POST);
             $new = $model->dataExplode($_POST);
@@ -94,15 +94,16 @@ class cpltb extends BaseController
             // $customModel->insertBatch('t_taxbloom',$reData);
 
             echo 'cek proses';
-            
+
         } else {
             $sesi = session();
             $sesi->setTempdata('fail', 'Tidak ada data', 2);
             return redirect('prodi-taxbloom');
         }
     }
-    
-    public function tbl_taxbloom(){
+
+    public function tbl_taxbloom()
+    {
         $sesi = session();
         $ver = $sesi->get('login');
         if (isset($ver['jenis_user'])) {
@@ -117,15 +118,17 @@ class cpltb extends BaseController
 
         $model = new Prodi();
         $modelTbl = new TaxbloomModel();
+        $db=db_connect();
+        $modelCustom = new CustomModel($db);
         $data = $this->arData($model->title(), $sesi->get('login'));
 
 
+        $data['C2']=$modelCustom->where1('t_taxbloom', 'kode', 'C2');
 
 
 
-        
 
-        return view('dashboard/prodi/taxbloom',$data);
+        return view('dashboard/prodi/taxbloom', $data);
 
     }
 

@@ -65,8 +65,10 @@
                         </tr>
                     </tbody>
                 </table> -->
+                <pre>
 
-                <?= $table->generate($dataTbl) ?>
+                    <?php print_r($dataC2) ?>
+                </pre>
             </div>
         </div>
 
