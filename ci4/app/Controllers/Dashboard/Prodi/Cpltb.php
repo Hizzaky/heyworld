@@ -123,7 +123,7 @@ class cpltb extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
 
 
-        $data['C2']=$modelCustom->where1('t_taxbloom', 'kode', 'C2');
+        $data['dataC2']=$modelCustom->where1('t_taxbloom', 'kode', 'C2');
 
 
 
