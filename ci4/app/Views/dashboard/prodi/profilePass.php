@@ -85,9 +85,9 @@
                             <input type="password" class="form-control" name="rePassword" value=""
                                 placeholder="Inputkan Kembali Password Baru" required minlength="8">
                             <div class="invalid-feedback">
-                                Password baru minimal 8 digit!
+                                Password harus sama dengan password baru!
                             </div>
-                        </div> 
+                        </div>
                         <hr>
                         <div class="form-group col-md-12 col-12">
                             <label>Password Terkini</label>
