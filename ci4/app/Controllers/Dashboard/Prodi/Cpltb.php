@@ -42,9 +42,18 @@ class cpltb extends BaseController
     }
     public function taxbloom()
     {
+        $sesi = session();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Prodi') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
         $model = new Prodi();
         $modelTbl = new TaxbloomModel();
-        $sesi = session();
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['side'] = '2';
 
@@ -94,60 +103,27 @@ class cpltb extends BaseController
     }
     
     public function tbl_taxbloom(){
+        $sesi = session();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Prodi') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
         $table = new \CodeIgniter\View\Table();
 
         $model = new Prodi();
         $modelTbl = new TaxbloomModel();
-        $sesi = session();
         $data = $this->arData($model->title(), $sesi->get('login'));
 
 
 
 
 
-        $template = [
-            'table_open' => '<table class="table table-striped table-md" border="0" cellpadding="4" cellspacing="0">',
-
-            'thead_open' => '<thead>',
-            'thead_close' => '</thead>',
-
-            'heading_row_start' => '<tr>',
-            'heading_row_end' => '</tr>',
-            'heading_cell_start' => '<th>',
-            'heading_cell_end' => '</th>',
-
-            'tfoot_open' => '<tfoot>',
-            'tfoot_close' => '</tfoot>',
-
-            'footing_row_start' => '<tr>',
-            'footing_row_end' => '</tr>',
-            'footing_cell_start' => '<td>',
-            'footing_cell_end' => '</td>',
-
-            'tbody_open' => '<tbody>',
-            'tbody_close' => '</tbody>',
-
-            'row_start' => '<tr>',
-            'row_end' => '</tr>',
-            'cell_start' => '<td>',
-            'cell_end' => '</td>',
-
-            'row_alt_start' => '<tr>',
-            'row_alt_end' => '</tr>', 
-            'cell_alt_start' => '<td>',
-            'cell_alt_end' => '</td>',
-
-            'table_close' => '</table>',
-        ];
-
-        $table->setTemplate($template);
-
-        $dataTbl=$modelTbl->findAll();
-        // $this->pre($dataTbl);
-        $table->setHeading(['ID','Kode','Katalog','Created','Updated']);
-        // echo $table->generate($dataTbl);
-        $data['dataTbl']=$dataTbl;
-        $data['table']=$table;
+        
 
         return view('dashboard/prodi/taxbloom',$data);
 
