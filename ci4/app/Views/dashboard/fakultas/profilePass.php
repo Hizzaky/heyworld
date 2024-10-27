@@ -57,13 +57,13 @@
                             <label>Password Baru</label>
                             <input type="password" class="form-control" name="password" value=""
                                 aria-describedby="help password" autofocus placeholder="Inputkan Password Baru"
-                                required>
+                                required minlength="8">
                             <div class="invalid-feedback">
                                 Inputkan Password dengan benar!
                             </div>
                         </div>
                         <div class="form-group col-md-12 col-12">
-                            <label>Password Baru</label>
+                            <label>Ketik Kembali Password Baru</label>
                             <input type="password" class="form-control" name="rePassword" value=""
                                 placeholder="Inputkan Kembali Password Baru" required>
                             <div class="invalid-feedback">
