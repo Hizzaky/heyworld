@@ -59,10 +59,15 @@ class Prodi extends Model
         $dataC5=$model->where1('t_taxbloom', 'kode', 'C5');
         $dataC6=$model->where1('t_taxbloom', 'kode', 'C6');
 
-        $dataC2=array_push($dataC2,$dataC3);
+        array_push($dataC2,$dataC3);
         // $dataC2=array_push($dataC2,$dataC4);
         // $dataC2=array_push($dataC2,$dataC5);
         // $dataC2=array_push($dataC2,$dataC6);
+
+        // foreach($dataC3 as $val)
+        // {
+
+        // }
 
         return $dataC2;
     }
