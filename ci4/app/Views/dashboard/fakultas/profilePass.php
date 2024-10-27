@@ -57,7 +57,7 @@
                             <label>Password Baru</label>
                             <input type="password" class="form-control" name="password" value=""
                                 aria-describedby="help password" autofocus placeholder="Inputkan Password Baru"
-                                required minlength="8">
+                                 minlength="8">
                             <div class="invalid-feedback">
                                 Inputkan Password dengan benar!
                             </div>
