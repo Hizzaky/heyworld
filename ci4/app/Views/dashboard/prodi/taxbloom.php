@@ -66,7 +66,10 @@
                     </tbody>
                 </table> -->
 
-                <?= $table->generate($dataTbl) ?>
+                <table class="table table-striped table-md">
+
+                    <?= $table->generate($dataTbl) ?>
+                </table>
             </div>
         </div>
 
