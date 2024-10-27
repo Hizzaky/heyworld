@@ -140,7 +140,7 @@ class cpltb extends BaseController
             'table_close' => '</table>',
         ];
 
-        $table->setTemplate($template);
+        // $table->setTemplate($template);
 
         $dataTbl=$modelTbl->findAll();
         // $this->pre($dataTbl);
