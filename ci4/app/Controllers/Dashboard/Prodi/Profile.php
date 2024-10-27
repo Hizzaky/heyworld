@@ -33,6 +33,7 @@ class Profile extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         $data['side'] = '1';
+        $data['konten'] = 'Nama';
 
         // $this->pre($data);
         if (request()->getMethod() == 'post') {
@@ -70,6 +71,7 @@ class Profile extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         $data['side'] = '2';
+        $data['konten'] = 'Password';
 
         if (request()->getMethod() == 'post') {
             $rules = $model->passRules();
