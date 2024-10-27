@@ -9,7 +9,7 @@
 
         <div class="card-body p-0">
             <div class="table-responsive">
-                <table class="table table-striped table-md">
+                <!-- <table class="table table-striped table-md">
                     <tbody>
                         <tr>
                             <th>#</th>
@@ -64,7 +64,9 @@
                             <td><a href="#" class="btn btn-secondary">Detail</a></td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
+
+                <?= $table->generate($dataTbl) ?>
             </div>
         </div>
 

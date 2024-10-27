@@ -106,7 +106,7 @@ class cpltb extends BaseController
 
 
         $template = [
-            'table_open' => '<table border="0" cellpadding="4" cellspacing="0">',
+            'table_open' => '<table class="table table-striped table-md" border="0" cellpadding="4" cellspacing="0">',
 
             'thead_open' => '<thead>',
             'thead_close' => '</thead>',
@@ -146,6 +146,8 @@ class cpltb extends BaseController
         // $this->pre($dataTbl);
         $table->setHeading(['ID','Kode','Katalog','Created','Updated']);
         // echo $table->generate($dataTbl);
+        $data['dataTbl']=$dataTbl;
+        $data['table']=$table;
 
         return view('dashboard/prodi/taxbloom',$data);
 
