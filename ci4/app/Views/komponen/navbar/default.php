@@ -137,7 +137,7 @@
         <div class="d-sm-none d-lg-inline-block"><?= $nama_user ?></div>
     </a>
     <div class="dropdown-menu dropdown-menu-right">
-        <div class="dropdown-title">Logged in 5 min ago</div>
+        <!-- <div class="dropdown-title">Logged in 5 min ago</div> -->
         <a href="<?= $jenis_user ?>/Profile" class="dropdown-item has-icon">
             <i class="far fa-user"></i> Profile
         </a>
