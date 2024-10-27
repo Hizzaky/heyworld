@@ -96,8 +96,10 @@ class cpltb extends BaseController
     public function tbl_taxbloom(){
         $table = new \CodeIgniter\View\Table();
 
-        $model=new Prodi();
-        $modelTbl=new TaxbloomModel();
+        $model = new Prodi();
+        $modelTbl = new TaxbloomModel();
+        $sesi = session();
+        $data = $this->arData($model->title(), $sesi->get('login'));
 
 
 
@@ -145,7 +147,7 @@ class cpltb extends BaseController
         $table->setHeading(['ID','Kode','Katalog','Created','Updated']);
         echo $table->generate($dataTbl);
 
-        return view('dashboard/prodi/taxbloom');
+        return view('dashboard/prodi/taxbloom',$data);
 
     }
 
