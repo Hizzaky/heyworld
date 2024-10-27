@@ -59,11 +59,22 @@ class Prodi extends Model
         $dataC5=$model->where1('t_taxbloom', 'kode', 'C5');
         $dataC6=$model->where1('t_taxbloom', 'kode', 'C6');
 
+
+        $x=array(
+            count($dataC2),
+            count($dataC3),
+            count($dataC4),
+            count($dataC5),
+            count($dataC6)
+        );
+
+        // $x=max($cek);
+
         
         $data=[];
         $count=count($data);
         $no=1;
-        for($i=0;$i<count($dataC3);$i++)
+        for($i=0;$i<max($x);$i++)
         {
             // $data[$count]['taxbloom_id']=$dataC3[$i]['taxbloom_id'];
             // $data[$count]['kode']=$dataC3[$i]['kode'];
