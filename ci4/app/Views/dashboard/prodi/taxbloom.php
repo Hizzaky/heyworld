@@ -67,7 +67,7 @@
                 </table> -->
                 <pre>
 
-                    <?php print_r($dataC2) ?>
+                    <?php print_r($dataC2) ?> 
                 </pre>
             </div>
         </div>
