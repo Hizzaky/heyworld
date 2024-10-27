@@ -35,7 +35,7 @@
                 </ul>
             </nav>
             <!-- sidebar -->
-            <?= $this->include('komponen/sidebar/'.$jenis_user); ?>
+            <?= $this->include('komponen/sidebar/'.lcfirst($jenis_user)); ?>
 
 
             <!-- Main Content -->
