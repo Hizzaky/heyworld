@@ -35,13 +35,11 @@ class Profile extends BaseController
         $data['side'] = '1';
         $data['konten'] = 'Nama';
 
-        // $this->pre($data);
         if (request()->getMethod() == 'post') {
-            $rules = $model->rules();
+            $rules = $model->rules_nama();
 
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
-                // $this->pre($getData);
                 $_POST['prodi_id'] = $data['login']['user_id'];
                 $modelTbl->save($_POST);
 
@@ -74,7 +72,7 @@ class Profile extends BaseController
         $data['konten'] = 'Password';
 
         if (request()->getMethod() == 'post') {
-            $rules = $model->passRules();
+            $rules = $model->rules_pass();
             if ($this->validate($rules)) {
                 $getData = $modelTbl->find($data['login']['user_id']);
                 

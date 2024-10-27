@@ -10,11 +10,11 @@ class ProfileModel extends Model
     {
         $title = [
             'meta' => 'Profile Prodi UMMAT',
-            'header' => 'Profile UMMAT'
+            'header' => 'Profile'
         ];
         return $title;
     }
-    public function rules(){
+    public function rules_nama(){
         $rules = [
             'nama_prodi' => [
                 'rules' => 'required',
@@ -26,7 +26,7 @@ class ProfileModel extends Model
         ];
         return $rules;
     }
-    public function passRules(){
+    public function rules_pass(){
         $rules = [
             'oldPassword' => [
                 'rules' => 'required|min_length[8]',
