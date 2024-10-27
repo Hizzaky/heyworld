@@ -110,7 +110,6 @@ class Profile extends BaseController
 
                     if ($modelTbl) {
                         $sesi->setTempdata('sukses', 'Update Berhasil!',2);
-                        // $sesi->setTempdata('sukses', 'Update Berhasil!',3);
                         $getData = $modelTbl->find($data['login']['user_id']);
 
                         $dataUser = $this->userData($getData, $data['jenis_user']);
@@ -120,9 +119,8 @@ class Profile extends BaseController
                         $sesi->setTempdata('fail', 'Update Gagal!',2);
                     }
                 } else {
-                    $sesi->setTempdata('fail', 'Update Gagal, Password Terakhir Tidak Sesuai!',2);
+                    $sesi->setTempdata('fail', 'Update Gagal, Password Terkini Tidak Sesuai!',2);
                 }
-
             } else {
                 $data['validasi'] = $this->validator;
             }
@@ -131,11 +129,5 @@ class Profile extends BaseController
     }
 
 
-    public function cek(){
-        $this->pre($_POST);
-        $sesi=session();
-        $data['login'] = $sesi->get('login');
-        echo $data['login']['user_id'];
-    }
 
 }

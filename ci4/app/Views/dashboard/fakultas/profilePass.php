@@ -31,6 +31,27 @@
                     <div class="card-header">
                         <h4>Edit <?= $konten . ' ' . $jenis_user ?></h4>
                     </div>
+                    <!-- Notif -->
+                    <?php
+                    $dataSesi = session();
+                    $sukses = $dataSesi->getTempdata('sukses');
+                    $fail = $dataSesi->getTempdata('fail');
+
+                    if (isset($sukses)): ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <?= $sukses ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                        </div>
+                    <?php endif;
+                    if (isset($fail)): ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <?= $fail ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                        </div>
+                    <?php endif; ?>
+                    <!--  -->
                     <div class="card-body">
                         <div class="form-group col-md-12 col-12">
                             <label>Password Baru</label>
@@ -59,33 +80,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--  -->
-                    <?php
-                    $dataSesi = session();
-                    $sukses = $dataSesi->getTempdata('sukses');
-                    $fail = $dataSesi->getTempdata('fail');
-
-                    if (isset($sukses)): ?>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <?= $sukses ?>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
-                        </div>
-                    <?php endif;
-
-                    if (isset($fail)): ?>
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <?= $fail ?>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (isset($validasi)): ?>
-                        <div class="text-danger">
-                            <?= $validasi->listErrors() ?>
-                        </div>
-                    <?php endif; ?>
-                    <!--  -->
                     <div class="card-footer text-right">
                         <button class="btn btn-success">Update Password</button>
                     </div>
