@@ -67,9 +67,7 @@
                 </table> -->
 
                 <?= $table->generate($taxbloom) ?>
-                <pre>
-                    <?php print_r($taxbloom) ?>
-                </pre>
+
             </div>
         </div>
 

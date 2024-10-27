@@ -60,15 +60,25 @@ class Prodi extends Model
         $dataC6=$model->where1('t_taxbloom', 'kode', 'C6');
 
         
-        $data=$dataC2;
+        $data=[];
         $count=count($data);
+        $no=1;
         for($i=0;$i<count($dataC3);$i++)
         {
-            $data[$count]['taxbloom_id']=$dataC3[$i]['taxbloom_id'];
-            $data[$count]['kode']=$dataC3[$i]['kode'];
-            $data[$count]['katalog']=$dataC3[$i]['katalog'];
-            $data[$count]['created_at']=$dataC3[$i]['created_at'];
-            $data[$count]['updated_at']=$dataC3[$i]['updated_at'];
+            // $data[$count]['taxbloom_id']=$dataC3[$i]['taxbloom_id'];
+            // $data[$count]['kode']=$dataC3[$i]['kode'];
+            // $data[$count]['katalog']=$dataC3[$i]['katalog'];
+            // $data[$count]['created_at']=$dataC3[$i]['created_at'];
+            // $data[$count]['updated_at']=$dataC3[$i]['updated_at'];
+            
+            $data[$count]['no']=$no;
+            $data[$count]['c2']=$dataC2[$i]['katalog'];
+            $data[$count]['c3']=$dataC3[$i]['katalog'];
+            $data[$count]['c4']=$dataC4[$i]['katalog'];
+            $data[$count]['c5']=$dataC5[$i]['katalog'];
+            $data[$count]['c6']=$dataC6[$i]['katalog'];
+
+            $no++;
             $count++;
         }
 
