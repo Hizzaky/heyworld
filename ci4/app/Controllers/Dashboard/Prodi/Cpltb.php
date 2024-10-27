@@ -145,6 +145,8 @@ class cpltb extends BaseController
         $table->setHeading(['ID','Kode','Katalog','Created','Updated']);
         echo $table->generate($dataTbl);
 
+        return view('dashboard/prodi/taxbloom')
+
     }
 
 
