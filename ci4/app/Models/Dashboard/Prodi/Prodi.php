@@ -4,6 +4,7 @@ namespace App\Models\Dashboard\Prodi;
 
 use CodeIgniter\Model;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
+use App\Models\CustomModel;
 
 class Prodi extends Model
 {
@@ -49,5 +50,20 @@ class Prodi extends Model
         }
         echo 'cek';
     }
-    
+    public function dataTaxbloom(){
+        $db=db_connect();
+        $model=new CustomModel($db);
+        $dataC2=$model->where1('t_taxbloom', 'kode', 'C2');
+        $dataC3=$model->where1('t_taxbloom', 'kode', 'C3');
+        $dataC4=$model->where1('t_taxbloom', 'kode', 'C4');
+        $dataC5=$model->where1('t_taxbloom', 'kode', 'C5');
+        $dataC6=$model->where1('t_taxbloom', 'kode', 'C6');
+
+        $dataC2=array_push($dataC2,$dataC3);
+        $dataC2=array_push($dataC2,$dataC4);
+        $dataC2=array_push($dataC2,$dataC5);
+        $dataC2=array_push($dataC2,$dataC6);
+
+        return $dataC2;
+    }
 }

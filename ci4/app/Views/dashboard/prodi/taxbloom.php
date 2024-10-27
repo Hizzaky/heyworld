@@ -67,11 +67,7 @@
                 </table> -->
                 <pre>
 
-                    <?php print_r($dataC2) ?> 
-                    <?php print_r($dataC3) ?> 
-                    <?php print_r($dataC4) ?> 
-                    <?php print_r($dataC5) ?> 
-                    <?php print_r($dataC6) ?> 
+                    <?php print_r($taxbloom) ?> 
                 </pre>
             </div>
         </div>
