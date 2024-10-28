@@ -84,7 +84,7 @@ class Kata_kerja extends BaseController
 
         $data['table'] = $table;
 
-        // return view('dashboard/prodi/restore_taxbloom', $data);
+        return view('dashboard/prodi/restore_taxbloom', $data);
 
     }
     public function delete_kata_kerja($id)
