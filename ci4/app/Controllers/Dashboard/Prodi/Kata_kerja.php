@@ -55,7 +55,7 @@ class Kata_kerja extends BaseController
 
         // $data['taxbloom'] = $model->dataTaxbloom();
         $data['taxbloom'] = [
-            '0'=>['1', '1', '1'],
+            '0'=>['1', '', '1'],
             'c2'=>'ini c2',
             'c3'=>'ini c3',
             'c4'=>'',
