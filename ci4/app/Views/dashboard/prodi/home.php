@@ -7,7 +7,7 @@
     </div>
     <div class="section-body">
 
-
+    <?= $tes ?>
     </div>
 </section>
 
