@@ -6,13 +6,9 @@
         <h1><?= $header_title ?></h1>
     </div>
     <div class="section-body">
-
+    alert
         <div class="card-body p-0">
             <div class="table-responsive">
-                
-
-
-                <?= $table->generate($taxbloom) ?>
 
             </div>
         </div>
