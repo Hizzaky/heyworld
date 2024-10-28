@@ -103,10 +103,10 @@ class Prodi extends Model
                     <button  data-toggle="dropdown" class="btn dropdown nav-link dropdown-toggle >
                             <div class="d-sm-none d-lg-inline-block">' . $dataC5[$i]['katalog'] . '</div>
                         
-                        <div class="dropdown-menu " style="width:10px !important">
+                        <div class="dropdown-menu " >
                             
-                            <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
-                            | <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                            <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm dropdown-item"><i class="fas fa-pencil-alt"></i></a>
+                            | <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm dropdown-item"><i class="fas fa-trash"></i></a>
                             
                         </div>
                     </button>
