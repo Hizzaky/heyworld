@@ -100,16 +100,27 @@ class Prodi extends Model
                 $dataC5[$i]['katalog'] = '';
             } else {
                 $data[$count]['c5'] = $dataC5[$i]['katalog'].'
-<div class="dropdown-center">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Centered dropdown
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Action two</a></li>
-    <li><a class="dropdown-item" href="#">Action three</a></li>
-  </ul>
-</div>
+<li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+        <div class="d-sm-none d-lg-inline-block"><?= $nama_user ?></div>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <!-- <div class="dropdown-title">Logged in 5 min ago</div> -->
+        <a href="<?= $jenis_user ?>/Profile" class="dropdown-item has-icon">
+            <i class="far fa-user"></i> Profile
+        </a>
+        <a href="features-activities.html" class="dropdown-item has-icon">
+            <i class="fas fa-bolt"></i> Menu
+        </a>
+        <a href="features-settings.html" class="dropdown-item has-icon">
+            <i class="fas fa-cog"></i> Menu
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="/logUserOut" class="dropdown-item has-icon text-danger">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+    </div>
+</li>
                 ';
             }
             if (empty($dataC6[$i]['katalog'])) {
