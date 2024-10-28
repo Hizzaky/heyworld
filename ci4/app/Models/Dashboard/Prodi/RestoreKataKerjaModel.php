@@ -79,9 +79,9 @@ class RestoreKataKerjaModel extends Model
         {
             $newData[$x]=[
                 'no'=>$no,
-                'kode'=>$key->kode,
-                'katalog'=>$key->katalog,
-                'created_at'=>$key->created_at,
+                'kode'=>$val->kode,
+                'katalog'=>$val->katalog,
+                'created_at'=>$val->created_at,
                 'aksi'=>'<button class="btn">button</button>'
             ];
             $x++;
