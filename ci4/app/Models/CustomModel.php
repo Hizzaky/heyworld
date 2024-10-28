@@ -57,9 +57,9 @@ class CustomModel
     {
         $builder = $this->db->table($tbl);
         $builder->distinct($field);
-        $builder->get();
+        $data=$builder->get()->getResultArray();
 
-        return $builder;
+        return $data;
     }
     
 }
