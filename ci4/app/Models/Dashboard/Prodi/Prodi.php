@@ -98,7 +98,7 @@ class Prodi extends Model
             $data[$count]['c2']='<i class="fa-duotone fa-solid fa-pen-to-square"></i>'.$dataC2[$i]['katalog'];
             $data[$count]['c3']=$dataC3[$i]['katalog'].'<i class="fas fa-pencil-ruler"></i>';
             $data[$count]['c4']=$dataC4[$i]['katalog'].'<br><i class="fas fa-pencil-ruler"></i>';
-            $data[$count]['c5']='<span>'.$dataC5[$i]['katalog'].'</span><br><i class="fas fa-pencil-ruler" style="color:yellow"></i>';
+            $data[$count]['c5']='<span>'.$dataC5[$i]['katalog'].'</span><br><i class="btn fas fa-pencil-ruler" style="color:yellow"></i>';
             $data[$count]['c6']=$dataC6[$i]['katalog'];
 
             $no++;
