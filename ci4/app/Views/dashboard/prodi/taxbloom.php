@@ -10,7 +10,13 @@
         <div class="card-body p-0">
             <div class="table-responsive">
                 
+
+
                 <?= $table->generate($taxbloom) ?>
+
+                <pre>
+                    <?php print_r($taxbloom) ?>
+                </pre>
 
             </div>
         </div>
