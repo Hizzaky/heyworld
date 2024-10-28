@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <!-- <div class="form-group row mb-4"> -->
-                            <div class="col-sm-12 col-md-7" text-right>
+                            <div class="col-sm-12 col-md-7 text-right">
                                 <button class="btn btn-primary">Simpan</button>
                             </div>
                         <!-- </div> -->
