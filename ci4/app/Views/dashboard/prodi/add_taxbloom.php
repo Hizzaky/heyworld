@@ -38,9 +38,13 @@
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
                             <div class="col-sm-12 col-md-7">
                                 <select class="form-control selectric" name="kode">
-                                    <?php foreach ($kode as $val): ?>
-                                        <option value="<?= $val ?>"><?= $val ?></option>
-                                    <?php endforeach; ?>
+                                    <?php
+                                    $x=0;
+                                    foreach ($kode as $val): ?>
+                                        <option value="<?= $val[$x]['kode'] ?>"><?= $val[$x]['kode'] ?></option>
+                                    <?php
+                                $x++;
+                                endforeach; ?>
                                 </select>
                             </div>
                         </div>
