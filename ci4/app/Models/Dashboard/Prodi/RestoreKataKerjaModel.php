@@ -70,23 +70,22 @@ class RestoreKataKerjaModel extends Model
     public function dataTaxbloom()
     {
         $modelDel = new TaxbloomDeletedModel();
-        $dataTbl=$modelDel->findAll();
+        $dataTbl = $modelDel->findAll();
 
-        $newData=[];
-        $x=0;
-        $no=1;
-        foreach($dataTbl as $key => $val)
-        {
-            $newData[$x]=[
-                'no'=>$no,
-                'kode'=>$val['kode'],
-                'katalog'=>$val['katalog'],
-                'created_at'=>date('d-M-Y', strtotime($val['created_at'])),
-                'aksi'=>'
+        $newData = [];
+        $x = 0;
+        $no = 1;
+        foreach ($dataTbl as $key => $val) {
+            $newData[$x] = [
+                'no' => $no,
+                'kode' => $val['kode'],
+                'katalog' => $val['katalog'],
+                'created_at' => date('d-M-Y', strtotime($val['created_at'])),
+                'aksi' => '
+                    <a class="btn btn-success btn-sm " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
+                        class="fas fa-undo"></i></a>
                     <a class="btn btn-danger btn-sm " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                    <a class="btn btn-primary btn-sm " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
-                                    class="fas fa-undo"></i></a>'
+                        class="fas fa-trash"></i></a>'
             ];
             $x++;
             $no++;
