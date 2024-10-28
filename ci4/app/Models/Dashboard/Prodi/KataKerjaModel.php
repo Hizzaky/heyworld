@@ -12,7 +12,7 @@ class KataKerjaModel extends Model
     {
         $data = [
             'meta' => 'Kata Kerja Taxonomi Bloom',
-            'header' => 'Kata Kerja Taxonomi Bloom'
+            'header' => 'Kata Kerja Taxonomi Bloom' 
         ];
         return $data;
     }
