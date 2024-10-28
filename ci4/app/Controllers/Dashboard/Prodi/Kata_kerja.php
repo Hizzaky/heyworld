@@ -31,7 +31,7 @@ class Kata_kerja extends BaseController
 
     }
 
-    public function kata_kerja()
+    public function taxbloom()
     {
         $sesi = session();
         $ver = $sesi->get('login');
