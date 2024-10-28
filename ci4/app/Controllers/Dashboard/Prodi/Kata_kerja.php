@@ -75,7 +75,7 @@ class Kata_kerja extends BaseController
         $data['taxbloom'] = $model->dataTaxbloom();
 
         if (count($data['taxbloom']) < 1) {
-            $data['alert'] = 'Tidak ada kata kerja yang terhapus/dapat dipulihkan!';
+            $data['alert'] = 'Tidak ada kata kerja yang terhapus / dapat dipulihkan!';
         }
 
         $table->setTemplate($model->templateTbl());
