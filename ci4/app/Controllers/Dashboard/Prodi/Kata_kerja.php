@@ -85,7 +85,12 @@ class Kata_kerja extends BaseController
         }
 
         $table->setTemplate($model->templateTbl());
-        $table->setHeading(['#', 'Kode', 'Kata Kerja', 'Waktu Dihapus', 'aksi']);
+        $table->setHeading([        
+            '<strong>#</strong>', 
+            '<strong>Kode</strong>', 
+            '<strong>Kata Kerja</strong>', 
+            '<strong>Waktu Dihapus</strong>', 
+            '<strong>Aksi</strong>']);
 
         $data['table'] = $table;
 
