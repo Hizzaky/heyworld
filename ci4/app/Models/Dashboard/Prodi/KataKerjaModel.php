@@ -91,18 +91,16 @@ class KataKerjaModel extends Model
 
 
             if (isset($dataC2[$i]['katalog'])) {
-                $dataC2[$i]['katalog'] = '';
-            } else {
                 $data[$count]['c2'] = $dataC2[$i]['katalog'];
+            } else {
+                $dataC2[$i]['katalog'] = '';
             }
             if (isset($dataC3[$i]['katalog'])) {
-                $dataC3[$i]['katalog'] = '';
-            } else {
                 $data[$count]['c3'] = $dataC3[$i]['katalog'];
+            } else {
+                $dataC3[$i]['katalog'] = '';
             }
             if (isset($dataC4[$i]['katalog'])) {
-                $dataC4[$i]['katalog'] = '';
-            } else {
                 $data[$count]['c4'] = '
 <div class="dropdown">
   <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -114,10 +112,10 @@ class KataKerjaModel extends Model
   </div>
 </div>
                 ';
+            } else {
+                $dataC4[$i]['katalog'] = '';
             }
             if (isset($dataC5[$i]['katalog'])) {
-                $dataC5[$i]['katalog'] = '';
-            } else { 
                 $data[$count]['c5'] = '
                     <button  data-toggle="dropdown" class="btn dropdown nav-link dropdown-toggle >
                             <div class="d-sm-none d-lg-inline-block">' . $dataC5[$i]['katalog'] . '</div>
@@ -130,13 +128,15 @@ class KataKerjaModel extends Model
                         </div>
                     </button>
                 '; 
+            } else { 
+                $dataC5[$i]['katalog'] = '';
             }
             if (isset($dataC6[$i]['katalog'])) {
-                $dataC6[$i]['katalog'] = '';
-            } else {
                 $data[$count]['c6'] = $dataC6[$i]['katalog'] . '<br>
                     <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
                     <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>';
+                } else {
+                $dataC6[$i]['katalog'] = '';
             }
 
 
