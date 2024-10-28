@@ -95,14 +95,14 @@ class Prodi extends Model
                 $dataC5[$i]['katalog'] = '';
             } else {
                 $data[$count]['c5'] = $dataC5[$i]['katalog'].'
-                <div class="dropdown">
+<div class="dropdown-center">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+    Centered dropdown
   </button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Action two</a></li>
+    <li><a class="dropdown-item" href="#">Action three</a></li>
   </ul>
 </div>
                 ';
