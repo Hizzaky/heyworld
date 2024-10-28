@@ -30,7 +30,7 @@
         <div class="card-body p-0">
             <div class="table-responsive">
 
-            <?php id(isset($alert)): ?>
+            <?php if(isset($alert)): ?>
             <?= $alert ?>
             <?php else:?>
 
