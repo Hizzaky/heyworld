@@ -90,11 +90,11 @@ class Prodi extends Model
                 $dataC4[$i]['katalog'] = '';
             } else {
                 $data[$count]['c4'] = '
-<div class="dropdown" style="width:10px">
+<div class="dropdown" >
   <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     '.$dataC4[$i]['katalog'].'
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:10px">
     <i class="btn btn-warning btn-sm fas fa-pencil-alt"></i><a class="" href="' . $dataC4[$i]['taxbloom_id'] . '"> Edit</a>
     <i class="btn btn-danger btn-sm fas fa-trash"></i> <a class="" href="' . $dataC4[$i]['taxbloom_id'] . '"> Hapus</a>
   </div>
