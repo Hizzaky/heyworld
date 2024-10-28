@@ -100,9 +100,9 @@ class Prodi extends Model
                 $dataC5[$i]['katalog'] = '';
             } else {
                 $data[$count]['c5'] = '
-                    <button class="btn dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                    <button  data-toggle="dropdown" class="btn dropdown nav-link dropdown-toggle nav-link-lg nav-link-user>
                             <div class="d-sm-none d-lg-inline-block">' . $dataC5[$i]['katalog'] . '</div>
-                        </a>
+                        
                         <div class="dropdown-menu ">
                             <div class="dropdown-divider"></div>
                             <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
