@@ -89,7 +89,12 @@ class Prodi extends Model
             if (empty($dataC4[$i]['katalog'])) {
                 $dataC4[$i]['katalog'] = '';
             } else {
-                $data[$count]['c4'] = $dataC4[$i]['katalog'];
+                $data[$count]['c4'] = $dataC4[$i]['katalog'].'
+                <select>
+                <option>tes</option>
+                <option>tes</option>
+                </select>
+                ';
             }
             if (empty($dataC5[$i]['katalog'])) {
                 $dataC5[$i]['katalog'] = '';
