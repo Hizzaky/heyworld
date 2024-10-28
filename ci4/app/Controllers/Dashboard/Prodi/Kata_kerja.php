@@ -74,17 +74,15 @@ class Kata_kerja extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
 
         $data['taxbloom'] = $model->dataTaxbloom();
-        // $data['taxbloom'] = $modelDel->findAll();
 
-        // $this->pre($data['taxbloom']);
+        echo count($data['taxbloom']);
 
-        $table->setTemplate($model->templateTbl());
-        // $table->setHeading(['#', 'Kode', 'Kata Kerja', 'Aksi']);
-        $table->setHeading(['#', 'Kode', 'Kata Kerja', 'Waktu Dihapus','aksi']);
+        // $table->setTemplate($model->templateTbl());
+        // $table->setHeading(['#', 'Kode', 'Kata Kerja', 'Waktu Dihapus','aksi']);
 
-        $data['table'] = $table;
+        // $data['table'] = $table;
 
-        return view('dashboard/prodi/restore_taxbloom', $data);
+        // return view('dashboard/prodi/restore_taxbloom', $data);
 
     }
     public function delete_kata_kerja($id)
