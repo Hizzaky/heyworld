@@ -108,7 +108,7 @@ class Kata_kerja extends BaseController
         // $this->pre($dataTbl);
         // $this->pre($dataInsert);
 
-        return redirect('kata-kerja')->with('sukses','Kata kerja berhasil dihapus!');
+        return redirect('prodi-kata-kerja')->with('sukses','Kata kerja berhasil dihapus!');
 
     }
     
