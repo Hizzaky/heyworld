@@ -98,8 +98,6 @@ class Prodi extends Model
     <a class="dropdown-item" href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-pencil-alt"></i</a>
     <a class="dropdown-item" href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-trash"></i></a>
     <a class="dropdown-item" href="#">Something else here</a>
-    <a class="dropdown-item" href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-pencil-alt"></i</a>
-    <a class="dropdown-item" href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-trash"></i></a>
   </div>
 </div>
                 ';
