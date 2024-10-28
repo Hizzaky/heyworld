@@ -79,21 +79,19 @@ class Kata_kerja extends BaseController
         // 
 
         $model = new KataKerjaModel();
-        // $modelTbl = new TaxbloomModel();
-        $modelDelete = new TaxbloomDeletedModel();
+        $modelTbl = new TaxbloomModel();
+        $modelDel = new TaxbloomDeletedModel();
         // $db = db_connect();
         // $modelCustom = new CustomModel($db);
         $data = $this->arData($model->title(), $sesi->get('login'));
         // $data['taxbloom'] = $model->dataTaxbloom();
 
-        // $dataTbl=$modelTbl->find($id);
-        // $dataInsert['kode']=$dataTbl['kode'];
-        // $dataInsert['katalog']=$dataTbl['katalog'];
-        $dataInsert['kode']='kode';
-        $dataInsert['katalog']='tes insert';
+        $dataTbl=$modelTbl->find($id);
+        $dataInsert['kode']=$dataTbl['kode'];
+        $dataInsert['katalog']=$dataTbl['katalog'];
 
-        $modelDelete->save($dataInsert);
-        if($modelDelete){
+        $modelDel->save($dataInsert);
+        if($modelDel){
             echo 'sukses';
         }else{
             echo 'fail';
@@ -101,7 +99,7 @@ class Kata_kerja extends BaseController
 
 
         // $this->pre($dataTbl);
-        $this->pre($dataInsert);
+        // $this->pre($dataInsert);
 
 
 
