@@ -82,7 +82,7 @@ class RestoreKataKerjaModel extends Model
                 'katalog' => $val['katalog'],
                 'created_at' => date('d-M-Y', strtotime($val['created_at'])),
                 'aksi' => '
-                    <a class="btn btn-success btn-sm " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
+                    <a class="btn btn-primary  " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
                         class="fas fa-undo"></i></a> | 
                     <a class="btn btn-danger btn-sm " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
                         class="fas fa-trash"></i></a>'
