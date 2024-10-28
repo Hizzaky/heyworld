@@ -85,8 +85,8 @@ class Kata_kerja extends BaseController
         // $this->pre($data['kode']);
 
         if (request()->getMethod() == 'post') {
-            $rules = $model->rules_katalog();
-            if ($this->validate($rules)) {
+            // $rules = $model->rules_katalog();
+            // if ($this->validate($rules)) {
 
                 $dataTbl = [
                     'kode' => $_POST['kode'],
@@ -103,10 +103,10 @@ class Kata_kerja extends BaseController
                     $info = 'failAddKataKerja';
                     $msg = 'Kata kerja baru gagal ditambakan!';
                 }
-            } else {
-                $info = 'failAddKataKerja';
-                $msg = 'Kata kerja baru gagal ditambakan!';
-            }
+            // } else {
+            //     $info = 'failAddKataKerja';
+            //     $msg = 'Kata kerja baru gagal ditambakan!';
+            // }
 
         } else {
             $data['validasi'] = $this->validator;

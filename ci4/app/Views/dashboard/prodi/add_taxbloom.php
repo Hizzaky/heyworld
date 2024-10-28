@@ -33,32 +33,28 @@
                     <h4>Kata Kerja Baru</h4>
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form method="post" class="needs-validation" novalidate>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
                             <div class="col-sm-12 col-md-7">
                                 <select class="form-control selectric" name="kode">
                                     <?php
-                                    $x=0;
+                                    $x = 0;
                                     foreach ($kode as $val): ?>
                                         <option value="<?= $val['kode'] ?>"><?= $val['kode'] ?></option>
-                                    <?php
-                                $x++;
-                                endforeach; ?>
+                                        <?php
+                                        $x++;
+                                    endforeach; ?>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata Kerja</label>
                             <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="katalog">
+                                <input type="text" class="form-control" name="katalog" required>
                             </div>
-                        </div>
-
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
-                            <div class="col-sm-12 col-md-7">
-                                <textarea class="summernote-simple"></textarea>
+                            <div class="invalid-feedback">
+                                Inputkan kata kerja baru dengan benar!
                             </div>
                         </div>
                         <div class="form-group row mb-4">
