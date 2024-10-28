@@ -90,12 +90,12 @@ class Kata_kerja extends BaseController
         $dataInsert['kode']=$dataTbl['kode'];
         $dataInsert['katalog']=$dataTbl['katalog'];
 
-        // $modelDel->save($dataInsert);
-        // if($modelDel){
-        //     echo 'sukses';
-        // }else{
-        //     echo 'fail';
-        // }
+        $modelDel->save($dataInsert);
+        if($modelDel){
+            echo 'sukses';
+        }else{
+            echo 'fail';
+        }
 
 
         $this->pre($dataTbl);
