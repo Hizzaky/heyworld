@@ -96,17 +96,19 @@ class Prodi extends Model
             $data[$count]['c4'] = $dataC4[$i]['katalog'] . '<br><i class="fas fa-pencil-ruler"></i>';
             $data[$count]['c5'] = '<span>' . $dataC5[$i]['katalog'] . '</span><br><i class="btn fas fa-pencil-ruler" style=""></i>';
             $data[$count]['c6'] = '
-            <ul class="sidebar-menu">
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>'. $dataC6[$i]['katalog'].'</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="index-0.html"><i class="btn fas fa-pencil-ruler" style=""></a></li>
-                    <li><a class="nav-link" href="index.html"><i class="fas fa-pencil-ruler"></a></li>
+            <aside id="sidebar-wrapper">
+                <ul class="sidebar-menu">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>' . $dataC6[$i]['katalog'] . '</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="nav-link" href="index-0.html"><i class="btn fas fa-pencil-ruler" style=""></a></li>
+                            <li><a class="nav-link" href="index.html"><i class="fas fa-pencil-ruler"></a></li>
+                        </ul>
+                    </li>
                 </ul>
-                </li>
-            </ul>
+            </aside>
             ';
-            
+
 
             $no++;
             $count++;
