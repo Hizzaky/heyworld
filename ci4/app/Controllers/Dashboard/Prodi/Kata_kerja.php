@@ -73,8 +73,6 @@ class Kata_kerja extends BaseController
         // 
         $table = new \CodeIgniter\View\Table();
         $model = new RestoreKataKerjaModel();
-        $modelTbl = new TaxbloomModel();
-        $modelDel = new TaxbloomDeletedModel();
 
         $data = $this->arData($model->title(), $sesi->get('login'));
 
