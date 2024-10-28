@@ -4,6 +4,8 @@ namespace App\Models\Dashboard\Prodi;
 
 use CodeIgniter\Model;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
+use App\Models\Dashboard\Prodi\Table\TaxbloomDeletedModel;
+
 use App\Models\CustomModel;
 
 class RestoreKataKerjaModel extends Model
@@ -67,135 +69,26 @@ class RestoreKataKerjaModel extends Model
     }
     public function dataTaxbloom()
     {
-        $db = db_connect();
-        $model = new CustomModel($db);
-        $dataC2 = $model->where1('t_taxbloom', 'kode', 'C2');
-        $dataC3 = $model->where1('t_taxbloom', 'kode', 'C3');
-        $dataC4 = $model->where1('t_taxbloom', 'kode', 'C4');
-        $dataC5 = $model->where1('t_taxbloom', 'kode', 'C5');
-        $dataC6 = $model->where1('t_taxbloom', 'kode', 'C6');
+        $modelDel = new TaxbloomDeletedModel();
+        $dataTbl=$modelDel->findAll();
 
-        $x = array(
-            count($dataC2),
-            count($dataC3),
-            count($dataC4),
-            count($dataC5),
-            count($dataC6)
-        );
-
-        $data = [];
-        $count = count($data);
-        $no = 1;
-        for ($i = 0; $i < max($x); $i++) {
-
-            $data[$count]['no'] = $no;
-
-
-            if (isset($dataC2[$i]['katalog'])) {
-                $data[$count]['c2'] = '
-                    <div class="dropdown">
-                        <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ' . $dataC2[$i]['katalog'] . '
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="edit/' . $dataC2[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC2[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                ';
-            } else {
-                $data[$count]['c2'] = '';
-
-            }
-            if (isset($dataC3[$i]['katalog'])) {
-                $data[$count]['c3'] = '
-                    <div class="dropdown">
-                        <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ' . $dataC3[$i]['katalog'] . '
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="edit/' . $dataC3[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC3[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                ';
-            } else {
-                $data[$count]['c3'] = '';
-            }
-            if (isset($dataC4[$i]['katalog'])) {
-                $data[$count]['c4'] = '
-                    <div class="dropdown">
-                        <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ' . $dataC4[$i]['katalog'] . '
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="edit/' . $dataC4[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC4[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                ';
-            } else {
-                $data[$count]['c4'] = '';
-            }
-            if (isset($dataC5[$i]['katalog'])) {
-                $data[$count]['c5'] = '
-                    <div class="dropdown">
-                        <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ' . $dataC5[$i]['katalog'] . '
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="edit/' . $dataC5[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC5[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                ';
-            } else {
-                $data[$count]['c5'] = '';
-            }
-            if (isset($dataC6[$i]['katalog'])) {
-                $data[$count]['c6'] ='
-                    <div class="dropdown">
-                        <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ' . $dataC6[$i]['katalog'] . '
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="edit/' . $dataC6[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC6[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                ';
-            } else {
-                $data[$count]['c6'] = '';
-            }
-
-
-
-
-
-            $no++;
-            $count++;
+        $newData=[];
+        $x=0;
+        $no=1;
+        foreach($dataTbl as $key => $val)
+        {
+            $newData[$x]=[
+                'no'=>$no,
+                'kode'=>$key->kode,
+                'katalog'=>$key->katalog,
+                'created_at'=>$key->created_at,
+                'aksi'=>'<button class="btn">button</button>'
+            ];
+            $x++;
         }
 
-        return $data;
+
+
+        return $newData;
     }
 }

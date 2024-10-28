@@ -73,8 +73,8 @@ class Kata_kerja extends BaseController
 
         $data = $this->arData($model->title(), $sesi->get('login'));
 
-        // $data['taxbloom'] = $model->dataTaxbloom();
-        $data['taxbloom'] = $modelDel->findAll();
+        $data['taxbloom'] = $model->dataTaxbloom();
+        // $data['taxbloom'] = $modelDel->findAll();
 
         $this->pre($data['taxbloom']);
 
