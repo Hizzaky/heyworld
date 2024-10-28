@@ -21,7 +21,7 @@
                     <span>Taxonomi Bloom</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="/Prodi/Kata-kerja">Index Kata Kerja</a></li>
-                    <li><a class="nav-link" href="#">Penambahan Kata Kerja</a></li>
+                    <li><a class="nav-link" href="/Prodi/Penambahan-kata-kerja">Penambahan Kata Kerja</a></li>
                     <li><a class="nav-link" href="/Prodi/Restore-kata-kerja">Kata Kerja Terhapus</a></li>
                     <li><a class="nav-link" href="#">Menu</a></li>
                 </ul>
