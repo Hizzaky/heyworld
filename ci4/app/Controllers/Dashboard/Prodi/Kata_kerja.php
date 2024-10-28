@@ -50,6 +50,7 @@ class Kata_kerja extends BaseController
         $modelTbl = new TaxbloomModel();
         $db = db_connect();
         $modelCustom = new CustomModel($db);
+        
         $data = $this->arData($model->title(), $sesi->get('login'));
 
         $data['taxbloom'] = $model->dataTaxbloom();
@@ -83,7 +84,9 @@ class Kata_kerja extends BaseController
         // $modelCustom = new CustomModel($db);
         $data = $this->arData($model->title(), $sesi->get('login'));
 
-        $data['taxbloom'] = $model->dataTaxbloom();
+        // $data['taxbloom'] = $model->dataTaxbloom();
+
+        echo $id;
 
     }
     
