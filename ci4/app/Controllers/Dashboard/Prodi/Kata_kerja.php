@@ -7,7 +7,6 @@ use App\Models\Dashboard\Prodi\KataKerjaModel;
 use App\Models\Dashboard\Prodi\RestoreKataKerjaModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomDeletedModel;
-use App\Models\CustomModel;
 
 
 class Kata_kerja extends BaseController
