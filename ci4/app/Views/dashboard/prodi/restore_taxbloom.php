@@ -30,9 +30,12 @@
         <div class="card-body p-0">
             <div class="table-responsive">
 
-                <?= $table->generate($taxbloom) ?>
+            <?php id(isset($alert)): ?>
+            <?= $alert ?>
+            <?php else:?>
 
-                <?= $alert ?>
+                <?= $table->generate($taxbloom) ?>
+            <?php endif; ?>
 
             </div>
         </div>
