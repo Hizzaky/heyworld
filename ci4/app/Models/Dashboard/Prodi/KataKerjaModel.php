@@ -32,7 +32,7 @@ class KataKerjaModel extends Model
         $template = [
             'table_open' => '<table class="table table-responsive table-striped table-md" border="0" cellpadding="4" cellspacing="0">',
 
-            'thead_open' => '<thead  style="font-weight: bold;">', 
+            'thead_open' => '<thead>', 
             'thead_close' => '</thead>',
 
             'heading_row_start' => '<tr>',
