@@ -97,8 +97,8 @@ class Kata_kerja extends BaseController
                 $modelTbl->save($dataTbl);
 
                 if ($modelTbl) {
-                    $info='suksesAddKataKerja';
-                    $msg='Kata kerja baru berhasil ditambakan!';
+                    $info = 'suksesAddKataKerja';
+                    $msg = 'Kata kerja baru berhasil ditambakan!';
 
                 } else {
                     $info = 'failAddKataKerja';
@@ -113,7 +113,9 @@ class Kata_kerja extends BaseController
             $data['validasi'] = $this->validator;
         }
 
-        $sesi->setFlashdata($info, $msg);
+        if (isset($info)) {
+            $sesi->setFlashdata($info, $msg);
+        }
 
         return view('dashboard/prodi/add_taxbloom', $data);
     }
