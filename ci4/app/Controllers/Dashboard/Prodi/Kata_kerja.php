@@ -79,7 +79,8 @@ class Kata_kerja extends BaseController
         // 
 
         $model = new KataKerjaModel();
-        $modelTbl = new TaxbloomDeletedModel();
+        $modelTbl = new TaxbloomModel();
+        $modelDel = new TaxbloomDeletedModel();
         // $db = db_connect();
         // $modelCustom = new CustomModel($db);
         $data = $this->arData($model->title(), $sesi->get('login'));
