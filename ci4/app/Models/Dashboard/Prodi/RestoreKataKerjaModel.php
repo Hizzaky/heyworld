@@ -86,6 +86,7 @@ class RestoreKataKerjaModel extends Model
                                     class="fas fa-trash"></i></a></button>'
             ];
             $x++;
+            $no++;
         }
 
 
