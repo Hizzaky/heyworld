@@ -57,12 +57,23 @@
                                 </div> 
                             </div>
                         </div>
+                        <div class="form-group col-md-12 col-12">
+                            <label>Password Terkini</label>
+                            <input type="password" class="form-control" name="oldPassword" value=""
+                                placeholder="Inputkan Password Terkini" required minlength="8">
+                            <div class="invalid-feedback">
+                                Password minimal 8 digit!
+                            </div>
+                        </div>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                             <div class="col-sm-12 col-md-7">
                                 <button class="btn btn-primary text-right">Simpan</button>
                             </div>
                         </div>
+                        <div class="card-footer text-right">
+                        <button class="btn btn-success">Update Password</button>
+                    </div>
                     </form>
                 </div>
             </div>
