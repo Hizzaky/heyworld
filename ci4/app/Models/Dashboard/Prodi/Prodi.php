@@ -29,7 +29,7 @@ class Prodi extends Model
     }
     public function reData($data)
     {
-        $modelTbl=new TaxbloomModel();
+        $modelTbl = new TaxbloomModel();
         $new = [];
         // $key = array_keys($data);
         $count = count($data);
@@ -50,16 +50,17 @@ class Prodi extends Model
         }
         echo 'cek';
     }
-    public function dataTaxbloom(){
-        $db=db_connect();
-        $model=new CustomModel($db);
-        $dataC2=$model->where1('t_taxbloom', 'kode', 'C2');
-        $dataC3=$model->where1('t_taxbloom', 'kode', 'C3');
-        $dataC4=$model->where1('t_taxbloom', 'kode', 'C4');
-        $dataC5=$model->where1('t_taxbloom', 'kode', 'C5');
-        $dataC6=$model->where1('t_taxbloom', 'kode', 'C6');
+    public function dataTaxbloom()
+    {
+        $db = db_connect();
+        $model = new CustomModel($db);
+        $dataC2 = $model->where1('t_taxbloom', 'kode', 'C2');
+        $dataC3 = $model->where1('t_taxbloom', 'kode', 'C3');
+        $dataC4 = $model->where1('t_taxbloom', 'kode', 'C4');
+        $dataC5 = $model->where1('t_taxbloom', 'kode', 'C5');
+        $dataC6 = $model->where1('t_taxbloom', 'kode', 'C6');
 
-        $x=array(
+        $x = array(
             count($dataC2),
             count($dataC3),
             count($dataC4),
@@ -67,60 +68,45 @@ class Prodi extends Model
             count($dataC6)
         );
 
-        $data=[];
-        $count=count($data);
-        $no=1;
-        for($i=0;$i<max($x);$i++)
-        {
+        $data = [];
+        $count = count($data);
+        $no = 1;
+        for ($i = 0; $i < max($x); $i++) {
 
-            $data[$count]['no']=$no;
+            $data[$count]['no'] = $no;
 
 
-            if(empty($dataC2[$i]['katalog']))
-            {
-                $dataC2[$i]['katalog']='';
-            }else{
-                $data[$count]['c2'] = '<i class="fa-duotone fa-solid fa-pen-to-square"></i>' . $dataC2[$i]['katalog'];
+            if (empty($dataC2[$i]['katalog'])) {
+                $dataC2[$i]['katalog'] = '';
+            } else {
+                $data[$count]['c2'] = $dataC2[$i]['katalog'];
             }
-
-
-            if(empty($dataC3[$i]['katalog']))
-            {
-                $dataC3[$i]['katalog']='';
-            }else{
-                $data[$count]['c3']=$dataC3[$i]['katalog'].'<i class="fas fa-pencil-ruler"></i>';
+            if (empty($dataC3[$i]['katalog'])) {
+                $dataC3[$i]['katalog'] = '';
+            } else {
+                $data[$count]['c3'] = $dataC3[$i]['katalog'];
             }
-
-
-            if(empty($dataC4[$i]['katalog']))
-            {
-                $dataC4[$i]['katalog']='';
-            }else{
-                $data[$count]['c4']=$dataC4[$i]['katalog'].'<br><i class="fas fa-pencil-ruler"></i>';
+            if (empty($dataC4[$i]['katalog'])) {
+                $dataC4[$i]['katalog'] = '';
+            } else {
+                $data[$count]['c4'] = $dataC4[$i]['katalog'];
             }
-
-
-            if(empty($dataC5[$i]['katalog']))
-            {
-                $dataC5[$i]['katalog']='';
-            }else{
-                $data[$count]['c5']='<span>'.$dataC5[$i]['katalog'].'</span><br><i class="btn fas fa-pencil-ruler" style=""></i>';
+            if (empty($dataC5[$i]['katalog'])) {
+                $dataC5[$i]['katalog'] = '';
+            } else {
+                $data[$count]['c5'] = $dataC5[$i]['katalog'];
             }
-
-
-
-            if(empty($dataC6[$i]['katalog']))
-            {
-                $dataC6[$i]['katalog']='';
-            }else{
-                $data[$count]['c6']=$dataC6[$i]['katalog'].'<br>
-                    <a href="'. $dataC6[$i]['taxbloom_id'].'" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
+            if (empty($dataC6[$i]['katalog'])) {
+                $dataC6[$i]['katalog'] = '';
+            } else {
+                $data[$count]['c6'] = $dataC6[$i]['katalog'] . '<br>
+                    <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
                     <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>';
             }
-            
 
-            
-            
+
+
+
 
             $no++;
             $count++;
