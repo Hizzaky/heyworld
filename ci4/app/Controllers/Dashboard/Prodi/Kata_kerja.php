@@ -87,8 +87,11 @@ class Kata_kerja extends BaseController
         // $data['taxbloom'] = $model->dataTaxbloom();
 
         $dataTbl=$modelTbl->find($id);
+        $dataInsert['kode']=$dataTbl['kode'];
+        $dataInsert['katalog']=$dataTbl['katalog'];
 
         $this->pre($dataTbl);
+        $this->pre($dataInsert);
 
 
 
