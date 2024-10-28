@@ -82,7 +82,8 @@ class RestoreKataKerjaModel extends Model
                 'kode'=>$val['kode'],
                 'katalog'=>$val['katalog'],
                 'created_at'=>$val['created_at'],
-                'aksi'=>'<button class="btn">button</button>'
+                'aksi'=>'<button class="btn"><a class="btn btn-danger btn-sm " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
+                                    class="fas fa-trash"></i></a></button>'
             ];
             $x++;
         }

@@ -141,21 +141,22 @@ class Kata_kerja extends BaseController
         $dataRestore['kode'] = $dataDel['kode'];
         $dataRestore['katalog'] = $dataDel['katalog'];
 
-        $modelTbl->save($dataRestore);
-        if ($modelTbl) {
-            $modelDel->delete($id);
-            if ($modelDel) {
-                $key = 'suksesRestoreKataKerja';
-                $msg='Kata kerja berhasil dikembalikan!';
-            } else {
-                $key='failRestoreKataKerja';
-                $msg = 'Kata kerja gagal dikembalikan!';
-            }
-        } else {
-            $key = 'failRestoreKataKerja';
-            $msg = 'Kata kerja gagal dikembalikan!';
-        }
-        return redirect('prodi-kata-kerja')->with($key, $msg);
+        $this->pre($id);
+        // $modelTbl->save($dataRestore);
+        // if ($modelTbl) {
+        //     $modelDel->delete($id);
+        //     if ($modelDel) {
+        //         $key = 'suksesRestoreKataKerja';
+        //         $msg='Kata kerja berhasil dikembalikan!';
+        //     } else {
+        //         $key='failRestoreKataKerja';
+        //         $msg = 'Kata kerja gagal dikembalikan!';
+        //     }
+        // } else {
+        //     $key = 'failRestoreKataKerja';
+        //     $msg = 'Kata kerja gagal dikembalikan!';
+        // }
+        // return redirect('prodi-kata-kerja')->with($key, $msg);
     }
 
 
