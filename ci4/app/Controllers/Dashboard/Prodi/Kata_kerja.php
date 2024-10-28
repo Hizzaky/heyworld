@@ -45,7 +45,13 @@ class Kata_kerja extends BaseController
         $data['taxbloom'] = $model->dataTaxbloom();
 
         $table->setTemplate($model->templateTbl());
-        $table->setHeading(['<strong>#</strong>', '<strong>C2</strong>', '<strong>C3</strong>', '<strong>C4</strong>', '<strong>C5</strong>', '<strong>C6</strong>']);
+        $table->setHeading([
+            '<strong>#</strong>', 
+            '<strong>C2</strong>', 
+            '<strong>C3</strong>', 
+            '<strong>C4</strong>', 
+            '<strong>C5</strong>', 
+            '<strong>C6</strong>']);
 
         $data['table'] = $table;
 
