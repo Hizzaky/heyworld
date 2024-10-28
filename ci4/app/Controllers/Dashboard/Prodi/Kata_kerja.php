@@ -3,8 +3,9 @@
 namespace App\Controllers\Dashboard\Prodi;
 
 use App\Controllers\BaseController;
-use App\Models\Dashboard\Prodi\Prodi;
+use App\Models\Dashboard\Prodi\KataKerjaModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
+use App\Models\Dashboard\Prodi\Table\TaxbloomDeletedModel;
 use App\Models\CustomModel;
 
 
@@ -45,7 +46,7 @@ class Kata_kerja extends BaseController
         // 
         $table = new \CodeIgniter\View\Table();
 
-        $model = new Prodi();
+        $model = new KataKerjaModel();
         $modelTbl = new TaxbloomModel();
         $db = db_connect();
         $modelCustom = new CustomModel($db);
@@ -63,21 +64,33 @@ class Kata_kerja extends BaseController
         return view('dashboard/prodi/taxbloom', $data);
 
     }
-    public function capaian()
+    public function delete_kata_kerja($id)
     {
-        $model = new Prodi();
         $sesi = session();
-        $data = $this->arData($model->title(), $sesi->get('login'));
-        $data['side'] = '1';
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Prodi') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
 
-        return view('dashboard/prodi/capaian', $data);
+        $model = new KataKerjaModel();
+        $modelTbl = new TaxbloomDeletedModel();
+        // $db = db_connect();
+        // $modelCustom = new CustomModel($db);
+        $data = $this->arData($model->title(), $sesi->get('login'));
+
+        $data['taxbloom'] = $model->dataTaxbloom();
 
     }
     
 
     public function save_taxbloom()
     {
-        $model = new Prodi();
+        $model = new KataKerjaModel();
         $modelTbl = new TaxbloomModel();
 
         $db = db_connect();
@@ -123,7 +136,7 @@ class Kata_kerja extends BaseController
         // 
         $table = new \CodeIgniter\View\Table();
 
-        $model = new Prodi();
+        $model = new KataKerjaModel();
         $modelTbl = new TaxbloomModel();
         $db=db_connect();
         $modelCustom = new CustomModel($db);
