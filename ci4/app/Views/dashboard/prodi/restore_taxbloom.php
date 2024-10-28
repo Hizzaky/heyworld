@@ -32,6 +32,8 @@
 
                 <?= $table->generate($taxbloom) ?>
 
+                asdasd
+
             </div>
         </div>
 
