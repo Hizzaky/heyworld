@@ -183,7 +183,7 @@ class Kata_kerja extends BaseController
             $key = 'failRestoreKataKerja';
             $msg = 'Kata kerja gagal dihapus permanen!';
         }
-        return redirect('restore-taxbloom')->with($key, $msg);
+        return redirect('prodi-restore-kata-kerja')->with($key, $msg);
     }
 
 
