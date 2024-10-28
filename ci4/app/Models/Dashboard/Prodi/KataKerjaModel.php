@@ -103,17 +103,7 @@ class KataKerjaModel extends Model
             if (empty($dataC4[$i]['katalog'])) {
                 $dataC4[$i]['katalog'] = '';
             } else {
-                $data[$count]['c4'] = '
-<div class="dropdown">
-  <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    '.$dataC4[$i]['katalog'].'
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:10px !important; text-align:center;"> 
-    <a class="btn btn-warning btn-sm " href="edit/' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-pencil-alt"></i> </a> | 
-    <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-trash"></i></a>
-  </div>
-</div>
-                ';
+                $data[$count]['c4'] = $dataC4[$i]['taxbloom_id'];
             }
             if (empty($dataC5[$i]['katalog'])) {
                 $dataC5[$i]['katalog'] = '';
