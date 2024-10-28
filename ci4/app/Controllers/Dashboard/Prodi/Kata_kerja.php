@@ -92,9 +92,16 @@ class Kata_kerja extends BaseController
 
         $modelDel->save($dataInsert);
         if($modelDel){
-            echo 'sukses';
+            $modelTbl->delete($id);
+            if($modelTbl)
+            {
+
+                echo 'sukses';
+            }else{
+                echo 'fail';
+
+            }
         }else{
-            echo 'fail';
         }
 
 
