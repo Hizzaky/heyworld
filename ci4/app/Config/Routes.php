@@ -86,7 +86,7 @@ $routes->group('Prodi', function ($routes) {
     $routes->add('Update-password', 'Dashboard\Prodi\Profile::update_password', ['as' => 'prodi-update-password']);
     
     $routes->add('Kata-kerja', 'Dashboard\Prodi\Kata_kerja::taxbloom', ['as' => 'prodi-kata-kerja']);
-    $routes->add('sukses/(:any)', 'Dashboard\Prodi\Kata_kerja::delete_kata_kerja/$1');
+    $routes->add('hapus-index/(:any)', 'Dashboard\Prodi\Kata_kerja::delete_kata_kerja/$1');
 
     // $routes->add('Save-taxbloom', 'Dashboard\Prodi\Kata_kerja::save_taxbloom', ['as' => 'prodi-save-taxbloom']);
     // $routes->add('Taxonomi-bloom', 'Dashboard\Prodi\Kata_kerja::tbl_taxbloom', ['as' => 'prodi-tbl-taxbloom']);
