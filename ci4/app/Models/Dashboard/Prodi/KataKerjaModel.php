@@ -173,6 +173,7 @@ class KataKerjaModel extends Model
             $no++;
             $count++;
         }
+        
 
         return $data;
     }
