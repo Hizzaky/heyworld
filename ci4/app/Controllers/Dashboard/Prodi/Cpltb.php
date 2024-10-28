@@ -163,7 +163,7 @@ class cpltb extends BaseController
         $table->setTemplate($template);
 
         // $dataTbl = $modelTbl->findAll();
-        $table->setHeading(['No', 'C2', 'C3', 'C4', 'C5', 'C6']);
+        $table->setHeading(['#', 'C2', 'C3', 'C4', 'C5', 'C6']);
         // $data['dataTbl'] = $dataTbl;
         $data['table'] = $table;
 
