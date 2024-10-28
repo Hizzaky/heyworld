@@ -89,7 +89,7 @@ class Prodi extends Model
             if (empty($dataC4[$i]['katalog'])) {
                 $dataC4[$i]['katalog'] = '';
             } else {
-                $data[$count]['c4'] = $dataC4[$i]['katalog'].'
+                $data[$count]['c4'] = $dataC4[$i]['katalog'] . '
                 <select>
                 <option>tes</option>
                 <option>tes</option>
@@ -99,28 +99,24 @@ class Prodi extends Model
             if (empty($dataC5[$i]['katalog'])) {
                 $dataC5[$i]['katalog'] = '';
             } else {
-                $data[$count]['c5'] = $dataC5[$i]['katalog'].'
-<li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-        <img alt="image" src="<?= base_url() ?>/template/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-        <div class="d-sm-none d-lg-inline-block"><?= $nama_user ?></div>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right">
-        <!-- <div class="dropdown-title">Logged in 5 min ago</div> -->
-        <a href="<?= $jenis_user ?>/Profile" class="dropdown-item has-icon">
-            <i class="far fa-user"></i> Profile
-        </a>
-        <a href="features-activities.html" class="dropdown-item has-icon">
-            <i class="fas fa-bolt"></i> Menu
-        </a>
-        <a href="features-settings.html" class="dropdown-item has-icon">
-            <i class="fas fa-cog"></i> Menu
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="/logUserOut" class="dropdown-item has-icon text-danger">
-            <i class="fas fa-sign-out-alt"></i> Logout
-        </a>
-    </div>
-</li>
+                $data[$count]['c5'] = '
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <div class="d-sm-none d-lg-inline-block">' . $dataC5[$i]['katalog'] . '</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                            <a href="features-activities.html" class="dropdown-item has-icon">
+                                <i class="fas fa-bolt"></i> Menu
+                            </a>
+                            <a href="features-settings.html" class="dropdown-item has-icon">
+                                <i class="fas fa-cog"></i> Menu
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
+                    <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                            
+                        </div>
+                    </li>
                 ';
             }
             if (empty($dataC6[$i]['katalog'])) {
