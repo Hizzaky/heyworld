@@ -38,7 +38,7 @@
                 </ul>
             </nav>
             <!-- sidebar -->
-            <?= $this->include('komponen/sidebar/default'); ?>
+            <?= $this->include('komponen/sidebar/'.lcfirst($jenis_user)); ?>
 
             <!-- Main Content -->
             <div class="main-content">
