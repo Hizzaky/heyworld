@@ -16,6 +16,18 @@ class AddKataKerjaModel extends Model
         ];
         return $data;
     }
+    public function rules_katalog(){
+        $rules = [
+            'katalog' => [
+                'rules' => 'required',
+                'label' => 'Katalog',
+                'errors' => [
+                    'required' => 'Input Kata Kerja dengan benar!'
+                ]
+            ]
+        ];
+        return $rules;
+    }
     public function dataExplode($data)
     {
         // $count=count($data);
