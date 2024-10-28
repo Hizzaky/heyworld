@@ -56,7 +56,7 @@ class CustomModel
     function selectDist($tbl, $field)
     {
         $builder = $this->db->table($tbl);
-        $builder->distinct($field);
+        $builder->distinct('kode');
         $data=$builder->get()->getResultArray();
 
         return $data;
