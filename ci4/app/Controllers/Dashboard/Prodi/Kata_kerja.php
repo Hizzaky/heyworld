@@ -54,16 +54,7 @@ class Kata_kerja extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
 
         $data['taxbloom'] = $model->dataTaxbloom();
-        // $data['taxbloom'] = [
-        //     '0'=>['1', '', '1'],
-        //     'c2'=>'ini c2',
-        //     'c3'=>'ini c3',
-        //     'c4'=>'',
-        //     'c5'=>'ini c5',
-        //     'c6'=>'ini c6'
-        // ];
-
-
+        
         $table->setTemplate($model->templateTbl());
 
         // $dataTbl = $modelTbl->findAll();
@@ -99,15 +90,15 @@ class Kata_kerja extends BaseController
         $dataInsert['kode']=$dataTbl['kode'];
         $dataInsert['katalog']=$dataTbl['katalog'];
 
-        $modelDel->save($dataInsert);
-        if($modelDel){
-            echo 'sukses';
-        }else{
-            echo 'fail';
-        }
+        // $modelDel->save($dataInsert);
+        // if($modelDel){
+        //     echo 'sukses';
+        // }else{
+        //     echo 'fail';
+        // }
 
 
-        $this->pre($dataTbl);
+        // $this->pre($dataTbl);
         $this->pre($dataInsert);
 
 
