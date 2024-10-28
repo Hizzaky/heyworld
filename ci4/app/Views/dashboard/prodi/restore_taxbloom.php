@@ -32,7 +32,7 @@
 
                 <?= $table->generate($taxbloom) ?>
 
-                asdasd
+                <?= $alert ?>
 
             </div>
         </div>
