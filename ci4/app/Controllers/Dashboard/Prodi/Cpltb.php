@@ -126,7 +126,7 @@ class cpltb extends BaseController
 
 
         $template = [
-            'table_open' => '<table class="table table-striped table-md" border="0" cellpadding="4" cellspacing="0">',
+            'table_open' => '<table class="table table-responsive table-striped table-md" border="0" cellpadding="4" cellspacing="0">',
 
             'thead_open' => '<thead>',
             'thead_close' => '</thead>',
