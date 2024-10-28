@@ -80,7 +80,7 @@ class Kata_kerja extends BaseController
 
         $table->setTemplate($model->templateTbl());
         // $table->setHeading(['#', 'Kode', 'Kata Kerja', 'Aksi']);
-        $table->setHeading(['ID', 'Kode', 'Kata Kerja', 'Waktu Dihapus','aksi']);
+        $table->setHeading(['#', 'Kode', 'Kata Kerja', 'Waktu Dihapus','aksi']);
 
         $data['table'] = $table;
 
