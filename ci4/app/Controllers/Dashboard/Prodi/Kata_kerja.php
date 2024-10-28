@@ -8,7 +8,7 @@ use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
 use App\Models\CustomModel;
 
 
-class cpltb extends BaseController
+class Kata_kerja extends BaseController
 {
     public function index()
     {
@@ -52,17 +52,22 @@ class cpltb extends BaseController
             return redirect()->to('/');
         }
         // 
+        $table = new \CodeIgniter\View\Table();
+
         $model = new Prodi();
         $modelTbl = new TaxbloomModel();
+        $db = db_connect();
+        $modelCustom = new CustomModel($db);
         $data = $this->arData($model->title(), $sesi->get('login'));
-        $data['side'] = '2';
 
-        // if(request()->getMethod()=='post'){
-        //     $rule=$model->rules();
-        // }
+        $data['taxbloom'] = $model->dataTaxbloom();
 
+        $table->setTemplate($model->templateTbl());
 
-
+        // $dataTbl = $modelTbl->findAll();
+        $table->setHeading(['#', 'C2', 'C3', 'C4', 'C5', 'C6']);
+        // $data['dataTbl'] = $dataTbl;
+        $data['table'] = $table;
 
         return view('dashboard/prodi/taxbloom', $data);
 

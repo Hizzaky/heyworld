@@ -84,9 +84,9 @@ $routes->group('Prodi', function ($routes) {
     $routes->add('Profile', 'Dashboard\Prodi\Profile::index');
     $routes->add('Update-nama', 'Dashboard\Prodi\Profile::update_nama', ['as' => 'prodi-update-nama']);
     $routes->add('Update-password', 'Dashboard\Prodi\Profile::update_password', ['as' => 'prodi-update-password']);
-    $routes->add('Capaian', 'Dashboard\Prodi\Cpltb::capaian', ['as' => 'prodi-capaian']);
-    // $routes->add('Taxonomi-bloom', 'Dashboard\Prodi\Cpltb::taxbloom', ['as' => 'prodi-taxbloom']);
-    $routes->add('Save-taxbloom', 'Dashboard\Prodi\Cpltb::save_taxbloom', ['as' => 'prodi-save-taxbloom']);
-    $routes->add('Taxonomi-bloom', 'Dashboard\Prodi\Cpltb::tbl_taxbloom', ['as' => 'prodi-tbl-taxbloom']);
+    $routes->add('Capaian', 'Dashboard\Prodi\Kata_kerja::capaian', ['as' => 'prodi-capaian']);
+    $routes->add('Taxonomi-bloom', 'Dashboard\Prodi\Kata_kerja::taxbloom', ['as' => 'prodi-taxbloom']);
+    $routes->add('Save-taxbloom', 'Dashboard\Prodi\Kata_kerja::save_taxbloom', ['as' => 'prodi-save-taxbloom']);
+    // $routes->add('Taxonomi-bloom', 'Dashboard\Prodi\Kata_kerja::tbl_taxbloom', ['as' => 'prodi-tbl-taxbloom']);
 
 });
