@@ -4,6 +4,7 @@ namespace App\Controllers\Dashboard\Prodi;
 
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Prodi\KataKerjaModel;
+use App\Models\Dashboard\Prodi\RestoreKataKerjaModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomDeletedModel;
 use App\Models\CustomModel;
@@ -50,6 +51,38 @@ class Kata_kerja extends BaseController
         $data['table'] = $table;
 
         return view('dashboard/prodi/taxbloom', $data);
+
+    }
+
+    public function restore_taxbloom()
+    {
+        $sesi = session();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Prodi') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        $table = new \CodeIgniter\View\Table();
+        $model = new RestoreKataKerjaModel();
+        $modelTbl = new TaxbloomModel();
+        $modelDel = new TaxbloomDeletedModel();
+
+        $data = $this->arData($model->title(), $sesi->get('login'));
+
+        // $data['taxbloom'] = $model->dataTaxbloom();
+        $data['taxbloom'] = $modelDel->findAll();
+
+        $table->setTemplate($model->templateTbl());
+        // $table->setHeading(['#', 'Kode', 'Kata Kerja', 'Aksi']);
+        $table->setHeading(['ID', 'Kode', 'Kata Kerja', 'Tgl Dihapus','aksi']);
+
+        $data['table'] = $table;
+
+        return view('dashboard/prodi/restore_taxbloom', $data);
 
     }
     public function delete_kata_kerja($id)
