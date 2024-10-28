@@ -37,7 +37,7 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
                             <div class="col-sm-12 col-md-7">
-                                <select class="form-control selectric" name="kode">
+                                <select class="form-control selectric" name="kode" required>
                                     <?php
                                     $x = 0;
                                     foreach ($kode as $val): ?>
@@ -52,10 +52,10 @@
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata Kerja</label>
                             <div class="col-sm-12 col-md-7">
                                 <input type="text" class="form-control" name="katalog" required>
+                                <div class="invalid-feedback">
+                                    Inputkan kata kerja baru dengan benar!
+                                </div> 
                             </div>
-                            <div class="invalid-feedback">
-                                Inputkan kata kerja baru dengan benar!
-                            </div> 
                         </div>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
