@@ -101,7 +101,7 @@ class Prodi extends Model
             } else {
                 $data[$count]['c5'] = $dataC5[$i]['katalog'].'
 <div class="dropdown-center">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Centered dropdown
   </button>
   <ul class="dropdown-menu">
