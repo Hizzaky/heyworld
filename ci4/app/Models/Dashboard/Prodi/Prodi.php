@@ -103,14 +103,7 @@ class Prodi extends Model
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <div class="d-sm-none d-lg-inline-block">' . $dataC5[$i]['katalog'] . '</div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            
-                            <a href="features-activities.html" class="dropdown-item has-icon">
-                                <i class="fas fa-bolt"></i> Menu
-                            </a>
-                            <a href="features-settings.html" class="dropdown-item has-icon">
-                                <i class="fas fa-cog"></i> Menu
-                            </a>
+                        <div class="dropdown-menu ">
                             <div class="dropdown-divider"></div>
                             <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
                     <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
