@@ -89,14 +89,14 @@ class Prodi extends Model
             if (empty($dataC4[$i]['katalog'])) {
                 $dataC4[$i]['katalog'] = '';
             } else {
-                $data[$count]['c4'] = $dataC4[$i]['katalog'] . '
+                $data[$count]['c4'] = '
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
+  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    '.$dataC4[$i]['katalog'].'
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-pencil-alt"></i</a>
+    <a class="dropdown-item" href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-trash"></i></a>
     <a class="dropdown-item" href="#">Something else here</a>
   </div>
 </div>
@@ -111,8 +111,8 @@ class Prodi extends Model
                         
                         <div class="dropdown-menu " >
                             
-                            <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm "><i class="fas fa-pencil-alt"></i></a>
-                            | <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm "><i class="fas fa-trash"></i></a>
+                            <a href="' . $dataC5[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm "><i class="fas fa-pencil-alt"></i></a>
+                            | <a href="' . $dataC5[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm "><i class="fas fa-trash"></i></a>
                             
                         </div>
                     </button>
