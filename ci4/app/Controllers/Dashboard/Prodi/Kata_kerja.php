@@ -80,7 +80,7 @@ class Kata_kerja extends BaseController
 
         $model = new KataKerjaModel();
         $modelTbl = new TaxbloomModel();
-        $modelDel = new TaxbloomDeletedModel();
+        $modelDelete = new TaxbloomDeletedModel();
         // $db = db_connect();
         // $modelCustom = new CustomModel($db);
         $data = $this->arData($model->title(), $sesi->get('login'));
@@ -90,8 +90,8 @@ class Kata_kerja extends BaseController
         $dataInsert['kode']=$dataTbl['kode'];
         $dataInsert['katalog']=$dataTbl['katalog'];
 
-        $modelDel->save($dataInsert);
-        if($modelDel){
+        $modelDelete->save($dataInsert);
+        if($modelDelete){
             echo 'sukses';
         }else{
             echo 'fail';
