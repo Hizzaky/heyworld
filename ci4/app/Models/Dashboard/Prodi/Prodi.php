@@ -102,7 +102,7 @@ class Prodi extends Model
             $data[$count]['c5']='<span>'.$dataC5[$i]['katalog'].'</span><br><i class="btn fas fa-pencil-ruler" style=""></i>';
 
             $data[$count]['c6']=$dataC6[$i]['katalog'].'<br>
-                <a href="'. $dataC6[$i]['taxbloom_id'].'" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
+                <a href="'. $dataC6[$i]['katalog'].'" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
                 <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>';
             
 
