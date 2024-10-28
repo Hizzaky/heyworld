@@ -56,10 +56,10 @@ class CustomModel
     function selectDist($tbl, $field)
     {
         $builder = $this->db->table($tbl);
-        $builder->select('DISTINCT '.$field);
-        $query = $builder->get();
+        $builder->distinct($field);
+        $builder->get();
 
-        return $query;
+        return $builder;
     }
     
 }
