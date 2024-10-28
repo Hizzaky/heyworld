@@ -86,7 +86,7 @@ class RestoreKataKerjaModel extends Model
                     <a class="btn btn-danger btn-sm " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
                                     class="fas fa-trash"></i></a>
                     <a class="btn btn-danger btn-sm " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
-                                    class="fas fa-trash-undo-alt"></i></a>'
+                                    class="fas fa-undo"></i></a>'
             ];
             $x++;
             $no++;
