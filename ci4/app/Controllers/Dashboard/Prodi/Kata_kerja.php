@@ -63,6 +63,8 @@ class Kata_kerja extends BaseController
         //     'c6'=>'ini c6'
         // ];
 
+        $this->pre($data['taxbloom']);
+
         $table->setTemplate($model->templateTbl());
 
         // $dataTbl = $modelTbl->findAll();
@@ -70,7 +72,7 @@ class Kata_kerja extends BaseController
         // $data['dataTbl'] = $dataTbl;
         $data['table'] = $table;
 
-        return view('dashboard/prodi/taxbloom', $data);
+        // return view('dashboard/prodi/taxbloom', $data);
 
     }
     public function delete_kata_kerja($id)
