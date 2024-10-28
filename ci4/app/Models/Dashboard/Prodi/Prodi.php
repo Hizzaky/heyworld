@@ -91,7 +91,7 @@ class Prodi extends Model
             } else {
                 $data[$count]['c4'] = '
 <div class="dropdown">
-  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     '.$dataC4[$i]['katalog'].'
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
