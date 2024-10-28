@@ -5,6 +5,7 @@ namespace App\Controllers\Dashboard\Prodi;
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Prodi\KataKerjaModel;
 use App\Models\Dashboard\Prodi\RestoreKataKerjaModel;
+use App\Models\Dashboard\Prodi\AddKataKerjaModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomDeletedModel;
 
@@ -46,17 +47,38 @@ class Kata_kerja extends BaseController
 
         $table->setTemplate($model->templateTbl());
         $table->setHeading([
-            '<strong>#</strong>', 
-            '<strong>C2</strong>', 
-            '<strong>C3</strong>', 
-            '<strong>C4</strong>', 
-            '<strong>C5</strong>', 
-            '<strong>C6</strong>']);
+            '<strong>#</strong>',
+            '<strong>C2</strong>',
+            '<strong>C3</strong>',
+            '<strong>C4</strong>',
+            '<strong>C5</strong>',
+            '<strong>C6</strong>'
+        ]);
 
         $data['table'] = $table;
 
         return view('dashboard/prodi/taxbloom', $data);
 
+    }
+
+    public function add_taxbloom()
+    {
+        $sesi = session();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Prodi') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        $model = new AddKataKerjaModel();
+        $modelTbl = new TaxbloomModel();
+
+        $data = $this->arData($model->title(), $sesi->get('login'));
+
+        return view('dashboard/prodi/add_taxbloom', $data);
     }
 
     public function restore_taxbloom()
@@ -83,12 +105,13 @@ class Kata_kerja extends BaseController
         }
 
         $table->setTemplate($model->templateTbl());
-        $table->setHeading([        
-            '<strong>#</strong>', 
-            '<strong>Kode</strong>', 
-            '<strong>Kata Kerja</strong>', 
-            '<strong>Waktu Dihapus</strong>', 
-            '<strong>Aksi</strong>']);
+        $table->setHeading([
+            '<strong>#</strong>',
+            '<strong>Kode</strong>',
+            '<strong>Kata Kerja</strong>',
+            '<strong>Waktu Dihapus</strong>',
+            '<strong>Aksi</strong>'
+        ]);
 
         $data['table'] = $table;
 
