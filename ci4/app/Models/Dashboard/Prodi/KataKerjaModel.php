@@ -96,7 +96,7 @@ class KataKerjaModel extends Model
                 $data[$count]['c2'] = $dataC2[$i]['katalog'];
             }
             if (empty($dataC3[$i]['katalog'])) {
-                $dataC3[$i]['katalog'] = '';
+                $dataC3[$i]['katalog'] = 'asd';
             } else {
                 $data[$count]['c3'] = $dataC3[$i]['katalog'];
             }
