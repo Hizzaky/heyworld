@@ -50,11 +50,11 @@ class Kata_kerja extends BaseController
         $modelTbl = new TaxbloomModel();
         $db = db_connect();
         $modelCustom = new CustomModel($db);
-        
+
         $data = $this->arData($model->title(), $sesi->get('login'));
 
         $data['taxbloom'] = $model->dataTaxbloom();
-        
+
         $table->setTemplate($model->templateTbl());
 
         // $dataTbl = $modelTbl->findAll();
@@ -86,32 +86,27 @@ class Kata_kerja extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         // $data['taxbloom'] = $model->dataTaxbloom();
 
-        $dataTbl=$modelTbl->find($id);
-        $dataInsert['kode']=$dataTbl['kode'];
-        $dataInsert['katalog']=$dataTbl['katalog'];
+        $dataTbl = $modelTbl->find($id);
+        $dataInsert['kode'] = $dataTbl['kode'];
+        $dataInsert['katalog'] = $dataTbl['katalog'];
 
         $modelDel->save($dataInsert);
-        if($modelDel){
+        if ($modelDel) {
             $modelTbl->delete($id);
-            if($modelTbl)
-            {
-
-                echo 'sukses';
-            }else{
-                echo 'fail';
-
+            if ($modelTbl) {
+                $key = 'suksesHapusKataKerja';
+                $msg='Kata kerja berhasil dihapus!';
+            } else {
+                $key='failHapusKataKerja';
+                $msg = 'Kata kerja gagal dihapus!';
             }
-        }else{
+        } else {
+            $key = 'failHapusKataKerja';
+            $msg = 'Kata kerja gagal dihapus!';
         }
-
-
-        // $this->pre($dataTbl);
-        // $this->pre($dataInsert);
-
-        return redirect('prodi-kata-kerja')->with('sukses','Kata kerja berhasil dihapus!');
-
+        return redirect('prodi-kata-kerja')->with($key, $msg);
     }
-    
+
 
     public function save_taxbloom()
     {
@@ -163,11 +158,11 @@ class Kata_kerja extends BaseController
 
         $model = new KataKerjaModel();
         $modelTbl = new TaxbloomModel();
-        $db=db_connect();
+        $db = db_connect();
         $modelCustom = new CustomModel($db);
         $data = $this->arData($model->title(), $sesi->get('login'));
 
-        $data['taxbloom']=$model->dataTaxbloom();
+        $data['taxbloom'] = $model->dataTaxbloom();
 
 
         $template = [
