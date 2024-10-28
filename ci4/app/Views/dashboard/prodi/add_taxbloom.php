@@ -54,17 +54,12 @@
                                 <input type="text" class="form-control" name="katalog" required>
                                 <div class="invalid-feedback">
                                     Inputkan kata kerja baru dengan benar!
-                                </div> 
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="form-group row mb-4"> -->
-                            <div class="col-sm-12 col-md-7 text-right">
-                                <button class="btn btn-primary">Simpan</button>
-                            </div>
-                        <!-- </div> -->
                         <div class="card-footer text-right">
-                        <button class="btn btn-success">Update Password</button>
-                    </div>
+                            <button class="btn btn-primary">Simpan</button>
+                        </div>
                     </form>
                 </div>
             </div>
