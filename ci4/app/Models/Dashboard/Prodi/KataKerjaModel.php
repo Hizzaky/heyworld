@@ -93,12 +93,13 @@ class KataKerjaModel extends Model
             if (isset($dataC2[$i]['katalog'])) {
                 $data[$count]['c2'] = $dataC2[$i]['katalog'];
             } else {
-                $dataC2[$i]['katalog'] = '';
+                $data[$count]['c2'] = '';
+
             }
             if (isset($dataC3[$i]['katalog'])) {
                 $data[$count]['c3'] = $dataC3[$i]['katalog'];
             } else {
-                $dataC3[$i]['katalog'] = '';
+                $data[$count]['c3'] = '';
             }
             if (isset($dataC4[$i]['katalog'])) {
                 $data[$count]['c4'] = '
@@ -113,7 +114,7 @@ class KataKerjaModel extends Model
 </div>
                 ';
             } else {
-                $dataC4[$i]['katalog'] = '';
+                $data[$count]['c4'] = '';
             }
             if (isset($dataC5[$i]['katalog'])) {
                 $data[$count]['c5'] = '
@@ -129,14 +130,14 @@ class KataKerjaModel extends Model
                     </button>
                 '; 
             } else { 
-                $dataC5[$i]['katalog'] = '';
+                $data[$count]['c5'] = '';
             }
             if (isset($dataC6[$i]['katalog'])) {
                 $data[$count]['c6'] = $dataC6[$i]['katalog'] . '<br>
                     <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
                     <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>';
                 } else {
-                $dataC6[$i]['katalog'] = '';
+                $data[$count]['c6'] = '';
             }
 
 
