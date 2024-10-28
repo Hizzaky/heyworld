@@ -3,6 +3,7 @@
 namespace App\Controllers\Dashboard\Prodi;
 
 use App\Controllers\BaseController;
+use App\Models\CustomModel;
 use App\Models\Dashboard\Prodi\KataKerjaModel;
 use App\Models\Dashboard\Prodi\RestoreKataKerjaModel;
 use App\Models\Dashboard\Prodi\AddKataKerjaModel;
@@ -73,12 +74,16 @@ class Kata_kerja extends BaseController
             return redirect()->to('/');
         }
         // 
+        $db=db_connect();
+        $modelCustom = new CustomModel($db);
         $model = new AddKataKerjaModel();
         $modelTbl = new TaxbloomModel();
 
-        $data = $this->arData($model->title(), $sesi->get('login'));
+        $this->pre($modelCustom);
 
-        return view('dashboard/prodi/add_taxbloom', $data);
+        // $data = $this->arData($model->title(), $sesi->get('login'));
+
+        // return view('dashboard/prodi/add_taxbloom', $data);
     }
 
     public function restore_taxbloom()

@@ -9,8 +9,8 @@
         <!-- Notif -->
         <?php
         $dataSesi = session();
-        $sukses = $dataSesi->getFlashdata('suksesRestoreKataKerja');
-        $fail = $dataSesi->getFlashdata('failRestoreKataKerja');
+        $sukses = $dataSesi->getFlashdata('suksesAddKataKerja');
+        $fail = $dataSesi->getFlashdata('failAddKataKerja');
 
         if (isset($sukses)): ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">

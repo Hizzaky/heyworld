@@ -50,7 +50,16 @@ class CustomModel
     {
         $builder = $this->db->table($tbl);
         $builder->insertBatch($data);
+        
+    }
+    
+    function selectDist($tbl, $field)
+    {
+        $builder = $this->db->table($tbl);
+        $builder->select('DISTINCT '.$field);
+        $query = $builder->get();
 
+        return $query;
     }
     
 }
