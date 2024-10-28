@@ -74,13 +74,13 @@ class Kata_kerja extends BaseController
             return redirect()->to('/');
         }
         // 
-        $db=db_connect();
+        $db = db_connect();
         $modelCustom = new CustomModel($db);
         $model = new AddKataKerjaModel();
         $modelTbl = new TaxbloomModel();
-        
+
         $data = $this->arData($model->title(), $sesi->get('login'));
-        $data['kode']=$modelCustom->selectDist('t_taxbloom','kode');
+        $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
 
         if (request()->getMethod() == 'post') {
             $rules = $model->rules_katalog();
@@ -89,32 +89,31 @@ class Kata_kerja extends BaseController
 
                 // if (password_verify($_POST['oldPassword'], $getData['password'])) {
 
-                    $dataTbl = [
-                        'kode' => $_POST['kode'],
-                        'katalog' => $_POST['katalog']
-                    ];
+                $dataTbl = [
+                    'kode' => $_POST['kode'],
+                    'katalog' => $_POST['katalog']
+                ];
 
-                    $modelTbl->save($dataTbl);
+                $modelTbl->save($dataTbl);
 
-                    if ($modelTbl) {
-                        $sesi->setFlashdata('suksesAddKataKerja','Kata kerja baru berhasil ditambakan!');
-                        // $sesi->setTempdata('sukses', 'Update Berhasil!',3);
-                        $getData = $modelTbl->find($data['login']['user_id']);
+                if ($modelTbl) {
+                    $info='suksesAddKataKerja';
+                    $msg='Kata kerja baru berhasil ditambakan!';
 
-                        $dataUser = $this->userData($getData, $data['jenis_user']);
-                        $sesi->set('login', $dataUser);
-                        $data['login'] = $sesi->get('login');
-                    } else {
-                        $sesi->setTempdata('fail', 'Update Gagal!', 2);
-                    }
                 } else {
-                    $sesi->setTempdata('fail', 'Update Gagal, Password Terkini Tidak Sesuai!', 2);
+                    $info = 'failAddKataKerja';
+                    $msg = 'Kata kerja baru gagal ditambakan!';
                 }
-
             } else {
-                $data['validasi'] = $this->validator;
+                $info = 'failAddKataKerja';
+                $msg = 'Kata kerja baru gagal ditambakan!';
             }
+
+        } else {
+            $data['validasi'] = $this->validator;
         }
+
+        $sesi->setFlashdata($info, $msg);
 
         return view('dashboard/prodi/add_taxbloom', $data);
     }
