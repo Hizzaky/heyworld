@@ -100,7 +100,7 @@ class Prodi extends Model
                 $dataC5[$i]['katalog'] = '';
             } else {
                 $data[$count]['c5'] = '
-                    <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                    <button class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <div class="d-sm-none d-lg-inline-block">' . $dataC5[$i]['katalog'] . '</div>
                         </a>
                         <div class="dropdown-menu ">
@@ -109,7 +109,7 @@ class Prodi extends Model
                     <a href="' . $dataC6[$i]['taxbloom_id'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                             
                         </div>
-                    </li>
+                    </button>
                 ';
             }
             if (empty($dataC6[$i]['katalog'])) {
