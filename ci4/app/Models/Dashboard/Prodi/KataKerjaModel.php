@@ -37,7 +37,7 @@ class KataKerjaModel extends Model
 
             'heading_row_start' => '<tr>',
             'heading_row_end' => '</tr>',
-            'heading_cell_start' => '<th>',
+            'heading_cell_start' => '<th style="font-weight: bold;">',
             'heading_cell_end' => '</th>',
 
             'tfoot_open' => '<tfoot>',
