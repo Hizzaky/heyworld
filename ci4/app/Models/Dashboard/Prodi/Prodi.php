@@ -95,8 +95,8 @@ class Prodi extends Model
     '.$dataC4[$i]['katalog'].'
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:1px">
-    <a class="btn btn-warning btn-sm dropdown-item" href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-pencil-alt"></i> </a>
-    <a class="btn btn-danger btn-sm dropdown-item" href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-trash"></i></a>
+    <a class="btn btn-warning btn-sm " href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-pencil-alt"></i> </a>
+    <a class="btn btn-danger btn-sm " href="' . $dataC4[$i]['taxbloom_id'] . '"><i class="fas fa-trash"></i></a>
   </div>
 </div>
                 ';
