@@ -76,7 +76,7 @@ class Kata_kerja extends BaseController
         $data['taxbloom'] = $model->dataTaxbloom();
         // $data['taxbloom'] = $modelDel->findAll();
 
-        $this->pre($data['taxbloom']);
+        // $this->pre($data['taxbloom']);
 
         $table->setTemplate($model->templateTbl());
         // $table->setHeading(['#', 'Kode', 'Kata Kerja', 'Aksi']);
