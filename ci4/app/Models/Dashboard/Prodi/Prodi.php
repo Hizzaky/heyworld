@@ -110,7 +110,7 @@ class Prodi extends Model
                             
                         </div>
                     </button>
-                ';
+                '; 
             }
             if (empty($dataC6[$i]['katalog'])) {
                 $dataC6[$i]['katalog'] = '';
