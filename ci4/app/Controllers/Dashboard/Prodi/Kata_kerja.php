@@ -54,8 +54,8 @@ class Kata_kerja extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
 
         // $data['taxbloom'] = $model->dataTaxbloom();
-        $data['taxbloom'] = [0][
-            'no'=>'1',
+        $data['taxbloom'] = [
+            '0'=>['1', '1', '1'],
             'c2'=>'ini c2',
             'c3'=>'ini c3',
             'c4'=>'',
