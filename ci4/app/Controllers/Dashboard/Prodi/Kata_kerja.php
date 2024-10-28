@@ -27,20 +27,11 @@ class Kata_kerja extends BaseController
 
         // return view('dashboard/prodi/home', $data);
 
-        return redirect('prodi-taxbloom');
+        return redirect('prodi-kata-kerja');
 
     }
-    public function capaian()
-    {
-        $model = new Prodi();
-        $sesi = session();
-        $data = $this->arData($model->title(), $sesi->get('login'));
-        $data['side'] = '1';
 
-        return view('dashboard/prodi/capaian', $data);
-
-    }
-    public function taxbloom()
+    public function kata_kerja()
     {
         $sesi = session();
         $ver = $sesi->get('login');
@@ -72,6 +63,17 @@ class Kata_kerja extends BaseController
         return view('dashboard/prodi/taxbloom', $data);
 
     }
+    public function capaian()
+    {
+        $model = new Prodi();
+        $sesi = session();
+        $data = $this->arData($model->title(), $sesi->get('login'));
+        $data['side'] = '1';
+
+        return view('dashboard/prodi/capaian', $data);
+
+    }
+    
 
     public function save_taxbloom()
     {

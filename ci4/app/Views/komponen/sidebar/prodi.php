@@ -20,7 +20,7 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Taxonomi Bloom</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="/Prodi/Taxonomi-bloom">Index Kata Kerja</a></li>
+                    <li><a class="nav-link" href="/Prodi/Kata-kerja">Index Kata Kerja</a></li>
                     <li><a class="nav-link" href="layout-transparent.html">Penambahan Kata Kerja</a></li>
                 </ul>
             </li>
