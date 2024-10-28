@@ -94,7 +94,8 @@ class Prodi extends Model
             }
             
             $data[$count]['no']=$no;
-            $data[$count]['c2']='<button class="btn btn-outline-secondary" style="width:100%"><i class="fa-duotone fa-solid fa-pen-to-square"></i>'.$dataC2[$i]['katalog'].'</button>';
+            // $data[$count]['c2']='<button class="btn btn-outline-secondary" style="width:100%"><i class="fa-duotone fa-solid fa-pen-to-square"></i>'.$dataC2[$i]['katalog'].'</button>';
+            $data[$count]['c2']='<i class="fa-duotone fa-solid fa-pen-to-square"></i>'.$dataC2[$i]['katalog'];
             $data[$count]['c3']=$dataC3[$i]['katalog'];
             $data[$count]['c4']=$dataC4[$i]['katalog'];
             $data[$count]['c5']=$dataC5[$i]['katalog'];
