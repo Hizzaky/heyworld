@@ -171,7 +171,7 @@ class Kata_kerja extends BaseController
 
         if (isset($info)) {
             $sesi->setFlashdata($info, $msg);
-            return redirect('kata-kerja');
+            return redirect('prodi-kata-kerja');
         }
 
         return view('dashboard/prodi/add_taxbloom', $data);
