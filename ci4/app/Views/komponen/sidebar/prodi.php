@@ -20,7 +20,7 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Taxonomi Bloom</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="/Prodi/Kata-kerja">Index Kata Kerja</a></li>
+                    <li class="active"><a class="nav-link" href="/Prodi/Kata-kerja">Index Kata Kerja</a></li>
                     <li><a class="nav-link" href="/Prodi/Penambahan-kata-kerja">Penambahan Kata Kerja</a></li>
                     <li><a class="nav-link" href="/Prodi/Restore-kata-kerja">Kata Kerja Terhapus</a></li>
                     <li><a class="nav-link" href="#">Menu</a></li>
@@ -28,7 +28,7 @@
             </li>
             <li class=""><a class="nav-link" href="#"><i class="far fa-square"></i>
                     <span>Menu</span></a></li>
-            <li class="active"><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
+            <li ><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
                     <span>Blank Page</span></a></li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
