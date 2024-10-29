@@ -66,11 +66,13 @@ abstract class BaseController extends Controller
     }
     public function arData($title, $data)
     {
-        $titlea = [
+        $dataAr = [
             'nama_user' => $data['nama_user'],
             'jenis_user' => $data['jenis_user']
         ]; 
-         $ret=array_push($title,$titlea);
+        
+        $ret=array_merge($title,$dataAr);
+
         return $ret;
     }
     protected function userData($data, $jenis_user)
