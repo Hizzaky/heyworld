@@ -33,7 +33,7 @@ class Home extends BaseController
         }
         return redirect($ret);
     }
-    
+
     public function dosen()
     {
         $sesi = session();
@@ -46,11 +46,11 @@ class Home extends BaseController
         helper(['form']);
         $jenis_user = $sesi->get('jenis_user');
         $data = $model->arDataLogin($jenis_user);
-        $data['dataTbl']=$model->getData($jenis_user);
+        $data['dataTbl'] = $model->getData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
-            $rules = $model->ruleDosen();
+            $rules = $model->ruleProdi();
 
             if ($this->validate($rules)) {
                 $data['post'] = $_POST;
@@ -64,7 +64,7 @@ class Home extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('login/fakultas', $data);
+        return view('login/dosen', $data);
     }
     public function prodi()
     {

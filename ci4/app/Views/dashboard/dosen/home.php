@@ -1,11 +1,14 @@
-<?= $this->extend('layout/dosen/main') ?>
+<?= $this->extend('layout/default/main') ?>
 <?= $this->section('konten') ?>
-<div class="mrg-home">
-    <!-- <div class="row"> -->
-        <!-- <div class="col-12 col-sm-9"> -->
-            <h1><?= $konten ?></h1>
 
-        <!-- </div> -->
-    <!-- </div> -->
-</div>
+<section class="section">
+    <div class="section-header">
+        <h1><?= $header_title ?></h1>
+    </div>
+    <div class="section-body">
+
+
+    </div>
+</section>
+
 <?= $this->endSection() ?>
