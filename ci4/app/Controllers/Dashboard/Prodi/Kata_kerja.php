@@ -146,7 +146,7 @@ class Kata_kerja extends BaseController
 
 
         $this->pre($newDataTbl);
-
+echo 'tes';
         // if (request()->getMethod() == 'post') {
             
         //         $dataTbl = [
