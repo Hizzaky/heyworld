@@ -10,7 +10,9 @@ class Fakultas extends Model
     {
         $data = [
             'meta_title' => 'Welcome Fakultas UMMAT',
-            'header_title' => 'Homepage Fakultas'
+            'header_title' => 'Homepage Fakultas',
+            'sideDashboard' => 'active',
+            'menuDashboard' => 'active'
         ];
         return $data;
     } 
