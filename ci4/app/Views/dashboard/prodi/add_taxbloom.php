@@ -41,7 +41,7 @@
                                     <?php
                                     $x = 0;
                                     foreach ($kode as $val): ?>
-                                        <option <?= $selected ?> value="<?= $val['taxonomi_id'] ?>"><?= $val['kode'] ?></option>
+                                        <option <?= $selected ?> value="<?= $val['kode'] ?>"><?= $val['kode'] ?></option>
                                         <?php
                                         $x++;
                                     endforeach; ?>
