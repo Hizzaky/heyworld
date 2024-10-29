@@ -66,7 +66,7 @@ abstract class BaseController extends Controller
     }
     public function arData($title, $data)
     {
-        $title = [
+        $titlea = [
             'nama_user' => $data['nama_user'],
             'jenis_user' => $data['jenis_user']
         ];
