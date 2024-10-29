@@ -42,7 +42,7 @@
                                     $x = 0;
                                     foreach ($kode as $val): ?>
                                         <option <?= $selected ?> value="<?= $val['kode'] ?>"><?= $val['kode'] ?></option>
-                                        <?php
+                                        <?php 
                                         $x++;
                                     endforeach; ?>
                                 </select>
