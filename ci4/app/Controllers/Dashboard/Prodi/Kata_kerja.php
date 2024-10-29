@@ -82,6 +82,7 @@ class Kata_kerja extends BaseController
 
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
+        $data['selected']='';
 
         // $this->pre($data['kode']);
 
@@ -142,6 +143,7 @@ class Kata_kerja extends BaseController
             $newDataTbl[$key]=$val;
         }
         $data['selected']=$newDataTbl['kode'];
+        $data['disabled']='disabled';
         $data['taxbloom']=$newDataTbl;
 
 
