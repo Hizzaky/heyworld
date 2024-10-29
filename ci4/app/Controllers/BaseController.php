@@ -71,7 +71,7 @@ abstract class BaseController extends Controller
             'jenis_user' => $data['jenis_user']
         ];
          
-        return $data;
+        return $title;
     }
     protected function userData($data, $jenis_user)
     {
