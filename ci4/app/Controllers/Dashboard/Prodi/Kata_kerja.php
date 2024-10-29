@@ -135,18 +135,20 @@ class Kata_kerja extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
         $dataTbl = $modelTbl->find($id);
-        $data['selected']='';
         $newDataTbl=[];
-
+        
         foreach($dataTbl as $key=>$val)
         {
             if($key=='created_at' OR $key=='updated_at') continue;
             $newDataTbl[$key]=$val;
         }
+        $data['selected']=$newDataTbl['kode'];
+        $data['taxbloom']=$newDataTbl;
 
 
-        $this->pre($newDataTbl);
-echo 'tes';
+
+        // $this->pre($newDataTbl);
+
         // if (request()->getMethod() == 'post') {
             
         //         $dataTbl = [
@@ -173,7 +175,7 @@ echo 'tes';
         //     $sesi->setFlashdata($info, $msg);
         // }
 
-        // return view('dashboard/prodi/add_taxbloom', $data);
+        return view('dashboard/prodi/add_taxbloom', $data);
     }
 
     public function restore_taxbloom()
