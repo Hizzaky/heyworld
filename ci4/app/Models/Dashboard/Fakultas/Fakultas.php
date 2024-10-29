@@ -9,8 +9,8 @@ class Fakultas extends Model
     public function title()
     {
         $data = [
-            'meta' => 'Welcome Fakultas UMMAT',
-            'header' => 'Homepage Fakultas'
+            'meta_title' => 'Welcome Fakultas UMMAT',
+            'header_title' => 'Homepage Fakultas'
         ];
         return $data;
     }

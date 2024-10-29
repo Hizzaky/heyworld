@@ -9,8 +9,8 @@ class ProfileModel extends Model
     public function title()
     {
         $title = [
-            'meta' => 'Profile Fakultas UMMAT',
-            'header' => 'Profile'
+            'meta_title' => 'Profile Fakultas UMMAT',
+            'header_title' => 'Profile'
         ];
         return $title;
     }
