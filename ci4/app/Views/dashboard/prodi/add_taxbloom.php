@@ -41,7 +41,7 @@
                                     <?php
                                     $x = 0;
                                     foreach ($kode as $val): ?>
-                                        <option value="<?= $val['kode'] ?>"><?= $val['kode'] ?></option>
+                                        <option <?= $x=$val['kode']=='C4' ? 'selected' : '' ?> value="<?= $val['kode'] ?>"><?= $val['kode'] ?></option>
                                         <?php
                                         $x++;
                                     endforeach; ?>
@@ -51,7 +51,7 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata Kerja</label>
                             <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="katalog" required>
+                                <input type="text" class="form-control" name="katalog" required value="tes">
                                 <div class="invalid-feedback">
                                     Inputkan kata kerja baru dengan benar!
                                 </div>
