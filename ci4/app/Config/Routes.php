@@ -92,7 +92,6 @@ $routes->group('Prodi', function ($routes) {
 
     $routes->add('hapus-index/(:any)', 'Dashboard\Prodi\Kata_kerja::delete_kata_kerja/$1');
     $routes->add('restore-index/(:any)', 'Dashboard\Prodi\Kata_kerja::restore_kata_kerja/$1');
-    $routes->add('edit-index', 'Dashboard\Prodi\Kata_kerja::edit_kata_kerja');
     $routes->add('delete-permanen/(:any)', 'Dashboard\Prodi\Kata_kerja::permanen_kata_kerja/$1');
 
     // $routes->add('Save-taxbloom', 'Dashboard\Prodi\Kata_kerja::save_taxbloom', ['as' => 'prodi-save-taxbloom']);

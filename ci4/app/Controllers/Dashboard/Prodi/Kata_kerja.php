@@ -150,33 +150,28 @@ class Kata_kerja extends BaseController
         $data['taxbloom']=$newDataTbl;
 
 
-
-
-        // if (request()->getMethod() == 'post') {
+        if (request()->getMethod() == 'post') {
             
-        //         $dataTbl = [
-        //             'kode' => $_POST['kode'],
-        //             'katalog' => $_POST['katalog']
-        //         ];
+                $dataInsert = [
+                    'taxbloom_id' => $id,
+                    'katalog' => $_POST['katalog']
+                ];
 
-        //         $modelTbl->save($dataTbl);
+                $modelTbl->save($dataInsert);
 
-        //         if ($modelTbl) {
-        //             $info = 'suksesAddKataKerja';
-        //             $msg = 'Kata kerja baru berhasil ditambakan!';
+                if ($modelTbl) {
+                    $info = 'suksesEditKataKerja';
+                    $msg = 'Kata kerja baru berhasil ditambakan!';
 
-        //         } else {
-        //             $info = 'failAddKataKerja';
-        //             $msg = 'Kata kerja baru gagal ditambakan!';
-        //         }
-                
-        // } else {
-        //     $data['validasi'] = $this->validator;
-        // }
-
-        // if (isset($info)) {
-        //     $sesi->setFlashdata($info, $msg);
-        // }
+                } else {
+                    $info = 'failEditKataKerja';
+                    $msg = 'Kata kerja baru gagal ditambakan!';
+                }
+        }
+        
+        if (isset($info)) {
+            $sesi->setFlashdata($info, $msg);
+        }
 
         return view('dashboard/prodi/add_taxbloom', $data);
     }
@@ -289,42 +284,7 @@ class Kata_kerja extends BaseController
         }
         return redirect('prodi-restore-kata-kerja')->with($key, $msg);
     }
-    public function edit_kata_kerja()
-    {
-        $sesi = session();
-        $ver = $sesi->get('login');
-        if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Prodi') {
-                return redirect()->back();
-            }
-        } else {
-            return redirect()->to('/');
-        }
-        // 
-        // $modelTbl = new TaxbloomModel();
-        // $modelDel = new TaxbloomDeletedModel();
-
-        // $dataDel = $modelDel->find($id);
-        // $dataRestore['kode'] = $dataDel['kode'];
-        // $dataRestore['katalog'] = $dataDel['katalog'];
-
-        $this->pre($_POST);
-        // $modelTbl->save($dataRestore);
-        // if ($modelTbl) {
-        //     $modelDel->delete($id);
-        //     if ($modelDel) {
-        //         $key = 'suksesRestoreKataKerja';
-        //         $msg = 'Kata kerja berhasil dikembalikan!';
-        //     } else {
-        //         $key = 'failRestoreKataKerja';
-        //         $msg = 'Kata kerja gagal dikembalikan!';
-        //     }
-        // } else {
-        //     $key = 'failRestoreKataKerja';
-        //     $msg = 'Kata kerja gagal dikembalikan!';
-        // }
-        // return redirect('prodi-restore-kata-kerja')->with($key, $msg);
-    }
+    
 
     public function permanen_kata_kerja($id)
     {
