@@ -41,7 +41,7 @@
                                     <?php
                                     $x = 0;
                                     foreach ($kode as $val): ?>
-                                        <option <?= $x=$val['kode']==$edit['kode'] ? 'selected' : '' ?> value="<?= $val['kode'] ?>"><?= $val['kode'] ?></option>
+                                        <option <?= $x=$val['kode']==isset($edit) ? 'selected' : '' ?> value="<?= $val['kode'] ?>"><?= $val['kode'] ?></option>
                                         <?php
                                         $x++;
                                     endforeach; ?>
