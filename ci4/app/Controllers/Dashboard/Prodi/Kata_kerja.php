@@ -135,42 +135,43 @@ class Kata_kerja extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login')); 
         // $this->pre($data);
 
-         
+
         $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
         $dataTbl = $modelTbl->find($id);
-        $newDataTbl=[];
-        
-        foreach($dataTbl as $key=>$val)
-        {
-            if($key=='created_at' OR $key=='updated_at') continue;
-            $newDataTbl[$key]=$val;
+        $newDataTbl = [];
+
+        foreach ($dataTbl as $key => $val) {
+            if ($key == 'created_at' or $key == 'updated_at')
+                continue;
+            $newDataTbl[$key] = $val;
         }
-        $data['selected']=$newDataTbl['kode'];
-        $data['disabled']='disabled';
-        $data['taxbloom']=$newDataTbl;
+        $data['selected'] = $newDataTbl['kode'];
+        $data['disabled'] = 'disabled';
+        $data['taxbloom'] = $newDataTbl;
 
 
         if (request()->getMethod() == 'post') {
-            
-                $dataInsert = [
-                    'taxbloom_id' => $id,
-                    'katalog' => $_POST['katalog']
-                ];
 
-                $modelTbl->save($dataInsert);
+            $dataInsert = [
+                'taxbloom_id' => $id,
+                'katalog' => $_POST['katalog']
+            ];
 
-                if ($modelTbl) {
-                    $info = 'suksesEditKataKerja';
-                    $msg = 'Kata kerja baru berhasil ditambakan!';
+            $modelTbl->save($dataInsert);
 
-                } else {
-                    $info = 'failEditKataKerja';
-                    $msg = 'Kata kerja baru gagal ditambakan!';
-                }
+            if ($modelTbl) {
+                $info = 'suksesHapusKataKerja';
+                $msg = 'Update kata kerja berhasil!';
+
+            } else {
+                $info = 'failHapusKataKerja';
+                $msg = 'Update kata kerja gagal!';
+            }
         }
-        
+
         if (isset($info)) {
             $sesi->setFlashdata($info, $msg);
+            return redirect('kata-kerja');
         }
 
         return view('dashboard/prodi/add_taxbloom', $data);
@@ -284,7 +285,43 @@ class Kata_kerja extends BaseController
         }
         return redirect('prodi-restore-kata-kerja')->with($key, $msg);
     }
-    
+    public function edit_kata_kerja($id)
+    {
+        $sesi = session();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Prodi') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        // $modelTbl = new TaxbloomModel();
+        // $modelDel = new TaxbloomDeletedModel();
+
+        // $dataDel = $modelDel->find($id);
+        // $dataRestore['kode'] = $dataDel['kode'];
+        // $dataRestore['katalog'] = $dataDel['katalog'];
+
+        $this->pre($id);
+        $this->pre($_POST);
+        // $modelTbl->save($dataRestore);
+        // if ($modelTbl) {
+        //     $modelDel->delete($id);
+        //     if ($modelDel) {
+        //         $key = 'suksesRestoreKataKerja';
+        //         $msg = 'Kata kerja berhasil dikembalikan!';
+        //     } else {
+        //         $key = 'failRestoreKataKerja';
+        //         $msg = 'Kata kerja gagal dikembalikan!';
+        //     }
+        // } else {
+        //     $key = 'failRestoreKataKerja';
+        //     $msg = 'Kata kerja gagal dikembalikan!';
+        // }
+        // return redirect('prodi-restore-kata-kerja')->with($key, $msg);
+    }
 
     public function permanen_kata_kerja($id)
     {
