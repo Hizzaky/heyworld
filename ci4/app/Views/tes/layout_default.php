@@ -273,7 +273,7 @@
                             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
                                     class="fas fa-columns"></i> <span>Layout</span></a>
                             <ul class="dropdown-menu">
-                                <li class="active"><a class="nav-link" href="layout-default.html">Default Layout</a>
+                                <li ><a class="nav-link" href="layout-default.html">Default Layout</a>
                                 </li>
                                 <li><a class="nav-link" href="layout-transparent.html">Transparent Sidebar</a></li>
                                 <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li>
@@ -286,7 +286,7 @@
                                 <span>Bootstrap</span></a>
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="bootstrap-alert.html">Alert</a></li>
-                                <li><a class="nav-link" href="bootstrap-badge.html">Badge</a></li>
+                                <li class="active"><a class="nav-link" href="bootstrap-badge.html">Badge</a></li>
                                 <li><a class="nav-link" href="bootstrap-breadcrumb.html">Breadcrumb</a></li>
                                 <li><a class="nav-link" href="bootstrap-buttons.html">Buttons</a></li>
                                 <li><a class="nav-link" href="bootstrap-card.html">Card</a></li>
@@ -429,7 +429,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Default Layout 111</h1>
+                        <h1>Default Layout 112</h1>
                         <div class="section-header-breadcrumb">
                             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
                             <div class="breadcrumb-item"><a href="#">Layout</a></div>
