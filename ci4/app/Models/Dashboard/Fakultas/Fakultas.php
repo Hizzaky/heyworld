@@ -13,6 +13,6 @@ class Fakultas extends Model
             'header_title' => 'Homepage Fakultas'
         ];
         return $data;
-    }
+    } 
     
 }
