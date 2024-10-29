@@ -14,7 +14,9 @@ class RestoreKataKerjaModel extends Model
     {
         $data = [
             'meta_title' => 'Restore Kata Kerja Taxonomi Bloom',
-            'header_title' => 'Kata Kerja Taxonomi Bloom'
+            'header_title' => 'Kata Kerja Taxonomi Bloom',
+            'sideTaxbloom' => 'active',
+            'menuDelKataKerja' => 'active'
         ];
         return $data;
     }

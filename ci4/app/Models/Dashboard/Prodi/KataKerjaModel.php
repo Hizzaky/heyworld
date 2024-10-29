@@ -12,7 +12,9 @@ class KataKerjaModel extends Model
     {
         $data = [
             'meta_title' => 'Kata Kerja Taxonomi Bloom',
-            'header_title' => 'Kata Kerja Taxonomi Bloom'
+            'header_title' => 'Kata Kerja Taxonomi Bloom',
+            'sideTaxbloom' => 'active',
+            'menuIndexKataKerja' => 'active'
         ];
         return $data;
     }

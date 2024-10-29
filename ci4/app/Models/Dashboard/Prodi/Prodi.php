@@ -12,7 +12,9 @@ class Prodi extends Model
     {
         $data = [
             'meta_title' => 'Welcome Prodi UMMAT',
-            'header_title' => 'Homepage Prodi'
+            'header_title' => 'Homepage Prodi',
+            'sideDashboard'=>'active',
+            'menuDashboard'=>'active'
         ];
         return $data;
     }
