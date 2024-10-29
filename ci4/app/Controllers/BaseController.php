@@ -105,9 +105,9 @@ abstract class BaseController extends Controller
         return $dataUser;
     }
 
-    public function sidebar(){
-        $data['sidebar'] = 1;
-        $data['sidemenu'] = 1;
+    public function sidebar($sidebar){
+        $data['sidebar'.$sidebar] = 1;
+        $data['sidemenu'.$sidebar] = 1;
         return $data;
     }
     
