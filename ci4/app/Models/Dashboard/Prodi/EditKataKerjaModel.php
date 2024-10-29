@@ -12,7 +12,8 @@ class EditKataKerjaModel extends Model
     {
         $data = [
             'meta' => 'Kata Kerja Taxonomi Bloom',
-            'header' => 'Pengubahan Kata Kerja Taxonomi Bloom'
+            'sub_title' => 'Edit Kata Kerja',
+            'header' => 'Perubahan Kata Kerja Taxonomi Bloom'
         ];
         return $data;
     }
