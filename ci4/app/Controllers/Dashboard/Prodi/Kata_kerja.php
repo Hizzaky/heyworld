@@ -133,10 +133,19 @@ class Kata_kerja extends BaseController
         $modelTbl = new TaxbloomModel();
 
         $data = $this->arData($model->title(), $sesi->get('login'));
-        $data['data'] = $modelTbl->find($id);
-        // $data['selected']='';
+        $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
+        $dataTbl = $modelTbl->find($id);
+        $data['selected']='';
+        $newDataTbl=[];
 
-        $this->pre($data['data']);
+        foreach($dataTbl as $key=>$val)
+        {
+            if($key=='created_at' OR $key=='updated_at') continue;
+            $newDataTbl[$key]=$val;
+        }
+
+
+        $this->pre($newDataTbl);
 
         // if (request()->getMethod() == 'post') {
             
