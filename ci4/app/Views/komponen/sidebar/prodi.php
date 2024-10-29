@@ -8,7 +8,8 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class="<?= $var = isset($sideDashboard) ? 'active' : '' ?>"><a class="nav-link" href="/<?= $jenis_user ?>"><i class="fas fa-home"></i>
+            <li class="<?= $var = isset($sideDashboard) ? 'active' : '' ?>"><a class="nav-link"
+                    href="/<?= $jenis_user ?>"><i class="fas fa-home"></i>
                     <span>Home</span></a></li>
 
             <li class="menu-header">Kata Kerja Operasional</li>
