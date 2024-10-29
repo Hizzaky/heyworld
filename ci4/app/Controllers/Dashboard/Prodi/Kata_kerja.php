@@ -132,7 +132,7 @@ class Kata_kerja extends BaseController
         $model = new EditKataKerjaModel();
         $modelTbl = new TaxbloomModel();
 
-        $data = $this->arData($model->title(), $sesi->get('login'));
+        $data = $this->arData($model->title(), $sesi->get('login')); 
         $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
         $dataTbl = $modelTbl->find($id);
         $newDataTbl=[];
