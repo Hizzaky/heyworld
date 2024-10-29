@@ -37,12 +37,11 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
                             <div class="col-sm-12 col-md-7">
-                                <?php $edit='C3'; ?>
                                 <select class="form-control selectric" name="kode" required <?= $x = isset($edit) ? 'disabled' : '' ?>>
                                     <?php
                                     $x = 0;
                                     foreach ($kode as $val): ?>
-                                        <option <?= $x=$val['kode']==isset($edit) ? 'selected' : '' ?> value="<?= $val['kode'] ?>"><?= $val['kode'] ?></option>
+                                        <option <?= $selected ?> value="<?= $val['kode'] ?>"><?= $val['kode'] ?></option>
                                         <?php
                                         $x++;
                                     endforeach; ?>

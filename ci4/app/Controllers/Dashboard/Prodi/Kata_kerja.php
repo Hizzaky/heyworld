@@ -7,6 +7,7 @@ use App\Models\CustomModel;
 use App\Models\Dashboard\Prodi\KataKerjaModel;
 use App\Models\Dashboard\Prodi\RestoreKataKerjaModel;
 use App\Models\Dashboard\Prodi\AddKataKerjaModel;
+use App\Models\Dashboard\Prodi\EditKataKerjaModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomDeletedModel;
 
@@ -81,6 +82,7 @@ class Kata_kerja extends BaseController
 
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
+        $data['selected']='';
 
         // $this->pre($data['kode']);
 
@@ -111,6 +113,58 @@ class Kata_kerja extends BaseController
         }
 
         return view('dashboard/prodi/add_taxbloom', $data);
+    }
+
+    public function edit_taxbloom($id)
+    {
+        $sesi = session();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Prodi') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        $db = db_connect();
+        $modelCustom = new CustomModel($db);
+        $model = new EditKataKerjaModel();
+        $modelTbl = new TaxbloomModel();
+
+        $data = $this->arData($model->title(), $sesi->get('login'));
+        $data['data'] = $modelTbl->find($id);
+        // $data['selected']='';
+
+        $this->pre($data['data']);
+
+        // if (request()->getMethod() == 'post') {
+            
+        //         $dataTbl = [
+        //             'kode' => $_POST['kode'],
+        //             'katalog' => $_POST['katalog']
+        //         ];
+
+        //         $modelTbl->save($dataTbl);
+
+        //         if ($modelTbl) {
+        //             $info = 'suksesAddKataKerja';
+        //             $msg = 'Kata kerja baru berhasil ditambakan!';
+
+        //         } else {
+        //             $info = 'failAddKataKerja';
+        //             $msg = 'Kata kerja baru gagal ditambakan!';
+        //         }
+                
+        // } else {
+        //     $data['validasi'] = $this->validator;
+        // }
+
+        // if (isset($info)) {
+        //     $sesi->setFlashdata($info, $msg);
+        // }
+
+        // return view('dashboard/prodi/add_taxbloom', $data);
     }
 
     public function restore_taxbloom()
