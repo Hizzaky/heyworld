@@ -136,18 +136,18 @@ class Kata_kerja extends BaseController
         $this->pre($data);
 
          
-        // $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
-        // $dataTbl = $modelTbl->find($id);
-        // $newDataTbl=[];
+        $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
+        $dataTbl = $modelTbl->find($id);
+        $newDataTbl=[];
         
-        // foreach($dataTbl as $key=>$val)
-        // {
-        //     if($key=='created_at' OR $key=='updated_at') continue;
-        //     $newDataTbl[$key]=$val;
-        // }
-        // $data['selected']=$newDataTbl['kode'];
-        // $data['disabled']='disabled';
-        // $data['taxbloom']=$newDataTbl;
+        foreach($dataTbl as $key=>$val)
+        {
+            if($key=='created_at' OR $key=='updated_at') continue;
+            $newDataTbl[$key]=$val;
+        }
+        $data['selected']=$newDataTbl['kode'];
+        $data['disabled']='disabled';
+        $data['taxbloom']=$newDataTbl;
 
 
 
