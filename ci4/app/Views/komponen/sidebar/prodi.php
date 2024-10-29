@@ -8,7 +8,7 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class="/<?= $jenis_user ?>"><a class="nav-link" href="#"><i class="fas fa-home"></i>
+            <li class="/<?= $jenis_user ?>"><a class="nav-link" href="#"><i class="fas fa-laptop-house"></i>
                     <span>Home</span></a></li>
 
             <li class="menu-header">Kata Kerja Operasional</li>
