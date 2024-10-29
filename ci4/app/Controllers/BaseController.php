@@ -69,7 +69,7 @@ abstract class BaseController extends Controller
         $titlea = [
             'nama_user' => $data['nama_user'],
             'jenis_user' => $data['jenis_user']
-        ];
+        ]; 
          
         return $title;
     }
