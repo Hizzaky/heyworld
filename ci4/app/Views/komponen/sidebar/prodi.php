@@ -22,7 +22,6 @@
                             href="/Prodi/Penambahan-kata-kerja">Penambahan Kata Kerja</a></li>
                     <li class="<?= $var = isset($menuDelKataKerja) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/Restore-kata-kerja">Kata Kerja Terhapus</a></li>
-                    <li><a class="nav-link" href="#">Menu</a></li>
                 </ul>
             </li>
 
