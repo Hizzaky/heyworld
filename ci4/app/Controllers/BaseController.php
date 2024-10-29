@@ -66,12 +66,11 @@ abstract class BaseController extends Controller
     }
     public function arData($title, $data)
     {
-        $data = [
-            'meta_title' => $title['meta'],
-            'header_title' => $title['header'],
+        $title = [
             'nama_user' => $data['nama_user'],
             'jenis_user' => $data['jenis_user']
         ];
+        
         return $data;
     }
     protected function userData($data, $jenis_user)

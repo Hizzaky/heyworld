@@ -30,7 +30,7 @@
         <div class="card-body p-0">
             <div class="card">
                 <div class="card-header">
-                    <h4>Kata Kerja Baru</h4>
+                    <h4><?= $sub_title ?></h4>
                 </div>
                 <div class="card-body">
                     <form method="post" class="needs-validation" novalidate>

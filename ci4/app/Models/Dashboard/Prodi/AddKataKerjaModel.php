@@ -11,8 +11,9 @@ class AddKataKerjaModel extends Model
     public function title()
     {
         $data = [
-            'meta' => 'Kata Kerja Taxonomi Bloom',
-            'header' => 'Penambahan Kata Kerja Taxonomi Bloom'
+            'meta_title' => 'Kata Kerja Taxonomi Bloom',
+            'sub_title' => 'Edit Kata Kerja',
+            'header_title' => 'Penambahan Kata Kerja Taxonomi Bloom'
         ];
         return $data;
     }
