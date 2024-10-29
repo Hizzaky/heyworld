@@ -9,7 +9,7 @@ use App\Models\CustomModel;
 class EditKataKerjaModel extends Model
 {
     public function title()
-    { 
+    {
         $data = [
             'meta_title' => 'Kata Kerja Taxonomi Bloom',
             'sub_title' => 'Edit Kata Kerja',
