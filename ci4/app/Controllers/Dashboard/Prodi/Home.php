@@ -22,7 +22,6 @@ class Home extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data=array_merge($data,$this->sidebar('dashboard'));
 
-        $this->pre($data);
         return view('dashboard/prodi/home',$data);
     }
 
