@@ -94,7 +94,8 @@ class KataKerjaModel extends Model
 
 
             if (isset($dataC2[$i]['katalog'])) {
-                $dir='hapus-index/' . $dataC2[$i]['taxbloom_id'];
+                // $dir='hapus-index/' . $dataC2[$i]['taxbloom_id'];
+                $dir=$dataC2[$i]['taxbloom_id'];
                 $data[$count]['c2'] = '
                     <div class="dropdown">
                         <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
