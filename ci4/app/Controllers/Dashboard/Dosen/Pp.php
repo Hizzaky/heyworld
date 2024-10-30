@@ -49,7 +49,7 @@ class Pp extends BaseController
         $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
         $data['selected'] = '';
 
-        // $this->pre($data['kode']);
+        $this->pre($data);
 
         // if (request()->getMethod() == 'post') {
 
