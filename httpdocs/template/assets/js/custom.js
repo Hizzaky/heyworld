@@ -9,5 +9,5 @@
 
 
 function tesDelete() {
-    return window.location.href = "/Tes/get?id=1";
+    window.location.href = "/Tes/get?id=1";
 }
