@@ -27,7 +27,7 @@ class Tes extends BaseController
         return view('tes/modal',$data); 
     }
 
-    public function tes(){
+    public function get(){
         $id=$_GET['id'];
 
         echo $id;
