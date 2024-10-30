@@ -79,9 +79,16 @@
         </div>
     </div>
 </form>
+<script>
+    function fungsi(){
+        window.location.href = "http://www.w3schools.com";
+
+    }
+</script>
 <!-- End Modal Add Product-->
         <!--  -->
     </div>
+    
 </section>
 
 <?= $this->endSection() ?>
