@@ -11,8 +11,7 @@ class Profile extends BaseController
 {
     public function index()
     {
-        $sesi = session();
-        $ver = $sesi->get('login');
+        $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
             if ($ver['jenis_user'] != 'Fakultas') {
                 return redirect()->back();
@@ -52,14 +51,14 @@ class Profile extends BaseController
                 $modelTbl->save($_POST);
 
                 if ($modelTbl) {
-                    $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+                    $sesi->setTempdata('sukses', 'Update Berhasil!', 2);
                     $getData = $modelTbl->find($data['login']['user_id']);
 
                     $dataUser = $this->userData($getData, $data['jenis_user']);
                     $sesi->set('login', $dataUser);
                     $data['login'] = $sesi->get('login');
                 } else {
-                    $sesi->setTempdata('fail', 'Update Gagal!',2);
+                    $sesi->setTempdata('fail', 'Update Gagal!', 2);
                 }
             } else {
                 $data['validasi'] = $this->validator;
@@ -86,7 +85,7 @@ class Profile extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         $data['side'] = '2';
-        $data['konten'] = 'Password'; 
+        $data['konten'] = 'Password';
 
         if (request()->getMethod() == 'post') {
             $rules = $model->rules_pass();
@@ -103,17 +102,17 @@ class Profile extends BaseController
                     $modelTbl->save($dataTbl);
 
                     if ($modelTbl) {
-                        $sesi->setTempdata('sukses', 'Update Berhasil!',2);
+                        $sesi->setTempdata('sukses', 'Update Berhasil!', 2);
                         $getData = $modelTbl->find($data['login']['user_id']);
 
                         $dataUser = $this->userData($getData, $data['jenis_user']);
                         $sesi->set('login', $dataUser);
                         $data['login'] = $sesi->get('login');
                     } else {
-                        $sesi->setTempdata('fail', 'Update Gagal!',2);
+                        $sesi->setTempdata('fail', 'Update Gagal!', 2);
                     }
                 } else {
-                    $sesi->setTempdata('fail', 'Update Gagal, Password Terkini Tidak Sesuai!',2);
+                    $sesi->setTempdata('fail', 'Update Gagal, Password Terkini Tidak Sesuai!', 2);
                 }
             } else {
                 $data['validasi'] = $this->validator;
@@ -125,4 +124,3 @@ class Profile extends BaseController
 
 
 }
- 
