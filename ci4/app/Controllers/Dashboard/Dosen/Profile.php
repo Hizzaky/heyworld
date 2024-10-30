@@ -109,7 +109,6 @@ class Profile extends BaseController
 
                         $dataUser = $this->userData($getData, $data['jenis_user']);
                         $sesi->set('login', $dataUser);
-                        $data = $this->arData($model->title(), $sesi->get('login'));
                         $data['login'] = $sesi->get('login');
                     } else {
                         $sesi->setTempdata('fail', 'Update Gagal!', 2);
