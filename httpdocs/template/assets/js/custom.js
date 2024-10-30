@@ -11,3 +11,9 @@
 function prodiDeleteTaxbloom(dir) {
     window.location.href = 'hapus-index/'+dir;
 }
+function prodiDeleteTaxbloomPermanen(dir) {
+    window.location.href = 'delete-permanen/'+dir;
+}
+function prodiRestoreTaxbloom(dir) {
+    window.location.href = 'restore-index/'+dir;
+}

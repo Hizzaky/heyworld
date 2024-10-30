@@ -87,8 +87,17 @@ class RestoreKataKerjaModel extends Model
                     <a class="btn btn-primary  " href="restore-index/' . $val['taxbloom_delete_id'] . '"><i
                         class="fas fa-undo" ></i></a> | 
                     <a class="btn btn-danger btn-sm " href="delete-permanen/' . $val['taxbloom_delete_id'] . '"><i
-                        class="fas fa-trash"></i></a>'
-            ];
+                        class="fas fa-trash"></i></a>
+
+                    <button class="btn btn-primary " 
+                        data-confirm="Restore Kata Kerja?|Gunakan kembali kata kerja?" 
+                        data-confirm-yes="prodiRestoreTaxbloom(' . $val['taxbloom_delete_id'] . ')"
+                        ><i class="fas fa-trash"></i>aa</button>
+                    <button class="btn btn-danger btn-sm " 
+                        data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja secara permanen?" 
+                        data-confirm-yes="prodiDeleteTaxbloomPermanen(' . $val['taxbloom_delete_id'] . ')"
+                        ><i class="fas fa-trash"></i>aa</button>
+            '];
             $x++;
             $no++;
         }
