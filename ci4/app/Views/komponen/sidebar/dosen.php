@@ -18,11 +18,11 @@
                     <span>Penguasaan Pengetahuan (PP)</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/PP">Menu</a></li>
+                            href="/Prodi/PP">Penguasaan Pengetahuan (PP)</a></li>
                     <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Menu</a></li>
+                            href="/Prodi/KU">Keterampilan Umum (KU)</a></li>
                     <li class="<?= $var = isset($menuKK) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KK">Menu</a></li>
+                            href="/Prodi/KK">Keterampilan Khusus (KK)</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
