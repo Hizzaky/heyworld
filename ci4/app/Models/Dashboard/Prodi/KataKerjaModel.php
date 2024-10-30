@@ -124,85 +124,25 @@ class KataKerjaModel extends Model
 
             }
             if (isset($dataC3[$i]['katalog'])) {
-                $data[$count]['c3'] = '
-                    <div class="dropdown">
-                        <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ' . $dataC3[$i]['katalog'] . '
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $dataC3[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC3[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                ';
+                $data[$count]['c3'] = $this->delBtn($dataC3[$i]);
             } else {
                 $data[$count]['c3'] = '';
             }
             if (isset($dataC4[$i]['katalog'])) {
-                $data[$count]['c4'] = '
-                    <div class="dropdown">
-                        <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ' . $dataC4[$i]['katalog'] . '
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $dataC4[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC4[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                ';
+                $data[$count]['c4'] = $this->delBtn($dataC4[$i]);
             } else {
                 $data[$count]['c4'] = '';
             }
             if (isset($dataC5[$i]['katalog'])) {
-                $data[$count]['c5'] = '
-                    <div class="dropdown">
-                        <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ' . $dataC5[$i]['katalog'] . '
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $dataC5[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC5[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                ';
+                $data[$count]['c5'] = $this->delBtn($dataC5[$i]);
             } else {
                 $data[$count]['c5'] = '';
             }
             if (isset($dataC6[$i]['katalog'])) {
-                $data[$count]['c6'] = '
-                    <div class="dropdown">
-                        <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            ' . $dataC6[$i]['katalog'] . '
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $dataC6[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC6[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                ';
+                $data[$count]['c6'] = $this->delBtn($dataC6[$i]);
             } else {
                 $data[$count]['c6'] = '';
             }
-
-
-
-
 
             $no++;
             $count++;
