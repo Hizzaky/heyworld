@@ -8,6 +8,6 @@
 "use strict";
 
 
-function tesDlete() {
+function tesDelete() {
     return window.location.href = "/Tes/get?id=1";
 }
