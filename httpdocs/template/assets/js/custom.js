@@ -7,6 +7,7 @@
 
 "use strict";
 
+
 function tesDlete() {
-    window.location.href = "/Tes/get?id=1";
+    return window.location.href = "/Tes/get?id=1";
 }

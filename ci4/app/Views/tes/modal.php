@@ -7,7 +7,7 @@
     </div>
     <div class="section-body">
 
-    <button class="btn btn-danger btn-sm" data-confirm="Hapus data?|Yakin ingin hapus data?" data-confirm-yes="tesDlete()">del</button>
+    <button class="btn btn-danger btn-sm" data-confirm="Hapus data?|Yakin ingin hapus data?" data-confirm-yes="tesDtlete()">del</button>
 
        <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
