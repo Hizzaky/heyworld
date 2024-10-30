@@ -15,14 +15,14 @@
             <li class="menu-header">Capaian Pembelajaran</li>
             <li class="nav-item dropdown <?= $var = isset($sideTaxbloom) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
-                    <span>Taxonomi Bloom</span></a>
+                    <span>Caapaiaan Pembelajaran</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuIndexKataKerja) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Kata-kerja">Index Kata Kerja</a></li>
+                            href="/Prodi/Kata-kerja">Penguaasaan Pengetahuan (PP)</a></li>
                     <li class="<?= $var = isset($menuAddKataKerja) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Penambahan-kata-kerja">Penambahan Kata Kerja</a></li>
+                            href="/Prodi/Penambahan-kata-kerja">Keterampilan Uum (KU)</a></li>
                     <li class="<?= $var = isset($menuDelKataKerja) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Restore-kata-kerja">Kata Kerja Terhapus</a></li>
+                            href="/Prodi/Restore-kata-kerja">Keterampilan Khusus (KU)</a></li>
                 </ul>
             </li>
             <li class="active"><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
