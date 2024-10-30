@@ -6,7 +6,7 @@
 
     <h2 class="section-title">Hi, <?= $nama_user ?>!</h2>
     <p class="section-lead">
-        ( <?= $nidn ?> )
+        ( <?= $login['nidn'] ?> )
     </p>
 
     <div class="row mt-sm-4">
