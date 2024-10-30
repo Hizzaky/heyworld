@@ -15,14 +15,38 @@
             <li class="menu-header">Capaian Pembelajaran</li>
             <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
-                    <span>Capaian Pembelajaran</span></a>
+                    <span>Penguasaan Pengetahuan (PP)</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Kata-kerja">Penguasaan Pengetahuan (PP)</a></li>
+                            href="/Prodi/PP">Menu</a></li>
                     <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Penambahan-kata-kerja">Keterampilan Umum (KU)</a></li>
+                            href="/Prodi/KU">Menu</a></li>
                     <li class="<?= $var = isset($menuKK) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Restore-kata-kerja">Keterampilan Khusus (KK)</a></li>
+                            href="/Prodi/KK">Menu</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
+                    <span>Keterampilan Umum (KU)</span></a>
+                <ul class="dropdown-menu">
+                    <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/PP">Menu</a></li>
+                    <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/KU">Menu</a></li>
+                    <li class="<?= $var = isset($menuKK) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/KK">Menu</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
+                    <span>Keterampilan Khusus (KK)</span></a>
+                <ul class="dropdown-menu">
+                    <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/PP">Menu</a></li>
+                    <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/KU">Menu</a></li>
+                    <li class="<?= $var = isset($menuKK) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/KK">Menu</a></li>
                 </ul>
             </li>
             <li class="active"><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
