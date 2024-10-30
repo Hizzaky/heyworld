@@ -50,7 +50,7 @@ class Pp extends BaseController
         // $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
         $data['selected'] = '';
 
-        $this->pre($data);
+        // $this->pre($data);
 
         // if (request()->getMethod() == 'post') {
 
@@ -78,7 +78,7 @@ class Pp extends BaseController
         //     $sesi->setFlashdata($info, $msg);
         // }
 
-        // return view('dashboard/dosen/pp/add_pp', $data);
+        return view('dashboard/dosen/pp/add_pp', $data);
     }
 
 }
