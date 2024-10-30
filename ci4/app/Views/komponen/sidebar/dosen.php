@@ -13,16 +13,16 @@
                     <span>Home</span></a></li>
 
             <li class="menu-header">Capaian Pembelajaran</li>
-            <li class="nav-item dropdown <?= $var = isset($sideTaxbloom) ? 'active' : '' ?>">
+            <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
                     <span>Capaian Pembelajaran</span></a>
                 <ul class="dropdown-menu">
-                    <li class="<?= $var = isset($menuIndexKataKerja) ? 'active' : '' ?>"><a class="nav-link"
+                    <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/Kata-kerja">Penguasaan Pengetahuan (PP)</a></li>
-                    <li class="<?= $var = isset($menuAddKataKerja) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Penambahan-kata-kerja">Keterampilan Uum (KU)</a></li>
-                    <li class="<?= $var = isset($menuDelKataKerja) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Restore-kata-kerja">Keterampilan Khusus (KU)</a></li>
+                    <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/Penambahan-kata-kerja">Keterampilan Umum (KU)</a></li>
+                    <li class="<?= $var = isset($menuKK) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/Restore-kata-kerja">Keterampilan Khusus (KK)</a></li>
                 </ul>
             </li>
             <li class="active"><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
