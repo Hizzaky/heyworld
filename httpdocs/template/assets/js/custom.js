@@ -8,6 +8,7 @@
 "use strict";
 
 
-function modalDelete(dir) {
-    window.location.href = "/"+dir;
+function modalDelete() {
+    // window.location.href = "/"+dir;
+    window.location.href = 'meh';
 }
