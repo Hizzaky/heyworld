@@ -7,7 +7,7 @@
     </div>
     <div class="section-body">
 
-    <button class="btn btn-danger btn-sm" data-confirm="Hapus data?|Yakin ingin hapus data?" data-confirm-yes="fungsi()">del</button>
+    <button class="btn btn-danger btn-sm" data-confirm="Hapus data?|Yakin ingin hapus data?" data-confirm-yes="tesDlete()">del</button>
 
        <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -79,13 +79,7 @@
         </div>
     </div>
 </form>
-<script>
-    function fungsi(){
-        window.location.href = "/Tes/get?id=7";
-        // window.location.replace("/testes");
 
-    }
-</script>
 <!-- End Modal Add Product-->
         <!--  -->
     </div>
