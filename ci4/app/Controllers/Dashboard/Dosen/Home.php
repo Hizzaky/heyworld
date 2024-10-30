@@ -12,6 +12,10 @@ class Home extends BaseController
         $model = new Dosen();
 
         $data = $this->arData($model->title(), session()->get('login'));
+        if($data==0)
+        {
+            return redirect()->to('logUserOut');
+        }
 
         return view('dashboard/dosen/home', $data);
     }
