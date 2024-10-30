@@ -9,8 +9,11 @@
 
        <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+    Launch demo modal
 </button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+    modal 2
+        </button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -32,6 +35,49 @@
     </div>
   </div>
 </div>
+
+
+    <!-- Modal Add Product-->
+    <form action="/product/save" method="post">
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add New Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" class="form-control" name="product_name" placeholder="Product Name">
+                </div>
+                
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" name="product_price" placeholder="Product Price">
+                </div>
+
+                <div class="form-group">
+                    <label>Category</label>
+                    <select name="product_category" class="form-control">
+                        <option value="">-Select-</option>
+                        
+                        </select>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- End Modal Add Product-->
         <!--  -->
     </div>
 </section>
