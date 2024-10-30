@@ -81,7 +81,7 @@
 </form>
 <script>
     function fungsi(){
-        window.location.href = "http://www.w3schools.com";
+        window.location.href = "ttttes";
 
     }
 </script>
