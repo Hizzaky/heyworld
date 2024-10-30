@@ -9,6 +9,6 @@
 
 
 function modalDelete(dir) {
-    window.location.href = "/"+dir;
+    window.location.href = dir;
     // window.location.href = 'meh';
 }
