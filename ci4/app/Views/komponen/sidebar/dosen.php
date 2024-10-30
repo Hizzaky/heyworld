@@ -18,11 +18,10 @@
                     <span>Penguasaan Pengetahuan</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/PP">Penguasaan Pengetahuan (PP)</a></li>
+                            href="/Prodi/PP">Index</a></li>
                     <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Keterampilan Umum (KU)</a></li>
-                    <li class="<?= $var = isset($menuKK) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KK">Keterampilan Khusus (KK)</a></li>
+                            href="/Prodi/KU">Tambah PP</a></li>
+                    
                 </ul>
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
@@ -30,11 +29,9 @@
                     <span>Keterampilan Umum</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/PP">Menu</a></li>
+                            href="/Prodi/PP">Index</a></li>
                     <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Menu</a></li>
-                    <li class="<?= $var = isset($menuKK) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KK">Menu</a></li>
+                            href="/Prodi/KU">Tambah KU</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
@@ -42,11 +39,9 @@
                     <span>Keterampilan Khusus</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/PP">Menu</a></li>
+                            href="/Prodi/PP">Index</a></li>
                     <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Menu</a></li>
-                    <li class="<?= $var = isset($menuKK) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KK">Menu</a></li>
+                            href="/Prodi/KU">Tambah KK</a></li>
                 </ul>
             </li>
             <li class=""><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
