@@ -8,6 +8,6 @@
 "use strict";
 
 
-function modalDelete(dir) {
+function prodiDeleteTaxbloom(dir) {
     window.location.href = 'hapus-index/'+dir;
 }
