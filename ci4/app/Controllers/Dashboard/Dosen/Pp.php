@@ -77,7 +77,7 @@ class Pp extends BaseController
         //     $sesi->setFlashdata($info, $msg);
         // }
 
-        return view('dashboard/dosen/pp/add_pp', $data);
+        // return view('dashboard/dosen/pp/add_pp', $data);
     }
 
 }
