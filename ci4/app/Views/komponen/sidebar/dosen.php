@@ -13,48 +13,41 @@
                     <span>Home</span></a></li>
 
             <li class="menu-header">Capaian Pembelajaran</li>
-            <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
+            <li class="nav-item dropdown <?= $var = isset($sidePp) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
                     <span>Penguasaan Pengetahuan</span></a>
                 <ul class="dropdown-menu">
-                    <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/PP">Index</a></li>
-                    <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Tambah PP Baru</a></li>
+                    <li class="<?= $var = isset($menuPpIndex) ? 'active' : '' ?>"><a class="nav-link"
+                            href="#">Index</a></li>
+                    <li class="<?= $var = isset($menuPpAdd) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/Penguasaan-pengetahuan">Tambah PP Baru</a></li>
                     
                 </ul>
             </li>
-            <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
+            <li class="nav-item dropdown <?= $var = isset($sideKu) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
                     <span>Keterampilan Umum</span></a>
                 <ul class="dropdown-menu">
-                    <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/PP">Index</a></li>
-                    <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Tambah KU Baru</a></li>
+                    <li class="<?= $var = isset($menuKuIndex) ? 'active' : '' ?>"><a class="nav-link"
+                            href="#">Index</a></li>
+                    <li class="<?= $var = isset($menuKuAdd) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/Keterampilan-umum">Tambah KU Baru</a></li>
                 </ul>
             </li>
-            <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
+            <li class="nav-item dropdown <?= $var = isset($sideKk) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
                     <span>Keterampilan Khusus</span></a>
                 <ul class="dropdown-menu">
-                    <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/PP">Index</a></li>
-                    <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Tambah KK Baru</a></li>
+                    <li class="<?= $var = isset($menuKkIndex) ? 'active' : '' ?>"><a class="nav-link"
+                            href="#">Index</a></li>
+                    <li class="<?= $var = isset($menuKkAdd) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/Keterampilan-khusus">Tambah KK Baru</a></li>
                 </ul>
             </li>
+            
+            <li class="menu-header">MENU</li>
             <li class=""><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
                     <span>Blank Page</span></a></li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i>
-                    <span>Bootstrap</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="bootstrap-alert.html">Alert</a></li>
-                    <li><a class="nav-link" href="bootstrap-badge.html">Badge</a></li>
-                </ul>
-            </li>
-            <li class="menu-header">MENU</li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i>
                     <span>Components</span></a>

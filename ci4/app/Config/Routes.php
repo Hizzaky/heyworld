@@ -65,6 +65,7 @@ $routes->group('Fakultas', function ($routes) {
     $routes->add('cek', 'Dashboard\Fakultas\Profile::cek');
 });
 
+
 $routes->group('Prodi', function ($routes) {
     $routes->add('/', 'Dashboard\Prodi\Home::index');
     $routes->add('Home', 'Dashboard\Prodi\Home::index');
@@ -81,9 +82,6 @@ $routes->group('Prodi', function ($routes) {
     $routes->add('restore-index/(:any)', 'Dashboard\Prodi\Kata_kerja::restore_kata_kerja/$1');
     $routes->add('edit-index/(:any)', 'Dashboard\Prodi\Kata_kerja::edit_kata_kerja/$1');
     $routes->add('delete-permanen/(:any)', 'Dashboard\Prodi\Kata_kerja::permanen_kata_kerja/$1');
-
-
-
 });
 
 
@@ -92,4 +90,9 @@ $routes->group('Dosen', function ($routes) {
     $routes->add('Profile', 'Dashboard\Dosen\Profile::index');
     $routes->add('Update-nama', 'Dashboard\Dosen\Profile::update_nama', ['as' => 'dosen-update-nama']);
     $routes->add('Update-password', 'Dashboard\Dosen\Profile::update_password', ['as' => 'dosen-update-password']);
+
+    $routes->add('Penguasaan-pengetahuan', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-pp']);
+    $routes->add('Keterampilan-umum', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-ku']);
+    $routes->add('Keterampilan-khusus', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-kk']);
+    
 });
