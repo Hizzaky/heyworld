@@ -81,7 +81,7 @@
 </form>
 <script>
     function fungsi(){
-        window.location.href = "get?id=5";
+        window.location.href = "/get?id=5";
         // window.location.replace("/testes");
 
     }
