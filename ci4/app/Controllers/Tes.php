@@ -18,6 +18,6 @@ class Tes extends BaseController
         $data = $this->arData($title, session()->get('login'));
 
 
-        return view('tes/modal'); 
+        return view('tes/modal',$data); 
     }
 }
