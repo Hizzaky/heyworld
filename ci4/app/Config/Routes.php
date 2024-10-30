@@ -90,6 +90,6 @@ $routes->group('Prodi', function ($routes) {
 $routes->group('Dosen', function ($routes) {
     $routes->add('/', 'Dashboard\Dosen\Home::index');
     $routes->add('Profile', 'Dashboard\Dosen\Profile::index');
-    $routes->add('update_nama', 'Dashboard\Dosen\Profile::update_nama', ['as' => 'dosen-update-nama']);
-    $routes->add('update_password', 'Dashboard\Dosen\Profile::update_password', ['as' => 'dosen-update-password']);
+    $routes->add('update-nama', 'Dashboard\Dosen\Profile::update_nama', ['as' => 'dosen-update-nama']);
+    $routes->add('update-password', 'Dashboard\Dosen\Profile::update_password', ['as' => 'dosen-update-password']);
 });
