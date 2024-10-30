@@ -34,7 +34,7 @@ class KataKerjaModel extends Model
         $template = [
             'table_open' => '<table class="table table-responsive table-striped table-md" border="0" cellpadding="4" cellspacing="0">',
 
-            'thead_open' => '<thead style="background-color:lightblue;">', 
+            'thead_open' => '<thead style="background-color:lightblue;">',
             'thead_close' => '</thead>',
 
             'heading_row_start' => '<tr>',
@@ -102,7 +102,7 @@ class KataKerjaModel extends Model
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                             style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $dataC2[$i]['taxbloom_id'] . '"><i
+                            <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $dataC2[$i]['taxbloom_id'] . '" data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ' . $dataC2[$i]['katalog'] . '?" data-confirm-yes="modalDelete(dir)"><i
                                     class="fas fa-pencil-alt"></i> </a> |
                             <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC2[$i]['taxbloom_id'] . '"><i
                                     class="fas fa-trash"></i></a>
@@ -171,7 +171,7 @@ class KataKerjaModel extends Model
                 $data[$count]['c5'] = '';
             }
             if (isset($dataC6[$i]['katalog'])) {
-                $data[$count]['c6'] ='
+                $data[$count]['c6'] = '
                     <div class="dropdown">
                         <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">

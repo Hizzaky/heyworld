@@ -6,8 +6,8 @@
         <h1>Tes Modal</h1>
     </div>
     <div class="section-body">
-
-    <button class="btn btn-danger btn-sm" data-confirm="Hapus data?|Yakin ingin hapus data?" data-confirm-yes="tesDelete()">del</button>
+<!-- Delete modal -->
+    <button class="btn btn-danger btn-sm" data-confirm="Hapus data?|Yakin ingin hapus data?" data-confirm-yes="modalDelete(dir)">del</button>
 
        <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
