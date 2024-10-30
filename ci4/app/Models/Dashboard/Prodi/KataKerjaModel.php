@@ -85,7 +85,7 @@ class KataKerjaModel extends Model
                     <button class="btn btn-danger btn-sm " 
                         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ' . $data['katalog'] . '?" 
                         data-confirm-yes="prodiDeleteTaxbloom(' . $dir . ')"
-                        ><i class="fas fa-trash"></i>11</button>
+                        ><i class="fas fa-trash"></i></button>
                 </div>
             </div>
         ';
