@@ -72,7 +72,7 @@ class Profile extends BaseController
         $sesi = session();
         $ver = $sesi->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Fakultas') {
+            if ($ver['jenis_user'] != 'Dosen') {
                 return redirect()->back();
             }
         } else {
@@ -96,7 +96,7 @@ class Profile extends BaseController
                 if (password_verify($_POST['oldPassword'], $getData['password'])) {
 
                     $dataTbl = [
-                        'fakultas_id' => $getData['fakultas_id'],
+                        'dosen_id' => $getData['dosen_id'],
                         'password' => $_POST['password']
                     ];
 
@@ -119,7 +119,7 @@ class Profile extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('dashboard/fakultas/profilePass', $data);
+        return view('dashboard/dosen/profilePass', $data);
     }
 
 
