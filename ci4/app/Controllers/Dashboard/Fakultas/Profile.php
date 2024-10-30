@@ -65,7 +65,7 @@ class Profile extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('dashboard/fakultas/profileNama', $data);
+        return view('dashboard/fakultas/profile/profileNama', $data);
     }
     public function update_password()
     {
@@ -119,7 +119,7 @@ class Profile extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
-        return view('dashboard/fakultas/profilePass', $data);
+        return view('dashboard/fakultas/profile/profilePass', $data);
     }
 
 

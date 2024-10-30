@@ -67,7 +67,7 @@ class Profile extends BaseController
         }
         $data['side'] = '1';
         $data['konten'] = 'Nama';
-        return view('dashboard/dosen/profileNama', $data);
+        return view('dashboard/dosen/profile/profileNama', $data);
     }
     public function update_password()
     {
@@ -121,7 +121,7 @@ class Profile extends BaseController
         }
         $data['side'] = '2';
         $data['konten'] = 'Password';
-        return view('dashboard/dosen/profilePass', $data);
+        return view('dashboard/dosen/profile/profilePass', $data);
     }
 
 
