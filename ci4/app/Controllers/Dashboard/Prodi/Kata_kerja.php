@@ -59,7 +59,7 @@ class Kata_kerja extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/prodi/taxbloom', $data);
+        return view('dashboard/prodi/taxbloom/taxbloom', $data);
 
     }
 
@@ -112,7 +112,7 @@ class Kata_kerja extends BaseController
             $sesi->setFlashdata($info, $msg);
         }
 
-        return view('dashboard/prodi/add_taxbloom', $data);
+        return view('dashboard/prodi/taxbloom/add_taxbloom', $data);
     }
 
     public function edit_taxbloom($id)
@@ -172,7 +172,7 @@ class Kata_kerja extends BaseController
             return redirect('prodi-kata-kerja');
         }
 
-        return view('dashboard/prodi/add_taxbloom', $data);
+        return view('dashboard/prodi/taxbloom/add_taxbloom', $data);
     }
 
     public function restore_taxbloom()
@@ -209,7 +209,7 @@ class Kata_kerja extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/prodi/restore_taxbloom', $data);
+        return view('dashboard/prodi/taxbloom/restore_taxbloom', $data);
 
     }
     public function delete_kata_kerja($id)
@@ -283,44 +283,7 @@ class Kata_kerja extends BaseController
         }
         return redirect('prodi-restore-kata-kerja')->with($key, $msg);
     }
-    public function edit_kata_kerja($id)
-    {
-        $sesi = session();
-        $ver = $sesi->get('login');
-        if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Prodi') {
-                return redirect()->back();
-            }
-        } else {
-            return redirect()->to('/');
-        }
-        // 
-        // $modelTbl = new TaxbloomModel();
-        // $modelDel = new TaxbloomDeletedModel();
-
-        // $dataDel = $modelDel->find($id);
-        // $dataRestore['kode'] = $dataDel['kode'];
-        // $dataRestore['katalog'] = $dataDel['katalog'];
-
-        $this->pre($id);
-        $this->pre($_POST);
-        // $modelTbl->save($dataRestore);
-        // if ($modelTbl) {
-        //     $modelDel->delete($id);
-        //     if ($modelDel) {
-        //         $key = 'suksesRestoreKataKerja';
-        //         $msg = 'Kata kerja berhasil dikembalikan!';
-        //     } else {
-        //         $key = 'failRestoreKataKerja';
-        //         $msg = 'Kata kerja gagal dikembalikan!';
-        //     }
-        // } else {
-        //     $key = 'failRestoreKataKerja';
-        //     $msg = 'Kata kerja gagal dikembalikan!';
-        // }
-        // return redirect('prodi-restore-kata-kerja')->with($key, $msg);
-    }
-
+   
     public function permanen_kata_kerja($id)
     {
         $sesi = session();
