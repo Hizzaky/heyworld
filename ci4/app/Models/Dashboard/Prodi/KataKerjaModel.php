@@ -108,7 +108,7 @@ class KataKerjaModel extends Model
                             
                             <button class="btn btn-danger btn-sm " 
                                 data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ' . $dataC2[$i]['katalog'] . '?" 
-                                data-confirm-yes="modalDelete()"
+                                data-confirm-yes="modalDelete("asdasdasd")"
                                 ><i class="fas fa-trash"></i>2</button>
                         </div>
                     </div>
