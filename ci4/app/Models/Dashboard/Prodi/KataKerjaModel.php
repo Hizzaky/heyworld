@@ -107,7 +107,7 @@ class KataKerjaModel extends Model
                             <a class="btn btn-danger btn-sm " 
                                 data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus ' . $dataC2[$i]['katalog'] . '?" 
                                 data-confirm-yes="modalDelete(hapus-index/' . $dataC2[$i]['taxbloom_id'] . ')"
-                                ><i class="fas fa-trash"></i></a>
+                                ><i class="fas fa-trash"></i>aaaaa</a>
                         </div>
                     </div>
                 ';
