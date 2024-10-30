@@ -7,7 +7,7 @@
     </div>
     <div class="section-body">
 
-    <button class="btn btn-danger btn-sm" data-confirm="Hapus data?|<?php print_r($login) ?>" data-confirm-yes="fungsi()">del</button>
+    <button class="btn btn-danger btn-sm" data-confirm="Hapus data?|<?php print_r($input) ?>" data-confirm-yes="fungsi()">del</button>
 
        <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
