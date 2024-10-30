@@ -20,7 +20,7 @@
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/PP">Index</a></li>
                     <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Tambah PP</a></li>
+                            href="/Prodi/KU">Tambah PP Baru</a></li>
                     
                 </ul>
             </li>
@@ -31,7 +31,7 @@
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/PP">Index</a></li>
                     <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Tambah KU</a></li>
+                            href="/Prodi/KU">Tambah KU Baru</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
@@ -41,7 +41,7 @@
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/PP">Index</a></li>
                     <li class="<?= $var = isset($menuKU) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/KU">Tambah KK</a></li>
+                            href="/Prodi/KU">Tambah KK Baru</a></li>
                 </ul>
             </li>
             <li class=""><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
