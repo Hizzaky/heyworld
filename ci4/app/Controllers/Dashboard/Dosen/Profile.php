@@ -95,7 +95,6 @@ class Profile extends BaseController
                 $getData = $modelTbl->find($data['login']['user_id']);
 
                 if (password_verify($_POST['oldPassword'], $getData['password'])) {
-
                     $dataTbl = [
                         'dosen_id' => $getData['dosen_id'],
                         'password' => $_POST['password']

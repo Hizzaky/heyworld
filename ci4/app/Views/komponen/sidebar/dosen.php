@@ -8,21 +8,21 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                    <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
-                </ul>
-            </li>
-            <li class="menu-header">Starter</li>
-            <li class="nav-item dropdown">
+            <li class="<?= $var = isset($sideDashboard) ? 'active' : '' ?>"><a class="nav-link"
+                    href="/<?= $jenis_user ?>"><i class="fas fa-home"></i>
+                    <span>Home</span></a></li>
+
+            <li class="menu-header">Capaian Pembelajaran</li>
+            <li class="nav-item dropdown <?= $var = isset($sideTaxbloom) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
-                    <span>Layout</span></a>
+                    <span>Taxonomi Bloom</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="layout-default.html">Default Layout</a></li>
-                    <li><a class="nav-link" href="layout-transparent.html">Transparent Sidebar</a></li>
-                    <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li>
+                    <li class="<?= $var = isset($menuIndexKataKerja) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/Kata-kerja">Index Kata Kerja</a></li>
+                    <li class="<?= $var = isset($menuAddKataKerja) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/Penambahan-kata-kerja">Penambahan Kata Kerja</a></li>
+                    <li class="<?= $var = isset($menuDelKataKerja) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Prodi/Restore-kata-kerja">Kata Kerja Terhapus</a></li>
                 </ul>
             </li>
             <li class="active"><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
