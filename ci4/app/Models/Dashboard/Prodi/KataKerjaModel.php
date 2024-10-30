@@ -116,7 +116,6 @@ class KataKerjaModel extends Model
 
             $data[$count]['no'] = $no;
 
-
             if (isset($dataC2[$i]['katalog'])) {
                 $data[$count]['c2'] = $this->delBtn($dataC2[$i]);
             } else {

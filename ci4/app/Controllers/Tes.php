@@ -24,7 +24,8 @@ class Tes extends BaseController
             <input class="form-control" type="submit" name="input3" value="Button"><br>
         ';
 
-        return view('tes/modal',$data); 
+        // return view('tes/modal',$data); 
+        echo view('tes/modal',$data); 
     }
 
     public function get(){
