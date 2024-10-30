@@ -39,8 +39,8 @@ class Profile extends BaseController
 
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
-        // $data['side'] = '1';
-        // $data['konten'] = 'Nama';
+        
+        $this->pre($data);
 
         if (request()->getMethod() == 'post') {
             $rules = $model->rules_nama();
@@ -68,7 +68,7 @@ class Profile extends BaseController
         }
         $data['side'] = '1';
         $data['konten'] = 'Nama';
-        return view('dashboard/dosen/profileNama', $data);
+        // return view('dashboard/dosen/profileNama', $data);
     }
     public function update_password()
     {
