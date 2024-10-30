@@ -7,7 +7,7 @@ use App\Models\Dashboard\Dosen\Dosen;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
         $model = new Dosen();
 
