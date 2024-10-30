@@ -8,6 +8,6 @@ class Tes extends BaseController
     {
         // return redirect()->to('Homepage/');
 
-        return view('tes/modal');
+        return view('tes/modal'); 
     }
 }
