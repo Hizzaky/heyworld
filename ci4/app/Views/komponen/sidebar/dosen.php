@@ -15,7 +15,7 @@
             <li class="menu-header">Capaian Pembelajaran</li>
             <li class="nav-item dropdown <?= $var = isset($sideTaxbloom) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
-                    <span>Caapaiaan Pembelajaran</span></a>
+                    <span>Capaiaan Pembelajaran</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuIndexKataKerja) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/Kata-kerja">Penguaasaan Pengetahuan (PP)</a></li>
