@@ -94,7 +94,6 @@ class KataKerjaModel extends Model
 
 
             if (isset($dataC2[$i]['katalog'])) {
-                // $dir='hapus-index/' . $dataC2[$i]['taxbloom_id'];
                 $dir=$dataC2[$i]['taxbloom_id'];
                 $data[$count]['c2'] = '
                     <div class="dropdown">
@@ -110,7 +109,7 @@ class KataKerjaModel extends Model
                             <button class="btn btn-danger btn-sm " 
                                 data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ' . $dataC2[$i]['katalog'] . '?" 
                                 data-confirm-yes="prodiDeleteTaxbloom('.$dir.')"
-                                ><i class="fas fa-trash"></i>6</button>
+                                ><i class="fas fa-trash"></i></button>
                         </div>
                     </div>
                 ';
