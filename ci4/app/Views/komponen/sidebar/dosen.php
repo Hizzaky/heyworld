@@ -20,7 +20,7 @@
                     <li class="<?= $var = isset($menuPpIndex) ? 'active' : '' ?>"><a class="nav-link"
                             href="#">Index</a></li>
                     <li class="<?= $var = isset($menuPpAdd) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Penguasaan-pengetahuan">Tambah PP Baru</a></li>
+                            href="/Dosen/Penguasaan-pengetahuan">Tambah PP Baru</a></li>
                     
                 </ul>
             </li>
@@ -31,7 +31,7 @@
                     <li class="<?= $var = isset($menuKuIndex) ? 'active' : '' ?>"><a class="nav-link"
                             href="#">Index</a></li>
                     <li class="<?= $var = isset($menuKuAdd) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Keterampilan-umum">Tambah KU Baru</a></li>
+                            href="/Dosen/Keterampilan-umum">Tambah KU Baru</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideKk) ? 'active' : '' ?>">
@@ -41,10 +41,10 @@
                     <li class="<?= $var = isset($menuKkIndex) ? 'active' : '' ?>"><a class="nav-link"
                             href="#">Index</a></li>
                     <li class="<?= $var = isset($menuKkAdd) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Keterampilan-khusus">Tambah KK Baru</a></li>
+                            href="/Dosen/Keterampilan-khusus">Tambah KK Baru</a></li>
                 </ul>
             </li>
-            
+
             <li class="menu-header">MENU</li>
             <li class=""><a class="nav-link" href="blank.html"><i class="far fa-square"></i>
                     <span>Blank Page</span></a></li>
