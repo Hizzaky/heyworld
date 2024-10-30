@@ -15,7 +15,7 @@
             <li class="menu-header">Capaian Pembelajaran</li>
             <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
-                    <span>Penguasaan Pengetahuan (PP)</span></a>
+                    <span>Penguasaan Pengetahuan</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/PP">Penguasaan Pengetahuan (PP)</a></li>
@@ -27,7 +27,7 @@
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
-                    <span>Keterampilan Umum (KU)</span></a>
+                    <span>Keterampilan Umum</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/PP">Menu</a></li>
@@ -39,7 +39,7 @@
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideCpl) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
-                    <span>Keterampilan Khusus (KK)</span></a>
+                    <span>Keterampilan Khusus</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPP) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/PP">Menu</a></li>
