@@ -39,7 +39,7 @@ class Profile extends BaseController
 
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
-        
+
         $this->pre($data);
 
         if (request()->getMethod() == 'post') {
@@ -57,7 +57,6 @@ class Profile extends BaseController
                     $dataUser = $this->userData($getData, $data['jenis_user']);
                     $sesi->set('login', $dataUser);
                     $data = $this->arData($model->title(), $sesi->get('login'));
-
                     $data['login'] = $sesi->get('login');
                 } else {
                     $sesi->setTempdata('fail', 'Update Gagal!', 2);
@@ -88,8 +87,7 @@ class Profile extends BaseController
 
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
-        $data['side'] = '2';
-        $data['konten'] = 'Password';
+
 
         if (request()->getMethod() == 'post') {
             $rules = $model->rules_pass();
@@ -111,6 +109,7 @@ class Profile extends BaseController
 
                         $dataUser = $this->userData($getData, $data['jenis_user']);
                         $sesi->set('login', $dataUser);
+                        $data = $this->arData($model->title(), $sesi->get('login'));
                         $data['login'] = $sesi->get('login');
                     } else {
                         $sesi->setTempdata('fail', 'Update Gagal!', 2);
@@ -122,6 +121,8 @@ class Profile extends BaseController
                 $data['validasi'] = $this->validator;
             }
         }
+        $data['side'] = '2';
+        $data['konten'] = 'Password';
         return view('dashboard/dosen/profilePass', $data);
     }
 
