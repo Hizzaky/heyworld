@@ -9,13 +9,12 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        // $sesi=session();
-        $model=new Dosen();
+        $model = new Dosen();
 
-        $data=$model->arData();
+        $data = $this->arData($model->title(), session()->get('login'));
 
-        return view('dashboard/dosen/home',$data);
+        return view('dashboard/dosen/home', $data);
     }
 
-    
+
 }

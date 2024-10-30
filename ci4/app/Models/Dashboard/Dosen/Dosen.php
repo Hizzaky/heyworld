@@ -6,13 +6,13 @@ use CodeIgniter\Model;
 
 class Dosen extends Model
 {
-    public function arData()
+    public function title()
     {
         $data = [
-            'meta_title' => 'Welcome Dosen UMMAT',
-            'header_title' => '',
-            'kategori' => 'Dosen',
-            'konten' => 'login berhasil'
+            'meta_title' => 'Welcome Fakultas UMMAT',
+            'header_title' => 'Homepage Fakultas',
+            'sideDashboard' => 'active',
+            'menuDashboard' => 'active'
         ];
         return $data;
     }
