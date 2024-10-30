@@ -9,5 +9,5 @@
 
 
 function prodiDeleteTaxbloom(dir) {
-    window.location.href = 'hapus -index/'.dir;
+    window.location.href = 'hapus-index/'.dir;
 }
