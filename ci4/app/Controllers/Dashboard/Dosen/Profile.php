@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Dashboard\Fakultas;
+namespace App\Controllers\Dashboard\Dosen;
 
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Dosen\ProfileModel;
@@ -13,7 +13,7 @@ class Profile extends BaseController
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Fakultas') {
+            if ($ver['jenis_user'] != 'Dosen') {
                 return redirect()->back();
             }
         } else {
