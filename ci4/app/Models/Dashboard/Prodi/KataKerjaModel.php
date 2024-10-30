@@ -102,14 +102,15 @@ class KataKerjaModel extends Model
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                             style="width:10px !important; text-align:center;">
-                            <a class="btn btn-warning btn-sm " data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ' . $dataC2[$i]['katalog'] . '?" data-confirm-yes="modalDelete(dir)"><i
+                            <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $dataC2[$i]['taxbloom_id'] . '"><i
                                     class="fas fa-pencil-alt"></i> </a> |
-                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC2[$i]['taxbloom_id'] . '"><i
-                                    class="fas fa-trash"></i></a>
+                            <a class="btn btn-danger btn-sm " href="hapus-index/' . $dataC2[$i]['taxbloom_id'] . '" 
+                                data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus ' . $dataC2[$i]['katalog'] . '?" 
+                                data-confirm-yes="modalDelete(hapus-index/' . $dataC2[$i]['taxbloom_id'] . ')"
+                                ><i class="fas fa-trash"></i></a>
                         </div>
                     </div>
                 ';
-                // <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $dataC2[$i]['taxbloom_id'] . '" data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ' . $dataC2[$i]['katalog'] . '?" data-confirm-yes="modalDelete(dir)"><i class="fas fa-pencil-alt"></i> </a>
             } else {
                 $data[$count]['c2'] = '';
 
