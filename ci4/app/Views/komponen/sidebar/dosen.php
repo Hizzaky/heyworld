@@ -14,7 +14,7 @@
 
             <li class="menu-header">Capaian Pembelajaran</li>
             <li class="nav-item dropdown <?= $var = isset($sideTaxbloom) ? 'active' : '' ?>">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
                     <span>Taxonomi Bloom</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuIndexKataKerja) ? 'active' : '' ?>"><a class="nav-link"
