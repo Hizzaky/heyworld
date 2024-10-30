@@ -16,7 +16,7 @@ class Tes extends BaseController
         ];
 
         $data = $this->arData($title, session()->get('login'));
-
+        $data['login']=session()->get('login');
 
         return view('tes/modal',$data); 
     }
