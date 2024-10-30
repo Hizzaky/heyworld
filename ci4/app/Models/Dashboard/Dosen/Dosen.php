@@ -9,8 +9,8 @@ class Dosen extends Model
     public function title()
     {
         $data = [
-            'meta_title' => 'Welcome Fakultas UMMAT',
-            'header_title' => 'Homepage Fakultas',
+            'meta_title' => 'Welcome Dosen UMMAT',
+            'header_title' => 'Homepage Dosen',
             'sideDashboard' => 'active',
             'menuDashboard' => 'active'
         ];
