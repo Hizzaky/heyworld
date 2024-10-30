@@ -21,7 +21,6 @@
                             href="#">Index</a></li>
                     <li class="<?= $var = isset($menuPpAdd) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Dosen/Penguasaan-pengetahuan">Tambah PP Baru</a></li>
-                    
                 </ul>
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideKu) ? 'active' : '' ?>">
