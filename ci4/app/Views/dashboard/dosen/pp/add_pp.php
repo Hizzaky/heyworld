@@ -50,15 +50,15 @@
                                 <input class="btn form-control" type="text" name="show" id="show"
                                     placeholder="--Pilih Kata Kerja--" value="" style="color:red" disabled>
 
-                                <input class="btn form-control" type="text" name="red" id="katalog"
-                                    placeholder="--Pilih Kata Kerja--" value="" required style="color:red" >
+                                <!-- <input class="btn form-control" type="text" name="red" id="katalog"
+                                    placeholder="--Pilih Kata Kerja--" value="" required style="color:red" > -->
+                                    <input class="btn form-control" type="text" name="taxbloom_id" id="id"
+                                        placeholder="ID" value="" required hidden >
 
                                 <div class="invalid-feedback">
                                     Silahkan pilih kata kejra!
                                 </div>
 
-                                <input class="btn form-control" type="text" name="taxbloom_id" id="id"
-                                    placeholder="ID" value="" hidden >
 
                             </div> 
                         </div>
