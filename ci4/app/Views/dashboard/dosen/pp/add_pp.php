@@ -37,7 +37,7 @@
                 <!-- <button class="btn btn-danger" type="button" onclick="modalKataKerja(  )">button</button>  -->
                 <div class="col-sm-12 col-md-7">
 
-                    <textarea class="form-control" name="konteksPp" id="konteksPp" style="height:20px" readonly></textarea>
+                    <textarea class="form-control" name="konteksPp" id="konteksPp" style="" ></textarea>
                 </div>
                     <form method="testing" class="needs-validation" novalidate>
                         <div class="form-group row mb-4">
