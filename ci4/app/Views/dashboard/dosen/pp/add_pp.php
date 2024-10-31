@@ -41,9 +41,10 @@
                                 <!-- <button class="btn btn-outline-secondary form-control" type="text" data-toggle="modal"
                                     data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" value="" 
                                     readonly required><i class="fas fa-list-ul"></i>add</button> -->
-                                    <a class="btn btn-ouline-info form-control " data-toggle="modal" data-target="#modalKataKerja"> 
-                                       <i class="fas fa-list"></i>a</a> 
-                                <input class="btn form-control" type="text" placeholder="--Pilih Kata Kerja--" value="" required style="color:red" >
+                                    <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja"> 
+                                       <i class="fas fa-list"></i></a> 
+                                <input class="btn form-control" type="text" name="kode" id="kode" 
+                                    placeholder="--Pilih Kata Kerja--" value="" required style="color:red" hidden>
 
                                 <div class="invalid-feedback"> 
                                     ----------------!
@@ -91,7 +92,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                2
+                <?= $table->generate($taxbloom) ?>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
