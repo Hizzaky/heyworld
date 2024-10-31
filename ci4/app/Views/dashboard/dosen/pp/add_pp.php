@@ -45,14 +45,14 @@
                                     <i class="fas fa-list" style="color:white"></i></a>
 
                                 <input class="btn form-control" type="text" name="red" id="index"
-                                    placeholder="--Pilih Kata Kerja--" value="" required style="color:red" hidden>
+                                    placeholder="--Pilih Kata Kerja--" value="" required style="color:red" >
 
                                 <div class="invalid-feedback">
                                     Silahkan pilih kata kejra!
                                 </div>
 
                                 <input class="btn form-control" type="text" name="taxbloom_id" id="id"
-                                    value=""  hidden>
+                                    value=""  >
 
                             </div>
                         </div>
