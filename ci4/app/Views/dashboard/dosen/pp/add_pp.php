@@ -30,8 +30,8 @@
         <div class="card-body p-0">
             <div class="card">
                 <div class="card-header">
-                    <h4><?= $sub_title ?></h4>
-                </div>
+                    <h4><?= $sub_title ?></h4> 
+                </div> 
                 <div class="card-body">
 
                 <button class="btn btn-danger" type="button" onclick="modalKataKerja('a')">button</button> 
