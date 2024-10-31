@@ -122,7 +122,7 @@ class PpModel extends Model
         //         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ' . $data['katalog'] . '?" 
         //         data-confirm-yes="prodiDeleteTaxbloom(' . $dir . ')"
         //         ><i class="fas fa-trash"></i></button>
-        // </div>
+        // </div> 
         return $ret;
     }
     public function dataTaxbloom()
