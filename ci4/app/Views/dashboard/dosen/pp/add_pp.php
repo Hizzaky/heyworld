@@ -33,7 +33,7 @@
                     <h4><?= $sub_title ?></h4>
                 </div>
                 <div class="card-body">
-                    <form method="post" class="needs-validation" novalidate>
+                    <form method="testing" class="needs-validation" novalidate>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
                             <div class="col-sm-12 col-md-7 form-inline">
@@ -44,19 +44,22 @@
                                 <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
                                     <i class="fas fa-list" style="color:white"></i></a>
 
-                                <input class="btn form-control" type="text" name="kode" id="kode"
+                                <input class="btn form-control" type="text" name="red" id="index"
                                     placeholder="--Pilih Kata Kerja--" value="" required style="color:red" hidden>
 
                                 <div class="invalid-feedback">
-                                    ----------------!
+                                    Silahkan pilih kata kejra!
                                 </div>
+
+                                <input class="btn form-control" type="text" name="taxbloom_id" id="id"
+                                    value=""  hidden>
 
                             </div>
                         </div>
                         <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata Kerja</label>
+                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 1</label>
                             <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="katalog" required value=""
+                                <input type="text" class="form-control" name="blue" required value=""
                                     style="color:blue">
                                 <div class="invalid-feedback">
                                     ----------------!
@@ -64,9 +67,9 @@
                             </div>
                         </div>
                         <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata Kerja</label>
+                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 2</label>
                             <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="katalog" required value=""
+                                <input type="text" class="form-control" name="green" required value=""
                                     style="color:green">
                                 <div class="invalid-feedback">
                                     ----------------!
@@ -95,7 +98,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div style="height:75vh; overflow:auto"> 
+                <div style="height:75vh; overflow:auto">
 
                     <?= $table->generate($taxbloom) ?>
                 </div>

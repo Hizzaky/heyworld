@@ -102,9 +102,9 @@ class PpModel extends Model
 
         $ret = '
             <div class="dropdown">
-                <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
+                <button class="btn " type="button">
                     ' . $data['katalog'] . '
+                    onclick="modalKataKerja(' . $data['taxbloom_id'] . ',' . $data['katalog'] . ')"
                 </button>
                 </div>
                 ';
