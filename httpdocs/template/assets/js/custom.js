@@ -32,5 +32,5 @@ function auto_grow(element) {
 
 ppTextarea();
 function ppTextarea(){
-    document.getElementById(konteksPp).value='asd';
+    document.getElementById('konteksPp').value='asd';
 }
