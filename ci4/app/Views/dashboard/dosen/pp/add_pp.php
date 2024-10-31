@@ -75,7 +75,7 @@
                         </div>
                         <div class="card-footer text-right">
                             <button class="btn btn-primary">
-                                5
+                                6
                             </button>
                         </div>
                     </form>
@@ -97,7 +97,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div style="height:50vh; overflow:auto">
+                <div style="height:750vh; overflow:auto">
 
                     <?= $table->generate($taxbloom) ?>
                 </div>
