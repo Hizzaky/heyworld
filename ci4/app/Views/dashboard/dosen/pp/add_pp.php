@@ -39,7 +39,7 @@
                             <div class="col-sm-12 col-md-7">
                                 <!-- <select class="form-control selectric" name="kode" required <?= $x = isset($disabled) ? 'disabled' : '' ?>>
                                 </select> -->
-                                <input class="btn btn-outline-secondary form-control" data-toggle="modal"
+                                <input class="btn btn-outline-secondary form-control" type="text" data-toggle="modal"
                                     data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" value="" 
                                     readonly required>
                                 <div class="invalid-feedback">
