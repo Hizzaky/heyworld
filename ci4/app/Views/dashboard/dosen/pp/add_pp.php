@@ -42,7 +42,7 @@
                                     data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" value="" 
                                     readonly required><i class="fas fa-list-ul"></i>add</button> -->
                                 <!-- <input class="" type="text" placeholder="--Pilih Kata Kerja--" value="" required> -->
-                                 <a class="btn btn-info  " >
+                                 <a class="btn btn-info  " > 
                                     <i class="fas fa-list"></i></a>
 
                                 <div class="invalid-feedback"> 
