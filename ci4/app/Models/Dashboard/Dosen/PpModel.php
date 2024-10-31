@@ -3,6 +3,8 @@
 namespace App\Models\Dashboard\Dosen;
 
 use CodeIgniter\Model;
+use App\Models\CustomModel;
+
 
 class PpModel extends Model
 {
