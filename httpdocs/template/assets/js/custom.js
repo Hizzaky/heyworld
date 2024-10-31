@@ -25,3 +25,7 @@ function modalKataKerja(id,index) {
     document.getElementById('show').value=katalog;
     $('#modalKataKerja').modal('hide');
 }
+function auto_grow(element) {
+    element.style.height = "5px";
+    element.style.height = (element.scrollHeight) + "px";
+}
