@@ -101,10 +101,11 @@ class PpModel extends Model
     protected function delBtn($data)
     {
         $dir = $data['taxbloom_id'];
+        $katalog = $data['katalog'];
 
         $ret = '
             <div class="dropdown">
-                <button class="btn " type="button" onclick="modalKataKerja('.$dir.')">' . $data['katalog'] . ' 
+                <button class="btn " type="button" onclick="modalKataKerja('.$dir.',' . $katalog . ')">' . $data['katalog'] . ' 
                 </button>
             </div>
         ';
