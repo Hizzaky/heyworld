@@ -35,7 +35,10 @@
                 <div class="card-body">
 
                 <!-- <button class="btn btn-danger" type="button" onclick="modalKataKerja(  )">button</button>  -->
-<textarea name="konteksPp" id="konteksPp" readonly></textarea>
+                <div class="col-sm-12 col-md-7 form-inline">
+
+                    <textarea name="konteksPp" id="konteksPp" readonly></textarea>
+                </div>
                     <form method="testing" class="needs-validation" novalidate>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
