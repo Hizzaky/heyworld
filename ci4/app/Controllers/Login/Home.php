@@ -130,4 +130,8 @@ class Home extends BaseController
         }
         return view('login/fakultas', $data);
     }
+    public function cek(){
+        echo 'tes';
+    }
 }
+
