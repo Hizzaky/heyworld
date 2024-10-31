@@ -33,6 +33,9 @@
                     <h4><?= $sub_title ?></h4>
                 </div>
                 <div class="card-body">
+
+                <button class="btn " type="button" onclick="modalKataKerja('id','katalog')">button</button> 
+
                     <form method="testing" class="needs-validation" novalidate>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
