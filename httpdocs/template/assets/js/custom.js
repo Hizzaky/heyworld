@@ -37,7 +37,8 @@ function auto_grow(element) {
 //     document.getElementById('konteksPp').value = red + ' ' + blue + ' ' + green;
 // }
 
-function changeRed(red){
+function inputRed(){
+    let red = document.getElementById('red').value;
     let pp = document.getElementById('konteksPp').value;
     document.getElementById('konteksPp').value=red+' '+pp;
 }
