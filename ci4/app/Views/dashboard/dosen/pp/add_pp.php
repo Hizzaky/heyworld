@@ -42,8 +42,8 @@
                                     data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" value="" 
                                     readonly required><i class="fas fa-list-ul"></i>add</button> -->
                                     <a class="btn btn-ouline-info form-control " data-toggle="modal" data-target="#modalKataKerja"> 
-                                       <i class="fas fa-list"></i></a> 
-                                <input class="btn form-control" type="text" placeholder="--Pilih Kata Kerja--" value="" required style="color:red" hidden>
+                                       <i class="fas fa-list"></i>a</a> 
+                                <input class="btn form-control" type="text" placeholder="--Pilih Kata Kerja--" value="" required style="color:red" >
 
                                 <div class="invalid-feedback"> 
                                     ----------------!
