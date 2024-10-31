@@ -34,7 +34,7 @@
                 </div>
                 <div class="card-body">
 
-                <button class="btn " type="button" onclick="modalKataKerja($header_tilte,$header_tilte)">button</button> 
+                <button class="btn " type="button" onclick="modalKataKerja(<?= $header_tilte ?>,<?= $header_tilte ?>)">button</button> 
 
                     <form method="testing" class="needs-validation" novalidate>
                         <div class="form-group row mb-4">
