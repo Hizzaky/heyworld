@@ -36,9 +36,9 @@
 
                 <!-- <button class="btn btn-danger" type="button" onclick="modalKataKerja(  )">button</button>  -->
                 <div class="col-sm-12 col-md-7">
-<span id="tred" style="color:red"></span>
-<span id="tblue" style="color:blue"></span>
-<span id="tgreen" style="color:green"></span>
+<span id="tred" style="color:red">red</span>
+<span id="tblue" style="color:blue">blue</span>
+<span id="tgreen" style="color:green">green</span>
                     <textarea class="form-control" name="konteksPp" id="konteksPp" style="resize: none;overflow: hidden;min-height: 50px;max-height: 100px;" onchange="auto_grow(this)" readonly></textarea>
                 </div>
                     <form method="testing" class="needs-validation" novalidate>
@@ -53,7 +53,7 @@
                                     <i class="fas fa-list" style="color:white"></i></a>
 
                                 <input class="btn form-control" style="width:80%;color:red" type="text" name="red" id="red"
-                                    placeholder="--Pilih Kata Kerja--" value=""  onreset="inputPp()">
+                                    placeholder="--Pilih Kata Kerja--" value=""  onload="inputPp()">
 
                                 <!-- <input class="btn form-control" type="text" name="red" id="katalog"
                                     placeholder="--Pilih Kata Kerja--" value="" required style="color:red" > -->
