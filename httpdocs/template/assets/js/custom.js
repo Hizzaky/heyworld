@@ -17,8 +17,8 @@ function prodiDeleteTaxbloomPermanen(dir) {
 function prodiRestoreTaxbloom(dir) {
     window.location.href = 'restore-index/'+dir;
 }
-function modalKataKerja(id,katalog) {
-    document.getElementById('katalog').value=katalog;
+function modalKataKerja(id) {
     document.getElementById('id').value=id;
+    // document.getElementById('katalog').value=katalog;
     $('#modalKataKerja').modal('hide');
 }
