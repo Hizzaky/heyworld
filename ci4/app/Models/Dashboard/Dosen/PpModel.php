@@ -61,7 +61,7 @@ class PpModel extends Model
     public function templateTbl()
     {
         $template = [
-            'table_open' => '<table class="table >',
+            'table_open' => '<table class="table table-responsive >',
 
             'thead_open' => '<thead style="background-color:lightblue;">',
             'thead_close' => '</thead>',
