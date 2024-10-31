@@ -46,7 +46,7 @@
                                      required>
                                 <div class="invalid-feedback"> 
                                     ----------------!
-                                </div>
+                                </div> 
 
                             </div>
                         </div>
