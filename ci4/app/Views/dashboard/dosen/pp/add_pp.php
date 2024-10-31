@@ -42,10 +42,6 @@
                                 <input class="btn btn-outline-secondary" data-toggle="modal"
                                     data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" value="" readonly
                                     required>
-
-                                <input type="text" class="form-control" name="katalog1" data-toggle="modal"
-                                    data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" required value="">
-
                                 <div class="invalid-feedback">
                                     ----------------!
                                 </div>
