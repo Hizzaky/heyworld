@@ -14,7 +14,7 @@
     Launch demo modal
 </button>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
-    modal 2
+    modal 
         </button>
 
         <!--  -->
