@@ -41,7 +41,7 @@
                                 <!-- <button class="btn btn-outline-secondary form-control" type="text" data-toggle="modal"
                                     data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" value="" 
                                     readonly required><i class="fas fa-list-ul"></i>add</button> -->
-                                <input class="btn form-control" type="text" placeholder="--Pilih Kata Kerja--" value="" required disabled>
+                                <input class="btn form-control" type="text" placeholder="--Pilih Kata Kata Kerja--" value="" required disabled>
                                  <!-- <a class="btn btn-ouline-info  " data-toggle="modal" data-target="#modalKataKerja"> 
                                     <i class="fas fa-list"></i></a> --> 
 
