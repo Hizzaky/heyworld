@@ -97,7 +97,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div style="height:9vh; overflow:auto">
+                <div style="height:30vh; overflow:auto">
 
                     <?= $table->generate($taxbloom) ?>
                 </div>
