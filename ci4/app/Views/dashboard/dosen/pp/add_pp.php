@@ -57,7 +57,7 @@
                                 <input class="btn form-control" type="text" name="taxbloom_id" id="id"
                                     placeholder="ID" value=""  >
 
-                            </div>
+                            </div> 
                         </div>
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 1</label>
