@@ -29,10 +29,10 @@ function auto_grow(element) {
     element.style.height = (element.scrollHeight) + "px";
 }
 
-ppTextarea();
-function ppTextarea() {
-    let red = document.getElementById('red');
-    let blue = document.getElementById('blue');
-    let green = document.getElementById('green');
-    document.getElementById('konteksPp').value = red + ' ' + blue + ' ' + green;
-}
+// ppTextarea();
+// function ppTextarea() {
+//     let red = document.getElementById('red');
+//     let blue = document.getElementById('blue');
+//     let green = document.getElementById('green');
+//     document.getElementById('konteksPp').value = red + ' ' + blue + ' ' + green;
+// }
