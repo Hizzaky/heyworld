@@ -38,14 +38,17 @@ class Home extends BaseController
     {
         $sesi = session();
         $dataSesi = $sesi->get('login');
+        $jenis_user = $sesi->get('jenis_user');
+        
         if (isset($dataSesi['user_id'])) {
             return redirect()->to('Dashboard');
         }
-        
+        if(!isset($jenis_user)){
+            return redirect()->to('/');
+        }        
 
         $model = new Login;
         helper(['form']);
-        $jenis_user = $sesi->get('jenis_user');
         $data = $model->arDataLogin($jenis_user);
         $data['dataTbl'] = $model->getData($jenis_user);
 
