@@ -42,7 +42,7 @@
                                     data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" value="" 
                                     readonly required><i class="fas fa-list-ul"></i>add</button> -->
                                     <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja"> 
-                                       <i class="fas fa-list"></i></a> 
+                                       <i class="fas fa-list" style="color:white"></i></a> 
                                 <input class="btn form-control" type="text" name="kode" id="kode" 
                                     placeholder="--Pilih Kata Kerja--" value="" required style="color:red" hidden>
 
@@ -92,8 +92,8 @@
                 </button>
             </div>
             <div class="modal-body">
-
-        </div>
+                <?= $table->generate($taxbloom) ?>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
