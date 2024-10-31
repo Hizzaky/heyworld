@@ -43,6 +43,10 @@ function inputPp(){
     let blue = document.getElementById('blue').value;
     // let pp = document.getElementById('konteksPp').value;
     document.getElementById('konteksPp').value=red+' '+blue+' '+green;
+    
+    document.getElementById('tred').innerHTML=red;
+    document.getElementById('tblue').innerHTML=blue;
+    document.getElementById('tgreen').innerHTML=green;
 }
 // function inputBlue(){
 //     let blue = document.getElementById('blue').value;

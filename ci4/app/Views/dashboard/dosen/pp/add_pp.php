@@ -36,7 +36,9 @@
 
                 <!-- <button class="btn btn-danger" type="button" onclick="modalKataKerja(  )">button</button>  -->
                 <div class="col-sm-12 col-md-7">
-
+<span id="tred" style="color:red"></span>
+<span id="tblue" style="color:blue"></span>
+<span id="tgreen" style="color:green"></span>
                     <textarea class="form-control" name="konteksPp" id="konteksPp" style="resize: none;overflow: hidden;min-height: 50px;max-height: 100px;" onchange="auto_grow(this)" readonly></textarea>
                 </div>
                     <form method="testing" class="needs-validation" novalidate>
