@@ -17,9 +17,10 @@ function prodiDeleteTaxbloomPermanen(dir) {
 function prodiRestoreTaxbloom(dir) {
     window.location.href = 'restore-index/'+dir;
 }
-function modalKataKerja(id,katalog) {
+function modalKataKerja(id,index) {
     document.getElementById('id').value=id;
-    let strReplace=katalog.replace('_',' ');
+    let strReplace=index.replace('_',' ');
+    let katalog='Mampu '+indexl;
     document.getElementById('katalog').value=strReplace;
     $('#modalKataKerja').modal('hide');
 }
