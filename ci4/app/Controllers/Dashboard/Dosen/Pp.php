@@ -101,5 +101,8 @@ class Pp extends BaseController
 
         return view('dashboard/dosen/pp/add_pp', $data);
     }
+    public function testing(){
+        print_r($_POST);
+    }
     
 }

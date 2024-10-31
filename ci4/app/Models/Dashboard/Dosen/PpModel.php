@@ -19,7 +19,8 @@ class PpModel extends Model
         ];
         return $title;
     }
-    public function rules_nama(){
+    public function rules_nama()
+    {
         $rules = [
             'nama_dosen' => [
                 'rules' => 'required',
@@ -31,7 +32,8 @@ class PpModel extends Model
         ];
         return $rules;
     }
-    public function rules_pass(){
+    public function rules_pass()
+    {
         $rules = [
             'oldPassword' => [
                 'rules' => 'required|min_length[8]',
@@ -102,21 +104,19 @@ class PpModel extends Model
 
         $ret = '
             <div class="dropdown">
-                <button class="btn " type="button">
-                    ' . $data['katalog'] . '
-                    onclick="modalKataKerja(' . $data['taxbloom_id'] . ',' . $data['katalog'] . ')"
+                <button class="btn " type="button">' . $data['katalog'] . ' onclick="modalKataKerja(' . $data['taxbloom_id'] . ',' . $data['katalog'] . ')"
                 </button>
-                </div>
+            </div>
                 ';
-                // <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                //     style="width:10px !important; text-align:center;">
-                //     <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $data['taxbloom_id'] . '"><i
-                //             class="fas fa-pencil-alt"></i> </a> |
-                //     <button class="btn btn-danger btn-sm " 
-                //         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ' . $data['katalog'] . '?" 
-                //         data-confirm-yes="prodiDeleteTaxbloom(' . $dir . ')"
-                //         ><i class="fas fa-trash"></i></button>
-                // </div>
+        // <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
+        //     style="width:10px !important; text-align:center;">
+        //     <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $data['taxbloom_id'] . '"><i
+        //             class="fas fa-pencil-alt"></i> </a> |
+        //     <button class="btn btn-danger btn-sm " 
+        //         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ' . $data['katalog'] . '?" 
+        //         data-confirm-yes="prodiDeleteTaxbloom(' . $dir . ')"
+        //         ><i class="fas fa-trash"></i></button>
+        // </div>
         return $ret;
     }
     public function dataTaxbloom()
