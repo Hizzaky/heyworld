@@ -50,7 +50,7 @@
                                 <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
                                     <i class="fas fa-list" style="color:white"></i></a>
 
-                                <input class="btn form-control" style="width:80%;color:red" type="text" name="show" id="show"
+                                <input class="btn form-control" style="width:80%;color:red" type="text" name="red" id="red"
                                     placeholder="--Pilih Kata Kerja--" value="" disable >
 
                                 <!-- <input class="btn form-control" type="text" name="red" id="katalog"
@@ -68,7 +68,7 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 1</label>
                             <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="blue" required value=""
+                                <input type="text" class="form-control" name="blue" id="blue" required value=""
                                     style="color:blue">
                                 <div class="invalid-feedback">
                                     ----------------!
@@ -78,7 +78,7 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 2</label>
                             <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="green" required value=""
+                                <input type="text" class="form-control" name="green" id="green" required value=""
                                     style="color:green">
                                 <div class="invalid-feedback">
                                     ----------------!
