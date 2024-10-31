@@ -20,7 +20,7 @@ function prodiRestoreTaxbloom(dir) {
 function modalKataKerja(id,index) {
     document.getElementById('id').value=id;
     let strReplace=index.replace('_',' ');
-    let katalog='Mampu '+index; 
-    document.getElementById('katalog').value=strReplace;
+    let katalog='Mampu '+strReplace; 
+    document.getElementById('katalog').value=katalog;
     $('#modalKataKerja').modal('hide');
 }
