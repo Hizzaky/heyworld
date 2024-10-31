@@ -23,6 +23,9 @@ function modalKataKerja(id, index) {
     let katalog = 'Mampu ' + strReplace;
     document.getElementById('red').value = katalog;
 // 
+    let green = document.getElementById('green').value;
+    let blue = document.getElementById('blue').value;
+    document.getElementById('konteksPp').value = katalog + ' ' + blue + ' ' + green;
     document.getElementById('tred').innerHTML = katalog;
 // 
 
@@ -45,7 +48,6 @@ function inputPp(){
     let red = document.getElementById('red').value;
     let green = document.getElementById('green').value;
     let blue = document.getElementById('blue').value;
-    // let pp = document.getElementById('konteksPp').value;
     document.getElementById('konteksPp').value=red+' '+blue+' '+green;
     
     document.getElementById('tred').innerHTML=red;
