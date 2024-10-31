@@ -23,4 +23,4 @@ function modalKataKerja(id,index) {
     let katalog='Mampu '+indexl; 
     document.getElementById('katalog').value=strReplace;
     $('#modalKataKerja').modal('hide');
-}
+} 
