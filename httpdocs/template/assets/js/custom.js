@@ -42,7 +42,7 @@ function inputPp(){
     let green = document.getElementById('green').value;
     let blue = document.getElementById('blue').value;
     // let pp = document.getElementById('konteksPp').value;
-    document.getElementById('konteksPp').value=red+' '+green+' '+blue;
+    document.getElementById('konteksPp').value=red+' '+blue+' '+green;
 }
 // function inputBlue(){
 //     let blue = document.getElementById('blue').value;
