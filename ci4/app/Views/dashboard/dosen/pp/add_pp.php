@@ -47,6 +47,8 @@
                                 <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
                                     <i class="fas fa-list" style="color:white"></i></a>
 
+                                <input class="btn form-control" type="text" name="show" id="show"
+                                    placeholder="--Pilih Kata Kerja--" value="" required style="color:red" >
                                 <input class="btn form-control" type="text" name="red" id="katalog"
                                     placeholder="--Pilih Kata Kerja--" value="" required style="color:red" >
 

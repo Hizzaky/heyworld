@@ -13,7 +13,7 @@ class PpModel extends Model
         $title = [
             'meta_title' => 'SIM UMMAT',
             'header_title' => 'Penguasaan Pengetahuan',
-            'sub_title' => 'Sub Penguasaan Pengetahuan',
+            'sub_title' => 'Form Penambahan Penguasaan Pengetahuan Baru',
             'sidePp' => 'active',
             'menuPpAdd' => 'active'
         ];
