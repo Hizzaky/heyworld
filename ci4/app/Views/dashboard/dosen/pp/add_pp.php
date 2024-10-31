@@ -34,7 +34,7 @@
                 </div>
                 <div class="card-body">
 
-                <button class="btn btn-danger" type="button" onclick="modalKataKerja( <?= 'b' ?> )">button</button> 
+                <button class="btn btn-danger" type="button" onclick="modalKataKerja(' <?= $sub_title ?> '  )">button</button> 
 
                     <form method="testing" class="needs-validation" novalidate>
                         <div class="form-group row mb-4">
