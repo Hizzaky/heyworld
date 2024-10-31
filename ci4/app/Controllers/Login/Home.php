@@ -7,10 +7,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        $dataSesi=session();
-        $sesi=$dataSesi->get('login');
-        if(isset($sesi['jenis_user'])){
-            
+        $dataSesi = session();
+        $sesi = $dataSesi->get('login');
+        if (isset($sesi['jenis_user'])) {
+
             return redirect()->to($sesi['jenis_user']);
         }
 
@@ -26,7 +26,7 @@ class Home extends BaseController
                 $sesi->set('jenis_user', 'Fakultas');
             }
             // $ret = '/Login/' . $_GET['login'];
-            $ret='login-'.$sesi->get('jenis_user');
+            $ret = 'login-' . $sesi->get('jenis_user');
         } else {
             $ret = '/';
             return redirect()->to(base_url($ret));
@@ -39,13 +39,13 @@ class Home extends BaseController
         $sesi = session();
         $dataSesi = $sesi->get('login');
         $jenis_user = $sesi->get('jenis_user');
-        
+
         if (isset($dataSesi['user_id'])) {
             return redirect()->to('Dashboard');
         }
-        if(!isset($jenis_user)){
+        if (!isset($jenis_user)) {
             return redirect()->to('/');
-        }        
+        }
 
         $model = new Login;
         helper(['form']);
@@ -74,15 +74,19 @@ class Home extends BaseController
     {
         $sesi = session();
         $dataSesi = $sesi->get('login');
+        $jenis_user = $sesi->get('jenis_user');
+        
         if (isset($dataSesi['user_id'])) {
             return redirect()->to('Dashboard');
+        }
+        if (!isset($jenis_user)) {
+            return redirect()->to('/');
         }
 
         $model = new Login;
         helper(['form']);
-        $jenis_user = $sesi->get('jenis_user');
         $data = $model->arDataLogin($jenis_user);
-        $data['dataTbl']=$model->getData($jenis_user);
+        $data['dataTbl'] = $model->getData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
@@ -106,15 +110,19 @@ class Home extends BaseController
     {
         $sesi = session();
         $dataSesi = $sesi->get('login');
+        $jenis_user = $sesi->get('jenis_user');
+
         if (isset($dataSesi['user_id'])) {
             return redirect()->to('Dashboard');
+        }
+        if (!isset($jenis_user)) {
+            return redirect()->to('/');
         }
 
         $model = new Login;
         helper(['form']);
-        $jenis_user = $sesi->get('jenis_user');
         $data = $model->arDataLogin($jenis_user);
-        $data['dataTbl']=$model->getData($jenis_user);
+        $data['dataTbl'] = $model->getData($jenis_user);
 
         if ($this->request->getMethod() == 'post') {
 
@@ -133,9 +141,6 @@ class Home extends BaseController
             }
         }
         return view('login/fakultas', $data);
-    }
-    public function cek(){
-        echo 'tes';
     }
 }
 
