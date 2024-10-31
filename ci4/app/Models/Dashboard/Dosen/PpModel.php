@@ -110,7 +110,7 @@ class PpModel extends Model
             ';
             $ret="
             <div class='dropdown'>
-                <button class='btn' type='button' onclick=modalKataKerja('$dir,$katalog') </button>
+                <button class='btn' type='button' onclick=modalKataKerja('$dir','$katalog')> $katalog </button>
             </div>
 
         "; 
