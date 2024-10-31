@@ -74,9 +74,7 @@
                             </div>
                         </div>
                         <div class="card-footer text-right">
-                            <button class="btn btn-primary">
-                                7
-                            </button>
+                            <button class="btn btn-primary">Simpan</button>
                         </div>
                     </form>
                 </div>
