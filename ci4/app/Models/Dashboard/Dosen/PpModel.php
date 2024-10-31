@@ -101,7 +101,7 @@ class PpModel extends Model
     protected function delBtn($data)
     {
         $dir = $data['taxbloom_id'];
-        $katalog = $data['katalog'];
+        $katalog = str_replace(' ','_',$data['katalog']);
 
         $ret = '
             <div class="dropdown">
