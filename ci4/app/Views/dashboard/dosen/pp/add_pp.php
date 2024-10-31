@@ -27,10 +27,10 @@
             </div>
         <?php endif; ?>
         <!--  -->
-        <div class="card-body p-0"> 
+        <div class="card-body p-0">
             <div class="card">
                 <div class="card-header">
-                    <h4><?= $sub_title ?></h4> 
+                    <h4><?= $sub_title ?></h4>
                 </div>
                 <div class="card-body">
 
