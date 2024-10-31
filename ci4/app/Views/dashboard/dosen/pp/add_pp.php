@@ -37,9 +37,11 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
                             <div class="col-sm-12 col-md-7">
-                                <select class="form-control selectric" name="kode" required <?= $x = isset($disabled) ? 'disabled' : '' ?>>
-                                    
-                                </select>
+                                <!-- <select class="form-control selectric" name="kode" required <?= $x = isset($disabled) ? 'disabled' : '' ?>>
+                                </select> -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#modalKataKerja">--Pilih Kata Kerja--</button>
+
                             </div>
                         </div>
                         <div class="form-group row mb-4">
@@ -70,5 +72,27 @@
 
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="modalKataKerja" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalKataKerjaLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                2
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
 
 <?= $this->endSection() ?>
