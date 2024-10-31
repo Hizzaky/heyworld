@@ -51,7 +51,7 @@
                                     <i class="fas fa-list" style="color:white"></i></a>
 
                                 <input class="btn form-control" style="width:80%;color:red" type="text" name="red" id="red"
-                                    placeholder="--Pilih Kata Kerja--" value=""  onchange="inputPp()">
+                                    placeholder="--Pilih Kata Kerja--" value=""  onreset="inputPp()">
 
                                 <!-- <input class="btn form-control" type="text" name="red" id="katalog"
                                     placeholder="--Pilih Kata Kerja--" value="" required style="color:red" > -->
