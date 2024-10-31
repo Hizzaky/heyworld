@@ -52,7 +52,7 @@
                                 </div>
 
                                 <input class="btn form-control" type="text" name="taxbloom_id" id="id"
-                                    value=""  >
+                                    placeholder="ID" value=""  >
 
                             </div>
                         </div>
