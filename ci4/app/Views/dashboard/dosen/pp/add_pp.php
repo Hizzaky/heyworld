@@ -49,7 +49,7 @@
 
                                 <input class="btn form-control" type="text" name="red" id="katalog"
                                     placeholder="--Pilih Kata Kerja--" value="" required style="color:red" >
-
+ 
                                 <div class="invalid-feedback">
                                     Silahkan pilih kata kejra!
                                 </div>
