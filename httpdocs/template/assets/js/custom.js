@@ -22,6 +22,10 @@ function modalKataKerja(id, index) {
     let strReplace = index.replace('_', ' ');
     let katalog = 'Mampu ' + strReplace;
     document.getElementById('red').value = katalog;
+// 
+    document.getElementById('tred').innerHTML = katalog;
+// 
+
     $('#modalKataKerja').modal('hide');
 }
 function auto_grow(element) {
