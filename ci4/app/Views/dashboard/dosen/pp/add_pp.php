@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div class="card-footer text-right">
-                            <button class="btn btn-primary">2</button>
+                            <button class="btn btn-primary">3</button>
                         </div>
                     </form>
                 </div>
