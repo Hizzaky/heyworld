@@ -36,35 +36,36 @@ class Home extends BaseController
 
     public function dosen()
     {
-        // $sesi = session();
-        // $dataSesi = $sesi->get('login');
-        // if (isset($dataSesi['user_id'])) {
-        //     return redirect()->to('Dashboard');
-        // }
+        $sesi = session();
+        $dataSesi = $sesi->get('login');
+        if (isset($dataSesi['user_id'])) {
+            return redirect()->to('Dashboard');
+        }
+        
 
-        // $model = new Login;
-        // helper(['form']);
-        // $jenis_user = $sesi->get('jenis_user');
-        // $data = $model->arDataLogin($jenis_user);
-        // $data['dataTbl'] = $model->getData($jenis_user);
+        $model = new Login;
+        helper(['form']);
+        $jenis_user = $sesi->get('jenis_user');
+        $data = $model->arDataLogin($jenis_user);
+        $data['dataTbl'] = $model->getData($jenis_user);
 
-        // if ($this->request->getMethod() == 'post') {
+        if ($this->request->getMethod() == 'post') {
 
-        //     $rules = $model->ruleProdi();
+            $rules = $model->ruleProdi();
 
-        //     if ($this->validate($rules)) {
-        //         $data['post'] = $_POST;
-        //         $login = $model->cekAkun($_POST, $jenis_user);
-        //         if ($login['login'] == '1') {
-        //             return redirect()->to('Dashboard');
-        //         } else {
-        //             $data['fail'] = 'Username/Password tidak valid!';
-        //         }
-        //     } else {
-        //         $data['validasi'] = $this->validator;
-        //     }
-        // }
-        // return view('login/dosen', $data);
+            if ($this->validate($rules)) {
+                $data['post'] = $_POST;
+                $login = $model->cekAkun($_POST, $jenis_user);
+                if ($login['login'] == '1') {
+                    return redirect()->to('Dashboard');
+                } else {
+                    $data['fail'] = 'Username/Password tidak valid!';
+                }
+            } else {
+                $data['validasi'] = $this->validator;
+            }
+        }
+        return view('login/dosen', $data);
     }
     public function prodi()
     {
