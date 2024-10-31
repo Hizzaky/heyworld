@@ -107,7 +107,13 @@ class PpModel extends Model
             <div class="dropdown">
                 <button class="btn " type="button" onclick="modalKataKerja('.$dir.',"'.$katalog.')">' . $data['katalog'] . ' </button>
             </div>
-        ';
+            ';
+            $ret="
+            <div class='dropdown'>
+                <button class='btn' type='button' onclick=modalKataKerja('$dir,$katalog') </button>
+            </div>
+
+        ";
         // <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
         //     style="width:10px !important; text-align:center;">
         //     <a class="btn btn-warning btn-sm " href="Perubahan-kata-kerja/' . $data['taxbloom_id'] . '"><i
