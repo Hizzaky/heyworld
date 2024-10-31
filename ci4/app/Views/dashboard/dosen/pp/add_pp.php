@@ -41,7 +41,7 @@
                                 <!-- <button class="btn btn-outline-secondary form-control" type="text" data-toggle="modal"
                                     data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" value="" 
                                     readonly required><i class="fas fa-list-ul"></i>add</button> -->
-                                <input class="btn form-control" type="text" placeholder="--Pilih Kata Kerja--" value="" required readonly>
+                                <input class="btn form-control" type="text" placeholder="--Pilih Kata Kerja--" value="" required style="color:red">
                                  <!-- <a class="btn btn-ouline-info  " data-toggle="modal" data-target="#modalKataKerja"> 
                                     <i class="fas fa-list"></i></a> --> 
 
@@ -63,7 +63,7 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata Kerja</label>
                             <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="katalog" required value="">
+                                <input type="text" class="form-control" name="katalog" required value="" style="color:green">
                                 <div class="invalid-feedback">
                                     ----------------!
                                 </div>
