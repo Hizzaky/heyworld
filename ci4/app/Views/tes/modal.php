@@ -17,6 +17,11 @@
     modal 2
         </button>
 
+        <!--  -->
+    </div>
+    
+</section>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -81,9 +86,5 @@
 </form>
 
 <!-- End Modal Add Product-->
-        <!--  -->
-    </div>
-    
-</section>
 
 <?= $this->endSection() ?>
