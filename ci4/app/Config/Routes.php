@@ -28,6 +28,7 @@ $routes->group('Login', function ($routes) {
     $routes->add('Dosen', 'Login\Home::dosen', ['as' => 'login-Dosen']);
     $routes->add('Prodi', 'Login\Home::prodi', ['as' => 'login-Prodi']);
     $routes->add('Fakultas', 'Login\Home::fakultas', ['as' => 'login-Fakultas']);
+    $routes->add('cek', 'Login\Home::cek');
     // $routes->add('sukses','Login\Home::sukses',['as'=>'sukses']);
     $routes->add('sukses/(:any)/(:any)/(:any)', 'Login\Home::sukses/$1/$2/$3');
 });
