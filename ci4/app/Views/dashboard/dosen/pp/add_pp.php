@@ -51,7 +51,7 @@
                                     <i class="fas fa-list" style="color:white"></i></a>
 
                                 <input class="btn form-control" style="width:80%;color:red" type="text" name="red" id="red"
-                                    placeholder="--Pilih Kata Kerja--" value=""  onchange="changeRed(this)">
+                                    placeholder="--Pilih Kata Kerja--" value=""  oninput="inputPp()">
 
                                 <!-- <input class="btn form-control" type="text" name="red" id="katalog"
                                     placeholder="--Pilih Kata Kerja--" value="" required style="color:red" > -->
@@ -69,7 +69,7 @@
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 1</label>
                             <div class="col-sm-12 col-md-7">
                                 <input type="text" class="form-control" name="blue" id="blue" required value=""
-                                    style="color:blue" oninput="inputRed()">
+                                    style="color:blue" oninput="inputPp()">
                                 <div class="invalid-feedback">
                                     ----------------!
                                 </div>
@@ -79,7 +79,7 @@
                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 2</label>
                             <div class="col-sm-12 col-md-7">
                                 <input type="text" class="form-control" name="green" id="green" required value=""
-                                    style="color:green">
+                                    style="color:green" oninput="inputPp()">
                                 <div class="invalid-feedback">
                                     ----------------!
                                 </div>

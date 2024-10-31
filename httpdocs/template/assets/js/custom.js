@@ -37,8 +37,20 @@ function auto_grow(element) {
 //     document.getElementById('konteksPp').value = red + ' ' + blue + ' ' + green;
 // }
 
-function inputRed(){
+function inputPp(){
     let red = document.getElementById('red').value;
-    let pp = document.getElementById('konteksPp').value;
-    document.getElementById('konteksPp').value=red+' '+pp;
+    let green = document.getElementById('green').value;
+    let blue = document.getElementById('blue').value;
+    // let pp = document.getElementById('konteksPp').value;
+    document.getElementById('konteksPp').value=red+' '+green+' '+blue;
 }
+// function inputBlue(){
+//     let blue = document.getElementById('blue').value;
+//     // let pp = document.getElementById('konteksPp').value;
+//     document.getElementById('konteksPp').value=red+' '+pp;
+// }
+// function inputGreen(){
+//     let red = document.getElementById('red').value;
+//     // let pp = document.getElementById('konteksPp').value;
+//     document.getElementById('konteksPp').value=red+' '+pp;
+// }
