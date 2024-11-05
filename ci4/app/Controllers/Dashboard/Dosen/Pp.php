@@ -105,6 +105,15 @@ class Pp extends BaseController
     {
         $this->pre($_POST);
         $this->pre(session()->get('login'));
+
+        $insert=[
+            'taxbloom_id'=>$_POST['taxbloom_id'],
+            'blue'=>$_POST['blue'],
+            'green'=>$_POST['green'],
+            'dosen_id'=>session()->get('user_id')
+        ];
+
+        $this->pre($insert);
         
     }
 
