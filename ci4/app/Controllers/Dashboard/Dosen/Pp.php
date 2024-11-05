@@ -103,8 +103,9 @@ class Pp extends BaseController
     }
     public function Save_pp()
     {
-        print_r($_POST);
-        print_r(session()->get('login'));
+        $this->pre($_POST);
+        $this->pre(session()->get('login'));
+        
     }
 
 }
