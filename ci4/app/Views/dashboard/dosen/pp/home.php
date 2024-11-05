@@ -34,6 +34,7 @@
             </div>
         </div>
         <!--  -->
+        <div class="container">
         <div class="row">
             <?php foreach($pp as $key=>$val): ?>
                 
@@ -53,6 +54,7 @@
                     </div>
                 </div>
             <?php endforeach; ?>
+        </div>
         </div>
 
     </div>
