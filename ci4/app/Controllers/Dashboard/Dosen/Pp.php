@@ -46,7 +46,7 @@ class Pp extends BaseController
         $modelTbl = new PpTblModel();
 
         $data = $this->arData($model->title(), $sesi->get('login'));
-        $data['login']=$sesi->get('login');
+        $data['login'] = $sesi->get('login');
         // $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
         $data['selected'] = '';
 
@@ -101,8 +101,9 @@ class Pp extends BaseController
 
         return view('dashboard/dosen/pp/add_pp', $data);
     }
-    public function testing(){
+    public function testing()
+    {
         print_r($_POST);
     }
-    
+
 }

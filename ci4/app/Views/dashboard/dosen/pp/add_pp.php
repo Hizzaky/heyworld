@@ -47,7 +47,7 @@
                 </div>
                 <form method="testing" class="needs-validation" novalidate>
                     <div class="form-group row mb-4">
-                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata Kerja </label>
                         <div class="col-sm-12 col-md-7 form-inline">
                             <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
                                 <i class="fas fa-list" style="color:white"></i></a>
