@@ -96,6 +96,6 @@ $routes->group('Dosen', function ($routes) {
     $routes->add('Keterampilan-umum', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-ku']);
     $routes->add('Keterampilan-khusus', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-kk']);
 
-    $routes->post('testing', 'Dashboard\Dosen\Pp::testing');
+    $routes->post('Save-pp', 'Dashboard\Dosen\Pp::save_pp', ['as' => 'dosen-save-pp']);
     
 });

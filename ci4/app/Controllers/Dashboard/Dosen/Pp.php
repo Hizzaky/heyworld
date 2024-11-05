@@ -101,9 +101,10 @@ class Pp extends BaseController
 
         return view('dashboard/dosen/pp/add_pp', $data);
     }
-    public function testing()
+    public function Save_pp()
     {
         print_r($_POST);
+        print_r(session()->get('login'));
     }
 
 }
