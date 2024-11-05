@@ -6,9 +6,4 @@
  */
 
 /*# sourceMappingURL=custom.css.map */
-.textLimit {
-    width: 50ch;
-    overflow: hidden;
-    /* white-space: nowrap; */
-    text-overflow: ellipsis;
-}
+
