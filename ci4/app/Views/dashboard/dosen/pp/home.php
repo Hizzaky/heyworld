@@ -41,7 +41,7 @@
                 <div class="card col-12 col-sm-6 col-md-4" style="margin:10px">
                     <div class="container" style="">
                         <div class="card-body">
-                            <h6 class="card-title"><i class="fas fa-star" style="color:lightblue"></i> <u><?= $val['katalog'] ?></u></h6>
+                            <h6 class="card-title" style="cursor:default"><i class="fas fa-star" style="color:lightblue"></i> <u><?= $val['katalog'] ?></u></h6>
                             <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
                             <p class="card-text limitText">
                                 <span style="color:red">Mampu <?= $val['katalog'] ?></span>
