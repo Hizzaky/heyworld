@@ -49,7 +49,6 @@ function inputPp() {
     document.getElementById('blank').innerHTML = '';
 }
 
-limitText();
 function limitText() {
     var para = document.getElementsByClassName("long-text")[0];
     var text = para.innerHTML;
