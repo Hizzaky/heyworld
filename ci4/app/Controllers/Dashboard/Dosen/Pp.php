@@ -135,7 +135,7 @@ class Pp extends BaseController
             //     }
         }
         if (isset($key)) {
-            $sesi->setFlashdata($key, $msg);
+            session()->setFlashdata($key, $msg);
         }
 
         echo $msg;
