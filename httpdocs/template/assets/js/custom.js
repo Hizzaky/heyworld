@@ -25,16 +25,17 @@ function modalKataKerja(id, index) {
 // 
     let green = document.getElementById('green').value;
     let blue = document.getElementById('blue').value;
-    document.getElementById('konteksPp').value = katalog + ' ' + blue + ' ' + green;
+    // document.getElementById('konteksPp').value = katalog + ' ' + blue + ' ' + green;
     document.getElementById('tred').innerHTML = katalog;
+    document.getElementById('blank').innerHTML = '';
 // 
 
     $('#modalKataKerja').modal('hide');
 }
-function auto_grow(element) {
-    element.style.height = "5px";
-    element.style.height = (element.scrollHeight) + "px";
-}
+// function auto_grow(element) {
+//     element.style.height = "5px";
+//     element.style.height = (element.scrollHeight) + "px";
+// }
 
 // ppTextarea();
 // function ppTextarea() {
@@ -48,11 +49,12 @@ function inputPp(){
     let red = document.getElementById('red').value;
     let green = document.getElementById('green').value;
     let blue = document.getElementById('blue').value;
-    document.getElementById('konteksPp').value=red+' '+blue+' '+green;
+    // document.getElementById('konteksPp').value=red+' '+blue+' '+green;
     
     document.getElementById('tred').innerHTML=red;
     document.getElementById('tblue').innerHTML=blue;
     document.getElementById('tgreen').innerHTML=green;
+    document.getElementById('blank').innerHTML='';
 }
 // function inputBlue(){
 //     let blue = document.getElementById('blue').value;

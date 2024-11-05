@@ -35,11 +35,18 @@
                 <div class="card-body">
 
                 <!-- <button class="btn btn-danger" type="button" onclick="modalKataKerja(  )">button</button>  -->
-                <div class="col-sm-12 col-md-7">
-<span id="tred" style="color:red">red</span>
-<span id="tblue" style="color:blue">blue</span>
-<span id="tgreen" style="color:green">green</span>
-                    <textarea class="form-control" name="konteksPp" id="konteksPp" style="resize: none;overflow: hidden;min-height: 50px;max-height: 100px;" onchange="auto_grow(this)" readonly></textarea>
+                <div class="container">
+						<div class="row">
+							<div class="col-md-2"></div>
+							<div class=" col-md-9 col-" style="border-style:double; padding:10px">
+								<span id="tred" style="color:red"></span>
+								<span id="tblue" style="color:blue"> </span>
+								<span id="tgreen" style="color:green"></span>
+                                <span id="blank">Silahkan inputkan kata kerja dibawah!</span>
+							</div>
+						</div>
+					</div><br>
+                    <!-- <textarea class="form-control" name="konteksPp" id="konteksPp" style="resize: none;overflow: hidden;min-height: 50px;max-height: 100px;" onchange="auto_grow(this)" readonly></textarea> -->
                 </div>
                     <form method="testing" class="needs-validation" novalidate>
                         <div class="form-group row mb-4">
