@@ -37,7 +37,7 @@
         <div class="row">
             <?php foreach($pp as $key=>$val): ?>
                 
-                <div class="card col-12 col-sm-6 col-md-3" style="margin:3px">
+                <div class="card col-12 col-sm-6 col-md-4" style="margin:3px">
                     <div class="container" style="">
                         <div class="card-body">
                             <h5 class="card-title"><?= $val['katalog'] ?></h5>
