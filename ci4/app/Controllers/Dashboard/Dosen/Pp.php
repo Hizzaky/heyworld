@@ -49,7 +49,7 @@ class Pp extends BaseController
         // $data['taxbloom'] = $model->dataTaxbloom();
         $data['pp'] = $model->dataPp();
 
-        $this->pre($data['pp']);
+        // $this->pre($data['pp']);
 
         $table->setTemplate($model->templateTbl());
         $table->setHeading([
@@ -63,7 +63,7 @@ class Pp extends BaseController
 
         $data['table'] = $table;
 
-        // return view('dashboard/dosen/pp/home', $data);
+        return view('dashboard/dosen/pp/home', $data);
     }
     public function add_pp()
     {
