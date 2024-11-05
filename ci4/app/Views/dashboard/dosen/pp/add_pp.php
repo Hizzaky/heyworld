@@ -52,11 +52,11 @@
                             <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
                                 <i class="fas fa-list" style="color:white"></i></a>
 
+                            <input class="btn form-control" type="text" name="taxbloom_id" id="id" placeholder="ID"
+                                value="" required hidden>
                             <input class="btn form-control" style="width:80%;color:red" type="text" name="red" id="red"
                                 placeholder="--Pilih Kata Kerja--" value="" onload="inputPp()" hidden>
 
-                            <input class="btn form-control" type="text" name="taxbloom_id" id="id" placeholder="ID"
-                                value="" required hidden>
 
                             <div class="invalid-feedback">
                                 Silahkan pilih kata kejra!
