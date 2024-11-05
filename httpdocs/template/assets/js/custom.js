@@ -50,7 +50,7 @@ function inputPp() {
 }
 
 function limitText() {
-    var para = document.getElementsByClassName("long-text")[0];
+    var para = document.getElementsByClassName("long-text");
     var text = para.innerHTML;
     para.innerHTML = "";
     var words = text.split(" ");
