@@ -30,7 +30,6 @@
         <div class="card-body p-0">
             <div class="table-responsive">
 
-                <?= $table->generate($taxbloom) ?>
 
             </div>
         </div>

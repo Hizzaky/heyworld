@@ -49,19 +49,18 @@ class Pp extends BaseController
         // $data['taxbloom'] = $model->dataTaxbloom();
         $data['pp'] = $model->dataPp();
 
-        // $this->pre($data['pp']);
 
-        $table->setTemplate($model->templateTbl());
-        $table->setHeading([
-            '<strong>#</strong>',
-            '<strong>C2</strong>',
-            '<strong>C3</strong>',
-            '<strong>C4</strong>',
-            '<strong>C5</strong>',
-            '<strong>C6</strong>'
-        ]);
+        // $table->setTemplate($model->templateTbl());
+        // $table->setHeading([
+        //     '<strong>#</strong>',
+        //     '<strong>C2</strong>',
+        //     '<strong>C3</strong>',
+        //     '<strong>C4</strong>',
+        //     '<strong>C5</strong>',
+        //     '<strong>C6</strong>'
+        // ]);
 
-        $data['table'] = $table;
+        // $data['table'] = $table;
 
         return view('dashboard/dosen/pp/home', $data);
     }
