@@ -36,19 +36,22 @@
         <!--  -->
         <div class="row">
             <?php foreach($pp as $key=>$val): ?>
-            <div class="card col-12 col-sm-5 col-md-3" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title"><?= $val['katalog'] ?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                        <span style="color:red"><?= $val['katalog'] ?></span>
-                        <span style="color:blue"><?= $val['blue'] ?></span>
-                        <span style="color:green"><?= $val['green'] ?></span>
-                    </p>
-                    <a href="#" class="card-link">edit delete</a>
-                    <a href="#" class="card-link">more</a>
+                <div style="padding:5px">
+
+                    <div class="card col-12 col-sm-5 col-md-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $val['katalog'] ?></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">
+                                <span style="color:red"><?= $val['katalog'] ?></span>
+                                <span style="color:blue"><?= $val['blue'] ?></span>
+                                <span style="color:green"><?= $val['green'] ?></span>
+                            </p>
+                            <a href="#" class="card-link">edit delete</a>
+                            <a href="#" class="card-link">more</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
             <?php endforeach; ?>
         </div>
 
