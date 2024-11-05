@@ -39,7 +39,7 @@ class Pp extends BaseController
         }
         // 
         $model = new PpModel();
-        $sesi=$ver;
+        $sesi=session();
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         // $data['selected'] = '';
