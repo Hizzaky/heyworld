@@ -29,81 +29,67 @@
         <!--  -->
         <div class="card-body p-0">
             <div class="card">
-                <div class="card-header"> 
-                    <h4><?= $sub_title ?></h4> 
+                <div class="card-header">
+                    <h4><?= $sub_title ?></h4>
                 </div>
                 <div class="card-body">
-
-                <!-- <button class="btn btn-danger" type="button" onclick="modalKataKerja(  )">button</button>  -->
-                <div class="container">
-						<div class="row">
-							<div class="col-md-2"></div>
-							<div class=" col-md-9 col-" style="border-style:double; padding:10px">
-								<span id="tred" style="color:red"></span>
-								<span id="tblue" style="color:blue"> </span>
-								<span id="tgreen" style="color:green"></span>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class=" col-md-9 col-" style="border-style:double; padding:10px">
+                                <span id="tred" style="color:red"></span>
+                                <span id="tblue" style="color:blue"> </span>
+                                <span id="tgreen" style="color:green"></span>
                                 <span id="blank">Silahkan inputkan kata kerja dibawah!</span>
-							</div>
-						</div>
-					</div><br>
-                    <!-- <textarea class="form-control" name="konteksPp" id="konteksPp" style="resize: none;overflow: hidden;min-height: 50px;max-height: 100px;" onchange="auto_grow(this)" readonly></textarea> -->
-                </div>
-                    <form method="testing" class="needs-validation" novalidate>
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
-                            <div class="col-sm-12 col-md-7 form-inline">
-
-                                <!-- <button class="btn btn-outline-secondary form-control" type="text" data-toggle="modal"
-                                    data-target="#modalKataKerja" placeholder="--Pilih Kata Kerja--" value="" 
-                                    readonly required><i class="fas fa-list-ul"></i>add</button> -->
-                                <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
-                                    <i class="fas fa-list" style="color:white"></i></a>
-
-                                <input class="btn form-control" style="width:80%;color:red" type="text" name="red" id="red"
-                                    placeholder="--Pilih Kata Kerja--" value=""  onload="inputPp()">
-
-                                <!-- <input class="btn form-control" type="text" name="red" id="katalog"
-                                    placeholder="--Pilih Kata Kerja--" value="" required style="color:red" > -->
-                                    <input class="btn form-control" type="text" name="taxbloom_id" id="id"
-                                        placeholder="ID" value="" required hidden >
-
-                                <div class="invalid-feedback">
-                                    Silahkan pilih kata kejra!
-                                </div>
-
-
-                            </div> 
-                        </div>
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 1</label>
-                            <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="blue" id="blue" required value=""
-                                    style="color:blue" oninput="inputPp()">
-                                <div class="invalid-feedback">
-                                    ----------------!
-                                </div>
                             </div>
                         </div>
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 2</label>
-                            <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control" name="green" id="green" required value=""
-                                    style="color:green" oninput="inputPp()">
-                                <div class="invalid-feedback">
-                                    ----------------!
-                                </div>
+                    </div><br>
+                </div>
+                <form method="testing" class="needs-validation" novalidate>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kode </label>
+                        <div class="col-sm-12 col-md-7 form-inline">
+                            <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
+                                <i class="fas fa-list" style="color:white"></i></a>
+
+                            <input class="btn form-control" style="width:80%;color:red" type="text" name="red" id="red"
+                                placeholder="--Pilih Kata Kerja--" value="" onload="inputPp()">
+
+                            <input class="btn form-control" type="text" name="taxbloom_id" id="id" placeholder="ID"
+                                value="" required hidden>
+
+                            <div class="invalid-feedback">
+                                Silahkan pilih kata kejra!
                             </div>
                         </div>
-                        <div class="card-footer text-right">
-                            <button class="btn btn-primary">Simpan
-                                
-                            </button>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 1</label>
+                        <div class="col-sm-12 col-md-7">
+                            <input type="text" class="form-control" name="blue" id="blue" required value=""
+                                style="color:blue" oninput="inputPp()">
+                            <div class="invalid-feedback">
+                                ----------------!
+                            </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 2</label>
+                        <div class="col-sm-12 col-md-7">
+                            <input type="text" class="form-control" name="green" id="green" required value=""
+                                style="color:green" oninput="inputPp()">
+                            <div class="invalid-feedback">
+                                ----------------!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-right">
+                        <button class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
             </div>
         </div>
-
+    </div>
     </div>
 </section>
 

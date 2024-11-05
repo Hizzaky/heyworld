@@ -25,7 +25,6 @@ function modalKataKerja(id, index) {
 // 
     let green = document.getElementById('green').value;
     let blue = document.getElementById('blue').value;
-    // document.getElementById('konteksPp').value = katalog + ' ' + blue + ' ' + green;
     document.getElementById('tred').innerHTML = katalog;
     document.getElementById('blank').innerHTML = '';
 // 
@@ -37,32 +36,14 @@ function modalKataKerja(id, index) {
 //     element.style.height = (element.scrollHeight) + "px";
 // }
 
-// ppTextarea();
-// function ppTextarea() {
-//     let red = document.getElementById('red');
-//     let blue = document.getElementById('blue');
-//     let green = document.getElementById('green');
-//     document.getElementById('konteksPp').value = red + ' ' + blue + ' ' + green;
-// }
 
 function inputPp(){
     let red = document.getElementById('red').value;
     let green = document.getElementById('green').value;
     let blue = document.getElementById('blue').value;
-    // document.getElementById('konteksPp').value=red+' '+blue+' '+green;
     
     document.getElementById('tred').innerHTML=red;
     document.getElementById('tblue').innerHTML=blue;
     document.getElementById('tgreen').innerHTML=green;
     document.getElementById('blank').innerHTML='';
 }
-// function inputBlue(){
-//     let blue = document.getElementById('blue').value;
-//     // let pp = document.getElementById('konteksPp').value;
-//     document.getElementById('konteksPp').value=red+' '+pp;
-// }
-// function inputGreen(){
-//     let red = document.getElementById('red').value;
-//     // let pp = document.getElementById('konteksPp').value;
-//     document.getElementById('konteksPp').value=red+' '+pp;
-// }
