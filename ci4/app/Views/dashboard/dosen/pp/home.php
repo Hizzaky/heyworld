@@ -38,7 +38,7 @@
             <?php foreach($pp as $key=>$val): ?>
                 
                 <div class="card col-12 col-sm-6 col-md-4" style="width: 18rem; ">
-                        <div class="container" style="padding:5rem">
+                        <div class="container" style="">
                         <div class="card-body">
                             <h5 class="card-title"><?= $val['katalog'] ?></h5>
                             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
