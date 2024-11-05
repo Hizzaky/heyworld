@@ -8,6 +8,7 @@ use App\Controllers\BaseController;
 use App\Models\Dashboard\Dosen\Dosen;
 use App\Models\Dashboard\Dosen\Table\PpTblModel;
 use App\Models\Dashboard\Dosen\PpModel;
+use App\Models\Dashboard\Dosen\AddPpModel;
 
 class Pp extends BaseController
 {
@@ -77,7 +78,7 @@ class Pp extends BaseController
         // 
         // $db = db_connect();
         // $modelCustom = new CustomModel($db);
-        $model = new PpModel();
+        $model = new AddPpModel();
         // $modelTbl = new PpTblModel();
 
         $data = $this->arData($model->title(), $sesi->get('login'));

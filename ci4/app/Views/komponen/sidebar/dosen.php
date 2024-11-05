@@ -17,7 +17,7 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
                     <span>Penguasaan Pengetahuan</span></a>
                 <ul class="dropdown-menu">
-                    <li class="<?= $var = isset($menuPpIndex) ? 'active' : '' ?>"><a class="nav-link"
+                    <li class="<?= $var = isset($menuPp) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Dosen/Penguasaan-pengetahuan">Index</a></li>
                     <li class="<?= $var = isset($menuPpAdd) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Dosen/Penguasaan-pengetahuan-baru">Tambah PP Baru</a></li>

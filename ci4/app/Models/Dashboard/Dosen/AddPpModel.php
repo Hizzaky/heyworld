@@ -6,16 +6,16 @@ use CodeIgniter\Model;
 use App\Models\CustomModel;
 
 
-class PpModel extends Model
+class AddPpModel extends Model
 {
     public function title()
     {
         $title = [
             'meta_title' => 'SIM UMMAT',
             'header_title' => 'Penguasaan Pengetahuan',
-            'sub_title' => '',
+            'sub_title' => 'Form Penambahan Penguasaan Pengetahuan Baru',
             'sidePp' => 'active',
-            'menuPp' => 'active'
+            'menuPpAdd' => 'active'
         ];
         return $title;
     }
