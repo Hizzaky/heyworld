@@ -127,16 +127,6 @@ class AddPpModel extends Model
         return $ret;
     }
 
-    public function dataPp()
-    {
-        $db = db_connect();
-        $model = new CustomModel($db);
-
-        $data=$model->ppJoin();
-
-        return $data;
-
-    }
     public function dataTaxbloom()
     {
         $db = db_connect();

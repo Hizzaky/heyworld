@@ -184,4 +184,14 @@ class PpModel extends Model
 
         return $data;
     }
+    public function dataPp()
+    {
+        $db = db_connect();
+        $model = new CustomModel($db);
+
+        $data = $model->ppJoin();
+
+        return $data;
+
+    }
 }
