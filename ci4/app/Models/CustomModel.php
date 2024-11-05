@@ -46,31 +46,31 @@ class CustomModel
         return $post;
     }
 
-    function insertBatch($tbl,$data)
+    function insertBatch($tbl, $data)
     {
         $builder = $this->db->table($tbl);
         $builder->insertBatch($data);
-        
+
     }
-    
+
     function selectDist($tbl, $field)
     {
         $builder = $this->db;
-        $query = $builder->query('SELECT DISTINCT '.$field.' FROM '.$tbl);
-        $data=$query->getResultArray();
-        
+        $query = $builder->query('SELECT DISTINCT ' . $field . ' FROM ' . $tbl);
+        $data = $query->getResultArray();
+
         return $data;
     }
 
-    function ppJoin(){
+    function ppJoin()
+    {
         $builder = $this->db->table('t_pp');
         $builder->select('*');
-        // $builder->join('t_taxbloom','t_taxbloom.taxbloom_id=t_pp.taxbloom_id');
-        $builder->join('t_taxbloom','t_taxbloom.taxbloom_id=t_pp.taxbloom_id');
-        // $builder->join('t_dosen','t_dosen.dosen_id=t_pp.dosen_id');
+        $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_pp.taxbloom_id');
+        $builder->join('t_dosen','t_dosen.dosen_id=t_pp.dosen_id');
         $ret = $builder->get()->getResultArray();
-        
+
         return $ret;
     }
-    
+
 }
