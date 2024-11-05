@@ -42,7 +42,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $val['katalog'] ?></h5>
                             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text ">
+                            <p class="card-text " style="max-width:50ch">
                                 <span style="color:red"><?= $val['katalog'] ?></span>
                                 <span style="color:blue"><?= $val['blue'] ?></span>
                                 <span style="color:green"><?= $val['green'] ?></span>
