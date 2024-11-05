@@ -28,10 +28,8 @@ class Pp extends BaseController
 
         return view('dashboard/dosen/home', $data);
     }
-    public function add_pp()
-    {
-        $sesi = session();
-        $ver = $sesi->get('login');
+    public function pp(){
+        $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
             if ($ver['jenis_user'] != 'Dosen') {
                 return redirect()->back();
@@ -40,17 +38,11 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        $db = db_connect();
-        $modelCustom = new CustomModel($db);
         $model = new PpModel();
-        $modelTbl = new PpTblModel();
-
+        $sesi=$ver;
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
-        // $data['kode'] = $modelCustom->selectDist('t_taxbloom', 'kode');
-        $data['selected'] = '';
-
-
+        // $data['selected'] = '';
 
         // 
         $table = new \CodeIgniter\View\Table();
@@ -69,45 +61,64 @@ class Pp extends BaseController
 
         $data['table'] = $table;
 
+        return view('dashboard/pp/home', $data);
+    }
+    public function add_pp()
+    {
+        $sesi = session();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Dosen') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        // $db = db_connect();
+        // $modelCustom = new CustomModel($db);
+        $model = new PpModel();
+        // $modelTbl = new PpTblModel();
 
+        $data = $this->arData($model->title(), $sesi->get('login'));
+        $data['login'] = $sesi->get('login');
+        // $data['selected'] = '';
 
-        // $this->pre($data);
+        // 
+        $table = new \CodeIgniter\View\Table();
 
-        // if (request()->getMethod() == 'post') {
+        $data['taxbloom'] = $model->dataTaxbloom();
 
-        //     $dataTbl = [
-        //         'kode' => $_POST['kode'],
-        //         'katalog' => $_POST['katalog']
-        //     ];
+        $table->setTemplate($model->templateTbl());
+        $table->setHeading([
+            '<strong>#</strong>',
+            '<strong>C2</strong>',
+            '<strong>C3</strong>',
+            '<strong>C4</strong>',
+            '<strong>C5</strong>',
+            '<strong>C6</strong>'
+        ]);
 
-        //     $modelTbl->save($dataTbl);
-
-        //     if ($modelTbl) {
-        //         $info = 'suksesAddKataKerja';
-        //         $msg = 'Kata kerja baru berhasil ditambakan!';
-
-        //     } else {
-        //         $info = 'failAddKataKerja';
-        //         $msg = 'Kata kerja baru gagal ditambakan!';
-        //     }
-
-        // } else {
-        //     $data['validasi'] = $this->validator;
-        // }
-
-        // if (isset($info)) {
-        //     $sesi->setFlashdata($info, $msg);
-        // }
+        $data['table'] = $table;
 
         return view('dashboard/dosen/pp/add_pp', $data);
     }
     public function Save_pp()
     {
+        $ver = session()->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Dosen') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
         
         if (request()->getMethod() == 'post') {
             // $model = new PpModel();
             $modelTbl = new PpTblModel();
-            $sesi = session()->get('login');
+            $sesi = $ver;
             $insert = [
                 'taxbloom_id' => $_POST['taxbloom_id'],
                 'blue' => $_POST['blue'],
@@ -127,12 +138,14 @@ class Pp extends BaseController
             } else {
                 $key = 'failAddPp';
                 $msg = 'Penguasaan Pengetahuan Baru Gagal Ditambahkan!';
-
+                
             }
-
+            
             
             
             //     }
+        }else{
+            return redirect()->back();
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
@@ -140,6 +153,7 @@ class Pp extends BaseController
 
         echo $msg;
 
+        // return redirect();
 
 
     }

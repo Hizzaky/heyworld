@@ -18,9 +18,9 @@
                     <span>Penguasaan Pengetahuan</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPpIndex) ? 'active' : '' ?>"><a class="nav-link"
-                            href="#">Index</a></li>
+                            href="/Dosen/Penguasaan-pengetahuan">Index</a></li>
                     <li class="<?= $var = isset($menuPpAdd) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Dosen/Penguasaan-pengetahuan">Tambah PP Baru</a></li>
+                            href="/Dosen/Penguasaan-pengetahuan-baru">Tambah PP Baru</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideKu) ? 'active' : '' ?>">

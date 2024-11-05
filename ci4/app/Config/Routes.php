@@ -92,10 +92,13 @@ $routes->group('Dosen', function ($routes) {
     $routes->add('Update-nama', 'Dashboard\Dosen\Profile::update_nama', ['as' => 'dosen-update-nama']);
     $routes->add('Update-password', 'Dashboard\Dosen\Profile::update_password', ['as' => 'dosen-update-password']);
 
-    $routes->add('Penguasaan-pengetahuan', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-pp']);
+    $routes->add('Penguasaan-pengetahuan', 'Dashboard\Dosen\Pp::pp', ['as' => 'dosen-pp']);
+    $routes->add('Penguasaan-pengetahuan-baru', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-add-pp']);
+    $routes->post('Save-pp', 'Dashboard\Dosen\Pp::save_pp', ['as' => 'dosen-save-pp']);
+
     $routes->add('Keterampilan-umum', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-ku']);
+
     $routes->add('Keterampilan-khusus', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-kk']);
 
-    $routes->post('Save-pp', 'Dashboard\Dosen\Pp::save_pp', ['as' => 'dosen-save-pp']);
     
 });
