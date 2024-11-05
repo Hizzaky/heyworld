@@ -2,8 +2,6 @@
 
 namespace App\Controllers\Dashboard\Dosen;
 
-use App\Models\CustomModel;
-
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Dosen\Dosen;
 use App\Models\Dashboard\Dosen\Table\PpTblModel;
@@ -48,7 +46,10 @@ class Pp extends BaseController
         // 
         $table = new \CodeIgniter\View\Table();
 
-        $data['taxbloom'] = $model->dataTaxbloom();
+        // $data['taxbloom'] = $model->dataTaxbloom();
+        $data['pp'] = $model->dataPp();
+
+        $this->pre($data['pp']);
 
         $table->setTemplate($model->templateTbl());
         $table->setHeading([
@@ -62,7 +63,7 @@ class Pp extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/pp/home', $data);
+        // return view('dashboard/dosen/pp/home', $data);
     }
     public function add_pp()
     {
