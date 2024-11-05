@@ -14,7 +14,7 @@ class PpTblModel extends Model
     // protected $returnType = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['red', 'blue', 'green', 'dosen_id',];
+    protected $allowedFields = ['taxbloom_id', 'blue', 'green', 'dosen_id',];
 
     // protected bool $allowEmptyInserts = false;
     // protected bool $updateOnlyChanged = true;

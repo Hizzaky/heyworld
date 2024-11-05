@@ -103,18 +103,44 @@ class Pp extends BaseController
     }
     public function Save_pp()
     {
-        $this->pre($_POST);
-        $this->pre(session()->get('login'));
-        $sesi=session()->get('login');
-        $insert=[
-            'taxbloom_id'=>$_POST['taxbloom_id'],
-            'blue'=>$_POST['blue'],
-            'green'=>$_POST['green'],
-            'dosen_id'=>$sesi['user_id']
-        ];
-
-        $this->pre($insert);
         
-    }
+        if (request()->getMethod() == 'post') {
+            // $model = new PpModel();
+            $modelTbl = new PpTblModel();
+            $sesi = session()->get('login');
+            $insert = [
+                'taxbloom_id' => $_POST['taxbloom_id'],
+                'blue' => $_POST['blue'],
+                'green' => $_POST['green'],
+                'dosen_id' => $sesi['user_id']
+            ];
 
+            //     $rules = $model->();
+            //     if ($this->validate($rules)) {
+
+
+            $modelTbl->save($insert);
+
+            if ($modelTbl) {
+                $key = 'suksesAddPp';
+                $msg = 'Penguasaan Pengetahuan Baru Berhasil Ditambahkan!';
+            } else {
+                $key = 'failAddPp';
+                $msg = 'Penguasaan Pengetahuan Baru Gagal Ditambahkan!';
+
+            }
+
+            
+            
+            //     }
+        }
+        if (isset($key)) {
+            $sesi->setFlashdata($key, $msg);
+        }
+
+        echo $msg;
+
+
+
+    }
 }
