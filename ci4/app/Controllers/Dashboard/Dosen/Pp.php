@@ -7,7 +7,7 @@ use App\Models\Dashboard\Dosen\Dosen;
 use App\Models\Dashboard\Dosen\Table\PpTblModel;
 use App\Models\Dashboard\Dosen\PpModel;
 use App\Models\Dashboard\Dosen\AddPpModel;
-use App\Models\Dashboard\Dosen\editPpModel;
+use App\Models\Dashboard\Dosen\EditPpModel; 
 
 class Pp extends BaseController
 {
