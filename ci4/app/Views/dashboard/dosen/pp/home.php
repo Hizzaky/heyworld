@@ -30,7 +30,7 @@
             <div class="row">
                 <?php foreach ($pp as $key => $val): ?>
 
-                    <div class="card col-12 col-sm-6 col-md-4" style="margin:10px">
+                    <div class="card col-12 col-sm-6 col-md-4" style="margin:8px">
                         <div class="container" style="padding-bottom:5px">
                             <div class="card-body">
                                 <h6 class="card-title" style="cursor:default"><i class="fas fa-star"
@@ -41,7 +41,7 @@
                                     <span style="color:blue"><?= $val['blue'] ?></span>
                                     <span style="color:green"><?= $val['green'] ?></span>
                                 </p><hr>
-                                <div style="margin-bottom:5px">
+                                <div style="">
                                     <div class="" style="float:left">
                                         <div class="dropdown ">
                                             <a class=" " type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -61,7 +61,7 @@
                                     </div>
                                     <div class="" style="float:right">
                                         <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
-                                        <a class="" data-toggle="modal" data-target="#modalKataKerja">
+                                        <a class="" data-toggle="modal" data-target="#modalKataKerja" style="cursor:pointer">
                                             Selengkapnya...</a>
                                     </div>
                                 </div>
