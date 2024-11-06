@@ -151,8 +151,8 @@ class Pp extends BaseController
 
         
         
-        $this->pre($data['edit']);
         if (request()->getMethod() == 'post') {
+            $this->pre($_POST);
         //     // $model = new PpModel();
         //     $modelTbl = new PpTblModel();
         //     $sesi = $ver;
@@ -179,7 +179,7 @@ class Pp extends BaseController
         //     session()->setFlashdata($key, $msg);
         }
 
-        // return view('dashboard/dosen/pp/edit_pp', $data);
+        return view('dashboard/dosen/pp/edit_pp', $data);
     }
 
     public function tes(){
