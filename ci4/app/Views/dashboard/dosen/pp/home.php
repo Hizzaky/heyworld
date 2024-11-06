@@ -40,30 +40,30 @@
                                     <span style="color:red">Mampu <?= $val['katalog'] ?></span>
                                     <span style="color:blue"><?= $val['blue'] ?></span>
                                     <span style="color:green"><?= $val['green'] ?></span>
-                                </p>
-                                <hr>
-                                <div class="" style="float:left">
-
-                                    <div class="dropdown ">
-                                        <a class=" " type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            Aksi
-                                        </>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                                            style="width:10px !important; text-align:center;">
-                                            <a class="btn btn-warning btn-sm " href="#"><i class="fas fa-pencil-alt"></i>
-                                            </a> |
-                                            <button class="btn btn-danger btn-sm "
-                                                data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja <b><?= $val['katalog'] ?> (<?= $val['kode'] ?>)</b> ?"
-                                                data-confirm-yes="dosenDeleteTaxbloom(<?= $val['pp_id'] ?>)"><i
-                                                    class="fas fa-trash"></i></button>
+                                </p><hr>
+                                <div style="margin-bottom:5px">
+                                    <div class="" style="float:left">
+                                        <div class="dropdown ">
+                                            <a class=" " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                Aksi
+                                            </>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
+                                                style="width:10px !important; text-align:center;">
+                                                <a class="btn btn-warning btn-sm " href="#"><i class="fas fa-pencil-alt"></i>
+                                                </a> |
+                                                <button class="btn btn-danger btn-sm "
+                                                    data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja <b><?= $val['katalog'] ?> (<?= $val['kode'] ?>)</b> ?"
+                                                    data-confirm-yes="dosenDeleteTaxbloom(<?= $val['pp_id'] ?>)"><i
+                                                        class="fas fa-trash"></i></button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="" style="float:right">
-                                    <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
-                                    <a class="" data-toggle="modal" data-target="#modalKataKerja">
-                                        Selengkapnya...</a>
+                                    <div class="" style="float:right">
+                                        <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
+                                        <a class="" data-toggle="modal" data-target="#modalKataKerja">
+                                            Selengkapnya...</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
