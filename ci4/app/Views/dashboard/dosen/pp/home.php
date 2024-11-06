@@ -50,7 +50,7 @@
                                     <span style="color:green"><?= $val['green'] ?></span>
                                 </p>
                                 <!--  -->
-                                <div class="" style="float:right">
+                                <div class="" style="float:left">
 
                                     <div class="dropdown dropdown-toggle">
                                         <a class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -65,11 +65,11 @@
                                         </div>
                                     </div>
                                     <!--  -->
-                                    <!-- <a href="#" class="card-link">edit delete</a> -->
-                                    <div class="">
-                                        <a href="3" class=" " style="right">read more</a>
-                                    </div>
                                 </div>
+                                    <!-- <a href="#" class="card-link">edit delete</a> -->
+                                    <div class="float:right">
+                                        <a href="2" class=" " style="">read more</a>
+                                    </div>
                             </div>
                         </div>
                     </div>
