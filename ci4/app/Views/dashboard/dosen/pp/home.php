@@ -90,7 +90,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div>
+            </div><hr>
             <div class="modal-body" style="padding:5px;">
                 <!-- <div style="height:75vh; overflow:auto"> -->
                 <div class="container">
