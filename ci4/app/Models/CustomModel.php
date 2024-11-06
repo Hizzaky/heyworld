@@ -68,7 +68,7 @@ class CustomModel
         $builder->select('*');
         $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_pp.taxbloom_id');
         $builder->join('t_dosen','t_dosen.dosen_id=t_pp.dosen_id');
-        $builder->where('dosen_id',$id);
+        $builder->where('t_pp.dosen_id',$id);
 
 
 
