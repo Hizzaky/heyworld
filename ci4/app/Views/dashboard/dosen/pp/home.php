@@ -50,7 +50,7 @@
                                     <span style="color:green"><?= $val['green'] ?></span>
                                 </p>
                                 <!--  -->
-                                <!-- <div class="form-inline"> -->
+                                <div class="container">
 
                                     <div class="dropdown dropdown-toggle">
                                         <a class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -67,9 +67,9 @@
                                     <!--  -->
                                     <!-- <a href="#" class="card-link">edit delete</a> -->
                                     <div class="flRight">
-                                        <a href="#" class="card-link ">read more</a>
+                                        <a href="#" class=" ">read more</a>
                                     </div>
-                                <!-- </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
