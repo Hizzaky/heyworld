@@ -52,7 +52,7 @@
                                 <!--  -->
                                 <div class="" style="float:left">
 
-                                    <div class="dropdown dropdown-toggle">
+                                    <div class="dropdown ">
                                         <a class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">Aksi</a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
