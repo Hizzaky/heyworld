@@ -54,8 +54,12 @@
                                 <div class="" style="float:left">
 
                                     <div class="dropdown ">
+                                        <!-- <a class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">Aksi</a> -->
                                         <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">Aksi</>
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Aksi
+                                        </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                                             style="width:10px !important; text-align:center;">
                                             <a class="btn btn-warning btn-sm " href="#"><i class="fas fa-pencil-alt"></i>
@@ -67,10 +71,10 @@
                                     </div>
                                     <!--  -->
                                 </div>
-                                    <!-- <a href="#" class="card-link">edit delete</a> -->
-                                    <div class="" style="float:right">
-                                        <a href="2" class=" " style="">Selengkapnya...</a>
-                                    </div>
+                                <!-- <a href="#" class="card-link">edit delete</a> -->
+                                <div class="" style="float:right">
+                                    <a href="2" class=" " style="">Selengkapnya...</a>
+                                </div>
                             </div>
                         </div>
                     </div>
