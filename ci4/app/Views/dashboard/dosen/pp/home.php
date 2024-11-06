@@ -64,7 +64,7 @@
                                     <div class="" style="float:right">
                                         <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
                                         <a class="" data-toggle="modal" data-target="#modalKataKerja"
-                                            style="cursor:pointer" onclick="tesini('katalog')">
+                                            style="cursor:pointer" onclick="tesini('<?= $val['katalog'] ?>')">
                                             Selengkapnya...2
                                         </a>
                                     </div>
