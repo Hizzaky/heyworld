@@ -149,10 +149,10 @@ class Pp extends BaseController
         $data['login'] = $ver;
         $data['edit'] = $model->editDataPp($pp_id);
 
-        $this->pre($data['edit']);
-
-
-        // if (request()->getMethod() == 'post') {
+        
+        
+        if (request()->getMethod() == 'post') {
+            $this->pre($_POST);
         //     // $model = new PpModel();
         //     $modelTbl = new PpTblModel();
         //     $sesi = $ver;
@@ -177,9 +177,9 @@ class Pp extends BaseController
         // }
         // if (isset($key)) {
         //     session()->setFlashdata($key, $msg);
-        // }
+        }
 
-        // return redirect('Penguasaan-pengetahuan');
+        return view('dashboard/dosen/pp/edit_pp', $data);
     }
 
     public function tes(){
