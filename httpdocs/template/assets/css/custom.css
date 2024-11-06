@@ -14,3 +14,15 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+div.alCenter{
+    text-align: center;
+}
+div.alRight{
+    text-align: right;
+}
+div.flRigth{
+    float: right;
+}
+div.flLeft{
+    float: left;
+}

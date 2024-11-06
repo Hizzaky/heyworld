@@ -57,18 +57,18 @@
                                             aria-haspopup="true" aria-expanded="false">Aksi</a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                                             style="width:10px !important; text-align:center;">
-                                            <a class="btn btn-warning btn-sm "
-                                                href="#"><i
-                                                    class="fas fa-pencil-alt"></i> </a> |
+                                            <a class="btn btn-warning btn-sm " href="#"><i class="fas fa-pencil-alt"></i>
+                                            </a> |
                                             <button class="btn btn-danger btn-sm "
                                                 data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ?"
-                                                data-confirm-yes=""><i
-                                                    class="fas fa-trash"></i></button>
+                                                data-confirm-yes=""><i class="fas fa-trash"></i></button>
                                         </div>
                                     </div>
                                     <!--  -->
                                     <!-- <a href="#" class="card-link">edit delete</a> -->
-                                    <a href="#" class="card-link">more</a>
+                                    <div class="alRight">
+                                        <a href="#" class="card-link">more</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
