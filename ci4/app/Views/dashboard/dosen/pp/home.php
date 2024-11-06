@@ -50,7 +50,7 @@
                                                 Aksi
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                                                     style="width:10px !important; text-align:center;">
-                                                    <a class="btn btn-warning btn-sm " href="edit_pp"> 
+                                                    <a class="btn btn-warning btn-sm " href="Edit-pp/<?= $val['pp_id'] ?>"> 
                                                         <i class="fas fa-pencil-alt"></i>
                                                     </a> |
                                                     <button class="btn btn-danger btn-sm "

@@ -133,7 +133,7 @@ class Pp extends BaseController
         }
         return redirect('Penguasaan-pengetahuan');
     }
-    public function edit_pp()
+    public function edit_pp($pp_id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -147,9 +147,9 @@ class Pp extends BaseController
         $model = new EditPpModel();
         $data = $this->arData($model->title(), $ver);
         $data['login'] = $ver;
-        // $data['edit'] = $model->editDataPp($pp_id);
+        $data['edit'] = $model->editDataPp($pp_id);
 
-        $this->pre($data);
+        $this->pre($data['edit']);
 
 
         // if (request()->getMethod() == 'post') {
