@@ -35,26 +35,43 @@
         </div>
         <!--  -->
         <div class="container">
-        <div class="row">
-            <?php foreach($pp as $key=>$val): ?>
-                
-                <div class="card col-12 col-sm-6 col-md-4" style="margin:10px">
-                    <div class="container" style="">
-                        <div class="card-body">
-                            <h6 class="card-title" style="cursor:default"><i class="fas fa-star" style="color:lightblue"></i> <u><?= $val['katalog'] ?></u></h6>
-                            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-                            <p class="card-text limitText">
-                                <span style="color:red">Mampu <?= $val['katalog'] ?></span>
-                                <span style="color:blue"><?= $val['blue'] ?></span>
-                                <span style="color:green"><?= $val['green'] ?></span>
-                            </p>
-                            <a href="#" class="card-link">edit delete</a>
-                            <a href="#" class="card-link">more</a>
+            <div class="row">
+                <?php foreach ($pp as $key => $val): ?>
+
+                    <div class="card col-12 col-sm-6 col-md-4" style="margin:10px">
+                        <div class="container" style="">
+                            <div class="card-body">
+                                <h6 class="card-title" style="cursor:default"><i class="fas fa-star"
+                                        style="color:lightblue"></i> <u><?= $val['katalog'] ?></u></h6>
+                                <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                                <p class="card-text limitText">
+                                    <span style="color:red">Mampu <?= $val['katalog'] ?></span>
+                                    <span style="color:blue"><?= $val['blue'] ?></span>
+                                    <span style="color:green"><?= $val['green'] ?></span>
+                                </p>
+                                <!--  -->
+                                <div class="dropdown">
+                                    <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Aksi</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
+                                        style="width:10px !important; text-align:center;">
+                                        <a class="btn btn-warning btn-sm "
+                                            href="#"><i
+                                                class="fas fa-pencil-alt"></i> </a> |
+                                        <button class="btn btn-danger btn-sm "
+                                            data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja ?"
+                                            data-confirm-yes=""><i
+                                                class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <!-- <a href="#" class="card-link">edit delete</a> -->
+                                <a href="#" class="card-link">more</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
+                <?php endforeach; ?>
+            </div>
         </div>
 
     </div>
