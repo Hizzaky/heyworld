@@ -86,7 +86,7 @@
             </div>
             <div class="modal-body" style="padding:5px">
                 <div style="height:75vh; overflow:auto">
-                    <span style="color:red">Mampu blablabla </span>
+                    <span style="color:red">Mampu blablabla bla</span>
                     <span style="color:blue">blablabla blablabla</span>
                     <span style="color:green">blabla blabla blabla</span>
                 </div>
