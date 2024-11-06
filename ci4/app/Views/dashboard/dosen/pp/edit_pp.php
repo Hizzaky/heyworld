@@ -36,13 +36,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-2"></div>
-                            <div class=" col-md-9 col-" style="border-style:double; padding:10px" >
-                                <p style="cursor:default">
+                            <div class=" col-md-9 col-" style="border-style:double; padding:10px;cursor:default" >
                                     <span id="tred" style="color:red">Mampu <?= $edit[0]['katalog'] ?></span>
                                     <span id="tblue" style="color:blue"><?= $edit[0]['blue'] ?></span>
                                     <span id="tgreen" style="color:green"><?= $edit[0]['green'] ?></span>
                                     <!-- <span id="blank">Silahkan inputkan kata kerja dibawah!</span> -->
-                                </p>
                             </div>
                         </div>
                     </div><br>
