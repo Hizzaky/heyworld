@@ -66,7 +66,7 @@
                                     </div>
                                     <!--  -->
                                     <!-- <a href="#" class="card-link">edit delete</a> -->
-                                    <div class="alRight">
+                                    <div class="flRight">
                                         <a href="#" class="card-link">more</a>
                                     </div>
                                 </div>
