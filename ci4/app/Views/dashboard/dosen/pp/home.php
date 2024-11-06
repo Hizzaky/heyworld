@@ -65,7 +65,7 @@
                                             <a class="btn btn-warning btn-sm " href="#"><i class="fas fa-pencil-alt"></i>
                                             </a> |
                                             <button class="btn btn-danger btn-sm "
-                                                data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja <?= $val['katalog'] ?> (<?= $val['kode'] ?>) ?"
+                                                data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja <b><?= $val['katalog'] ?> (<?= $val['kode'] ?>)</b> ?"
                                                 data-confirm-yes=""><i class="fas fa-trash"></i></button>
                                         </div>
                                     </div>
