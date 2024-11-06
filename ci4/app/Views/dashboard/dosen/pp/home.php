@@ -50,7 +50,7 @@
                                     <span style="color:green"><?= $val['green'] ?></span>
                                 </p>
                                 <!--  -->
-                                <div class="form-inline">
+                                <div class="">
 
                                     <div class="dropdown dropdown-toggle">
                                         <a class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown"
