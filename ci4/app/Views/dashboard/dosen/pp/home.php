@@ -84,7 +84,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalKataKerjaLabel">
-                    Penguasaan Pengetahuan (<span id="modalpp"></span>)
+                    Penguasaan Pengetahuan (<span id="modalPp"></span>)
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -95,9 +95,9 @@
                 <div class="container">
                     <p class="card-text" style="text-align:justify">
 
-                        <span id="modelRed" style="color:red">Mampu blablabla bla</span>
-                        <span id="modelBlue" style="color:blue">blablabla blablabla</span>
-                        <span id="modelGreen" style="color:green">blabla blabla blabla</span>
+                        <span id="modalRed" style="color:red">Mampu blablabla bla</span>
+                        <span id="modalBlue" style="color:blue">blablabla blablabla</span>
+                        <span id="modalGreen" style="color:green">blabla blabla blabla</span>
                     </p>
                 </div>
             </div>

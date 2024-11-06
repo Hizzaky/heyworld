@@ -67,8 +67,8 @@ function limitText() {
 }
 
 function tesini(red, blue, green) {
-    document.getElementById('modelpp').innerHTML = red;
-    document.getElementById('modelRed').innerHTML = red;
-    document.getElementById('modelBlue').innerHTML = blue;
-    document.getElementById('modelGreen').innerHTML = green;
+    document.getElementById('modalPp').innerHTML = red;
+    document.getElementById('modalRed').innerHTML = red;
+    document.getElementById('modalBlue').innerHTML = blue;
+    document.getElementById('modalGreen').innerHTML = green;
 }
