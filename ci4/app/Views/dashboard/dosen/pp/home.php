@@ -64,8 +64,8 @@
                                     <div class="" style="float:right">
                                         <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
                                         <a class="" data-toggle="modal" data-target="#modalKataKerja"
-                                            style="cursor:pointer" onclick="tesini('<?= $val['katalog'] ?>')">
-                                            Selengkapnya...2
+                                            style="cursor:pointer" onclick="tesini('<?= $val['katalog'] ?>','<?= $val['blue'] ?>','<?= $val['green'] ?>')">
+                                            Selengkapnya...3
                                         </a>
                                     </div>
                                 </div>
@@ -93,10 +93,9 @@
                 <div class="container">
                     <p class="card-text">
 
-                        <span style="color:red">Mampu blablabla bla</span>
-                        <span style="color:blue">blablabla blablabla</span>
-                        <span style="color:green">blabla blabla blabla</span>
-                        <span id="tes">tes</span>
+                        <span id="modelRed" style="color:red">Mampu blablabla bla</span>
+                        <span id="modelBlue" style="color:blue">blablabla blablabla</span>
+                        <span id="modelGreen" style="color:green">blabla blabla blabla</span>
                     </p>
                 </div>
             </div>

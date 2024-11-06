@@ -66,7 +66,8 @@ function limitText() {
     para.innerHTML += "...";
 }
 
-function tesini(katalog)
-{
-    document.getElementById('tes').innerHTML=katalog;
+function tesini(red, blue, green) {
+    document.getElementById('modelRed').innerHTML = red;
+    document.getElementById('modelBlue').innerHTML = blue;
+    document.getElementById('modelGreen').innerHTML = green;
 }
