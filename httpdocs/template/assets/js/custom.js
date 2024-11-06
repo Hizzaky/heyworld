@@ -65,3 +65,8 @@ function limitText() {
     }
     para.innerHTML += "...";
 }
+
+function tesini(katalog)
+{
+    document.getElementById('tes').innerHTML=katalog;
+}

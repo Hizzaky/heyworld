@@ -64,7 +64,7 @@
                                     <div class="" style="float:right">
                                         <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
                                         <a class="" data-toggle="modal" data-target="#modalKataKerja"
-                                            style="cursor:pointer">
+                                            style="cursor:pointer" onclick="tesini(<?= $val['katalog'] ?>)">
                                             Selengkapnya...</a>
                                     </div>
                                 </div>
@@ -95,6 +95,7 @@
                         <span style="color:red">Mampu blablabla bla</span>
                         <span style="color:blue">blablabla blablabla</span>
                         <span style="color:green">blabla blabla blabla</span>
+                        <span id="tes">tes</span>
                     </p>
                 </div>
             </div>
