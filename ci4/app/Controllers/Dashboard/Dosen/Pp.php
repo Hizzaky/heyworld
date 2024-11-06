@@ -47,7 +47,7 @@ class Pp extends BaseController
         $table = new \CodeIgniter\View\Table();
 
         // $data['taxbloom'] = $model->dataTaxbloom();
-        $data['pp'] = $model->dataPp();
+        $data['pp'] = $model->dataPp($data['login']['user_id']);
 
 
         // $table->setTemplate($model->templateTbl());
