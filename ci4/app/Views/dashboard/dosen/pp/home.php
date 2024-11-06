@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="" style="float:right">
                                     <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
-                                    <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
+                                    <a class="" data-toggle="modal" data-target="#modalKataKerja">
                                         Selengkapnya...</a>
                                 </div>
                             </div>
