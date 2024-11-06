@@ -151,7 +151,7 @@ class Pp extends BaseController
 
         
         
-        if (request()->getMethod() == 'post') {
+        if (request()->getMethod() == 'post') { 
             $this->pre($_POST);
         //     // $model = new PpModel();
         //     $modelTbl = new PpTblModel();
