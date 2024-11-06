@@ -7,6 +7,7 @@ use App\Models\Dashboard\Dosen\Dosen;
 use App\Models\Dashboard\Dosen\Table\PpTblModel;
 use App\Models\Dashboard\Dosen\PpModel;
 use App\Models\Dashboard\Dosen\AddPpModel;
+use App\Models\Dashboard\Dosen\editPpModel;
 
 class Pp extends BaseController
 {
@@ -46,21 +47,7 @@ class Pp extends BaseController
         // 
         $table = new \CodeIgniter\View\Table();
 
-        // $data['taxbloom'] = $model->dataTaxbloom();
         $data['pp'] = $model->dataPp($data['login']['user_id']);
-
-
-        // $table->setTemplate($model->templateTbl());
-        // $table->setHeading([
-        //     '<strong>#</strong>',
-        //     '<strong>C2</strong>',
-        //     '<strong>C3</strong>',
-        //     '<strong>C4</strong>',
-        //     '<strong>C5</strong>',
-        //     '<strong>C6</strong>'
-        // ]);
-
-        // $data['table'] = $table;
 
         return view('dashboard/dosen/pp/home', $data);
     }
@@ -104,7 +91,7 @@ class Pp extends BaseController
 
         return view('dashboard/dosen/pp/add_pp', $data);
     }
-    public function Save_pp()
+    public function save_pp()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -126,11 +113,8 @@ class Pp extends BaseController
                 'green' => $_POST['green'],
                 'dosen_id' => $sesi['user_id']
             ];
-
             //     $rules = $model->();
             //     if ($this->validate($rules)) {
-
-
             $modelTbl->save($insert);
 
             if ($modelTbl) {
@@ -139,11 +123,7 @@ class Pp extends BaseController
             } else {
                 $key = 'failAddPp';
                 $msg = 'Penguasaan Pengetahuan Baru Gagal Ditambahkan!';
-                
             }
-            
-            
-            
             //     }
         }else{
             return redirect()->back();
@@ -151,11 +131,54 @@ class Pp extends BaseController
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
         }
+        return redirect('Penguasaan-pengetahuan');
+    }
+    public function edit_pp($pp_id)
+    {
+        $ver = session()->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Dosen') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        $model = new EditPpModel();
+        $data = $this->arData($model->title(), $ver);
+        $data['login'] = $ver;
+        $data['edit'] = $model->editDataPp($data['login']['user_id']);
 
-        echo $msg;
-
-        // return redirect();
+        $this->pre($data['edit']);
 
 
+        // if (request()->getMethod() == 'post') {
+        //     // $model = new PpModel();
+        //     $modelTbl = new PpTblModel();
+        //     $sesi = $ver;
+        //     $insert = [
+        //         'taxbloom_id' => $_POST['taxbloom_id'],
+        //         'blue' => $_POST['blue'],
+        //         'green' => $_POST['green'],
+        //         'dosen_id' => $sesi['user_id']
+        //     ];
+
+        //     $modelTbl->save($insert);
+
+        //     if ($modelTbl) {
+        //         $key = 'suksesAddPp';
+        //         $msg = 'Penguasaan Pengetahuan Baru Berhasil Ditambahkan!';
+        //     } else {
+        //         $key = 'failAddPp';
+        //         $msg = 'Penguasaan Pengetahuan Baru Gagal Ditambahkan!';
+        //     }
+        // }else{
+        //     return redirect()->back();
+        // }
+        // if (isset($key)) {
+        //     session()->setFlashdata($key, $msg);
+        // }
+
+        // return redirect('Penguasaan-pengetahuan');
     }
 }

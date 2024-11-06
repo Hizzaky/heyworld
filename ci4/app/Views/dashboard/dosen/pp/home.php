@@ -9,8 +9,8 @@
         <!-- Notif -->
         <?php
         $dataSesi = session();
-        $sukses = $dataSesi->getFlashdata('suksesHapusKataKerja');
-        $fail = $dataSesi->getFlashdata('failHapusKataKerja');
+        $sukses = $dataSesi->getFlashdata('suksesAddPp');
+        $fail = $dataSesi->getFlashdata('failAddPp');
 
         if (isset($sukses)): ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -48,23 +48,23 @@
                                             <a class=" " type="button" id="dropdownMenuButton" data-toggle="dropdown"
                                                 aria-haspopup="true" aria-expanded="false">
                                                 Aksi
-                                                </>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                                                     style="width:10px !important; text-align:center;">
-                                                    <a class="btn btn-warning btn-sm " href="#"><i
-                                                            class="fas fa-pencil-alt"></i>
+                                                    <a class="btn btn-warning btn-sm " href="Edit-pp/<?= $val['pp_id'] ?>">
+                                                        <i class="fas fa-pencil-alt"></i>
                                                     </a> |
                                                     <button class="btn btn-danger btn-sm "
                                                         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja <b><?= $val['katalog'] ?> (<?= $val['kode'] ?>)</b> ?"
-                                                        data-confirm-yes="dosenDeleteTaxbloom(<?= $val['pp_id'] ?>)"><i
-                                                            class="fas fa-trash"></i></button>
+                                                        data-confirm-yes="dosenDeleteTaxbloom(<?= $val['pp_id'] ?>)">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
                                                 </div>
                                         </div>
                                     </div>
                                     <div class="" style="float:right">
                                         <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
-                                        <a class="" data-toggle="modal" data-target="#modalKataKerja"
-                                            style="cursor:pointer" onclick="tesini('<?= $val['katalog'] ?>','<?= $val['blue'] ?>','<?= $val['green'] ?>')">
+                                        <a class="" data-toggle="modal" data-target="#modalKataKerja" style="cursor:pointer"
+                                            onclick="tesini('<?= $val['katalog'] ?>','<?= $val['blue'] ?>','<?= $val['green'] ?>')">
                                             Selengkapnya...
                                         </a>
                                     </div>
@@ -90,7 +90,8 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div><hr>
+            </div>
+            <hr>
             <div class="modal-body" style="padding:5px;">
                 <!-- <div style="height:75vh; overflow:auto"> -->
                 <div class="container">
