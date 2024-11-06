@@ -100,4 +100,42 @@ class EditPpModel extends Model
 
         return $data;
     }
+    public function templateTbl()
+    {
+        $template = [
+            'table_open' => '<table class="table table-striped table-md" border="0" cellpadding="4" cellspacing="0">',
+
+            'thead_open' => '<thead style="background-color:lightblue;">',
+            'thead_close' => '</thead>',
+
+            'heading_row_start' => '<tr>',
+            'heading_row_end' => '</tr>',
+            'heading_cell_start' => '<th>',
+            'heading_cell_end' => '</th>',
+
+            'tfoot_open' => '<tfoot>',
+            'tfoot_close' => '</tfoot>',
+
+            'footing_row_start' => '<tr>',
+            'footing_row_end' => '</tr>',
+            'footing_cell_start' => '<td>',
+            'footing_cell_end' => '</td>',
+
+            'tbody_open' => '<tbody>',
+            'tbody_close' => '</tbody>',
+
+            'row_start' => '<tr>',
+            'row_end' => '</tr>',
+            'cell_start' => '<td>',
+            'cell_end' => '</td>',
+
+            'row_alt_start' => '<tr>',
+            'row_alt_end' => '</tr>',
+            'cell_alt_start' => '<td>',
+            'cell_alt_end' => '</td>',
+
+            'table_close' => '</table>',
+        ];
+        return $template;
+    }
 }
