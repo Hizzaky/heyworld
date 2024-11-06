@@ -78,7 +78,7 @@
                     <div class="form-group row mb-4">
                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kata 2</label>
                         <div class="col-sm-12 col-md-7">
-                            <input type="text" class="form-control" name="green" id="green" required value="<?= $redit['green'] ?>"
+                            <input type="text" class="form-control" name="green" id="green" required value="<?= $edit['green'] ?>"
                                 style="color:green" oninput="inputPp()">
                             <div class="invalid-feedback">
                                 ----------------!
