@@ -147,7 +147,7 @@ class Pp extends BaseController
         $model = new EditPpModel();
         $data = $this->arData($model->title(), $ver);
         $data['login'] = $ver;
-        $data['edit'] = $model->editDataPp($data['login']['user_id']);
+        $data['edit'] = $model->editDataPp($pp_id);
 
         $this->pre($data['edit']);
 
