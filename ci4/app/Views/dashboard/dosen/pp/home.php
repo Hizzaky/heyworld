@@ -67,7 +67,7 @@
                                     <!--  -->
                                     <!-- <a href="#" class="card-link">edit delete</a> -->
                                     <div class="">
-                                        <a href="1" class=" " style="margin-left:30%">read more</a>
+                                        <a href="2" class=" " style="display:flex;float:right">read more</a>
                                     </div>
                                 </div>
                             </div>
