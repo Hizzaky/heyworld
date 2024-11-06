@@ -95,7 +95,8 @@ $routes->group('Dosen', function ($routes) {
     $routes->add('Penguasaan-pengetahuan', 'Dashboard\Dosen\Pp::pp', ['as' => 'dosen-pp']);
     $routes->add('Penguasaan-pengetahuan-baru', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-add-pp']);
     $routes->post('Save-pp', 'Dashboard\Dosen\Pp::save_pp', ['as' => 'dosen-save-pp']);
-    $routes->post('Edit-pp/(:any)', 'Dashboard\Dosen\Pp::edit_pp/$1', ['as' => 'dosen-edit-pp']);
+    // $routes->post('Edit-pp/(:any)', 'Dashboard\Dosen\Pp::edit_pp/$1', ['as' => 'dosen-edit-pp']);
+    $routes->post('Edit-pp', 'Dashboard\Dosen\Pp::tes', ['as' => 'dosen-edit-pp']);
  
     $routes->add('Keterampilan-umum', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-ku']);
 

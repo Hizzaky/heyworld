@@ -181,4 +181,8 @@ class Pp extends BaseController
 
         // return redirect('Penguasaan-pengetahuan');
     }
+
+    public function tes(){
+        $this->pre(session()->get('login'));
+    }
 }
