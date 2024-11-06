@@ -65,7 +65,7 @@
                                         <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
                                         <a class="" data-toggle="modal" data-target="#modalKataKerja"
                                             style="cursor:pointer" onclick="tesini('<?= $val['katalog'] ?>','<?= $val['blue'] ?>','<?= $val['green'] ?>')">
-                                            Selengkapnya...3
+                                            Selengkapnya...
                                         </a>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" style="padding:5px">
+            <div class="modal-body" style="padding:5px;">
                 <!-- <div style="height:75vh; overflow:auto"> -->
                 <div class="container">
                     <p class="card-text">
@@ -99,10 +99,10 @@
                     </p>
                 </div>
             </div>
-            <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div> -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
         </div>
     </div>
 </div>
