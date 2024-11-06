@@ -26,14 +26,6 @@
                         aria-hidden="true">&times;</span></button>
             </div>
         <?php endif; ?>
-        <!--  -->
-        <div class="card-body p-0">
-            <div class="table-responsive">
-
-
-            </div>
-        </div>
-        <!--  -->
         <div class="container">
             <div class="row">
                 <?php foreach ($pp as $key => $val): ?>
@@ -42,20 +34,17 @@
                         <div class="container" style="">
                             <div class="card-body">
                                 <h6 class="card-title" style="cursor:default"><i class="fas fa-star"
-                                        style="color:lightblue"></i> <u><?= $val['katalog'] ?></u> (<?= $val['kode'] ?>)</h6>
-                                <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                                        style="color:lightblue"></i> <u><?= $val['katalog'] ?></u> (<?= $val['kode'] ?>)
+                                </h6>
                                 <p class="card-text limitText">
                                     <span style="color:red">Mampu <?= $val['katalog'] ?></span>
                                     <span style="color:blue"><?= $val['blue'] ?></span>
                                     <span style="color:green"><?= $val['green'] ?></span>
                                 </p>
-                                <!--  -->
                                 <hr>
                                 <div class="" style="float:left">
 
                                     <div class="dropdown ">
-                                        <!-- <a class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">Aksi</a> -->
                                         <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">
                                             Aksi
@@ -66,14 +55,15 @@
                                             </a> |
                                             <button class="btn btn-danger btn-sm "
                                                 data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja <b><?= $val['katalog'] ?> (<?= $val['kode'] ?>)</b> ?"
-                                                data-confirm-yes=""><i class="fas fa-trash"></i></button>
+                                                data-confirm-yes="dosenDeleteTaxbloom(<?= $val['pp_id'] ?>)"><i
+                                                    class="fas fa-trash"></i></button>
                                         </div>
                                     </div>
-                                    <!--  -->
                                 </div>
-                                <!-- <a href="#" class="card-link">edit delete</a> -->
                                 <div class="" style="float:right">
-                                    <a href="2" class=" " style="">Selengkapnya...</a>
+                                    <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
+                                    <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
+                                        Selengkapnya...</a>
                                 </div>
                             </div>
                         </div>
@@ -81,8 +71,33 @@
                 <?php endforeach; ?>
             </div>
         </div>
-
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="modalKataKerja" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalKataKerjaLabel">Kata Kerja Taxonomi Bloom</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="padding:5px">
+                <div style="height:75vh; overflow:auto">
+                    <span style="color:red">Mampu blablabla </span>
+                    <span style="color:blue">blablabla blablabla</span>
+                    <span style="color:green">blabla blabla blabla</span>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
 
 <?= $this->endSection() ?>
