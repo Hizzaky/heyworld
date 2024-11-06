@@ -145,10 +145,25 @@ class Pp extends BaseController
         }
         // 
         $model = new EditPpModel();
+        $table = new \CodeIgniter\View\Table();
+
         $data = $this->arData($model->title(), $ver);
         $data['login'] = $ver;
         $data['edit'] = $model->editDataPp($pp_id);
 
+
+        $data['taxbloom'] = $model->dataTaxbloom();
+        $table->setTemplate($model->templateTbl());
+        $table->setHeading([
+            '<strong>#</strong>',
+            '<strong>C2</strong>',
+            '<strong>C3</strong>',
+            '<strong>C4</strong>',
+            '<strong>C5</strong>',
+            '<strong>C6</strong>'
+        ]);
+
+        $data['table'] = $table;
         
         
         if (request()->getMethod() == 'post') { 
