@@ -91,7 +91,7 @@
             <div class="modal-body" style="padding:5px;">
                 <!-- <div style="height:75vh; overflow:auto"> -->
                 <div class="container">
-                    <p class="card-text">
+                    <p class="card-text" style="text-align:justify">
 
                         <span id="modelRed" style="color:red">Mampu blablabla bla</span>
                         <span id="modelBlue" style="color:blue">blablabla blablabla</span>
