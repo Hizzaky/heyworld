@@ -31,7 +31,7 @@
                 <?php foreach ($pp as $key => $val): ?>
 
                     <div class="card col-12 col-sm-6 col-md-4" style="margin:10px">
-                        <div class="container" style="">
+                        <div class="container" style="padding-bottom:5px">
                             <div class="card-body">
                                 <h6 class="card-title" style="cursor:default"><i class="fas fa-star"
                                         style="color:lightblue"></i> <u><?= $val['katalog'] ?></u> (<?= $val['kode'] ?>)
