@@ -50,6 +50,7 @@
                                     <span style="color:green"><?= $val['green'] ?></span>
                                 </p>
                                 <!--  -->
+                                <hr>
                                 <div class="" style="float:left">
 
                                     <div class="dropdown ">
