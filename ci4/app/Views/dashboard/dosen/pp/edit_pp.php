@@ -37,10 +37,10 @@
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class=" col-md-9 col-" style="border-style:double; padding:10px">
-                                <span id="tred" style="color:red"></span>
-                                <span id="tblue" style="color:blue"> </span>
-                                <span id="tgreen" style="color:green"></span>
-                                <span id="blank">Silahkan inputkan kata kerja dibawah!</span>
+                                <span id="tred" style="color:red"><?= $edit['red'] ?></span>
+                                <span id="tblue" style="color:blue"><?= $edit['blue'] ?></span>
+                                <span id="tgreen" style="color:green"><?= $edit['green'] ?></span>
+                                <!-- <span id="blank">Silahkan inputkan kata kerja dibawah!</span> -->
                             </div>
                         </div>
                     </div><br>
@@ -55,7 +55,7 @@
                             <input class="btn form-control" type="text" name="taxbloom_id" id="id" placeholder="ID"
                                 value="" required hidden>
                             <input class="btn form-control" style="width:80%;color:red" type="text" name="red" id="red"
-                                placeholder="--Pilih Kata Kerja--" value="" hidden>
+                                placeholder="--Pilih Kata Kerja--" value="" onload="inputPp()" hidden>
 
 
                             <div class="invalid-feedback">
