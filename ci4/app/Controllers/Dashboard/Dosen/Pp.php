@@ -133,7 +133,7 @@ class Pp extends BaseController
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
         }
-        return redirect('Penguasaan-pengetahuan');
+        return redirect('dosen-pp');
     }
     public function edit_pp($pp_id)
     {
