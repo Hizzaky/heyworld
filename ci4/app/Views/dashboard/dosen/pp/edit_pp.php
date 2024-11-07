@@ -43,7 +43,7 @@
                                     <span id="blank"></span>
                             </div>
                         </div>
-                    </div><br>
+                    </div><br> 
                 </div>
                 <form action="" method="post" class="needs-validation" novalidate>
                     <div class="form-group row mb-4">
