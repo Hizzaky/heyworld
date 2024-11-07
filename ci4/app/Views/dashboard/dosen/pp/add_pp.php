@@ -36,7 +36,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-2"></div>
-                            <div class=" col-md-9 col-" style="border-style:double; padding:10px">
+                            <div class=" col-md-9 col-" style="border-style:double; padding:10px;cursor:default">
                                 <span id="tred" style="color:red"></span>
                                 <span id="tblue" style="color:blue"> </span>
                                 <span id="tgreen" style="color:green"></span>
