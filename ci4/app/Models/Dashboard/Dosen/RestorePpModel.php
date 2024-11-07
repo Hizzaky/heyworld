@@ -75,7 +75,7 @@ class RestorePpModel extends Model
                 'green' => $val['green'],
                 'created_at' => date('d-M-Y', strtotime($val['created_at'])),
                 'aksi' => '
-                    <div style="white-space:nowrap;">
+                    <div style="">
                         <button class="btn btn-primary " 
                         data-confirm="Restore Kata Kerja?|Gunakan kembali kata kerja?" 
                         data-confirm-yes="dosenRestoreTaxbloom(' . $val['pp_delete_id'] . ')"
