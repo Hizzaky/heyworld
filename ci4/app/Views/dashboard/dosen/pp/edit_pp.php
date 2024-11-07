@@ -61,7 +61,7 @@
 
 
                             <div class="invalid-feedback">
-                                Silahkan pilih kata kejra!
+                                Silahkan pilih kata kejra! 
                             </div>
                         </div>
                     </div>
