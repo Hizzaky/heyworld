@@ -167,9 +167,10 @@ class Pp extends BaseController
         
         
         if (request()->getMethod() == 'post') { 
-            $this->pre($_POST);
+            // $this->pre($_POST);
+            unset($_POST['red']);
         //     // $model = new PpModel();
-        //     $modelTbl = new PpTblModel();
+            $modelTbl = new PpTblModel();
         //     $sesi = $ver;
         //     $insert = [
         //         'taxbloom_id' => $_POST['taxbloom_id'],
@@ -178,20 +179,19 @@ class Pp extends BaseController
         //         'dosen_id' => $sesi['user_id']
         //     ];
 
-        //     $modelTbl->save($insert);
+            $modelTbl->save($_POST);
 
-        //     if ($modelTbl) {
-        //         $key = 'suksesAddPp';
-        //         $msg = 'Penguasaan Pengetahuan Baru Berhasil Ditambahkan!';
-        //     } else {
-        //         $key = 'failAddPp';
-        //         $msg = 'Penguasaan Pengetahuan Baru Gagal Ditambahkan!';
-        //     }
-        // }else{
-        //     return redirect()->back();
-        // }
-        // if (isset($key)) {
-        //     session()->setFlashdata($key, $msg);
+            if ($modelTbl) {
+                $key = 'suksesAddPp';
+                $msg = 'Penguasaan Pengetahuan Berhasil Dirubah!';
+            } else {
+                $key = 'failAddPp';
+                $msg = 'Penguasaan Pengetahuan Gagal Dirubah!';
+            }
+        }
+        if (isset($key)) {
+            session()->setFlashdata($key, $msg);
+            return redirect('dosen-pp');
         }
 
         return view('dashboard/dosen/pp/edit_pp', $data);
