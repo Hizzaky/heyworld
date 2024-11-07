@@ -200,5 +200,10 @@ class Pp extends BaseController
     public function tess(){
         $this->pre($_POST);
         
+        unset($_POST['red']);
+        
+        $this->pre($_POST);
+
+
     } 
 }
