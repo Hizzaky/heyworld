@@ -11,18 +11,23 @@
 function prodiDeleteTaxbloom(id) {
     window.location.href = 'hapus-index/' + id;
 }
+function prodiRestoreTaxbloom(id) {
+    window.location.href = 'restore-index/' + id;
+}
 function prodiDeleteTaxbloomPermanen(id) {
     window.location.href = 'delete-permanen/' + id;
 }
+
 function dosenDeleteTaxbloom(id) {
     window.location.href = 'hapus-pp/' + id;
 }
 function dosenDeleteTaxbloomPermanen(id) {
     // window.location.href = 'delete-permanen/' + id;
 }
-function prodiRestoreTaxbloom(dir) {
-    window.location.href = 'restore-index/' + dir;
+function dosenRestoreTaxbloom(id) {
+    window.location.href = 'restore-pp/' + id;
 }
+
 function modalKataKerja(id, index) {
     document.getElementById('id').value = id;
     let strReplace = index.replace('_', ' ');
@@ -53,11 +58,6 @@ function modalEditKataKerja(id, index) {
 
     $('#modalKataKerja').modal('hide');
 }
-// function auto_grow(element) {
-//     element.style.height = "5px";
-//     element.style.height = (element.scrollHeight) + "px";
-// }
-
 
 function inputPp() {
     let red = document.getElementById('red').value;

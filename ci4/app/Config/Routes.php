@@ -98,6 +98,8 @@ $routes->group('Dosen', function ($routes) {
     $routes->add('Edit-pp/(:any)', 'Dashboard\Dosen\Pp::edit_pp/$1', ['as' => 'dosen-edit-pp']);
     $routes->add('hapus-pp/(:any)', 'Dashboard\Dosen\Pp::delete_pp/$1', ['as' => 'dosen-delete-pp']);
     $routes->add('Penguasaan-pengetahuan-terhapus', 'Dashboard\Dosen\Pp::restore_pp', ['as' => 'dosen-restore-pp']);
+    $routes->add('hapus-pp-permanen/(:any)', 'Dashboard\Dosen\Pp::permanen_pp/$1', ['as' => 'dosen-delete-pp']);
+    $routes->add('Penguasaan-pengetahuan-terhapus', 'Dashboard\Dosen\Pp::restore_pp', ['as' => 'dosen-restore-pp']);
  
 
     $routes->add('Keterampilan-umum', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-ku']);
