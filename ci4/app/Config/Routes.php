@@ -102,5 +102,10 @@ $routes->group('Dosen', function ($routes) {
 
     $routes->add('Keterampilan-khusus', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-kk']);
 
+
+
+    // tes
+    $routes->add('tes', 'Dashboard\Dosen\Pp::tes');
+
     
 });

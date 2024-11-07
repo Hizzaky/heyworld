@@ -198,6 +198,6 @@ class Pp extends BaseController
     }
 
     public function tes(){
-        $this->pre(session()->get('login'));
+        $this->pre($_POST);
     }
 }
