@@ -39,7 +39,7 @@ function modalKataKerja(id, index) {
     $('#modalKataKerja').modal('hide');
 }
 function modalEditKataKerja(id, index) {
-    document.getElementById('pp_id').value = id;
+    document.getElementById('taxbloom_id').value = id;
     let strReplace = index.replace('_', ' ');
     let katalog = 'Mampu ' + strReplace;
     document.getElementById('red').value = katalog;
