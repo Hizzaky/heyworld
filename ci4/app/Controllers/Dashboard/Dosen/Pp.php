@@ -194,7 +194,7 @@ class Pp extends BaseController
         //     session()->setFlashdata($key, $msg);
         }
 
-        return view('dashboard/dosen/pp/edit_pp', $data);
+        // return view('dashboard/dosen/pp/edit_pp', $data);
     }
 
     public function tes(){
