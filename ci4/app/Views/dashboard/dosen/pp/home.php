@@ -96,10 +96,9 @@
                 <!-- <div style="height:75vh; overflow:auto"> -->
                 <div class="container">
                     <p class="card-text" style="text-align:justify">
-
-                        <span id="modalRed" style="color:red">Mampu blablabla bla</span>
-                        <span id="modalBlue" style="color:blue">blablabla blablabla</span>
-                        <span id="modalGreen" style="color:green">blabla blabla blabla</span>
+                        <span id="modalRed" style="color:red"></span>
+                        <span id="modalBlue" style="color:blue"></span>
+                        <span id="modalGreen" style="color:green"></span>
                     </p>
                 </div>
             </div>

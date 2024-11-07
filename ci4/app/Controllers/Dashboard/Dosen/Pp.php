@@ -292,21 +292,21 @@ class Pp extends BaseController
         $dataRestore['dosen_id'] = $ver['user_id'];
 
         $this->pre($dataRestore);
-        // $modelTbl->save($dataRestore);
-        // if ($modelTbl) {
-        //     $modelDel->delete($id);
-        //     if ($modelDel) {
-        //         $key = 'suksesRestoreKataKerja';
-        //         $msg = 'Kata kerja berhasil dikembalikan!';
-        //     } else {
-        //         $key = 'failRestoreKataKerja';
-        //         $msg = 'Kata kerja gagal dikembalikan!';
-        //     }
-        // } else {
-        //     $key = 'failRestoreKataKerja';
-        //     $msg = 'Kata kerja gagal dikembalikan!';
-        // }
-        // return redirect('prodi-restore-kata-kerja')->with($key, $msg);
+        $modelTbl->save($dataRestore);
+        if ($modelTbl) {
+            $modelDel->delete($id);
+            if ($modelDel) {
+                $key = 'suksesAddPp';
+                $msg = 'Kata kerja berhasil dikembalikan!';
+            } else {
+                $key = 'suksesAddPp';
+                $msg = 'Kata kerja gagal dikembalikan!';
+            }
+        } else {
+            $key = 'suksesAddPp';
+            $msg = 'Kata kerja gagal dikembalikan!';
+        }
+        return redirect('dosen-pp')->with($key, $msg);
     }
     public function permanen_pp($id)
     {
