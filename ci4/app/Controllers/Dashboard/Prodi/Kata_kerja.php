@@ -282,8 +282,7 @@ class Kata_kerja extends BaseController
             $msg = 'Kata kerja gagal dikembalikan!';
         }
         return redirect('prodi-restore-kata-kerja')->with($key, $msg);
-    }
-   
+    }   
     public function permanen_kata_kerja($id)
     {
         $sesi = session();

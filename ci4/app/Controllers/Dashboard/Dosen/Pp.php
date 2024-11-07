@@ -5,6 +5,7 @@ namespace App\Controllers\Dashboard\Dosen;
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Dosen\Dosen;
 use App\Models\Dashboard\Dosen\Table\PpTblModel;
+use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
 use App\Models\Dashboard\Dosen\PpModel;
 use App\Models\Dashboard\Dosen\AddPpModel;
 use App\Models\Dashboard\Dosen\EditPpModel; 
@@ -196,5 +197,137 @@ class Pp extends BaseController
 
         return view('dashboard/dosen/pp/edit_pp', $data);
     }
-    
+    public function restore_taxbloom()
+    {
+        $sesi = session();
+        $ver = $sesi->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Prodi') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        $table = new \CodeIgniter\View\Table();
+        $model = new RestorePpModel();
+
+        $data = $this->arData($model->title(), $sesi->get('login'));
+
+        $data['taxbloom'] = $model->dataTaxbloom();
+
+        if (count($data['taxbloom']) < 1) {
+            $data['alert'] = 'Tidak ada kata kerja yang terhapus / dapat dipulihkan!';
+        }
+
+        $table->setTemplate($model->templateTbl());
+        $table->setHeading([
+            '<strong>#</strong>',
+            '<strong>Kode</strong>',
+            '<strong>Kata Kerja</strong>',
+            '<strong>Waktu Dihapus</strong>',
+            '<strong>Aksi</strong>'
+        ]);
+
+        $data['table'] = $table;
+
+        return view('dashboard/dosen/pp/restore_pp', $data);
+
+    }
+    // 
+    public function delete_pp($id)
+    {
+        $ver = session()->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Dosen') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        $modelTbl = new PpTblModel();
+        $modelDel = new PpTblDeleteModel();
+
+        $dataTbl = $modelTbl->find($id);
+        $dataInsert['taxbloom_id'] = $dataTbl['taxbloom_id'];
+        $dataInsert['blue'] = $dataTbl['blue'];
+        $dataInsert['green'] = $dataTbl['green'];
+
+        $modelDel->save($dataInsert);
+        if ($modelDel) {
+            $modelTbl->delete($id);
+            if ($modelTbl) {
+                $key = 'suksesAddPp';
+                $msg = 'Penguasaan Pengetahuan berhasil dihapus!';
+            } else {
+                $key = 'failAddPp';
+                $msg = 'Penguasaan Pengetahuan gagal dihapus!';
+            }
+        } else {
+            $key = 'failAddPp';
+            $msg = 'Penguasaan Pengetahuan gagal dihapus!';
+        }
+        return redirect('dosen-pp')->with($key, $msg);
+    }
+    public function restore_pp($id)
+    {
+        $ver = session()->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Dosen') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        $modelTbl = new TaxbloomModel();
+        $modelDel = new TaxbloomDeletedModel();
+
+        $dataDel = $modelDel->find($id);
+        $dataRestore['kode'] = $dataDel['kode'];
+        $dataRestore['katalog'] = $dataDel['katalog'];
+
+        // $this->pre($id);
+        $modelTbl->save($dataRestore);
+        if ($modelTbl) {
+            $modelDel->delete($id);
+            if ($modelDel) {
+                $key = 'suksesRestoreKataKerja';
+                $msg = 'Kata kerja berhasil dikembalikan!';
+            } else {
+                $key = 'failRestoreKataKerja';
+                $msg = 'Kata kerja gagal dikembalikan!';
+            }
+        } else {
+            $key = 'failRestoreKataKerja';
+            $msg = 'Kata kerja gagal dikembalikan!';
+        }
+        return redirect('prodi-restore-kata-kerja')->with($key, $msg);
+    }
+    public function permanen_pp($id)
+    {
+        $ver = session()->get('login');
+        if (isset($ver['jenis_user'])) {
+            if ($ver['jenis_user'] != 'Dosen') {
+                return redirect()->back();
+            }
+        } else {
+            return redirect()->to('/');
+        }
+        // 
+        $modelDel = new TaxbloomDeletedModel();
+
+        $modelDel->delete($id);
+
+        if ($modelDel) {
+            $key = 'suksesRestoreKataKerja';
+            $msg = 'Kata kerja berhasil dihapus permanen!';
+
+        } else {
+            $key = 'failRestoreKataKerja';
+            $msg = 'Kata kerja gagal dihapus permanen!';
+        }
+        return redirect('prodi-restore-kata-kerja')->with($key, $msg);
+    }
 }

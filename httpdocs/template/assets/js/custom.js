@@ -8,17 +8,17 @@
 "use strict";
 
 
-function prodiDeleteTaxbloom(dir) {
-    window.location.href = 'hapus-index/' + dir;
+function prodiDeleteTaxbloom(id) {
+    window.location.href = 'hapus-index/' + id;
 }
-function prodiDeleteTaxbloomPermanen(dir) {
-    window.location.href = 'delete-permanen/' + dir;
+function prodiDeleteTaxbloomPermanen(id) {
+    window.location.href = 'delete-permanen/' + id;
 }
-function dosenDeleteTaxbloom(dir) {
-    // window.location.href = 'hapus-index/' + dir;
+function dosenDeleteTaxbloom(id) {
+    window.location.href = 'hapus-pp/' + id;
 }
-function dosenDeleteTaxbloomPermanen(dir) {
-    // window.location.href = 'delete-permanen/' + dir;
+function dosenDeleteTaxbloomPermanen(id) {
+    // window.location.href = 'delete-permanen/' + id;
 }
 function prodiRestoreTaxbloom(dir) {
     window.location.href = 'restore-index/' + dir;

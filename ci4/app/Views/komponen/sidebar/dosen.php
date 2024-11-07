@@ -21,7 +21,7 @@
                             href="/Dosen/Penguasaan-pengetahuan">Index</a></li>
                     <li class="<?= $var = isset($menuPpAdd) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Dosen/Penguasaan-pengetahuan-baru">Tambah PP Baru</a></li>
-                    <li class="<?= $var = isset($menuPpADel) ? 'active' : '' ?>"><a class="nav-link"
+                    <li class="<?= $var = isset($menuPpDel) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Dosen/Penguasaan-pengetahuan-terhapus">PP Terhapus</a></li>
                 </ul>
             </li>
