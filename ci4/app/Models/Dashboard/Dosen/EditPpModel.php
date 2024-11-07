@@ -38,7 +38,7 @@ class EditPpModel extends Model
             <div class='dropdown'>
                 <button class='btn' type='button' onclick=modalKataKerja('$dir','$katalog2')> $katalog1 </button>
             </div>
-        ";
+        "; 
         
         return $ret;
     }
