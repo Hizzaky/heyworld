@@ -25,7 +25,7 @@ class RestorePpModel extends Model
         $template = [
             'table_open' => '<table class="table table-striped table-md" border="0" cellpadding="4" cellspacing="0">',
 
-            'thead_open' => '<thead style="background-color:lightblue;">',
+            'thead_open' => '<thead style="background-color:lightblue;white-space:nowrap;">',
             'thead_close' => '</thead>',
 
             'heading_row_start' => '<tr>',
