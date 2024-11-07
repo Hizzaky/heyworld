@@ -199,5 +199,6 @@ class Pp extends BaseController
 
     public function tess(){
         $this->pre($_POST);
+        
     } 
 }
