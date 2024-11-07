@@ -296,17 +296,17 @@ class Pp extends BaseController
         if ($modelTbl) {
             $modelDel->delete($id);
             if ($modelDel) {
-                $key = 'suksesAddPp';
+                $key = 'suksesRestorePp';
                 $msg = 'Kata kerja berhasil dikembalikan!';
             } else {
-                $key = 'failAddPp';
+                $key = 'failRestorePp';
                 $msg = 'Kata kerja gagal dikembalikan!';
             }
         } else {
-            $key = 'failAddPp';
+            $key = 'failRestorePp';
             $msg = 'Kata kerja gagal dikembalikan!';
         }
-        return redirect('dosen-pp')->with($key, $msg);
+        return redirect('dosen-restore-pp')->with($key, $msg);
     }
     public function permanen_pp($id)
     {
