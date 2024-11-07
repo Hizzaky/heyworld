@@ -299,11 +299,11 @@ class Pp extends BaseController
                 $key = 'suksesAddPp';
                 $msg = 'Kata kerja berhasil dikembalikan!';
             } else {
-                $key = 'suksesAddPp';
+                $key = 'failAddPp';
                 $msg = 'Kata kerja gagal dikembalikan!';
             }
         } else {
-            $key = 'suksesAddPp';
+            $key = 'failAddPp';
             $msg = 'Kata kerja gagal dikembalikan!';
         }
         return redirect('dosen-pp')->with($key, $msg);
@@ -319,18 +319,18 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        $modelDel = new TaxbloomDeletedModel();
+        $modelDel = new PpTblDeleteModel();
 
         $modelDel->delete($id);
 
         if ($modelDel) {
-            $key = 'suksesRestoreKataKerja';
+            $key = 'suksesRestorePp';
             $msg = 'Kata kerja berhasil dihapus permanen!';
 
         } else {
-            $key = 'failRestoreKataKerja';
+            $key = 'failRestorePp';
             $msg = 'Kata kerja gagal dihapus permanen!';
         }
-        return redirect('prodi-restore-kata-kerja')->with($key, $msg);
+        return redirect('dosen-restore-pp')->with($key, $msg);
     }
 }

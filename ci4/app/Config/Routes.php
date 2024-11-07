@@ -99,7 +99,7 @@ $routes->group('Dosen', function ($routes) {
     $routes->add('hapus-pp/(:any)', 'Dashboard\Dosen\Pp::delete_pp/$1', ['as' => 'dosen-delete-pp']);
     $routes->add('Penguasaan-pengetahuan-terhapus', 'Dashboard\Dosen\Pp::restore_pp', ['as' => 'dosen-restore-pp']);
     $routes->add('restore-pp/(:any)', 'Dashboard\Dosen\Pp::pp_restore/$1');
-    $routes->add('hapus-pp-permanen/(:any)', 'Dashboard\Dosen\Pp::permanen_pp/$1', ['as' => 'dosen-delete-pp']);
+    $routes->add('hapus-pp-permanen/(:any)', 'Dashboard\Dosen\Pp::permanen_pp/$1', ['as' => 'dosen-permanen-pp']);
     // $routes->add('Penguasaan-pengetahuan-terhapus', 'Dashboard\Dosen\Pp::restore_pp', ['as' => 'dosen-restore-pp']);
  
 
