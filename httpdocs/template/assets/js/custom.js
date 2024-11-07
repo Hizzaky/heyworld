@@ -28,14 +28,14 @@ function modalKataKerja(id, index) {
     // document.getElementById('id').value = id;
     let strReplace = index.replace('_', ' ');
     let katalog = 'Mampu ' + strReplace;
-    // document.getElementById('red').value = katalog;
+    document.getElementById('red').value = katalog;
+    
+    let green = document.getElementById('green').value;
+    let blue = document.getElementById('blue').value;
+    document.getElementById('tred').innerHTML = katalog;
+    document.getElementById('blank').innerHTML = '';
     // 
-    // let green = document.getElementById('green').value;
-    // let blue = document.getElementById('blue').value;
-    // document.getElementById('tred').innerHTML = katalog;
-    // document.getElementById('blank').innerHTML = '';
-    // // 
-    // document.getElementById('red').removeAttribute('hidden');
+    document.getElementById('red').removeAttribute('hidden');
 
     $('#modalKataKerja').modal('hide');
 }
