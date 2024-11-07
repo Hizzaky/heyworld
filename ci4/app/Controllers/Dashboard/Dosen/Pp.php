@@ -270,7 +270,7 @@ class Pp extends BaseController
         }
         return redirect('dosen-pp')->with($key, $msg);
     }
-    public function restore_pppppp($id)
+    public function pp_restore($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -285,25 +285,27 @@ class Pp extends BaseController
         $modelDel = new PpTblDeleteModel();
 
         $dataDel = $modelDel->find($id);
-        $dataRestore['kode'] = $dataDel['kode'];
-        $dataRestore['katalog'] = $dataDel['katalog'];
+        $dataRestore['taxbloom_id'] = $dataDel['taxbloom_id'];
+        $dataRestore['blue'] = $dataDel['blue'];
+        $dataRestore['green'] = $dataDel['green'];
+        $dataRestore['dosen_id'] = $ver['user_id'];
 
-        // $this->pre($id);
-        $modelTbl->save($dataRestore);
-        if ($modelTbl) {
-            $modelDel->delete($id);
-            if ($modelDel) {
-                $key = 'suksesRestoreKataKerja';
-                $msg = 'Kata kerja berhasil dikembalikan!';
-            } else {
-                $key = 'failRestoreKataKerja';
-                $msg = 'Kata kerja gagal dikembalikan!';
-            }
-        } else {
-            $key = 'failRestoreKataKerja';
-            $msg = 'Kata kerja gagal dikembalikan!';
-        }
-        return redirect('prodi-restore-kata-kerja')->with($key, $msg);
+        $this->pre($dataRestore);
+        // $modelTbl->save($dataRestore);
+        // if ($modelTbl) {
+        //     $modelDel->delete($id);
+        //     if ($modelDel) {
+        //         $key = 'suksesRestoreKataKerja';
+        //         $msg = 'Kata kerja berhasil dikembalikan!';
+        //     } else {
+        //         $key = 'failRestoreKataKerja';
+        //         $msg = 'Kata kerja gagal dikembalikan!';
+        //     }
+        // } else {
+        //     $key = 'failRestoreKataKerja';
+        //     $msg = 'Kata kerja gagal dikembalikan!';
+        // }
+        // return redirect('prodi-restore-kata-kerja')->with($key, $msg);
     }
     public function permanen_pp($id)
     {

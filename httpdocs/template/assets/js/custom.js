@@ -22,7 +22,7 @@ function dosenDeleteTaxbloom(id) {
     window.location.href = 'hapus-pp/' + id;
 }
 function dosenDeleteTaxbloomPermanen(id) {
-    // window.location.href = 'delete-permanen/' + id;
+    window.location.href = 'hapus-pp-permanen/' + id;
 }
 function dosenRestoreTaxbloom(id) {
     window.location.href = 'restore-pp/' + id;
