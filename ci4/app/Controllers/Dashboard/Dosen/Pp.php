@@ -223,8 +223,9 @@ class Pp extends BaseController
         $table->setTemplate($model->templateTbl());
         $table->setHeading([
             '<strong>#</strong>',
-            '<strong>Kode</strong>',
-            '<strong>Penguasaan Pengetahuan</strong>',
+            '<strong>ID Taxbloom</strong>',
+            '<strong>Kata 1</strong>',
+            '<strong>Kata 2</strong>',
             '<strong>Waktu Dihapus</strong>',
             '<strong>Aksi</strong>'
         ]);
