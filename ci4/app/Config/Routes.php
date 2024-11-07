@@ -105,7 +105,7 @@ $routes->group('Dosen', function ($routes) {
 
 
     // tes
-    $routes->add('tes', 'Dashboard\Dosen\Pp::tes');
+    $routes->add('tes', 'Dashboard\Dosen\Pp::tess');
 
     
 });

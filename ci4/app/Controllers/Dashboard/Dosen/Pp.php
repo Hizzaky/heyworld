@@ -197,7 +197,7 @@ class Pp extends BaseController
         return view('dashboard/dosen/pp/edit_pp', $data);
     }
 
-    public function tes(){
+    public function tess(){
         $this->pre($_POST);
     } 
 }
