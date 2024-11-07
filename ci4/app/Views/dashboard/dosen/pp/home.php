@@ -64,7 +64,7 @@
                                     <div class="" style="float:right">
                                         <!-- <a href="2" class=" " style="">Selengkapnya...</a> -->
                                         <a class="" data-toggle="modal" data-target="#modalKataKerja" style="cursor:pointer"
-                                            onclick="tesini('<?= $val['katalog'] ?>','<?= $val['blue'] ?>','<?= $val['green'] ?>')">
+                                            onclick="ppDetail('<?= $val['katalog'] ?>','<?= $val['blue'] ?>','<?= $val['green'] ?>')">
                                             Selengkapnya...
                                         </a>
                                     </div>

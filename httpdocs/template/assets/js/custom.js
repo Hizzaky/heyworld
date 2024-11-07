@@ -81,9 +81,9 @@ function limitText() {
     para.innerHTML += "...";
 }
 
-function tesini(red, blue, green) {
+function ppDetail(red, blue, green) {
     document.getElementById('modalPp').innerHTML = red;
-    document.getElementById('modalRed').innerHTML = red;
+    document.getElementById('modalRed').innerHTML = 'Mampu '+red;
     document.getElementById('modalBlue').innerHTML = blue;
     document.getElementById('modalGreen').innerHTML = green;
 }
