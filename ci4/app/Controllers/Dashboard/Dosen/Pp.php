@@ -30,7 +30,7 @@ class Pp extends BaseController
 
         return view('dashboard/dosen/home', $data);
     }
-    public function pp(){
+    public function index_pp(){
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
             if ($ver['jenis_user'] != 'Dosen') {
@@ -44,8 +44,6 @@ class Pp extends BaseController
         $sesi=session();
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
-        // $data['selected'] = '';
-
         // 
         $table = new \CodeIgniter\View\Table();
 
