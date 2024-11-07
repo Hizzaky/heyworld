@@ -23,6 +23,7 @@ function dosenDeleteTaxbloomPermanen(dir) {
 function prodiRestoreTaxbloom(dir) {
     window.location.href = 'restore-index/' + dir;
 }
+
 function modalKataKerja(id, index) {
     document.getElementById('id').value = id;
     let strReplace = index.replace('_', ' ');

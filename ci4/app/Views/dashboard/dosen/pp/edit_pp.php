@@ -40,7 +40,7 @@
                                     <span id="tred" style="color:red">Mampu <?= $edit[0]['katalog'] ?></span>
                                     <span id="tblue" style="color:blue"><?= $edit[0]['blue'] ?></span>
                                     <span id="tgreen" style="color:green"><?= $edit[0]['green'] ?></span>
-                                    <!-- <span id="blank">Silahkan inputkan kata kerja dibawah!</span> -->
+                                    <span id="blank"></span>
                             </div>
                         </div>
                     </div><br>
