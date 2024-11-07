@@ -9,6 +9,7 @@ use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
 use App\Models\Dashboard\Dosen\PpModel;
 use App\Models\Dashboard\Dosen\AddPpModel;
 use App\Models\Dashboard\Dosen\EditPpModel; 
+use App\Models\Dashboard\Dosen\RestorePpModel; 
 
 class Pp extends BaseController
 {
@@ -197,12 +198,11 @@ class Pp extends BaseController
 
         return view('dashboard/dosen/pp/edit_pp', $data);
     }
-    public function restore_taxbloom()
+    public function restore_pp()
     {
-        $sesi = session();
-        $ver = $sesi->get('login');
+        $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Prodi') {
+            if ($ver['jenis_user'] != 'Dosen') {
                 return redirect()->back();
             }
         } else {
@@ -212,19 +212,19 @@ class Pp extends BaseController
         $table = new \CodeIgniter\View\Table();
         $model = new RestorePpModel();
 
-        $data = $this->arData($model->title(), $sesi->get('login'));
+        $data = $this->arData($model->title(), $ver);
 
         $data['taxbloom'] = $model->dataTaxbloom();
 
         if (count($data['taxbloom']) < 1) {
-            $data['alert'] = 'Tidak ada kata kerja yang terhapus / dapat dipulihkan!';
+            $data['alert'] = 'Tidak ada penguasaan pengetahuan yang terhapus / dapat dipulihkan!';
         }
 
         $table->setTemplate($model->templateTbl());
         $table->setHeading([
             '<strong>#</strong>',
             '<strong>Kode</strong>',
-            '<strong>Kata Kerja</strong>',
+            '<strong>Penguasaan Pengetahuan</strong>',
             '<strong>Waktu Dihapus</strong>',
             '<strong>Aksi</strong>'
         ]);
@@ -270,7 +270,7 @@ class Pp extends BaseController
         }
         return redirect('dosen-pp')->with($key, $msg);
     }
-    public function restore_pp($id)
+    public function restore_pppppp($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -281,8 +281,8 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        $modelTbl = new TaxbloomModel();
-        $modelDel = new TaxbloomDeletedModel();
+        $modelTbl = new PpTblModel();
+        $modelDel = new PpTblDeleteModel();
 
         $dataDel = $modelDel->find($id);
         $dataRestore['kode'] = $dataDel['kode'];
