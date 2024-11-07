@@ -36,7 +36,7 @@ class EditPpModel extends Model
 
         $ret = "
             <div class='dropdown'>
-                <button class='btn' type='button' onclick=modalKataKerja('$dir','$katalog2')> $katalog1 </button>
+                <button class='btn' type='button' onclick=modalEditKataKerja('$dir','$katalog2')> $katalog1 </button>
             </div>
         "; 
         
