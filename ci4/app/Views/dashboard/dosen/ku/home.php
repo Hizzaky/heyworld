@@ -11,7 +11,7 @@
         <!--  -->
         <div class="container">
             <div class="row">
-                <?php foreach ($pp as $key => $val): ?>
+                <?php foreach ($ku as $key => $val): ?>
 
                     <div class="card col-12 col-sm-6 col-md-5" style="margin:10px">
                         <div class="container" style="padding-bottom:5px">
