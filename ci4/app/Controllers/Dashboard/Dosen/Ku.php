@@ -136,7 +136,7 @@ class Ku extends BaseController
             return redirect()->to('/');
         }
         // 
-        $model = new EditPpModel();
+        $model = new EditKuModel();
         $table = new \CodeIgniter\View\Table();
 
         $data = $this->arData($model->title(), $ver);
@@ -164,10 +164,10 @@ class Ku extends BaseController
             $modelTbl->save($_POST);
 
             if ($modelTbl) {
-                $key = 'suksesAddPp';
+                $key = 'suksesAddKu';
                 $msg = 'Penguasaan Pengetahuan Berhasil Dirubah!';
             } else {
-                $key = 'failAddPp';
+                $key = 'failAddKu';
                 $msg = 'Penguasaan Pengetahuan Gagal Dirubah!';
             }
         }
