@@ -84,7 +84,7 @@ class Kk extends BaseController
 
         return view('dashboard/dosen/kk/add_kk', $data);
     }
-    public function save_pp()
+    public function save_kk()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -97,7 +97,7 @@ class Kk extends BaseController
         // 
         
         if (request()->getMethod() == 'post') {
-            $modelTbl = new PpTblModel();
+            $modelTbl = new KkTblModel();
             $sesi = $ver;
             $insert = [
                 'taxbloom_id' => $_POST['taxbloom_id'],
@@ -105,25 +105,22 @@ class Kk extends BaseController
                 'green' => $_POST['green'],
                 'dosen_id' => $sesi['user_id']
             ];
-            //     $rules = $model->();
-            //     if ($this->validate($rules)) {
             $modelTbl->save($insert);
 
             if ($modelTbl) {
-                $key = 'suksesAddPp';
-                $msg = 'Penguasaan Pengetahuan Baru Berhasil Ditambahkan!';
+                $key = 'suksesAddKk';
+                $msg = 'Keterampilah Khusus Baru Berhasil Ditambahkan!';
             } else {
-                $key = 'failAddPp';
-                $msg = 'Penguasaan Pengetahuan Baru Gagal Ditambahkan!';
+                $key = 'failAddKk';
+                $msg = 'Keterampilah Khusus Baru Gagal Ditambahkan!';
             }
-            //     }
         }else{
             return redirect()->back();
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
         }
-        return redirect('dosen-pp');
+        return redirect('dosen-kk');
     }
     public function edit_kk($kk_id)
     {
