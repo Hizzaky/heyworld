@@ -53,7 +53,7 @@
                             <input type="text" class="form-control" name="blue" id="blue" required value="<?= $edit[0]['blue'] ?>"
                                 style="color:blue" oninput="inputPp()">
                             <div class="invalid-feedback">
-                                ----------------!
+                                Input text!
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                             <input type="text" class="form-control" name="green" id="green" required value="<?= $edit[0]['green'] ?>"
                                 style="color:green" oninput="inputPp()">
                             <div class="invalid-feedback">
-                                ----------------!
+                                Input text!
                             </div>
                         </div>
                     </div>
@@ -77,28 +77,8 @@
 </section>
 
 <!-- Modal -->
-<div class="modal fade" id="modalKataKerja" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalKataKerjaLabel"><?= $modal_title ?></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div style="height:75vh; overflow:auto">
-
-                    <?= $table->generate($taxbloom) ?>
-                </div>
-            </div>
-            <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div> -->
-        </div>
-    </div>
-</div>
+<?= view_cell('\App\Libraries\Data::modalTaxbloomTbl', ['table' => $table->generate($taxbloom)]) ?>
+ 
 <!-- END Modal -->
 
 
