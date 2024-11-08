@@ -30,7 +30,7 @@ class Kk extends BaseController
 
         return view('dashboard/dosen/home', $data);
     }
-    public function index_pp(){
+    public function index_kk(){
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
             if ($ver['jenis_user'] != 'Dosen') {
