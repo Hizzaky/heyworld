@@ -63,15 +63,10 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        // $db = db_connect();
-        // $modelCustom = new CustomModel($db);
         $model = new AddPpModel();
-        // $modelTbl = new PpTblModel();
 
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
-        // $data['selected'] = '';
-
         // 
         $table = new \CodeIgniter\View\Table();
 
@@ -104,7 +99,6 @@ class Pp extends BaseController
         // 
         
         if (request()->getMethod() == 'post') {
-            // $model = new PpModel();
             $modelTbl = new PpTblModel();
             $sesi = $ver;
             $insert = [
@@ -165,19 +159,9 @@ class Pp extends BaseController
 
         $data['table'] = $table;
         
-        
         if (request()->getMethod() == 'post') { 
-            // $this->pre($_POST);
             unset($_POST['red']);
-        //     // $model = new PpModel();
             $modelTbl = new PpTblModel();
-        //     $sesi = $ver;
-        //     $insert = [
-        //         'taxbloom_id' => $_POST['taxbloom_id'],
-        //         'blue' => $_POST['blue'],
-        //         'green' => $_POST['green'],
-        //         'dosen_id' => $sesi['user_id']
-        //     ];
 
             $modelTbl->save($_POST);
 

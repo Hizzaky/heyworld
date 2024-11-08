@@ -14,6 +14,8 @@ class RestorePpModel extends Model
             'meta_title' => 'SIM UMMAT',
             'header_title' => 'Restore Penguasaan Pengetahuan',
             'sub_title' => '',
+            'sukses' => 'suksesRestorePp',
+            'fail' => 'failRestorePp',
             'sidePp' => 'active',
             'menuPpDel' => 'active'
         ];

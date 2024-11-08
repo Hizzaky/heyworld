@@ -14,6 +14,8 @@ class EditPpModel extends Model
             'meta_title' => 'SIM UMMAT',
             'header_title' => 'Penguasaan Pengetahuan',
             'sub_title' => 'Form Perubahan Penguasaan Pengetahuan',
+            'sukses' => 'suksesAddKataKerja',
+            'fail' => 'failAddKataKerja',
             'sidePp' => 'active'
         ];
         return $title;
