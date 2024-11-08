@@ -112,5 +112,30 @@ class CustomModel
 
         return $ret;
     }
+    function kkJoin($id)
+    {
+        $builder = $this->db->table('t_kk');
+        $builder->select('*');
+        $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_kk.taxbloom_id');
+        $builder->join('t_dosen', 't_dosen.dosen_id=t_kk.dosen_id');
+        $builder->where('t_kk.dosen_id', $id);
+        $builder->orderBy('kk_id', 'DESC');
+
+        $ret = $builder->get()->getResultArray();
+
+        return $ret;
+    }
+    function editKkJoin($id)
+    {
+        $builder = $this->db->table('t_kk');
+        $builder->select('*');
+        $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_kk.taxbloom_id');
+        $builder->join('t_dosen', 't_dosen.dosen_id=t_kk.dosen_id');
+        $builder->where('kk_id', $id);
+
+        $ret = $builder->get()->getResultArray();
+
+        return $ret;
+    }
 
 }

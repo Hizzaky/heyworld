@@ -159,21 +159,21 @@ class Ku extends BaseController
         
         if (request()->getMethod() == 'post') { 
             unset($_POST['red']);
-            $modelTbl = new PpTblModel();
+            $modelTbl = new KuTblModel();
 
             $modelTbl->save($_POST);
 
             if ($modelTbl) {
                 $key = 'suksesAddKu';
-                $msg = 'Penguasaan Pengetahuan Berhasil Dirubah!';
+                $msg = 'Keterampilan Umum Berhasil Dirubah!';
             } else {
                 $key = 'failAddKu';
-                $msg = 'Penguasaan Pengetahuan Gagal Dirubah!';
+                $msg = 'Keterampilan Umum Gagal Dirubah!';
             }
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
-            return redirect('dosen-pp');
+            return redirect('dosen-ku');
         }
 
         return view('dashboard/dosen/pp/edit_pp', $data);
