@@ -284,7 +284,7 @@ class Ku extends BaseController
         }
         return redirect('dosen-restore-ku')->with($key, $msg);
     }
-    public function permanen_pp($id)
+    public function permanen_ku($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -295,18 +295,18 @@ class Ku extends BaseController
             return redirect()->to('/');
         }
         // 
-        $modelDel = new PpTblDeleteModel();
+        $modelDel = new KuTblDeleteModel();
 
         $modelDel->delete($id);
 
         if ($modelDel) {
-            $key = 'suksesRestorePp';
+            $key = 'suksesRestoreKu';
             $msg = 'Kata kerja berhasil dihapus permanen!';
 
         } else {
-            $key = 'failRestorePp';
+            $key = 'failRestoreKu';
             $msg = 'Kata kerja gagal dihapus permanen!';
         }
-        return redirect('dosen-restore-pp')->with($key, $msg);
+        return redirect('dosen-restore-ku')->with($key, $msg);
     }
 }
