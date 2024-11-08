@@ -12,12 +12,12 @@ class KkModel extends Model
     {
         $title = [
             'meta_title' => 'SIM UMMAT',
-            'header_title' => 'Penguasaan Pengetahuan',
-            'sub_title' => 'Penguasaan Pengetahuan',
-            'sukses' => 'suksesAddPp',
-            'fail' => 'failAddPp',
-            'sidePp' => 'active',
-            'menuPp' => 'active'
+            'header_title' => 'Keterampilah Khusus',
+            'sub_title' => 'Keterampilah Khusus',
+            'sukses' => 'suksesAddKk',
+            'fail' => 'failAddKk',
+            'sideKk' => 'active',
+            'menuKk' => 'active'
         ];
         return $title;
     }
@@ -186,12 +186,12 @@ class KkModel extends Model
 
         return $data;
     }
-    public function dataPp($id)
+    public function dataKk($id)
     {
         $db = db_connect();
         $model = new CustomModel($db);
 
-        $data = $model->ppJoin($id);
+        $data = $model->kkJoin($id);
 
         return $data;
 

@@ -4,12 +4,12 @@ namespace App\Controllers\Dashboard\Dosen;
 
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Dosen\Dosen;
-use App\Models\Dashboard\Dosen\Table\PpTblModel;
-use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
-use App\Models\Dashboard\Dosen\Pp\PpModel;
-use App\Models\Dashboard\Dosen\Pp\AddPpModel;
-use App\Models\Dashboard\Dosen\Pp\EditPpModel; 
-use App\Models\Dashboard\Dosen\Pp\RestorePpModel; 
+use App\Models\Dashboard\Dosen\Table\KkTblModel;
+use App\Models\Dashboard\Dosen\Table\KkTblDeleteModel;
+use App\Models\Dashboard\Dosen\Kk\KkModel;
+use App\Models\Dashboard\Dosen\Kk\AddKkModel;
+use App\Models\Dashboard\Dosen\Kk\EditKkModel; 
+use App\Models\Dashboard\Dosen\Kk\RestoreKkModel; 
 
 class Pp extends BaseController
 {
@@ -30,7 +30,8 @@ class Pp extends BaseController
 
         return view('dashboard/dosen/home', $data);
     }
-    public function index_pp(){
+    public function index_kk()
+    {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
             if ($ver['jenis_user'] != 'Dosen') {
@@ -40,16 +41,16 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        $model = new PpModel();
-        $sesi=session();
+        $model = new KkModel();
+        $sesi = session();
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         // 
-        $data['pp'] = $model->dataPp($data['login']['user_id']);
+        $data['kk'] = $model->dataKk($data['login']['user_id']);
 
-        return view('dashboard/dosen/pp/home', $data);
+        return view('dashboard/dosen/kk/home', $data);
     }
-    public function add_pp()
+    public function add_ku()
     {
         $sesi = session();
         $ver = $sesi->get('login');
@@ -61,7 +62,7 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        $model = new AddPpModel();
+        $model = new AddKuModel();
 
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
@@ -82,9 +83,9 @@ class Pp extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/pp/add_pp', $data);
+        return view('dashboard/dosen/ku/add_ku', $data);
     }
-    public function save_pp()
+    public function save_ku()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -95,9 +96,8 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        
         if (request()->getMethod() == 'post') {
-            $modelTbl = new PpTblModel();
+            $modelTbl = new KuTblModel();
             $sesi = $ver;
             $insert = [
                 'taxbloom_id' => $_POST['taxbloom_id'],
@@ -105,27 +105,25 @@ class Pp extends BaseController
                 'green' => $_POST['green'],
                 'dosen_id' => $sesi['user_id']
             ];
-            //     $rules = $model->();
-            //     if ($this->validate($rules)) {
+
             $modelTbl->save($insert);
 
             if ($modelTbl) {
-                $key = 'suksesAddPp';
-                $msg = 'Penguasaan Pengetahuan Baru Berhasil Ditambahkan!';
+                $key = 'suksesAddKu';
+                $msg = 'Keterampilan Umum Baru Berhasil Ditambahkan!';
             } else {
-                $key = 'failAddPp';
-                $msg = 'Penguasaan Pengetahuan Baru Gagal Ditambahkan!';
+                $key = 'failAddKu';
+                $msg = 'Keterampilan Umum Baru Gagal Ditambahkan!';
             }
-            //     }
-        }else{
+        } else {
             return redirect()->back();
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
         }
-        return redirect('dosen-pp');
+        return redirect('dosen-ku');
     }
-    public function edit_pp($pp_id)
+    public function edit_ku($ku_id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -136,15 +134,15 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        $model = new EditPpModel();
+        $model = new EditKuModel();
         $table = new \CodeIgniter\View\Table();
 
         $data = $this->arData($model->title(), $ver);
         $data['login'] = $ver;
-        $data['edit'] = $model->editDataPp($pp_id);
-
+        $data['edit'] = $model->editDataKu($ku_id);
 
         $data['taxbloom'] = $model->dataTaxbloom();
+
         $table->setTemplate($model->templateTbl());
         $table->setHeading([
             '<strong>#</strong>',
@@ -156,29 +154,29 @@ class Pp extends BaseController
         ]);
 
         $data['table'] = $table;
-        
-        if (request()->getMethod() == 'post') { 
+
+        if (request()->getMethod() == 'post') {
             unset($_POST['red']);
-            $modelTbl = new PpTblModel();
+            $modelTbl = new KuTblModel();
 
             $modelTbl->save($_POST);
 
             if ($modelTbl) {
-                $key = 'suksesAddPp';
-                $msg = 'Penguasaan Pengetahuan Berhasil Dirubah!';
+                $key = 'suksesAddKu';
+                $msg = 'Keterampilan Umum Berhasil Dirubah!';
             } else {
-                $key = 'failAddPp';
-                $msg = 'Penguasaan Pengetahuan Gagal Dirubah!';
+                $key = 'failAddKu';
+                $msg = 'Keterampilan Umum Gagal Dirubah!';
             }
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
-            return redirect('dosen-pp');
+            return redirect('dosen-ku');
         }
 
-        return view('dashboard/dosen/pp/edit_pp', $data);
+        return view('dashboard/dosen/ku/edit_ku', $data);
     }
-    public function restore_pp()
+    public function restore_ku()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -190,14 +188,14 @@ class Pp extends BaseController
         }
         // 
         $table = new \CodeIgniter\View\Table();
-        $model = new RestorePpModel();
+        $model = new RestoreKuModel();
 
         $data = $this->arData($model->title(), $ver);
 
         $data['taxbloom'] = $model->dataTaxbloom();
 
         if (count($data['taxbloom']) < 1) {
-            $data['alert'] = 'Tidak ada penguasaan pengetahuan yang terhapus / dapat dipulihkan!';
+            $data['alert'] = 'Tidak ada Keterampilan Umum yang terhapus / dapat dipulihkan!';
         }
 
         $table->setTemplate($model->templateTbl());
@@ -212,11 +210,11 @@ class Pp extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/pp/restore_pp', $data);
+        return view('dashboard/dosen/ku/restore_ku', $data);
 
     }
     // 
-    public function delete_pp($id)
+    public function delete_ku($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -227,8 +225,8 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        $modelTbl = new PpTblModel();
-        $modelDel = new PpTblDeleteModel();
+        $modelTbl = new KuTblModel();
+        $modelDel = new KuTblDeleteModel();
 
         $dataTbl = $modelTbl->find($id);
         $dataInsert['taxbloom_id'] = $dataTbl['taxbloom_id'];
@@ -239,19 +237,19 @@ class Pp extends BaseController
         if ($modelDel) {
             $modelTbl->delete($id);
             if ($modelTbl) {
-                $key = 'suksesAddPp';
-                $msg = 'Penguasaan Pengetahuan berhasil dihapus!';
+                $key = 'suksesAddKu';
+                $msg = 'Keterampilan Umum berhasil dihapus!';
             } else {
-                $key = 'failAddPp';
-                $msg = 'Penguasaan Pengetahuan gagal dihapus!';
+                $key = 'failAddKu';
+                $msg = 'Keterampilan Umum gagal dihapus!';
             }
         } else {
-            $key = 'failAddPp';
-            $msg = 'Penguasaan Pengetahuan gagal dihapus!';
+            $key = 'failAddKu';
+            $msg = 'Keterampilan Umum gagal dihapus!';
         }
-        return redirect('dosen-pp')->with($key, $msg);
+        return redirect('dosen-ku')->with($key, $msg);
     }
-    public function pp_restore($id)
+    public function ku_restore($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -262,8 +260,8 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        $modelTbl = new PpTblModel();
-        $modelDel = new PpTblDeleteModel();
+        $modelTbl = new KuTblModel();
+        $modelDel = new KuTblDeleteModel();
 
         $dataDel = $modelDel->find($id);
         $dataRestore['taxbloom_id'] = $dataDel['taxbloom_id'];
@@ -271,24 +269,23 @@ class Pp extends BaseController
         $dataRestore['green'] = $dataDel['green'];
         $dataRestore['dosen_id'] = $ver['user_id'];
 
-        $this->pre($dataRestore);
         $modelTbl->save($dataRestore);
         if ($modelTbl) {
             $modelDel->delete($id);
             if ($modelDel) {
-                $key = 'suksesRestorePp';
+                $key = 'suksesRestoreKu';
                 $msg = 'Kata kerja berhasil dikembalikan!';
             } else {
-                $key = 'failRestorePp';
+                $key = 'failRestoreKu';
                 $msg = 'Kata kerja gagal dikembalikan!';
             }
         } else {
-            $key = 'failRestorePp';
+            $key = 'failRestoreKu';
             $msg = 'Kata kerja gagal dikembalikan!';
         }
-        return redirect('dosen-restore-pp')->with($key, $msg);
+        return redirect('dosen-restore-ku')->with($key, $msg);
     }
-    public function permanen_pp($id)
+    public function permanen_ku($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -299,18 +296,18 @@ class Pp extends BaseController
             return redirect()->to('/');
         }
         // 
-        $modelDel = new PpTblDeleteModel();
+        $modelDel = new KuTblDeleteModel();
 
         $modelDel->delete($id);
 
         if ($modelDel) {
-            $key = 'suksesRestorePp';
+            $key = 'suksesRestoreKu';
             $msg = 'Kata kerja berhasil dihapus permanen!';
 
         } else {
-            $key = 'failRestorePp';
+            $key = 'failRestoreKu';
             $msg = 'Kata kerja gagal dihapus permanen!';
         }
-        return redirect('dosen-restore-pp')->with($key, $msg);
+        return redirect('dosen-restore-ku')->with($key, $msg);
     }
 }
