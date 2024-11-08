@@ -69,7 +69,7 @@
                             <input type="text" class="form-control" name="blue" id="blue" required value=""
                                 style="color:blue" oninput="inputPp()">
                             <div class="invalid-feedback">
-                                ----------------!
+                                Input text!
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                             <input type="text" class="form-control" name="green" id="green" required value=""
                                 style="color:green" oninput="inputPp()">
                             <div class="invalid-feedback">
-                                ----------------!
+                                Input text!
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,6 @@
             </div>
             <div class="modal-body">
                 <div style="height:75vh; overflow:auto">
-
                     <?= $table->generate($taxbloom) ?>
                 </div>
             </div>

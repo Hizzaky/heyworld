@@ -29,20 +29,25 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
                     <span>Keterampilan Umum</span></a>
                 <ul class="dropdown-menu">
-                    <li class="<?= $var = isset($menuKuIndex) ? 'active' : '' ?>"><a class="nav-link"
-                            href="#">Index</a></li>
+                    <li class="<?= $var = isset($menuKu) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Dosen/Keterampilan-umum">Index</a></li>
                     <li class="<?= $var = isset($menuKuAdd) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Dosen/Keterampilan-umum">Tambah KU Baru</a></li>
+                            href="/Dosen/Keterampilan-umum-baru">Tambah KU Baru</a></li>
+                    <li class="<?= $var = isset($menuKuDel) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Dosen/Keterampilan-umum-terhapus">KU Terhapus</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown <?= $var = isset($sideKk) ? 'active' : '' ?>">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file-alt"></i>
                     <span>Keterampilan Khusus</span></a>
                 <ul class="dropdown-menu">
-                    <li class="<?= $var = isset($menuKkIndex) ? 'active' : '' ?>"><a class="nav-link"
-                            href="#">Index</a></li>
+                    <li class="<?= $var = isset($menuKk) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Dosen/Keterampilan-umum">Index</a>
+                    </li>
                     <li class="<?= $var = isset($menuKkAdd) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Dosen/Keterampilan-khusus">Tambah KK Baru</a></li>
+                            href="/Dosen/Keterampilan-umum-baru">Tambah KK Baru</a></li>
+                    <li class="<?= $var = isset($menuKkDel) ? 'active' : '' ?>"><a class="nav-link"
+                            href="/Dosen/Keterampilan-umum-terhapus">KK Terhapus</a></li>
                 </ul>
             </li>
 

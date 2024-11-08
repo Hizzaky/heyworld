@@ -1,6 +1,6 @@
 <?php namespace App\Libraries;
 
-class DataDosen{
+class Dosen{
     public function alert() {
         return view('komponen/data/alert');
     }
