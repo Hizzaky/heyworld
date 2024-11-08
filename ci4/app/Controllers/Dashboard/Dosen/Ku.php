@@ -47,7 +47,7 @@ class Ku extends BaseController
         // 
         $data['pp'] = $model->dataPp($data['login']['user_id']);
 
-        return view('dashboard/dosen/Ku/home', $data);
+        return view('dashboard/dosen/ku/home', $data);
     }
     public function add_pp()
     {
