@@ -186,12 +186,12 @@ class KuModel extends Model
 
         return $data;
     }
-    public function dataPp($id)
+    public function dataKu($id)
     {
         $db = db_connect();
         $model = new CustomModel($db);
 
-        $data = $model->ppJoin($id);
+        $data = $model->kuJoin($id);
 
         return $data;
 

@@ -45,7 +45,7 @@ class Ku extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         // 
-        $data['pp'] = $model->dataPp($data['login']['user_id']);
+        $data['ku'] = $model->dataKu($data['login']['user_id']);
 
         return view('dashboard/dosen/ku/home', $data);
     }

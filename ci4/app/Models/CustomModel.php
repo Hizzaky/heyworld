@@ -62,26 +62,26 @@ class CustomModel
         return $data;
     }
 
-    function ppJoin($id)
+    function kuJoin($id)
     {
-        $builder = $this->db->table('t_pp');
+        $builder = $this->db->table('t_ku');
         $builder->select('*');
-        $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_pp.taxbloom_id');
-        $builder->join('t_dosen', 't_dosen.dosen_id=t_pp.dosen_id');
-        $builder->where('t_pp.dosen_id', $id);
-        $builder->orderBy('pp_id', 'DESC');
+        $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_ku.taxbloom_id');
+        $builder->join('t_dosen', 't_dosen.dosen_id=t_ku.dosen_id');
+        $builder->where('t_ku.dosen_id', $id);
+        $builder->orderBy('ku_id', 'DESC');
 
         $ret = $builder->get()->getResultArray();
 
         return $ret;
     }
-    function editPpJoin($id)
+    function editKuJoin($id)
     {
-        $builder = $this->db->table('t_pp');
+        $builder = $this->db->table('t_ku');
         $builder->select('*');
-        $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_pp.taxbloom_id');
-        $builder->join('t_dosen', 't_dosen.dosen_id=t_pp.dosen_id');
-        $builder->where('pp_id', $id);
+        $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_ku.taxbloom_id');
+        $builder->join('t_dosen', 't_dosen.dosen_id=t_ku.dosen_id');
+        $builder->where('ku_id', $id);
 
         $ret = $builder->get()->getResultArray();
 
