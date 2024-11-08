@@ -7,7 +7,7 @@
     </div>
     <div class="section-body">
         <!-- Notif -->
-         <?= view_cell('\App') ?>
+         <?= view_cell('\App\Libraries\Dosen::alert',['sukses'=>'suksesAddPp','fail'=>'failAddPp']) ?>
          <!--  -->
         <div class="container">
             <div class="row">

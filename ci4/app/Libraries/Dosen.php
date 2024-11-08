@@ -1,8 +1,8 @@
 <?php namespace App\Libraries;
 
 class Dosen{
-    public function alert() {
-        return view('komponen/data/alert');
+    public function alert($params) {
+        return view('komponen/data/alert',$params);
     }
     public function loop() {
         return view('komponen/data/loop');

@@ -1,19 +1,19 @@
         <!-- Notif -->
 <?php
 $dataSesi = session();
-$sukses = $dataSesi->getFlashdata($alertSukses);
-$fail = $dataSesi->getFlashdata($alertFail);
+$alertSukses = $dataSesi->getFlashdata($sukses);
+$alertFail = $dataSesi->getFlashdata($fail);
 
-if (isset($sukses)): ?>
+if (isset($alertSukses)): ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <?= $sukses ?>
+        <?= $alertSukses ?>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
     </div>
 <?php endif;
-if (isset($fail)): ?>
+if (isset($alertFail)): ?>
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <?= $fail ?>
+        <?= $alertFail ?>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
     </div>
