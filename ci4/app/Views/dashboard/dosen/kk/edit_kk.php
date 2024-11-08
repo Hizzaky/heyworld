@@ -34,16 +34,15 @@
                             <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
                                 <i class="fas fa-list" style="color:white"></i></a>
 
-                            <input class="btn form-control" type="text" name="pp_id" id="pp_id" placeholder="ID"
-                                value="<?= $edit[0]['pp_id'] ?>" required hidden>
+                            <input class="btn form-control" type="text" name="kk_id" id="kk_id" placeholder="ID"
+                                value="<?= $edit[0]['kk_id'] ?>" required hidden>
                             <input class="btn form-control" type="text" name="taxbloom_id" id="taxbloom_id" placeholder="ID"
                                 value="<?= $edit[0]['taxbloom_id'] ?>" required hidden>
                             <input class="btn form-control" style="width:80%;color:red;cursor:default" type="text" name="red" id="red"
                                 placeholder="--Pilih Kata Kerja--" value="Mampu <?= $edit[0]['katalog'] ?>" >
 
-
                             <div class="invalid-feedback">
-                                Silahkan pilih kata kejra! 
+                                Silahkan pilih kata kerja! 
                             </div>
                         </div>
                     </div>

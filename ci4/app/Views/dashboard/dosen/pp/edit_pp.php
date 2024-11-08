@@ -41,9 +41,8 @@
                             <input class="btn form-control" style="width:80%;color:red;cursor:default" type="text" name="red" id="red"
                                 placeholder="--Pilih Kata Kerja--" value="Mampu <?= $edit[0]['katalog'] ?>" >
 
-
                             <div class="invalid-feedback">
-                                Silahkan pilih kata kejra! 
+                                Silahkan pilih kata kerja! 
                             </div>
                         </div>
                     </div>

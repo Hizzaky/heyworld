@@ -42,7 +42,7 @@
                                 placeholder="--Pilih Kata Kerja--" value="Mampu <?= $edit[0]['katalog'] ?>" >
 
                             <div class="invalid-feedback">
-                                Silahkan pilih kata kejra! 
+                                Silahkan pilih kata kerja! 
                             </div>
                         </div>
                     </div>
