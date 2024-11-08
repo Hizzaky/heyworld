@@ -12,22 +12,22 @@ class EditKkModel extends Model
     {
         $title = [
             'meta_title' => 'SIM UMMAT',
-            'header_title' => 'Penguasaan Pengetahuan',
-            'sub_title' => 'Form Perubahan Penguasaan Pengetahuan',
-            'sukses' => 'suksesAddKataKerja',
+            'header_title' => 'Keterampilah Khusus',
+            'sub_title' => 'Form Perubahan Keterampilah Khusus',
             'modal_title' => 'Kata Kerja Taxonomi Bloom',
-            'fail' => 'failAddKataKerja',
+            'sukses' => 'suksesEditKataKerja',
+            'fail' => 'failEditKataKerja',
             'sidePp' => 'active'
         ]; 
         return $title;
     }
     
-    public function editDataPp($pp_id)
+    public function editDataKk($kk_id)
     {
         $db = db_connect();
         $model = new CustomModel($db);
 
-        $data = $model->editPpJoin($pp_id);
+        $data = $model->editKkJoin($kk_id);
 
         return $data;
     }

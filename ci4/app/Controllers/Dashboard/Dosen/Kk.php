@@ -125,7 +125,7 @@ class Kk extends BaseController
         }
         return redirect('dosen-pp');
     }
-    public function edit_pp($pp_id)
+    public function edit_kk($kk_id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -136,12 +136,12 @@ class Kk extends BaseController
             return redirect()->to('/');
         }
         // 
-        $model = new EditPpModel();
+        $model = new EditKkModel();
         $table = new \CodeIgniter\View\Table();
 
         $data = $this->arData($model->title(), $ver);
         $data['login'] = $ver;
-        $data['edit'] = $model->editDataPp($pp_id);
+        $data['edit'] = $model->editDataKk($kk_id);
 
 
         $data['taxbloom'] = $model->dataTaxbloom();
@@ -159,24 +159,24 @@ class Kk extends BaseController
         
         if (request()->getMethod() == 'post') { 
             unset($_POST['red']);
-            $modelTbl = new PpTblModel();
+            $modelTbl = new KkTblModel();
 
             $modelTbl->save($_POST);
 
             if ($modelTbl) {
-                $key = 'suksesAddPp';
-                $msg = 'Penguasaan Pengetahuan Berhasil Dirubah!';
+                $key = 'suksesAddKk';
+                $msg = 'Keterampilah Khusus Berhasil Dirubah!';
             } else {
-                $key = 'failAddPp';
-                $msg = 'Penguasaan Pengetahuan Gagal Dirubah!';
+                $key = 'failAddKk';
+                $msg = 'Keterampilah Khusus Gagal Dirubah!';
             }
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
-            return redirect('dosen-pp');
+            return redirect('dosen-kk');
         }
 
-        return view('dashboard/dosen/pp/edit_pp', $data);
+        return view('dashboard/dosen/kk/edit_kk', $data);
     }
     public function restore_pp()
     {
