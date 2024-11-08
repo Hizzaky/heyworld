@@ -4,12 +4,12 @@ namespace App\Controllers\Dashboard\Dosen;
 
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Dosen\Dosen;
-use App\Models\Dashboard\Dosen\Table\PpTblModel;
-use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
-use App\Models\Dashboard\Dosen\PpModel;
-use App\Models\Dashboard\Dosen\AddPpModel;
-use App\Models\Dashboard\Dosen\EditPpModel; 
-use App\Models\Dashboard\Dosen\RestorePpModel; 
+use App\Models\Dashboard\Dosen\Table\KkTblModel;
+use App\Models\Dashboard\Dosen\Table\KkTblDeleteModel;
+use App\Models\Dashboard\Dosen\Kk\KkModel;
+use App\Models\Dashboard\Dosen\Kk\AddKkModel;
+use App\Models\Dashboard\Dosen\Kk\EditKkModel; 
+use App\Models\Dashboard\Dosen\Kk\RestoreKkModel; 
 
 class Kk extends BaseController
 {

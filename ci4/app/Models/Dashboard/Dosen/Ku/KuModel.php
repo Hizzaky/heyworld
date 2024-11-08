@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen;
+namespace App\Models\Dashboard\Dosen\Ku;
 
 use CodeIgniter\Model;
 use App\Models\CustomModel;
@@ -14,10 +14,10 @@ class KuModel extends Model
             'meta_title' => 'SIM UMMAT',
             'header_title' => 'Penguasaan Pengetahuan',
             'sub_title' => 'Penguasaan Pengetahuan',
-            'sukses' => 'suksesAddPp',
-            'fail' => 'failAddPp',
-            'sidePp' => 'active',
-            'menuPp' => 'active'
+            'sukses' => 'suksesAddKu',
+            'fail' => 'failAddKu',
+            'sideKu' => 'active',
+            'menuKu' => 'active'
         ];
         return $title;
     }

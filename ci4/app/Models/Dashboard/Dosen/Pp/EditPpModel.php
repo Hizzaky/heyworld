@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen;
+namespace App\Models\Dashboard\Dosen\Pp;
 
 use CodeIgniter\Model;
 use App\Models\CustomModel;
 
 
-class EditKkModel extends Model 
+class EditPpModel extends Model 
 {
     public function title()
     {

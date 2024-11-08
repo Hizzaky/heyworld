@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen;
+namespace App\Models\Dashboard\Dosen\Ku;
 
 use CodeIgniter\Model;
 use App\Models\CustomModel;
 use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
 
-class RestorePpModel extends Model
+class RestoreKuModel extends Model
 {
     public function title()
     {

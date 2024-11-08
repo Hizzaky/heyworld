@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen;
+namespace App\Models\Dashboard\Dosen\Ku;
 
 use CodeIgniter\Model;
 use App\Models\CustomModel;
 
 
-class AddPpModel extends Model
+class AddKuModel extends Model
 {
     public function title()
     {

@@ -6,10 +6,10 @@ use App\Controllers\BaseController;
 use App\Models\Dashboard\Dosen\Dosen;
 use App\Models\Dashboard\Dosen\Table\KuTblModel;
 use App\Models\Dashboard\Dosen\Table\KuTblDeleteModel;
-use App\Models\Dashboard\Dosen\KuModel;
-use App\Models\Dashboard\Dosen\AddKuModel;
-use App\Models\Dashboard\Dosen\EditKuModel; 
-use App\Models\Dashboard\Dosen\RestoreKuModel; 
+use App\Models\Dashboard\Dosen\Ku\KuModel;
+use App\Models\Dashboard\Dosen\Ku\AddKuModel;
+use App\Models\Dashboard\Dosen\Ku\EditKuModel; 
+use App\Models\Dashboard\Dosen\Ku\RestoreKuModel; 
 
 class Ku extends BaseController
 {
@@ -30,7 +30,7 @@ class Ku extends BaseController
 
         return view('dashboard/dosen/home', $data);
     }
-    public function index_pp(){
+    public function index_ku(){
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
             if ($ver['jenis_user'] != 'Dosen') {
@@ -40,14 +40,14 @@ class Ku extends BaseController
             return redirect()->to('/');
         }
         // 
-        $model = new PpModel();
+        $model = new KuModel();
         $sesi=session();
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         // 
         $data['pp'] = $model->dataPp($data['login']['user_id']);
 
-        return view('dashboard/dosen/pp/home', $data);
+        return view('dashboard/dosen/Ku/home', $data);
     }
     public function add_pp()
     {
