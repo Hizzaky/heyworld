@@ -3,8 +3,7 @@
 namespace App\Models\Dashboard\Dosen\Kk;
 
 use CodeIgniter\Model;
-use App\Models\CustomModel;
-use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
+use App\Models\Dashboard\Dosen\Table\KkTblDeleteModel;
 
 class RestoreKkModel extends Model
 {
@@ -63,7 +62,7 @@ class RestoreKkModel extends Model
     
     public function dataTaxbloom()
     {
-        $modelDel = new PpTblDeleteModel();
+        $modelDel = new KkTblDeleteModel();
         $dataTbl = $modelDel->findAll();
 
         $newData = [];
@@ -80,11 +79,11 @@ class RestoreKkModel extends Model
                     <div style="white-space:nowrap;">
                         <button class="btn btn-primary " 
                         data-confirm="Restore Kata Kerja?|Gunakan kembali kata kerja?" 
-                        data-confirm-yes="dosenRestoreTaxbloom(' . $val['pp_delete_id'] . ')"
+                        data-confirm-yes="dosenRestoreKk(' . $val['pp_delete_id'] . ')"
                         ><i class="fas fa-undo"></i></button>
                         <button class="btn btn-danger btn-sm " 
                         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja secara permanen?" 
-                        data-confirm-yes="dosenDeleteTaxbloomPermanen(' . $val['pp_delete_id'] . ')"
+                        data-confirm-yes="dosenDeleteKkPermanen(' . $val['pp_delete_id'] . ')"
                         ><i class="fas fa-trash"></i></button>
                     </div>
             '
