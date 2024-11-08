@@ -216,7 +216,7 @@ class Ku extends BaseController
 
     }
     // 
-    public function delete_pp($id)
+    public function delete_ku($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -227,8 +227,8 @@ class Ku extends BaseController
             return redirect()->to('/');
         }
         // 
-        $modelTbl = new PpTblModel();
-        $modelDel = new PpTblDeleteModel();
+        $modelTbl = new KuTblModel();
+        $modelDel = new KuTblDeleteModel();
 
         $dataTbl = $modelTbl->find($id);
         $dataInsert['taxbloom_id'] = $dataTbl['taxbloom_id'];
@@ -239,17 +239,17 @@ class Ku extends BaseController
         if ($modelDel) {
             $modelTbl->delete($id);
             if ($modelTbl) {
-                $key = 'suksesAddPp';
-                $msg = 'Penguasaan Pengetahuan berhasil dihapus!';
+                $key = 'suksesAddKu';
+                $msg = 'Keterampilan Umum berhasil dihapus!';
             } else {
-                $key = 'failAddPp';
-                $msg = 'Penguasaan Pengetahuan gagal dihapus!';
+                $key = 'failAddKu';
+                $msg = 'Keterampilan Umum gagal dihapus!';
             }
         } else {
-            $key = 'failAddPp';
-            $msg = 'Penguasaan Pengetahuan gagal dihapus!';
+            $key = 'failAddKu';
+            $msg = 'Keterampilan Umum gagal dihapus!';
         }
-        return redirect('dosen-pp')->with($key, $msg);
+        return redirect('dosen-ku')->with($key, $msg);
     }
     public function pp_restore($id)
     {
