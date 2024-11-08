@@ -18,14 +18,37 @@ function prodiDeleteTaxbloomPermanen(id) {
     window.location.href = 'delete-permanen/' + id;
 }
 
-function dosenDeleteTaxbloom(id) {
+// PP
+function dosenDeletePp(id) {
     window.location.href = 'hapus-pp/' + id;
 }
-function dosenDeleteTaxbloomPermanen(id) {
+function dosenDeletePpPermanen(id) {
     window.location.href = 'hapus-pp-permanen/' + id;
 }
-function dosenRestoreTaxbloom(id) {
+function dosenRestorePp(id) {
     window.location.href = 'restore-pp/' + id;
+}
+
+// KU
+function dosenDeleteKu(id) {
+    window.location.href = 'hapus-ku/' + id;
+}
+function dosenDeleteKuPermanen(id) {
+    window.location.href = 'hapus-ku-permanen/' + id;
+}
+function dosenRestoreKu(id) {
+    window.location.href = 'restore-ku/' + id;
+} 
+
+// KK
+function dosenDeleteKk(id) {
+    window.location.href = 'hapus-kk/' + id;
+}
+function dosenDeleteKkPermanen(id) {
+    window.location.href = 'hapus-kk-permanen/' + id;
+}
+function dosenRestoreKk(id) {
+    window.location.href = 'restore-kk/' + id;
 }
 
 function modalKataKerja(id, index) {
@@ -83,7 +106,7 @@ function limitText() {
 
 function ppDetail(red, blue, green) {
     document.getElementById('modalPp').innerHTML = red;
-    document.getElementById('modalRed').innerHTML = 'Mampu '+red;
+    document.getElementById('modalRed').innerHTML = 'Mampu ' + red;
     document.getElementById('modalBlue').innerHTML = blue;
     document.getElementById('modalGreen').innerHTML = green;
 }
