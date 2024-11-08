@@ -71,12 +71,8 @@
             </div>
         </div>
     </div>
-    </div>
 </section>
-
 <!-- Modal -->
 <?= view_cell('\App\Libraries\Data::modalTaxbloomTbl', ['table' => $table->generate($taxbloom)]) ?>
 <!-- END Modal -->
-
-
 <?= $this->endSection() ?>

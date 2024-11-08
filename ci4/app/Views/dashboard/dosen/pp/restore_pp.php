@@ -11,20 +11,15 @@
         <!--  -->
         <div class="card-body p-0">
             <div class="table-responsive">
-
                 <?php if (isset($alert)): ?>
                     <div class="alert alert-info alert-dismissible fade show" role="alert">
                         <?= $alert ?>
-                        
                     </div>
                 <?php else: ?>
-
                     <?= $table->generate($taxbloom) ?>
                 <?php endif; ?>
-
             </div>
         </div>
-
     </div>
 </section>
 
