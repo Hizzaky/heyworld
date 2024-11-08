@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 <div style="height:75vh; overflow:auto">
-                    <?= $table ?>
+                    <?= $table->generate($taxbloom) ?>
                 </div>
             </div>
         </div>
