@@ -175,7 +175,7 @@ class Kk extends BaseController
 
         return view('dashboard/dosen/kk/edit_kk', $data);
     }
-    public function restore_pp()
+    public function restore_kk()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -187,14 +187,14 @@ class Kk extends BaseController
         }
         // 
         $table = new \CodeIgniter\View\Table();
-        $model = new RestorePpModel();
+        $model = new RestoreKkModel();
 
         $data = $this->arData($model->title(), $ver);
 
         $data['taxbloom'] = $model->dataTaxbloom();
 
         if (count($data['taxbloom']) < 1) {
-            $data['alert'] = 'Tidak ada penguasaan pengetahuan yang terhapus / dapat dipulihkan!';
+            $data['alert'] = 'Tidak ada Keterampilah Khusus yang terhapus / dapat dipulihkan!';
         }
 
         $table->setTemplate($model->templateTbl());
@@ -209,7 +209,7 @@ class Kk extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/pp/restore_pp', $data);
+        return view('dashboard/dosen/kk/restore_kk', $data);
 
     }
     // 
