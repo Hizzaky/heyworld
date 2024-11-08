@@ -4,7 +4,7 @@ namespace App\Models\Dashboard\Dosen\Ku;
 
 use CodeIgniter\Model;
 use App\Models\CustomModel;
-use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
+use App\Models\Dashboard\Dosen\Table\KuTblDeleteModel;
 
 class RestoreKuModel extends Model
 {
@@ -63,7 +63,7 @@ class RestoreKuModel extends Model
     
     public function dataTaxbloom()
     {
-        $modelDel = new PpTblDeleteModel();
+        $modelDel = new KuTblDeleteModel();
         $dataTbl = $modelDel->findAll();
 
         $newData = [];
