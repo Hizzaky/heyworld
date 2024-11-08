@@ -7,7 +7,7 @@ class Data{
     public function loop() {
         return view('komponen/load/loop');
     }
-    public function modalTaxbloomTbl() {
+    public function modalTaxbloomTbl($params) {
         return view('komponen/load/modalTaxbloomTbl');
     }
     public function modalTaxbloomKonteks() {
