@@ -84,7 +84,7 @@ class Ku extends BaseController
 
         return view('dashboard/dosen/ku/add_ku', $data);
     }
-    public function save_pp()
+    public function save_ku()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -95,9 +95,8 @@ class Ku extends BaseController
             return redirect()->to('/');
         }
         // 
-        
         if (request()->getMethod() == 'post') {
-            $modelTbl = new PpTblModel();
+            $modelTbl = new KuTblModel();
             $sesi = $ver;
             $insert = [
                 'taxbloom_id' => $_POST['taxbloom_id'],
@@ -105,25 +104,23 @@ class Ku extends BaseController
                 'green' => $_POST['green'],
                 'dosen_id' => $sesi['user_id']
             ];
-            //     $rules = $model->();
-            //     if ($this->validate($rules)) {
+
             $modelTbl->save($insert);
 
             if ($modelTbl) {
-                $key = 'suksesAddPp';
-                $msg = 'Penguasaan Pengetahuan Baru Berhasil Ditambahkan!';
+                $key = 'suksesAddKu';
+                $msg = 'Keterampilan Umum Baru Berhasil Ditambahkan!';
             } else {
-                $key = 'failAddPp';
-                $msg = 'Penguasaan Pengetahuan Baru Gagal Ditambahkan!';
+                $key = 'failAddKu';
+                $msg = 'Keterampilan Umum Baru Gagal Ditambahkan!';
             }
-            //     }
         }else{
             return redirect()->back();
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
         }
-        return redirect('dosen-pp');
+        return redirect('dosen-ku');
     }
     public function edit_ku($ku_id)
     {
