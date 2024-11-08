@@ -49,7 +49,7 @@ class Kk extends BaseController
 
         return view('dashboard/dosen/kk/home', $data);
     }
-    public function add_pp()
+    public function add_kk()
     {
         $sesi = session();
         $ver = $sesi->get('login');
@@ -61,7 +61,7 @@ class Kk extends BaseController
             return redirect()->to('/');
         }
         // 
-        $model = new AddPpModel();
+        $model = new AddKkModel();
 
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
@@ -82,7 +82,7 @@ class Kk extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/pp/add_pp', $data);
+        return view('dashboard/dosen/kk/add_kk', $data);
     }
     public function save_pp()
     {

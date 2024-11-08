@@ -17,7 +17,7 @@ class EditKkModel extends Model
             'modal_title' => 'Kata Kerja Taxonomi Bloom',
             'sukses' => 'suksesEditKataKerja',
             'fail' => 'failEditKataKerja',
-            'sidePp' => 'active'
+            'sideKk' => 'active'
         ]; 
         return $title;
     }

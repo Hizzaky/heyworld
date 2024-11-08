@@ -12,13 +12,13 @@ class AddKkModel extends Model
     {
         $title = [
             'meta_title' => 'SIM UMMAT',
-            'header_title' => 'Penguasaan Pengetahuan',
-            'sub_title' => 'Form Penambahan Penguasaan Pengetahuan Baru',
+            'header_title' => 'Keterampilah Khusus',
+            'sub_title' => 'Form Penambahan Keterampilah Khusus Baru',
             'sukses' => 'suksesAddKataKerja',
             'fail' => 'failAddKataKerja',
             'modal_title' => 'Kata Kerja Taxonomi Bloom',
-            'sidePp' => 'active',
-            'menuPpAdd' => 'active'
+            'sideKk' => 'active',
+            'menuKkAdd' => 'active'
         ];
         return $title;
     }
