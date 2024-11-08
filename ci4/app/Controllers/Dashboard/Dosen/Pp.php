@@ -3,13 +3,13 @@
 namespace App\Controllers\Dashboard\Dosen;
 
 use App\Controllers\BaseController;
-use App\Models\Dashboard\Dosen\Dosen;
-use App\Models\Dashboard\Dosen\Table\PpTblModel;
-use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
-use App\Models\Dashboard\Dosen\PpModel;
-use App\Models\Dashboard\Dosen\AddPpModel;
-use App\Models\Dashboard\Dosen\EditPpModel; 
-use App\Models\Dashboard\Dosen\RestorePpModel; 
+use App\Models\Dashboard\Dosen\Pp\Dosen;
+use App\Models\Dashboard\Dosen\Pp\Table\PpTblModel;
+use App\Models\Dashboard\Dosen\Pp\Table\PpTblDeleteModel;
+use App\Models\Dashboard\Dosen\Pp\PpModel;
+use App\Models\Dashboard\Dosen\Pp\AddPpModel;
+use App\Models\Dashboard\Dosen\Pp\EditPpModel; 
+use App\Models\Dashboard\Dosen\Pp\RestorePpModel; 
 
 class Pp extends BaseController
 {
