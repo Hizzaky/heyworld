@@ -10,8 +10,8 @@ class Data{
     public function modalTbl() {
         return view('komponen/data/modalTbl');
     }
-    public function modalTaxbloom() {
-        return view('komponen/data/modalTaxbloom');
+    public function modalTaxbloomKonteks() {
+        return view('komponen/data/modalTaxbloomKonteks');
     }
 }
 

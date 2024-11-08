@@ -62,7 +62,7 @@
 </section>
 
 <!-- Modal -->
-<?= view_cell('\App\Libraries\Data::modalTaxbloom') ?>
+<?= view_cell('\App\Libraries\Data::modalTaxbloomKonteks') ?>
 <!-- END Modal -->
 
 <?= $this->endSection() ?>
