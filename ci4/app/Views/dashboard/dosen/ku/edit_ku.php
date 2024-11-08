@@ -34,8 +34,8 @@
                             <a class="btn btn-info form-control " data-toggle="modal" data-target="#modalKataKerja">
                                 <i class="fas fa-list" style="color:white"></i></a>
 
-                            <input class="btn form-control" type="text" name="pp_id" id="pp_id" placeholder="ID"
-                                value="<?= $edit[0]['pp_id'] ?>" required hidden>
+                            <input class="btn form-control" type="text" name="ku_id" id="ku_id" placeholder="ID"
+                                value="<?= $edit[0]['ku_id'] ?>" required hidden>
                             <input class="btn form-control" type="text" name="taxbloom_id" id="taxbloom_id" placeholder="ID"
                                 value="<?= $edit[0]['taxbloom_id'] ?>" required hidden>
                             <input class="btn form-control" style="width:80%;color:red;cursor:default" type="text" name="red" id="red"
