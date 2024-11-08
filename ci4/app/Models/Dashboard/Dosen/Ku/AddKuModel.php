@@ -12,13 +12,13 @@ class AddKuModel extends Model
     {
         $title = [
             'meta_title' => 'SIM UMMAT',
-            'header_title' => 'Penguasaan Pengetahuan',
-            'sub_title' => 'Form Penambahan Penguasaan Pengetahuan Baru',
+            'header_title' => 'Keterampilan Umum',
+            'sub_title' => 'Form Penambahan Keterampilan Umum Baru',
             'sukses' => 'suksesAddKataKerja',
             'fail' => 'failAddKataKerja',
             'modal_title' => 'Kata Kerja Taxonomi Bloom',
-            'sidePp' => 'active',
-            'menuPpAdd' => 'active'
+            'sideKu' => 'active',
+            'menuKuAdd' => 'active'
         ];
         return $title;
     }
