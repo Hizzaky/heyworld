@@ -42,12 +42,12 @@
                     <span>Keterampilan Khusus</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuKk) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Dosen/Keterampilan-umum">Index</a>
+                            href="/Dosen/Keterampilan-khusus">Index</a>
                     </li>
                     <li class="<?= $var = isset($menuKkAdd) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Dosen/Keterampilan-umum-baru">Tambah KK Baru</a></li>
+                            href="/Dosen/Keterampilan-khusus-baru">Tambah KK Baru</a></li>
                     <li class="<?= $var = isset($menuKkDel) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Dosen/Keterampilan-umum-terhapus">KK Terhapus</a></li>
+                            href="/Dosen/Keterampilan-khusus-terhapus">KK Terhapus</a></li>
                 </ul>
             </li>
 
