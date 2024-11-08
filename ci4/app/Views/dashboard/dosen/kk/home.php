@@ -33,12 +33,12 @@
                                                 Aksi
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                                                     style="width:10px !important; text-align:center;">
-                                                    <a class="btn btn-warning btn-sm " href="Edit-pp/<?= $val['kk_id'] ?>">
+                                                    <a class="btn btn-warning btn-sm " href="Edit-kk/<?= $val['kk_id'] ?>">
                                                         <i class="fas fa-pencil-alt"></i>
                                                     </a> |
                                                     <button class="btn btn-danger btn-sm "
                                                         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja <b><?= $val['katalog'] ?> (<?= $val['kode'] ?>)</b> ?"
-                                                        data-confirm-yes="dosenDeleteTaxbloom(<?= $val['kk_id'] ?>)">
+                                                        data-confirm-yes="dosenDeleteKk(<?= $val['kk_id'] ?>)">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                 </div>
