@@ -18,7 +18,7 @@ class EditPpModel extends Model
             'modal_title' => 'Kata Kerja Taxonomi Bloom',
             'fail' => 'failAddKataKerja',
             'sidePp' => 'active'
-        ];
+        ]; 
         return $title;
     }
     
