@@ -16,6 +16,7 @@ class AddPpModel extends Model
             'sub_title' => 'Form Penambahan Penguasaan Pengetahuan Baru',
             'sukses' => 'suksesAddKataKerja',
             'fail' => 'failAddKataKerja',
+            'modal_title' => 'Kata Kerja Taxonomi Bloom',
             'sidePp' => 'active',
             'menuPpAdd' => 'active'
         ];
