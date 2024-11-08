@@ -45,8 +45,6 @@ class Pp extends BaseController
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         // 
-        $table = new \CodeIgniter\View\Table();
-
         $data['pp'] = $model->dataPp($data['login']['user_id']);
 
         return view('dashboard/dosen/pp/home', $data);

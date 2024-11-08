@@ -7,8 +7,11 @@ class Data{
     public function loop() {
         return view('komponen/data/loop');
     }
-    public function modelTbl() {
-        return view('komponen/data/modelTbl');
+    public function modalTbl() {
+        return view('komponen/data/modalTbl');
+    }
+    public function modalTaxbloom() {
+        return view('komponen/data/modalTaxbloom');
     }
 }
 

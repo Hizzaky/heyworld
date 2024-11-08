@@ -1,4 +1,3 @@
-        <!-- Notif -->
 <?php
 $dataSesi = session();
 $alertSukses = $dataSesi->getFlashdata($sukses);

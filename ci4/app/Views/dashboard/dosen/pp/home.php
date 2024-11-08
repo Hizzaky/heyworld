@@ -7,8 +7,8 @@
     </div>
     <div class="section-body">
         <!-- Notif -->
-         <?= view_cell('\App\Libraries\Data::alert',['sukses'=>$sukses,'fail'=>$fail]) ?>
-         <!--  -->
+        <?= view_cell('\App\Libraries\Data::alert', ['sukses' => $sukses, 'fail' => $fail]) ?>
+        <!--  -->
         <div class="container">
             <div class="row">
                 <?php foreach ($pp as $key => $val): ?>
@@ -33,7 +33,7 @@
                                                 Aksi
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                                                     style="width:10px !important; text-align:center;">
-                                                    <a class="btn btn-warning btn-sm " href="Edit-pp/<?= $val['pp_id'] ?>"> 
+                                                    <a class="btn btn-warning btn-sm " href="Edit-pp/<?= $val['pp_id'] ?>">
                                                         <i class="fas fa-pencil-alt"></i>
                                                     </a> |
                                                     <button class="btn btn-danger btn-sm "
@@ -62,36 +62,7 @@
 </section>
 
 <!-- Modal -->
-<div class="modal fade" id="modalKataKerja" tabindex="-1" role="dialog">
-    <div class="modal-dialog " role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalKataKerjaLabel">
-                    Penguasaan Pengetahuan
-                    (<span id="modalPp"></span>)
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <hr>
-            <div class="modal-body" style="padding:5px;">
-                <!-- <div style="height:75vh; overflow:auto"> -->
-                <div class="container">
-                    <p class="card-text" style="text-align:justify">
-                        <span id="modalRed" style="color:red"></span>
-                        <span id="modalBlue" style="color:blue"></span>
-                        <span id="modalGreen" style="color:green"></span>
-                    </p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-            </div>
-        </div>
-    </div>
-</div>
+<?= view_cell('\App\Libraries\Data::modalTaxbloom') ?>
 <!-- END Modal -->
 
 <?= $this->endSection() ?>

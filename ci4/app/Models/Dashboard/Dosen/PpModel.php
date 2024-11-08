@@ -13,7 +13,7 @@ class PpModel extends Model
         $title = [
             'meta_title' => 'SIM UMMAT',
             'header_title' => 'Penguasaan Pengetahuan',
-            'sub_title' => '',
+            'sub_title' => 'Penguasaan Pengetahuan',
             'sukses' => 'suksesAddPp',
             'fail' => 'failAddPp',
             'sidePp' => 'active',
