@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 use App\Models\CustomModel;
 
 
-class EditKkModel extends Model 
+class EditPpModel extends Model 
 {
     public function title()
     {

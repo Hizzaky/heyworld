@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 use App\Models\CustomModel;
 
 
-class EditKkModel extends Model 
+class EditKuModel extends Model 
 {
     public function title()
     {
@@ -22,12 +22,12 @@ class EditKkModel extends Model
         return $title;
     }
     
-    public function editDataPp($pp_id)
+    public function editDataPp($id)
     {
         $db = db_connect();
         $model = new CustomModel($db);
 
-        $data = $model->editPpJoin($pp_id);
+        $data = $model->editPpJoin($id);
 
         return $data;
     }
