@@ -12,12 +12,12 @@ class RestoreKuModel extends Model
     {
         $title = [
             'meta_title' => 'SIM UMMAT',
-            'header_title' => 'Restore Penguasaan Pengetahuan',
+            'header_title' => 'Restore Keterampilan Umum',
             'sub_title' => '',
-            'sukses' => 'suksesRestorePp',
-            'fail' => 'failRestorePp',
-            'sidePp' => 'active',
-            'menuPpDel' => 'active'
+            'sukses' => 'suksesRestoreKu',
+            'fail' => 'failRestoreKu',
+            'sideKu' => 'active',
+            'menuKuDel' => 'active'
         ];
         return $title;
     }

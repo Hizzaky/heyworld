@@ -187,14 +187,14 @@ class Ku extends BaseController
         }
         // 
         $table = new \CodeIgniter\View\Table();
-        $model = new RestorePpModel();
+        $model = new RestoreKuModel();
 
         $data = $this->arData($model->title(), $ver);
 
         $data['taxbloom'] = $model->dataTaxbloom();
 
         if (count($data['taxbloom']) < 1) {
-            $data['alert'] = 'Tidak ada penguasaan pengetahuan yang terhapus / dapat dipulihkan!';
+            $data['alert'] = 'Tidak ada Keterampilan Umum yang terhapus / dapat dipulihkan!';
         }
 
         $table->setTemplate($model->templateTbl());
@@ -209,7 +209,7 @@ class Ku extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/pp/restore_pp', $data);
+        return view('dashboard/dosen/ku/restore_ku', $data);
 
     }
     // 
