@@ -14,6 +14,8 @@ class PpModel extends Model
             'meta_title' => 'SIM UMMAT',
             'header_title' => 'Penguasaan Pengetahuan',
             'sub_title' => '',
+            'sukses' => 'suksesAddPp',
+            'fail' => 'failAddPp',
             'sidePp' => 'active',
             'menuPp' => 'active'
         ];
