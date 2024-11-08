@@ -15,6 +15,7 @@ class EditPpModel extends Model
             'header_title' => 'Penguasaan Pengetahuan',
             'sub_title' => 'Form Perubahan Penguasaan Pengetahuan',
             'sukses' => 'suksesAddKataKerja',
+            'modal_title' => 'Kata Kerja Taxonomi Bloom',
             'fail' => 'failAddKataKerja',
             'sidePp' => 'active'
         ];
