@@ -175,7 +175,7 @@ class Ku extends BaseController
 
         return view('dashboard/dosen/ku/edit_ku', $data);
     }
-    public function restore_pp()
+    public function restore_ku()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
