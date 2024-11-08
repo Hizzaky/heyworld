@@ -7,7 +7,7 @@
     </div>
     <div class="section-body">
         <!-- Notif -->
-        <?= view_cell('\App\Libraries\Dosen::alert', ['sukses' => $sukses, 'fail' => $fail]) ?>
+        <?= view_cell('\App\Libraries\Data::alert', ['sukses' => $sukses, 'fail' => $fail]) ?>
         <!--  -->
         <div class="card-body p-0">
             <div class="card">
@@ -38,7 +38,6 @@
                                 value="" required hidden>
                             <input class="btn form-control" style="width:80%;color:red" type="text" name="red" id="red"
                                 placeholder="--Pilih Kata Kerja--" value="" hidden>
-
 
                             <div class="invalid-feedback">
                                 Silahkan pilih kata kejra!

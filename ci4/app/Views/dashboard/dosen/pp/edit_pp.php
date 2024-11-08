@@ -7,25 +7,7 @@
     </div>
     <div class="section-body">
         <!-- Notif -->
-        <?php
-        $dataSesi = session();
-        $sukses = $dataSesi->getFlashdata('suksesAddKataKerja');
-        $fail = $dataSesi->getFlashdata('failAddKataKerja');
-
-        if (isset($sukses)): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <?= $sukses ?>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-            </div>
-        <?php endif;
-        if (isset($fail)): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <?= $fail ?>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-            </div>
-        <?php endif; ?>
+        <?= view_cell('\App\Libraries\Data::alert', ['sukses' => $sukses, 'fail' => $fail]) ?>
         <!--  -->
         <div class="card-body p-0">
             <div class="card">

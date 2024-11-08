@@ -7,7 +7,7 @@
     </div>
     <div class="section-body">
         <!-- Notif -->
-        <?= view_cell('\App\Libraries\Dosen::alert', ['sukses' => $sukses, 'fail' => $fail]) ?>
+        <?= view_cell('\App\Libraries\Data::alert', ['sukses' => $sukses, 'fail' => $fail]) ?>
         <!--  -->
         <div class="card-body p-0">
             <div class="table-responsive">
