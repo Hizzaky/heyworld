@@ -40,14 +40,14 @@ class Kk extends BaseController
             return redirect()->to('/');
         }
         // 
-        $model = new PpModel();
+        $model = new KkModel();
         $sesi=session();
         $data = $this->arData($model->title(), $sesi->get('login'));
         $data['login'] = $sesi->get('login');
         // 
-        $data['pp'] = $model->dataPp($data['login']['user_id']);
+        $data['kk'] = $model->dataKk($data['login']['user_id']);
 
-        return view('dashboard/dosen/pp/home', $data);
+        return view('dashboard/dosen/kk/home', $data);
     }
     public function add_pp()
     {
