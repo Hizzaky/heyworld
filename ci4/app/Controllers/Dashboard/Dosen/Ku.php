@@ -176,7 +176,7 @@ class Ku extends BaseController
             return redirect('dosen-ku');
         }
 
-        return view('dashboard/dosen/pp/edit_pp', $data);
+        return view('dashboard/dosen/ku/edit_ku', $data);
     }
     public function restore_pp()
     {
