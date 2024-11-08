@@ -80,11 +80,11 @@ class RestoreKuModel extends Model
                     <div style="white-space:nowrap;">
                         <button class="btn btn-primary " 
                         data-confirm="Restore Kata Kerja?|Gunakan kembali kata kerja?" 
-                        data-confirm-yes="dosenRestoreTaxbloom(' . $val['pp_delete_id'] . ')"
+                        data-confirm-yes="dosenRestoreKu(' . $val['pp_delete_id'] . ')"
                         ><i class="fas fa-undo"></i></button>
                         <button class="btn btn-danger btn-sm " 
                         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja secara permanen?" 
-                        data-confirm-yes="dosenDeleteTaxbloomPermanen(' . $val['pp_delete_id'] . ')"
+                        data-confirm-yes="dosenDeleteKuPermanen(' . $val['pp_delete_id'] . ')"
                         ><i class="fas fa-trash"></i></button>
                     </div>
             '
