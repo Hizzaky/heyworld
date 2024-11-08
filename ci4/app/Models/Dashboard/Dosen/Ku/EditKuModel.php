@@ -12,8 +12,8 @@ class EditKuModel extends Model
     {
         $title = [
             'meta_title' => 'SIM UMMAT',
-            'header_title' => 'Penguasaan Pengetahuan',
-            'sub_title' => 'Form Perubahan Penguasaan Pengetahuan',
+            'header_title' => 'Keterampilan Umum',
+            'sub_title' => 'Form Perubahan Keterampilan Umum',
             'sukses' => 'suksesAddKataKerja',
             'modal_title' => 'Kata Kerja Taxonomi Bloom',
             'fail' => 'failAddKataKerja',
@@ -22,12 +22,12 @@ class EditKuModel extends Model
         return $title;
     }
     
-    public function editDataPp($id)
+    public function editDataKu($id)
     {
         $db = db_connect();
         $model = new CustomModel($db);
 
-        $data = $model->editPpJoin($id);
+        $data = $model->editKuJoin($id);
 
         return $data;
     }

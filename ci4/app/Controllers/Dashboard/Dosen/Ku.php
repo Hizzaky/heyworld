@@ -125,7 +125,7 @@ class Ku extends BaseController
         }
         return redirect('dosen-pp');
     }
-    public function edit_pp($pp_id)
+    public function edit_ku($ku_id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
@@ -141,10 +141,10 @@ class Ku extends BaseController
 
         $data = $this->arData($model->title(), $ver);
         $data['login'] = $ver;
-        $data['edit'] = $model->editDataPp($pp_id);
-
+        $data['edit'] = $model->editDataKu($ku_id);
 
         $data['taxbloom'] = $model->dataTaxbloom();
+
         $table->setTemplate($model->templateTbl());
         $table->setHeading([
             '<strong>#</strong>',

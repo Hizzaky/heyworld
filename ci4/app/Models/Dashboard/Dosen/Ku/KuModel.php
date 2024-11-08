@@ -12,8 +12,8 @@ class KuModel extends Model
     {
         $title = [
             'meta_title' => 'SIM UMMAT',
-            'header_title' => 'Penguasaan Pengetahuan',
-            'sub_title' => 'Penguasaan Pengetahuan',
+            'header_title' => 'Keterampilan Umum',
+            'sub_title' => 'Keterampilan Umum',
             'sukses' => 'suksesAddKu',
             'fail' => 'failAddKu',
             'sideKu' => 'active',
