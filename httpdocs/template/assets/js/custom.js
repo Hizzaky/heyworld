@@ -19,18 +19,18 @@ function prodiDeleteTaxbloomPermanen(id) {
 }
 
 // PP
-function dosenDeletePp(id) {
+function prodiDeletePp(id) {
     window.location.href = 'hapus-pp/' + id;
 }
-function dosenDeletePpPermanen(id) {
+function prodiDeletePpPermanen(id) {
     window.location.href = 'hapus-pp-permanen/' + id;
 }
-function dosenRestorePp(id) {
+function prodiRestorePp(id) {
     window.location.href = 'restore-pp/' + id;
 }
 
 // KU
-function dosenDeleteKu(id) {
+function prodiDeleteKu(id) {
     window.location.href = 'hapus-ku/' + id;
 }
 function prodiDeleteKuPermanen(id) {
@@ -41,7 +41,7 @@ function prodiRestoreKu(id) {
 } 
 
 // KK
-function dosenDeleteKk(id) {
+function prodiDeleteKk(id) {
     window.location.href = 'hapus-kk/' + id;
 }
 function prodiDeleteKkPermanen(id) {
