@@ -80,7 +80,7 @@ class CustomModel
         $builder = $this->db->table('t_pp');
         $builder->select('*');
         $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_pp.taxbloom_id');
-        $builder->join('t_dosen', 't_dosen.dosen_id=t_pp.dosen_id');
+        // $builder->join('t_dosen', 't_dosen.dosen_id=t_pp.dosen_id');
         $builder->where('pp_id', $id);
 
         $ret = $builder->get()->getResultArray();
@@ -92,8 +92,8 @@ class CustomModel
         $builder = $this->db->table('t_ku');
         $builder->select('*');
         $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_ku.taxbloom_id');
-        $builder->join('t_dosen', 't_dosen.dosen_id=t_ku.dosen_id');
-        $builder->where('t_ku.dosen_id', $id);
+        // $builder->join('t_dosen', 't_dosen.dosen_id=t_ku.dosen_id');
+        // $builder->where('t_ku.dosen_id', $id);
         $builder->orderBy('ku_id', 'DESC');
 
         $ret = $builder->get()->getResultArray();
@@ -105,7 +105,7 @@ class CustomModel
         $builder = $this->db->table('t_ku');
         $builder->select('*');
         $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_ku.taxbloom_id');
-        $builder->join('t_dosen', 't_dosen.dosen_id=t_ku.dosen_id');
+        // $builder->join('t_dosen', 't_dosen.dosen_id=t_ku.dosen_id');
         $builder->where('ku_id', $id);
 
         $ret = $builder->get()->getResultArray();
@@ -117,8 +117,8 @@ class CustomModel
         $builder = $this->db->table('t_kk');
         $builder->select('*');
         $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_kk.taxbloom_id');
-        $builder->join('t_dosen', 't_dosen.dosen_id=t_kk.dosen_id');
-        $builder->where('t_kk.dosen_id', $id);
+        // $builder->join('t_dosen', 't_dosen.dosen_id=t_kk.dosen_id');
+        // $builder->where('t_kk.dosen_id', $id);
         $builder->orderBy('kk_id', 'DESC');
 
         $ret = $builder->get()->getResultArray();
@@ -130,7 +130,7 @@ class CustomModel
         $builder = $this->db->table('t_kk');
         $builder->select('*');
         $builder->join('t_taxbloom', 't_taxbloom.taxbloom_id=t_kk.taxbloom_id');
-        $builder->join('t_dosen', 't_dosen.dosen_id=t_kk.dosen_id');
+        // $builder->join('t_dosen', 't_dosen.dosen_id=t_kk.dosen_id');
         $builder->where('kk_id', $id);
 
         $ret = $builder->get()->getResultArray();
