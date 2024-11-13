@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Controllers\Dashboard\Dosen;
+namespace App\Controllers\Dashboard\Prodi;
 
 use App\Controllers\BaseController;
-use App\Models\Dashboard\Dosen\Dosen;
-use App\Models\Dashboard\Dosen\Table\PpTblModel;
-use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
-use App\Models\Dashboard\Dosen\Pp\PpModel;
-use App\Models\Dashboard\Dosen\Pp\AddPpModel;
-use App\Models\Dashboard\Dosen\Pp\EditPpModel; 
-use App\Models\Dashboard\Dosen\Pp\RestorePpModel; 
+use App\Models\Dashboard\Prodi\Prodi;
+use App\Models\Dashboard\Prodi\Table\PpTblModel;
+use App\Models\Dashboard\Prodi\Table\PpTblDeleteModel;
+use App\Models\Dashboard\Prodi\Pp\PpModel;
+use App\Models\Dashboard\Prodi\Pp\AddPpModel;
+use App\Models\Dashboard\Prodi\Pp\EditPpModel; 
+use App\Models\Dashboard\Prodi\Pp\RestorePpModel; 
 
 class Pp extends BaseController
 {
@@ -17,23 +17,23 @@ class Pp extends BaseController
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
             return redirect()->to('/');
         }
 
-        $model = new Dosen();
+        $model = new Prodi();
 
         $data = $this->arData($model->title(), session()->get('login'));
 
-        return view('dashboard/dosen/home', $data);
+        return view('dashboard/prodi/home', $data);
     }
     public function index_pp(){
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -47,14 +47,14 @@ class Pp extends BaseController
         // 
         $data['pp'] = $model->dataPp($data['login']['user_id']);
 
-        return view('dashboard/dosen/pp/home', $data);
+        return view('dashboard/prodi/pp/home', $data);
     }
     public function add_pp()
     {
         $sesi = session();
         $ver = $sesi->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -82,13 +82,13 @@ class Pp extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/pp/add_pp', $data);
+        return view('dashboard/prodi/pp/add_pp', $data);
     }
     public function save_pp()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -102,11 +102,8 @@ class Pp extends BaseController
             $insert = [
                 'taxbloom_id' => $_POST['taxbloom_id'],
                 'blue' => $_POST['blue'],
-                'green' => $_POST['green'],
-                'dosen_id' => $sesi['user_id']
+                'green' => $_POST['green']
             ];
-            //     $rules = $model->();
-            //     if ($this->validate($rules)) {
             $modelTbl->save($insert);
 
             if ($modelTbl) {
@@ -116,20 +113,19 @@ class Pp extends BaseController
                 $key = 'failAddPp';
                 $msg = 'Penguasaan Pengetahuan Baru Gagal Ditambahkan!';
             }
-            //     }
         }else{
             return redirect()->back();
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
         }
-        return redirect('dosen-pp');
+        return redirect('prodi-pp');
     }
     public function edit_pp($pp_id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -173,16 +169,16 @@ class Pp extends BaseController
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
-            return redirect('dosen-pp');
+            return redirect('prodi-pp');
         }
 
-        return view('dashboard/dosen/pp/edit_pp', $data);
+        return view('dashboard/prodi/pp/edit_pp', $data);
     }
     public function restore_pp()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -212,7 +208,7 @@ class Pp extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/pp/restore_pp', $data);
+        return view('dashboard/prodi/pp/restore_pp', $data);
 
     }
     // 
@@ -220,7 +216,7 @@ class Pp extends BaseController
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -249,13 +245,13 @@ class Pp extends BaseController
             $key = 'failAddPp';
             $msg = 'Penguasaan Pengetahuan gagal dihapus!';
         }
-        return redirect('dosen-pp')->with($key, $msg);
+        return redirect('prodi-pp')->with($key, $msg);
     }
     public function pp_restore($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -269,7 +265,6 @@ class Pp extends BaseController
         $dataRestore['taxbloom_id'] = $dataDel['taxbloom_id'];
         $dataRestore['blue'] = $dataDel['blue'];
         $dataRestore['green'] = $dataDel['green'];
-        $dataRestore['dosen_id'] = $ver['user_id'];
 
         $this->pre($dataRestore);
         $modelTbl->save($dataRestore);
@@ -286,13 +281,13 @@ class Pp extends BaseController
             $key = 'failRestorePp';
             $msg = 'Kata kerja gagal dikembalikan!';
         }
-        return redirect('dosen-restore-pp')->with($key, $msg);
+        return redirect('prodi-restore-pp')->with($key, $msg);
     }
     public function permanen_pp($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -311,6 +306,6 @@ class Pp extends BaseController
             $key = 'failRestorePp';
             $msg = 'Kata kerja gagal dihapus permanen!';
         }
-        return redirect('dosen-restore-pp')->with($key, $msg);
+        return redirect('prodi-restore-pp')->with($key, $msg);
     }
 }

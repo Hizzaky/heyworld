@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Controllers\Dashboard\Dosen;
+namespace App\Controllers\Dashboard\Prodi;
 
 use App\Controllers\BaseController;
-use App\Models\Dashboard\Dosen\Dosen;
-use App\Models\Dashboard\Dosen\Table\KuTblModel;
-use App\Models\Dashboard\Dosen\Table\KuTblDeleteModel;
-use App\Models\Dashboard\Dosen\Ku\KuModel;
-use App\Models\Dashboard\Dosen\Ku\AddKuModel;
-use App\Models\Dashboard\Dosen\Ku\EditKuModel; 
-use App\Models\Dashboard\Dosen\Ku\RestoreKuModel; 
+use App\Models\Dashboard\Prodi\Prodi;
+use App\Models\Dashboard\Prodi\Table\KuTblModel;
+use App\Models\Dashboard\Prodi\Table\KuTblDeleteModel;
+use App\Models\Dashboard\Prodi\Ku\KuModel;
+use App\Models\Dashboard\Prodi\Ku\AddKuModel;
+use App\Models\Dashboard\Prodi\Ku\EditKuModel; 
+use App\Models\Dashboard\Prodi\Ku\RestoreKuModel; 
 
 class Ku extends BaseController
 {
@@ -17,23 +17,23 @@ class Ku extends BaseController
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
             return redirect()->to('/');
         }
 
-        $model = new Dosen();
+        $model = new Prodi();
 
         $data = $this->arData($model->title(), session()->get('login'));
 
-        return view('dashboard/dosen/home', $data);
+        return view('dashboard/prodi/home', $data);
     }
     public function index_ku(){
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -47,14 +47,14 @@ class Ku extends BaseController
         // 
         $data['ku'] = $model->dataKu($data['login']['user_id']);
 
-        return view('dashboard/dosen/ku/home', $data);
+        return view('dashboard/prodi/ku/home', $data);
     }
     public function add_ku()
     {
         $sesi = session();
         $ver = $sesi->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -82,13 +82,13 @@ class Ku extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/ku/add_ku', $data);
+        return view('dashboard/prodi/ku/add_ku', $data);
     }
     public function save_ku()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -97,12 +97,10 @@ class Ku extends BaseController
         // 
         if (request()->getMethod() == 'post') {
             $modelTbl = new KuTblModel();
-            $sesi = $ver;
             $insert = [
                 'taxbloom_id' => $_POST['taxbloom_id'],
                 'blue' => $_POST['blue'],
-                'green' => $_POST['green'],
-                'dosen_id' => $sesi['user_id']
+                'green' => $_POST['green']
             ];
 
             $modelTbl->save($insert);
@@ -120,13 +118,13 @@ class Ku extends BaseController
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
         }
-        return redirect('dosen-ku');
+        return redirect('prodi-ku');
     }
     public function edit_ku($ku_id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -170,16 +168,16 @@ class Ku extends BaseController
         }
         if (isset($key)) {
             session()->setFlashdata($key, $msg);
-            return redirect('dosen-ku');
+            return redirect('prodi-ku');
         }
 
-        return view('dashboard/dosen/ku/edit_ku', $data);
+        return view('dashboard/prodi/ku/edit_ku', $data);
     }
     public function restore_ku()
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -209,7 +207,7 @@ class Ku extends BaseController
 
         $data['table'] = $table;
 
-        return view('dashboard/dosen/ku/restore_ku', $data);
+        return view('dashboard/prodi/ku/restore_ku', $data);
 
     }
     // 
@@ -217,7 +215,7 @@ class Ku extends BaseController
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -246,13 +244,13 @@ class Ku extends BaseController
             $key = 'failAddKu';
             $msg = 'Keterampilan Umum gagal dihapus!';
         }
-        return redirect('dosen-ku')->with($key, $msg);
+        return redirect('prodi-ku')->with($key, $msg);
     }
     public function ku_restore($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -266,7 +264,6 @@ class Ku extends BaseController
         $dataRestore['taxbloom_id'] = $dataDel['taxbloom_id'];
         $dataRestore['blue'] = $dataDel['blue'];
         $dataRestore['green'] = $dataDel['green'];
-        $dataRestore['dosen_id'] = $ver['user_id'];
 
         $modelTbl->save($dataRestore);
         if ($modelTbl) {
@@ -282,13 +279,13 @@ class Ku extends BaseController
             $key = 'failRestoreKu';
             $msg = 'Kata kerja gagal dikembalikan!';
         }
-        return redirect('dosen-restore-ku')->with($key, $msg);
+        return redirect('prodi-restore-ku')->with($key, $msg);
     }
     public function permanen_ku($id)
     {
         $ver = session()->get('login');
         if (isset($ver['jenis_user'])) {
-            if ($ver['jenis_user'] != 'Dosen') {
+            if ($ver['jenis_user'] != 'Prodi') {
                 return redirect()->back();
             }
         } else {
@@ -307,6 +304,6 @@ class Ku extends BaseController
             $key = 'failRestoreKu';
             $msg = 'Kata kerja gagal dihapus permanen!';
         }
-        return redirect('dosen-restore-ku')->with($key, $msg);
+        return redirect('prodi-restore-ku')->with($key, $msg);
     }
 }
