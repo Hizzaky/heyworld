@@ -38,7 +38,7 @@
                                                     </a> |
                                                     <button class="btn btn-danger btn-sm "
                                                         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja <b><?= $val['katalog'] ?> (<?= $val['kode'] ?>)</b> ?"
-                                                        data-confirm-yes="prodiDeleteTaxbloom(<?= $val['pp_id'] ?>)">
+                                                        data-confirm-yes="prodiDeletePp(<?= $val['pp_id'] ?>)">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                 </div>
