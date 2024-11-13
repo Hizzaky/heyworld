@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Controllers\Dashboard\Dosen;
+namespace App\Controllers\Dashboard\Prodi;
 
 use App\Controllers\BaseController;
-use App\Models\Dashboard\Dosen\Dosen;
-use App\Models\Dashboard\Dosen\Table\KkTblModel;
-use App\Models\Dashboard\Dosen\Table\KkTblDeleteModel;
-use App\Models\Dashboard\Dosen\Kk\KkModel;
-use App\Models\Dashboard\Dosen\Kk\AddKkModel;
-use App\Models\Dashboard\Dosen\Kk\EditKkModel; 
-use App\Models\Dashboard\Dosen\Kk\RestoreKkModel; 
+use App\Models\Dashboard\Prodi\Prodi;
+use App\Models\Dashboard\Prodi\Table\KkTblModel;
+use App\Models\Dashboard\Prodi\Table\KkTblDeleteModel;
+use App\Models\Dashboard\Prodi\Kk\KkModel;
+use App\Models\Dashboard\Prodi\Kk\AddKkModel;
+use App\Models\Dashboard\Prodi\Kk\EditKkModel; 
+use App\Models\Dashboard\Prodi\Kk\RestoreKkModel; 
 
 class Kk extends BaseController
 {

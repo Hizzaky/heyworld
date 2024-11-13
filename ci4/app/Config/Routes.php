@@ -83,6 +83,35 @@ $routes->group('Prodi', function ($routes) {
     $routes->add('restore-index/(:any)', 'Dashboard\Prodi\Kata_kerja::restore_kata_kerja/$1');
     $routes->add('edit-index/(:any)', 'Dashboard\Prodi\Kata_kerja::edit_kata_kerja/$1');
     $routes->add('delete-permanen/(:any)', 'Dashboard\Prodi\Kata_kerja::permanen_kata_kerja/$1');
+
+
+    $routes->add('Penguasaan-pengetahuan', 'Dashboard\Prodi\Pp::index_pp', ['as' => 'prodi-pp']);
+    $routes->add('Penguasaan-pengetahuan-baru', 'Dashboard\Prodi\Pp::add_pp', ['as' => 'prodi-add-pp']);
+    $routes->add('Save-pp', 'Dashboard\Prodi\Pp::save_pp', ['as' => 'prodi-save-pp']);
+    $routes->add('Edit-pp/(:any)', 'Dashboard\Prodi\Pp::edit_pp/$1', ['as' => 'prodi-edit-pp']);
+    $routes->add('hapus-pp/(:any)', 'Dashboard\Prodi\Pp::delete_pp/$1', ['as' => 'prodi-delete-pp']);
+    $routes->add('Penguasaan-pengetahuan-terhapus', 'Dashboard\Prodi\Pp::restore_pp', ['as' => 'prodi-restore-pp']);
+    $routes->add('restore-pp/(:any)', 'Dashboard\Prodi\Pp::pp_restore/$1');
+    $routes->add('hapus-pp-permanen/(:any)', 'Dashboard\Prodi\Pp::permanen_pp/$1', ['as' => 'prodi-permanen-pp']);
+
+    $routes->add('Keterampilan-umum', 'Dashboard\Prodi\Ku::index_ku', ['as' => 'prodi-ku']);
+    $routes->add('Keterampilan-umum-baru', 'Dashboard\Prodi\Ku::add_ku', ['as' => 'prodi-add-ku']);
+    $routes->add('Save-ku', 'Dashboard\Prodi\Ku::save_ku', ['as' => 'prodi-save-ku']);
+    $routes->add('Edit-ku/(:any)', 'Dashboard\Prodi\Ku::edit_ku/$1', ['as' => 'prodi-edit-ku']);
+    $routes->add('hapus-ku/(:any)', 'Dashboard\Prodi\Ku::delete_ku/$1', ['as' => 'prodi-delete-ku']);
+    $routes->add('Keterampilan-umum-terhapus', 'Dashboard\Prodi\Ku::restore_ku', ['as' => 'prodi-restore-ku']);
+    $routes->add('restore-ku/(:any)', 'Dashboard\Prodi\Ku::ku_restore/$1');
+    $routes->add('hapus-ku-permanen/(:any)', 'Dashboard\Prodi\Ku::permanen_ku/$1', ['as' => 'prodi-permanen-ku']);
+
+    $routes->add('Keterampilan-khusus', 'Dashboard\Prodi\Kk::index_kk', ['as' => 'prodi-kk']);
+    $routes->add('Keterampilan-khusus-baru', 'Dashboard\Prodi\Kk::add_kk', ['as' => 'prodi-add-kk']);
+    $routes->add('Save-kk', 'Dashboard\Prodi\Kk::save_kk', ['as' => 'prodi-save-kk']);
+    $routes->add('Edit-kk/(:any)', 'Dashboard\Prodi\Kk::edit_kk/$1', ['as' => 'prodi-edit-kk']);
+    $routes->add('hapus-kk/(:any)', 'Dashboard\Prodi\Kk::delete_kk/$1', ['as' => 'prodi-delete-kk']);
+    $routes->add('Keterampilan-khusus-terhapus', 'Dashboard\Prodi\Kk::restore_kk', ['as' => 'prodi-restore-kk']);
+    $routes->add('restore-kk/(:any)', 'Dashboard\Prodi\Kk::kk_restore/$1');
+    $routes->add('hapus-kk-permanen/(:any)', 'Dashboard\Prodi\Kk::permanen_kk/$1', ['as' => 'prodi-permanen-kk']);
+
 });
 
 
@@ -91,33 +120,6 @@ $routes->group('Dosen', function ($routes) {
     $routes->add('Profile', 'Dashboard\Dosen\Profile::index');
     $routes->add('Update-nama', 'Dashboard\Dosen\Profile::update_nama', ['as' => 'dosen-update-nama']);
     $routes->add('Update-password', 'Dashboard\Dosen\Profile::update_password', ['as' => 'dosen-update-password']);
-
-    $routes->add('Penguasaan-pengetahuan', 'Dashboard\Dosen\Pp::index_pp', ['as' => 'dosen-pp']);
-    $routes->add('Penguasaan-pengetahuan-baru', 'Dashboard\Dosen\Pp::add_pp', ['as' => 'dosen-add-pp']);
-    $routes->add('Save-pp', 'Dashboard\Dosen\Pp::save_pp', ['as' => 'dosen-save-pp']);
-    $routes->add('Edit-pp/(:any)', 'Dashboard\Dosen\Pp::edit_pp/$1', ['as' => 'dosen-edit-pp']);
-    $routes->add('hapus-pp/(:any)', 'Dashboard\Dosen\Pp::delete_pp/$1', ['as' => 'dosen-delete-pp']);
-    $routes->add('Penguasaan-pengetahuan-terhapus', 'Dashboard\Dosen\Pp::restore_pp', ['as' => 'dosen-restore-pp']);
-    $routes->add('restore-pp/(:any)', 'Dashboard\Dosen\Pp::pp_restore/$1');
-    $routes->add('hapus-pp-permanen/(:any)', 'Dashboard\Dosen\Pp::permanen_pp/$1', ['as' => 'dosen-permanen-pp']);
- 
-    $routes->add('Keterampilan-umum', 'Dashboard\Dosen\Ku::index_ku', ['as' => 'dosen-ku']);
-    $routes->add('Keterampilan-umum-baru', 'Dashboard\Dosen\Ku::add_ku', ['as' => 'dosen-add-ku']);
-    $routes->add('Save-ku', 'Dashboard\Dosen\Ku::save_ku', ['as' => 'dosen-save-ku']);
-    $routes->add('Edit-ku/(:any)', 'Dashboard\Dosen\Ku::edit_ku/$1', ['as' => 'dosen-edit-ku']);
-    $routes->add('hapus-ku/(:any)', 'Dashboard\Dosen\Ku::delete_ku/$1', ['as' => 'dosen-delete-ku']);
-    $routes->add('Keterampilan-umum-terhapus', 'Dashboard\Dosen\Ku::restore_ku', ['as' => 'dosen-restore-ku']);
-    $routes->add('restore-ku/(:any)', 'Dashboard\Dosen\Ku::ku_restore/$1');
-    $routes->add('hapus-ku-permanen/(:any)', 'Dashboard\Dosen\Ku::permanen_ku/$1', ['as' => 'dosen-permanen-ku']);
-
-    $routes->add('Keterampilan-khusus', 'Dashboard\Dosen\Kk::index_kk', ['as' => 'dosen-kk']);
-    $routes->add('Keterampilan-khusus-baru', 'Dashboard\Dosen\Kk::add_kk', ['as' => 'dosen-add-kk']);
-    $routes->add('Save-kk', 'Dashboard\Dosen\Kk::save_kk', ['as' => 'dosen-save-kk']);
-    $routes->add('Edit-kk/(:any)', 'Dashboard\Dosen\Kk::edit_kk/$1', ['as' => 'dosen-edit-kk']);
-    $routes->add('hapus-kk/(:any)', 'Dashboard\Dosen\Kk::delete_kk/$1', ['as' => 'dosen-delete-kk']);
-    $routes->add('Keterampilan-khusus-terhapus', 'Dashboard\Dosen\Kk::restore_kk', ['as' => 'dosen-restore-kk']);
-    $routes->add('restore-kk/(:any)', 'Dashboard\Dosen\Kk::kk_restore/$1');
-    $routes->add('hapus-kk-permanen/(:any)', 'Dashboard\Dosen\Kk::permanen_kk/$1', ['as' => 'dosen-permanen-kk']);
 
 
 
