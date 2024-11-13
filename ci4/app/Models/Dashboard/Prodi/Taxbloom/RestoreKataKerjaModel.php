@@ -34,7 +34,7 @@ class RestoreKataKerjaModel extends Model
     public function templateTbl()
     {
         $template = [
-            'table_open' => '<table class="table table-responsive table-striped table-lg" border="0" cellpadding="4" cellspacing="0">',
+            'table_open' => '<table class="table  table-striped table-md" border="0" cellpadding="4" cellspacing="0" >',
 
             'thead_open' => '<thead style="background-color:lightblue;">',
             'thead_close' => '</thead>',
