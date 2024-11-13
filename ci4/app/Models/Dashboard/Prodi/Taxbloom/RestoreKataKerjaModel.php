@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Dashboard\Prodi;
+namespace App\Models\Dashboard\Prodi\Taxbloom;
 
 use CodeIgniter\Model;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;

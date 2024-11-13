@@ -4,10 +4,10 @@ namespace App\Controllers\Dashboard\Prodi;
 
 use App\Controllers\BaseController;
 use App\Models\CustomModel;
-use App\Models\Dashboard\Prodi\KataKerjaModel;
-use App\Models\Dashboard\Prodi\RestoreKataKerjaModel;
-use App\Models\Dashboard\Prodi\AddKataKerjaModel;
-use App\Models\Dashboard\Prodi\EditKataKerjaModel;
+use App\Models\Dashboard\Prodi\Taxbloom\KataKerjaModel;
+use App\Models\Dashboard\Prodi\Taxbloom\RestoreKataKerjaModel;
+use App\Models\Dashboard\Prodi\Taxbloom\AddKataKerjaModel;
+use App\Models\Dashboard\Prodi\Taxbloom\EditKataKerjaModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomModel;
 use App\Models\Dashboard\Prodi\Table\TaxbloomDeletedModel;
 
