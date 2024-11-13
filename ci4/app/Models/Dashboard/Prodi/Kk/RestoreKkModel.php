@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen\Kk;
+namespace App\Models\Dashboard\Prodi\Kk;
 
 use CodeIgniter\Model;
-use App\Models\Dashboard\Dosen\Table\KkTblDeleteModel;
+use App\Models\Dashboard\Prodi\Table\KkTblDeleteModel;
 
 class RestoreKkModel extends Model
 {
@@ -79,11 +79,11 @@ class RestoreKkModel extends Model
                     <div style="white-space:nowrap;">
                         <button class="btn btn-primary " 
                         data-confirm="Restore Kata Kerja?|Gunakan kembali kata kerja?" 
-                        data-confirm-yes="dosenRestoreKk(' . $val['kk_delete_id'] . ')"
+                        data-confirm-yes="prodiRestoreKk(' . $val['kk_delete_id'] . ')"
                         ><i class="fas fa-undo"></i></button>
                         <button class="btn btn-danger btn-sm " 
                         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja secara permanen?" 
-                        data-confirm-yes="dosenDeleteKkPermanen(' . $val['kk_delete_id'] . ')"
+                        data-confirm-yes="prodiDeleteKkPermanen(' . $val['kk_delete_id'] . ')"
                         ><i class="fas fa-trash"></i></button>
                     </div>
             '

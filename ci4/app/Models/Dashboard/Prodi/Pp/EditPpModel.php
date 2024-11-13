@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen\Pp;
+namespace App\Models\Dashboard\Prodi\Pp;
 
 use CodeIgniter\Model;
 use App\Models\CustomModel;

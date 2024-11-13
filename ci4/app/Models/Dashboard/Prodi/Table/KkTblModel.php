@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen\Table;
+namespace App\Models\Dashboard\Prodi\Table;
 
 use CodeIgniter\Model;
 
@@ -14,7 +14,7 @@ class KkTblModel extends Model
     // protected $returnType = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['taxbloom_id', 'blue', 'green', 'dosen_id',];
+    protected $allowedFields = ['taxbloom_id', 'blue', 'green'];
 
     // protected bool $allowEmptyInserts = false;
     // protected bool $updateOnlyChanged = true;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen\Table;
+namespace App\Models\Dashboard\Prodi\Table;
 
 use CodeIgniter\Model;
 

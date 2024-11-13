@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen\Ku;
+namespace App\Models\Dashboard\Prodi\Ku;
 
 use CodeIgniter\Model;
 use App\Models\CustomModel;

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Dashboard\Dosen\Pp;
+namespace App\Models\Dashboard\Prodi\Pp;
 
 use CodeIgniter\Model;
 use App\Models\CustomModel;
-use App\Models\Dashboard\Dosen\Table\PpTblDeleteModel;
+use App\Models\Dashboard\Prodi\Table\PpTblDeleteModel;
 
 class RestorePpModel extends Model
 {
@@ -80,11 +80,11 @@ class RestorePpModel extends Model
                     <div style="white-space:nowrap;">
                         <button class="btn btn-primary " 
                         data-confirm="Restore Kata Kerja?|Gunakan kembali kata kerja?" 
-                        data-confirm-yes="dosenRestoreTaxbloom(' . $val['pp_delete_id'] . ')"
+                        data-confirm-yes="prodiRestoreTaxbloom(' . $val['pp_delete_id'] . ')"
                         ><i class="fas fa-undo"></i></button>
                         <button class="btn btn-danger btn-sm " 
                         data-confirm="Hapus Kata Kerja?|Yakin ingin menghapus kata kerja secara permanen?" 
-                        data-confirm-yes="dosenDeleteTaxbloomPermanen(' . $val['pp_delete_id'] . ')"
+                        data-confirm-yes="prodiDeleteTaxbloomPermanen(' . $val['pp_delete_id'] . ')"
                         ><i class="fas fa-trash"></i></button>
                     </div>
             '

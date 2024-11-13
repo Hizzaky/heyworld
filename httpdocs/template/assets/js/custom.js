@@ -33,10 +33,10 @@ function dosenRestorePp(id) {
 function dosenDeleteKu(id) {
     window.location.href = 'hapus-ku/' + id;
 }
-function dosenDeleteKuPermanen(id) {
+function prodiDeleteKuPermanen(id) {
     window.location.href = 'hapus-ku-permanen/' + id;
 }
-function dosenRestoreKu(id) {
+function prodiRestoreKu(id) {
     window.location.href = 'restore-ku/' + id;
 } 
 
@@ -44,10 +44,10 @@ function dosenRestoreKu(id) {
 function dosenDeleteKk(id) {
     window.location.href = 'hapus-kk/' + id;
 }
-function dosenDeleteKkPermanen(id) {
+function prodiDeleteKkPermanen(id) {
     window.location.href = 'hapus-kk-permanen/' + id;
 }
-function dosenRestoreKk(id) {
+function prodiRestoreKk(id) {
     window.location.href = 'restore-kk/' + id;
 }
 
