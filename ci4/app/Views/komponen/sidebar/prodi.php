@@ -32,7 +32,7 @@
                     <span>Penguasaan Pengetahuan</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuPp) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Penguasaan-pengetahuan">Index</a></li>
+                            href="/Prodi/Penguasaan-pengetahuan">Index PP</a></li>
                     <li class="<?= $var = isset($menuPpAdd) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/Penguasaan-pengetahuan-baru">Tambah PP Baru</a></li>
                     <li class="<?= $var = isset($menuPpDel) ? 'active' : '' ?>"><a class="nav-link"
@@ -44,7 +44,7 @@
                     <span>Keterampilan Umum</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuKu) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Keterampilan-umum">Index</a></li>
+                            href="/Prodi/Keterampilan-umum">Index KU</a></li>
                     <li class="<?= $var = isset($menuKuAdd) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/Keterampilan-umum-baru">Tambah KU Baru</a></li>
                     <li class="<?= $var = isset($menuKuDel) ? 'active' : '' ?>"><a class="nav-link"
@@ -56,7 +56,7 @@
                     <span>Keterampilan Khusus</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?= $var = isset($menuKk) ? 'active' : '' ?>"><a class="nav-link"
-                            href="/Prodi/Keterampilan-khusus">Index</a>
+                            href="/Prodi/Keterampilan-khusus">Index KK</a>
                     </li>
                     <li class="<?= $var = isset($menuKkAdd) ? 'active' : '' ?>"><a class="nav-link"
                             href="/Prodi/Keterampilan-khusus-baru">Tambah KK Baru</a></li>
