@@ -380,7 +380,7 @@
                     <div class="section-header">
                         <h1>Blank Page for bolb section 3</h1><hr>
                         <h2><?= $file ?></h2>
-                        <h2><?= var_dump($aarr) ?></h2>
+                        
                     </div>
 
                     <div class="section-body">
@@ -395,7 +395,7 @@
                             <input class="btn btn-success right" type="submit" name="submit"
                                 value="upload file">
                         </form>
-
+                        <h2><?= var_dump($aarr) ?></h2>
                     </div>
                 </section>
             </div>
