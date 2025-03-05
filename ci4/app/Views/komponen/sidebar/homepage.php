@@ -4,6 +4,6 @@
 
         <li class="list-group-item s-body">bla bla bla</li>
         <li class="list-group-item s-body">bla bla bla</li>
-        <li class="list-group-item s-body">bla bla bla</li>
+        <li class="list-group-item s-body">bla bla bla 3</li>
     </ul>
-</div>
+</div> 
