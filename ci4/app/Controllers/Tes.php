@@ -26,7 +26,7 @@ class Tes extends BaseController
 
         $sesi = session();
         $ver = $sesi->get('login');
-
+ 
         helper('form');
       
         $data['login'] = $sesi->get('login');
