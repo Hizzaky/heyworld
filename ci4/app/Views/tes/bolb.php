@@ -384,10 +384,10 @@
                     </div>
 
                     <div class="section-body">
-                        <form method="POST" enctype="multipart/form-data">
+                        <form method="POST" enctype="multipart/form-data"> 
                             <div class="form-group">
 
-                                <input type="file" name="img" required>
+                                <input type="file" name="theFile" required>
                                 <input type="text" name="t1" value="teks 1">
                                 <input type="text" name="t2" value="teks 2">
                                 
