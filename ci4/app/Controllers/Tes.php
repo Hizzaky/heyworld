@@ -25,7 +25,7 @@ class Tes extends BaseController
         ';
 
         // return view('tes/modal',$data); 
-        echo view('tes/modal',$data); 
+        echo view('tes/bolb',$data); 
     }
 
     public function get(){
