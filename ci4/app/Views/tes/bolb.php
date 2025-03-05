@@ -387,7 +387,7 @@
                         <form method="POST" enctype="multipart/form-data">
                             <div class="form-group">
 
-                                <input type="file" name="bolbfile" req>
+                                <input type="file" name="bolbfile" required>
                                 
                             </div>
                             <hr>
