@@ -395,9 +395,9 @@
                             <input class="btn btn-success right" type="submit" name="submit"
                                 value="upload file">
                         </form>
-                        <h2><pre>
+                        <h2>
                             <?= print_r($aarr) ?>
-                        </pre></h2>
+                      </h2>
                     </div>
                 </section>
             </div>
