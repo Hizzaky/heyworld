@@ -380,7 +380,7 @@
                     <div class="section-header">
                         <h1>Blank Page for bolb section 3</h1><hr>
                         <h2><?= $file ?></h2>
-                        <h2><pre><?= $aarr ?></pre></h2>
+                        <h2><pre><?= var_dump($aarr) ?></pre></h2>
                     </div>
 
                     <div class="section-body">
