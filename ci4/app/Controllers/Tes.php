@@ -41,6 +41,7 @@ class Tes extends BaseController
             $data['aarr']=$_POST;
         }else{
             $data ['file']='gagal';
+            $data ['aarr']='gagal';
         }
 
         // return view('tes/modal',$data); 
