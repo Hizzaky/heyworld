@@ -33,13 +33,12 @@ class Tes extends BaseController
         $data['side'] = '1';
         $data['konten'] = 'Nama';
 
-        if (request()->getMethod() == 'post') {
+        if ($this->request()->getMethod() == 'post') {
             
             // $file = $_POST["file"]->getFile('file');
             // $data['file'] = $file->getName();
-            
             $data['file'] = 'sukses';
-            $data['aarr']=$this->getFile('theFile');
+            $data['aarr']=$this->request->getFile('theFile');
         }else{
             $data ['file']='gagal';
             $data ['aarr']='gagal';
