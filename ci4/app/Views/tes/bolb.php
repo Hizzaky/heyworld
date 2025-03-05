@@ -387,7 +387,7 @@
                         <form method="POST" enctype="multipart/form-data">
                             <div class="form-group">
 
-                                <input type="file" name="bolbfile" required>
+                                <input type="file" name="img" required>
                                 
                             </div>
                             <hr>
