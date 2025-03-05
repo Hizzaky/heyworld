@@ -383,7 +383,7 @@
                         
                     </div>
 
-                    <div class="section-body">
+                    <div class="section-body"> 
                         
                         <form method="POST" enctype="multipart/form-data">
                             <div class="form-group">
