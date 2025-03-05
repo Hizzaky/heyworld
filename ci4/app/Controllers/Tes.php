@@ -45,7 +45,7 @@ class Tes extends BaseController
             ];
             // $data['aarr']=$this->request->getFile('theFile');
         }else{
-            $data ['file']='gagal';
+            $data ['file']='fail';
             $data ['aarr']='gagal';
         }
 
