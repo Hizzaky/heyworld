@@ -382,6 +382,7 @@
                     </div>
 
                     <div class="section-body">
+                        <?= $input ?>
                     </div>
                 </section>
             </div>
