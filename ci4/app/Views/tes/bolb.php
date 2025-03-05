@@ -382,7 +382,7 @@
                     </div>
 
                     <div class="section-body">
-                        <form method="post">
+                        <form method="post" enctype="multipart/form-data">
                             <div class="form-group">
 
                                 <input type="file" name="bolbfile" req>
@@ -391,7 +391,7 @@
                             <hr>
                             <!-- <button type="submit" class="btn btn-primary right" >Masuk</button> -->
                             <input class="btn btn-success right" type="submit" name="submit"
-                                value="Masuk Sebagai <?= $jenis_user ?>">
+                                value="upload file">
                         </form>
 
                     </div>
