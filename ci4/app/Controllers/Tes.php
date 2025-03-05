@@ -46,7 +46,7 @@ class Tes extends BaseController
             // $data['aarr']=$this->request->getFile('theFile');
         }else{
             $data ['file']='fail';
-            $data ['aarr']='gagal';
+            $data ['aarr']='fal';
         }
 
         // return view('tes/modal',$data); 
