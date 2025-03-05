@@ -38,7 +38,7 @@ class Tes extends BaseController
             // $file = $_POST["file"]->getFile('file');
             // $data['file'] = $file->getName();
             $data['file'] = 'sukses';
-            $data['aarr'] = $_POST;
+            $data['aarr'] = $_FILES;
             // $data['aarr']=$this->request->getFile('theFile');
         }else{
             $data ['file']='gagal';
