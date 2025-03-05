@@ -384,7 +384,7 @@
                     </div>
 
                     <div class="section-body">
-                        <form method="post" enctype="multipart/form-data">
+                        <form method="POST" enctype="multipart/form-data">
                             <div class="form-group">
 
                                 <input type="file" name="bolbfile" req>
@@ -395,7 +395,9 @@
                             <input class="btn btn-success right" type="submit" name="submit"
                                 value="upload file">
                         </form>
-                        <h2><?= var_dump($aarr) ?></h2>
+                        <h2><pre>
+                            <?= print_r($aarr) ?>
+                        </pre></h2>
                     </div>
                 </section>
             </div>
