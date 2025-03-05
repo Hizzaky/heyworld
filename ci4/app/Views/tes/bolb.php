@@ -384,7 +384,7 @@
                     </div>
 
                     <div class="section-body"> 
-                        
+                        <pre> <?= print_r($aarr) ?> </pre>
                         <form method="POST" enctype="multipart/form-data">
                             <div class="form-group">
 
