@@ -378,7 +378,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Blank Page for bolb section 2</h1><hr>
+                        <h1>Blank Page for bolb section 3</h1><hr>
                         <h2><?= $file ?></h2>
                     </div>
 
