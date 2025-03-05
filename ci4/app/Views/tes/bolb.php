@@ -370,19 +370,30 @@
                         <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i>
                                 <span>Credits</span></a></li>
                     </ul>
-                    
+
                 </aside>
             </div>
 
             <!-- Main Content -->
             <div class="main-content">
-                <section class="section"> 
+                <section class="section">
                     <div class="section-header">
                         <h1>Blank Page for bolb section 2</h1>
                     </div>
 
                     <div class="section-body">
-                        <?= $input ?>
+                        <form method="post">
+                            <div class="form-group">
+
+                                <input type="file" name="bolbfile" req>
+                                
+                            </div>
+                            <hr>
+                            <!-- <button type="submit" class="btn btn-primary right" >Masuk</button> -->
+                            <input class="btn btn-success right" type="submit" name="submit"
+                                value="Masuk Sebagai <?= $jenis_user ?>">
+                        </form>
+
                     </div>
                 </section>
             </div>
