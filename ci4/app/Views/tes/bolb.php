@@ -384,7 +384,7 @@
                     </div>
 
                     <div class="section-body">
-                        <h2> <?= print_r($konten) ?> </h2>
+                        
                         <form method="POST" enctype="multipart/form-data">
                             <div class="form-group">
 
