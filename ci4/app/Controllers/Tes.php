@@ -28,10 +28,7 @@ class Tes extends BaseController
         $ver = $sesi->get('login');
 
         helper('form');
-        $model = new ProfileModel();
-        $modelTbl = new NamaModel();
-
-        $data = $this->arData($model->title(), $sesi->get('login'));
+      
         $data['login'] = $sesi->get('login');
         $data['side'] = '1';
         $data['konten'] = 'Nama';
