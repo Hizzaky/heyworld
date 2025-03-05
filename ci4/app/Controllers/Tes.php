@@ -35,9 +35,10 @@ class Tes extends BaseController
 
         if (request()->getMethod() == 'post') {
             
-            echo 'sukses';
+            $file = $this->request->getFile('file');
+            $data['file'] = $file->getName();
         }else{
-            echo 'fail';
+            $data ['file']='gagal';
         }
 
         // return view('tes/modal',$data); 
