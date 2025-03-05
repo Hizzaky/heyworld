@@ -35,8 +35,8 @@ class Tes extends BaseController
 
         if (request()->getMethod() == 'post') {
             
-            $file = $this->request->getFile('file');
-            $data['file'] = $file->getName();
+            // $file = $_POST["file"]->getFile('file');
+            $data['file'] = $_POST["file"]->getName();
         }else{
             $data ['file']='gagal';
         }
