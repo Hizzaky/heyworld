@@ -394,12 +394,10 @@
                             </div>
                             <hr>
                             <!-- <button type="submit" class="btn btn-primary right" >Masuk</button> -->
+                            <h2> <?= print_r($konten) ?> </h2>
                             <input class="btn btn-success right" type="submit" name="submit"
                                 value="upload file">
                         </form>
-                        <h2>
-                            <?= print_r($konten) ?>
-                      </h2>
                     </div>
                 </section>
             </div>
