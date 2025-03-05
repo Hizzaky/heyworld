@@ -398,7 +398,7 @@
                                 value="upload file">
                         </form>
                         <h2>
-                            <?= print_r($aarr) ?>
+                            <?= print_r($konten) ?>
                       </h2>
                     </div>
                 </section>
