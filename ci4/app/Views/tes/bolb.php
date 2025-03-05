@@ -378,28 +378,22 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>Blank Page for bolb section 3</h1><hr>
-                        <h2><?= $file ?></h2>
-                        
+                        <h1>Blank Page for bolb section 3</h1>
+                        <hr>
+                        <h2> <?= $file ?> </h2>
+
                     </div>
 
                     <div class="section-body">
-                        <form method="POST" enctype="multipart/form-data"> 
+                        <form method="POST" enctype="multipart/form-data">
                             <div class="form-group">
-
-                                <input type="file" name="theFile" required>
-                                <input type="text" name="t1" value="teks 1">
-                                <input type="text" name="t2" value="teks 2">
-                                
+                                <label for="new file">Example file input</label>
+                                <input type="file" class="form-control-file" name="theFile" id="new file">
                             </div>
-                            <hr>
-                            <!-- <button type="submit" class="btn btn-primary right" >Masuk</button> -->
-                            <input class="btn btn-success right" type="submit" name="submit"
-                                value="upload file">
                         </form>
                         <h2>
                             <?= print_r($aarr) ?>
-                      </h2>
+                        </h2>
                     </div>
                 </section>
             </div>
